@@ -315,18 +315,10 @@
         <h1 id="【置顶】-留言请点击友链留言室"><a href="#【置顶】-留言请点击友链留言室" class="headerlink" title="【置顶】 留言请点击友链留言室"></a>【置顶】 留言请点击友链留言室</h1><h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a target="_blank" rel="noopener" href="http://rocketmq.apache.org/release_notes/release-notes-4.3.2/">http://rocketmq.apache.org/release_notes/release-notes-4.3.2/</a></p>
 <h1 id="中文文档"><a href="#中文文档" class="headerlink" title="中文文档"></a>中文文档</h1><p><a target="_blank" rel="noopener" href="https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing">https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing</a></p>
 <h1 id="idea调试工具"><a href="#idea调试工具" class="headerlink" title="idea调试工具"></a>idea调试工具</h1><p><a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/idea/2019.1/debug-tool-window.html">https://www.jetbrains.com/help/idea/2019.1/debug-tool-window.html</a><br><a target="_blank" rel="noopener" href="https://github.com/DillonDong/notes">https://github.com/DillonDong/notes</a></p>
-<h1 id="Windows环境下安装RocketMQ"><a href="#Windows环境下安装RocketMQ" class="headerlink" title="Windows环境下安装RocketMQ"></a>Windows环境下安装RocketMQ</h1><p>一.预备环境<br>1.系统<br>Windows<br>2. 环境<br>JDK1.8、Maven、Git<br>二. RocketMQ部署<br>1.下载<br>1.1地址：<a target="_blank" rel="noopener" href="http://rocketmq.apache.org/release_notes/release-notes-4.3.0/">http://rocketmq.apache.org/release_notes/release-notes-4.3.0/</a><br>1.2选择‘Binary’进行下载</p>
-<p>1.3解压已下载工程</p>
-<ol start="2">
-<li>配置</li>
-<li>1 系统环境变量配置<br>变量名：ROCKETMQ_HOME<br>变量值：MQ解压路径\MQ文件夹名<br>eg、ROCKETMQ_HOME=D:\dev\rocketmq-all-4.3.0-bin-release</li>
-<li>启动</li>
-<li>1 启动NAMESERVER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqnamesrv.cmd’，启动NAMESERVER。成功后会弹出提示框，此框勿关闭。</li>
-</ol>
-<p>3.2 启动BROKER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true’，启动BROKER。成功后会弹出提示框，此框勿关闭</p>
+<h1 id="Windows环境下安装RocketMQ"><a href="#Windows环境下安装RocketMQ" class="headerlink" title="Windows环境下安装RocketMQ"></a>Windows环境下安装RocketMQ</h1><p>一.预备环境<br>1.系统<br>Windows<br>2. 环境<br>JDK1.8、Maven、Git<br>二. RocketMQ部署<br>1.下载<br>1.1地址：<a target="_blank" rel="noopener" href="http://rocketmq.apache.org/release_notes/release-notes-4.3.0/">http://rocketmq.apache.org/release_notes/release-notes-4.3.0/</a><br>1.2选择‘Binary’进行下载<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq1.jpg" alt="rocketMq"><br>1.3解压已下载工程<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq2.jpg" alt="rocketMq"><br>2. 配置<br>2.1 系统环境变量配置<br>变量名：ROCKETMQ_HOME<br>变量值：MQ解压路径\MQ文件夹名<br>eg、ROCKETMQ_HOME=D:\dev\rocketmq-all-4.3.0-bin-release<br>3. 启动<br>3.1 启动NAMESERVER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqnamesrv.cmd’，启动NAMESERVER。成功后会弹出提示框，此框勿关闭。<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq3.jpg" alt="rocketMq"><br>3.2 启动BROKER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true’，启动BROKER。成功后会弹出提示框，此框勿关闭</p>
 <ol start="2">
 <li>编译启动<br>用CMD进入‘\rocketmq-externals\rocketmq-console’文件夹，执行‘mvn clean package -Dmaven.test.skip=true’，编译生成。<br>编译成功之后，Cmd进入‘target’文件夹，执行‘java -jar rocketmq-console-ng-1.0.0.jar’，启动‘rocketmq-console-ng-1.0.0.jar’。</li>
-<li>测试<br>浏览器中输入‘127.0.0.1:配置端口’，成功后即可查看。<br>eg：<a target="_blank" rel="noopener" href="http://127.0.0.1:8088/">http://127.0.0.1:8088</a></li>
+<li>测试<br>浏览器中输入‘127.0.0.1:配置端口’，成功后即可查看。<br>eg：<a target="_blank" rel="noopener" href="http://127.0.0.1:8088/">http://127.0.0.1:8088</a><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq4.jpg" alt="rocketMq"></li>
 </ol>
 
       
