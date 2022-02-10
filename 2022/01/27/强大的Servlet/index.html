@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/ThreadLocalremove.png">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/oncePerRequestFilter.png">
 <meta property="article:published_time" content="2022-01-27T01:45:49.000Z">
-<meta property="article:modified_time" content="2022-02-09T09:48:55.198Z">
+<meta property="article:modified_time" content="2022-02-10T08:37:36.509Z">
 <meta property="article:author" content="赵KK">
 <meta property="article:tag" content="Springboot">
 <meta name="twitter:card" content="summary">
@@ -396,10 +396,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/01/27/%E5%BC%BA%E5%A4%A7%E7%9A%84Servlet/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 3.6k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 4.5k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 17(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 21(分)</span>
 	
 
       </div>
@@ -489,6 +489,18 @@
 <h2 id="那么为什么Tomcat被称之为嵌入式容器呢？"><a href="#那么为什么Tomcat被称之为嵌入式容器呢？" class="headerlink" title="那么为什么Tomcat被称之为嵌入式容器呢？"></a>那么为什么Tomcat被称之为嵌入式容器呢？</h2><p>因为tomcat中TomcatEmbeddedContext，Embedded即直译为嵌入式</p>
 <p>这里记忆有些混乱了，有点找不过来哪里是入口了，但先从TomcatServletWebServerFactoryCustomizer的customize()方法调用找，</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> Stream&lt;Wrapper&gt; <span class="title">getLoadOnStartupWrappers</span><span class="params">(Container[] children)</span> </span>&#123;</span><br><span class="line">        Map&lt;Integer, List&lt;Wrapper&gt;&gt; grouped = <span class="keyword">new</span> TreeMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (Container child : children) &#123;</span><br><span class="line">            Wrapper wrapper = (Wrapper) child;</span><br><span class="line">            <span class="keyword">int</span> order = wrapper.getLoadOnStartup();</span><br><span class="line">            <span class="keyword">if</span> (order &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                grouped.computeIfAbsent(order, ArrayList::<span class="keyword">new</span>);</span><br><span class="line">                grouped.get(order).add(wrapper);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> grouped.values().stream().flatMap(List::stream);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>因为要看下Netty，所以还是重新看下server.properties<br>我将Spring Boot AutoConfigure升级到了2.6.2，内置的Tomcat就升级到9.0了<br>为了方便查看才升级的，之前的2.1.x就不截图了<br>server.properties的位置在configuration的下面的json文件<br>spring-configuration-metadata.json</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">      &quot;name&quot;: &quot;server&quot;,</span><br><span class="line">      &quot;type&quot;: &quot;org.springframework.boot.autoconfigure.web.ServerProperties&quot;,</span><br><span class="line">      &quot;sourceType&quot;: &quot;org.springframework.boot.autoconfigure.web.ServerProperties&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那既然为了看Netty在这个json文件中同样存在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">      &quot;name&quot;: &quot;server.netty&quot;,</span><br><span class="line">      &quot;type&quot;: &quot;org.springframework.boot.autoconfigure.web.ServerProperties$Netty&quot;,</span><br><span class="line">      &quot;sourceType&quot;: &quot;org.springframework.boot.autoconfigure.web.ServerProperties&quot;,</span><br><span class="line">      &quot;sourceMethod&quot;: &quot;getNetty()&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>既然在json中存在getNetty等方法，猜测那么对应的ServerProperties也存在对应的方法，因为存在实例么，tomcat搭配server.xml和web.xml简单看了一下，当然Tomcat还是主要和Servlet的关联关系更为重要，本身tomcat知识点也最够庞大的，包含类加载器，双拼委派，打破双亲委派、jvm调优等等，可以顺带看下这里的专题</p>
+<h2 id="当一次请求发起都发生了什么？"><a href="#当一次请求发起都发生了什么？" class="headerlink" title="当一次请求发起都发生了什么？"></a>当一次请求发起都发生了什么？</h2><p>用户通过浏览器进行了一个操作，这个操作可以是输入url地址并回车，或者是点击超链接，或者是在搜索框中输入关键字进行搜索，接着浏览器就捕获到了这个事件<br>由于 HTTP 协议底层具体的数据传输使用的是 TCP/IP 协议，因此浏览器需要向服务端发出 TCP 连接请求<br>服务器接受浏览器的连接请求，并经过 TCP 三次握手建立连接<br>浏览器将请求数据打包成一个 HTTP 协议格式的数据包<br>浏览器将打包好的数据包推入网络，经过网络传输最终到达服务器指定程序<br>服务端程序拿到数据包后，根据 HTTP 协议格式进行解包，获取到客户端的意图<br>得知客户端意图后进行处理，比如提供静态文件或者调用服务端程序获得动态结果<br>服务器将响应结果按照 HTTP 协议格式打包<br>服务器将响应数据包推入网络，数据包经过网络传输最终达到到浏览器<br>浏览器拿到数据包后，按照 HTTP 协议的格式解包，然后对数据进行解析<br>浏览器将解析后的静态数据（如html、图片）展示给用户</p>
+<p>Tomcat 作为一个 HTTP 服务器，主要需要完成的功能是接受连接、解析请求数据、处理请求和发送响应这几个步骤。<br>作者：若兮缘<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7c9401b85704">https://www.jianshu.com/p/7c9401b85704</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>关于tomcat的架构就取自这篇文章，图文都很喜欢~</p>
+<p>导入过程Running With JRE 7 Or Later</p>
+<p>启动tomcat所需环境</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span></span><br><span class="line">   eval $_NOHUP <span class="string">&quot;\&quot;$_RUNJAVA\&quot;&quot;</span> <span class="string">&quot;\&quot;$CATALINA_LOGGING_CONFIG\&quot;&quot;</span> $LOGGING_MANAGER <span class="string">&quot;$JAVA_OPTS&quot;</span> <span class="string">&quot;$CATALINA_OPTS&quot;</span> \</span><br><span class="line">     -D$ENDORSED_PROP=<span class="string">&quot;\&quot;$JAVA_ENDORSED_DIRS\&quot;&quot;</span> \</span><br><span class="line">     -classpath <span class="string">&quot;\&quot;$CLASSPATH\&quot;&quot;</span> \</span><br><span class="line">     -Dcatalina.base=<span class="string">&quot;\&quot;$CATALINA_BASE\&quot;&quot;</span> \</span><br><span class="line">     -Dcatalina.home=<span class="string">&quot;\&quot;$CATALINA_HOME\&quot;&quot;</span> \</span><br><span class="line">     -Djava.io.tmpdir=<span class="string">&quot;\&quot;$CATALINA_TMPDIR\&quot;&quot;</span> \</span><br><span class="line">     org.apache.catalina.startup.Bootstrap <span class="string">&quot;$@&quot;</span> start \</span><br></pre></td></tr></table></figure>
+<p>后续不在赘述。重点在Server.properties中包含Netty的这个类，</p>
+
       
     </div>
     <div class="article-footer">
