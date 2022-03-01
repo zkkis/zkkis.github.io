@@ -46,8 +46,12 @@
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/fg15k701aa.png">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rediscachewriter.png">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/connectionfactory.png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/jms.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/AMQP.png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/kafka.png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/kafka2.png">
 <meta property="article:published_time" content="2022-01-27T01:45:49.000Z">
-<meta property="article:modified_time" content="2022-02-21T06:32:53.038Z">
+<meta property="article:modified_time" content="2022-03-01T05:33:51.636Z">
 <meta property="article:author" content="赵KK">
 <meta property="article:tag" content="Springboot">
 <meta name="twitter:card" content="summary">
@@ -407,10 +411,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/01/27/%E5%BC%BA%E5%A4%A7%E7%9A%84Servlet/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 10.1k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 11.1k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 47(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 51(分)</span>
 	
 
       </div>
@@ -595,6 +599,21 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">private static final Set&lt;Class&lt;? extends Annotation&gt;&gt; CACHE_OPERATION_ANNOTATIONS = new LinkedHashSet&lt;&gt;(8);</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        CACHE_OPERATION_ANNOTATIONS.add(Cacheable.class);</span><br><span class="line">        CACHE_OPERATION_ANNOTATIONS.add(CacheEvict.class);</span><br><span class="line">        CACHE_OPERATION_ANNOTATIONS.add(CachePut.class);</span><br><span class="line">        CACHE_OPERATION_ANNOTATIONS.add(Caching.class);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>其实我就是看他的写的emoj,而且在caching这个注解里他包含了4种注解,然后统一进行管理的。</p>
 <p>插播：Dbeaver中普通操作都会,安利一个类似idea的快捷键功能，Template—&gt;SQL编辑器中可设置常用SQL,快捷键加Tab唤出.</p>
+<h3 id="国际化包含文本的国际化和时区的国际化"><a href="#国际化包含文本的国际化和时区的国际化" class="headerlink" title="国际化包含文本的国际化和时区的国际化"></a>国际化包含文本的国际化和时区的国际化</h3><h3 id="Repository-VS-NoRepositoryBean"><a href="#Repository-VS-NoRepositoryBean" class="headerlink" title="@Repository VS  @NoRepositoryBean"></a>@Repository VS  @NoRepositoryBean</h3><p>回到cache相关中，在开启缓存时提示错误需要加入@Enablecahing注解，而在验证缓存注解时，在接口加了NoRepositoryBean，那么NoRepositoryBean又是什么？跟@Repository有何不同？<br>NoRepositoryBean：见名知意就是不需要创建的bean，在Springboot jpa中标识，雷同与不需要序列化的字段标识transient；<br>NoRepositoryBean用做标记当前接口或者类（抽象）不应该作为RepositoryBean被注册到Spring上下文，Springdata提供了自动代理的机制</p>
+<h2 id="JMS-java-message-service-JSR-914"><a href="#JMS-java-message-service-JSR-914" class="headerlink" title="JMS(java  message service)JSR-914"></a>JMS(java  message service)JSR-914</h2><p>1.JMS：用于应用程序之间，或在分布式系统中发送消息。而一些生产者，消费者，消息等不是消息队列的特指，而是JMS的所有特性。<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/jms.jpg" alt="Liucheng"><br>2.AMQP：(Advanced Message Queuing Protocol)<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/AMQP.png" alt="Liucheng"><br>消息队列协议,中文规范，消息代理(message brokers) 从发布者（publisher）亦称作生产者（producers）接受消息，根据<br>不同的路由规则（Routing Rule）把接受到的消息发送给处理消息的消费者（consumers）；</p>
+<h1 id="3-kafka-零拷贝？-哎嗨，重点来了"><a href="#3-kafka-零拷贝？-哎嗨，重点来了" class="headerlink" title="3.kafka? 零拷贝？ 哎嗨，重点来了"></a>3.kafka? 零拷贝？ 哎嗨，重点来了</h1><p>官网：<a target="_blank" rel="noopener" href="https://kafka.apache.org/">https://kafka.apache.org/</a><br>Kafka是一个分布式的基于发布/订阅模式的消息队列（Message Queue），主要应用于大数据实时处理领域。<br>其实大多数的消息队列的实时性只能保持在秒级，而在银行是能够在纳秒之间的，kafka2.8.x之前是基于zookeeper的，<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/kafka.png" alt="kafka"><br>架构图<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/kafka2.png" alt="kafka"></p>
+<p>默认分区内存大小32M，每个批次大小是16K<br>1.批次数据满了才会发送，16K<br>2.linger.ms批次数据未满时，延迟发送时间<br>Sender数据拉取<br>同步vs异步发送</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>配置</span><br><span class="line"><span class="number">2.</span>连接集群</span><br><span class="line"><span class="number">3.</span>指定序列化类型</span><br><span class="line"><span class="number">4.</span>创建生产者</span><br><span class="line"><span class="number">5.</span>发送数据</span><br><span class="line"><span class="number">6.</span>关闭资源</span><br></pre></td></tr></table></figure>
+<p>分区自定义，合理使用资源，负载均衡<br>可配置类都要放到统一类管理<br>1.指定分区的情况<br>2.没有指定分区，带key，key的hash值与topic的分区值取模<br>3.没有指定分区，不带key，粘性分区，随机选择一个分区，尽可能一直使用该分区<br>自定义分区器：实现分区器接口<br>一般会说那个表名作为key<br>自定义分区器：<br>恰好达到批次大小就进行发送<br>导致数据延迟：<br>生产环境配置5-100ms之间<br>压缩类型snappy<br>提供生产者吞吐量<br>应答ack  0   1  -1<br>动态ISR replica.lag.time.max.ms默认30s，超出则踢出<br>数据完全可靠条件：<br><font color="red"> ACK级别设置为1 +分区副本大于等于2 +ISR应答最小副本数量大于等于2  </font><br>要求可靠性<br>要求速度<br>默认值为int最大值<br>ack和重试数据<br>幂等性和事务:保证单分区单回话内不会重复<br>开启事务，必须开启幂等性<br>指定事务id<br>数据有序<br>单分区有序：<br>多分区有序：<br>数据乱序<br>kafka1.x前后差别：<br>是否开启幂等性区别：<br>其中一个出现异常则先缓存，后落盘<br>zookeeper中存放的信息<br>工具：prettyzoo</p>
+<p>1、brokerid<br>2、主题<br>3.消费者信息</p>
+<p>AR:是kafka中你那个所有分区副本的总称<br>ISR:leader和follower之间正常通讯的节点<br>除了基础知识点之外我最想看的就是kafka的零拷贝跟netty的关系。</p>
+<blockquote>
+<p>DMA</p>
+</blockquote>
+<blockquote>
+<p>在介绍零拷贝之前，我们先来看一个技术名词DMA（Direct Memory Access<br>直接内存访问）。它是现代电脑的重要特征之一，允许不同速度的硬件之间直接交互，而不需要占用CPU的中断负载。DMA传输将一个地址空间复制到另一个地址空间，当CPU<br>初始化这个传输之后，实际的数据传输是有DMA设备之间完成，这样可以大大的减少CPU的消耗。我们常见的硬件设备都支持DMA</p>
+</blockquote>
+<p>零拷贝有两种方式：mmap/sendfile，而直接内存的方式跟Netty也是如出一辙。</p>
 
       
     </div>
