@@ -50,8 +50,9 @@
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/AMQP.png">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/kafka.png">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/kafka2.png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/snappy.png">
 <meta property="article:published_time" content="2022-01-27T01:45:49.000Z">
-<meta property="article:modified_time" content="2022-03-01T05:43:10.605Z">
+<meta property="article:modified_time" content="2022-03-01T10:16:10.890Z">
 <meta property="article:author" content="赵KK">
 <meta property="article:tag" content="Springboot">
 <meta name="twitter:card" content="summary">
@@ -411,10 +412,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/01/27/%E5%BC%BA%E5%A4%A7%E7%9A%84Servlet/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 11.1k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 11.3k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 51(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 52(分)</span>
 	
 
       </div>
@@ -610,7 +611,16 @@
 <blockquote>
 <p>DMA<br>在介绍零拷贝之前，我们先来看一个技术名词DMA（Direct Memory Access<br>直接内存访问）。它是现代电脑的重要特征之一，允许不同速度的硬件之间直接交互，而不需要占用CPU的中断负载。DMA传输将一个地址空间复制到另一个地址空间，当CPU<br>初始化这个传输之后，实际的数据传输是有DMA设备之间完成，这样可以大大的减少CPU的消耗。我们常见的硬件设备都支持DMA</p>
 </blockquote>
-<p>零拷贝有两种方式：mmap/sendfile，而直接内存的方式跟Netty也是如出一辙。</p>
+<p>零拷贝有两种方式：mmap/sendfile，而直接内存的方式跟Netty也是如出一辙。<br>关于压缩类型snappy,他是Java提供的实现，在maven以来中可在kafka中看到<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/snappy.png" alt="kafka"></p>
+<h3 id="源码阅读"><a href="#源码阅读" class="headerlink" title="源码阅读"></a>源码阅读</h3><p>org.apache.kafka.clients.producer.ProducerRecord</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">可指定主题</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> String topic;</span><br><span class="line">分区</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Integer partition;</span><br><span class="line">头信息</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Headers headers;</span><br><span class="line">key</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> K key;</span><br><span class="line">value</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> V value;</span><br><span class="line">linger.ms</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Long timestamp;</span><br></pre></td></tr></table></figure>
+<p>构造器有几种，对于发送消息就有几种类型，consumerRecord同理，key和value需要指定序列化类。<br>所有的配置项存放在ProducerConfig中。<br>比如每个batchsize批次内存大小默认是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.define(BATCH_SIZE_CONFIG, Type.INT, 16384, atLeast(0), Importance.MEDIUM, BATCH_SIZE_DOC)</span><br></pre></td></tr></table></figure>
+<p>16384/1024=16k<br>比如linger.ms默认为0ms</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.define(LINGER_MS_CONFIG, Type.LONG, 0, atLeast(0), Importance.MEDIUM, LINGER_MS_DOC)</span><br></pre></td></tr></table></figure>
+<p>key指定的序列化类为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Serializer class for key that implements the &lt;code&gt;org.apache.kafka.common.serialization.Serializer&lt;/code&gt; interface.</span><br><span class="line">如果在配置文件中指定则需要全限定类名</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
