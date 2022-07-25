@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zkkget.github.io/2022/07/25/Mysql%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E4%BC%98%E5%8C%96/</loc>
+    
+    <lastmod>2022-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zkkget.github.io/2022/07/25/%E4%B8%BB%E7%AB%99%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%B9%8B%E7%BA%BF%E4%B8%8A%E5%AF%B9%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%A4%84%E7%90%86/</loc>
+    
+    <lastmod>2022-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zkkget.github.io/2022/07/25/%E3%80%90%E5%A3%B0%E6%98%8E%E3%80%91%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AF%BC%E8%87%B4%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA-%E5%8F%AF%E5%9C%A8%E6%AD%A4%E8%B4%B4%E4%B8%8B%E6%96%B9%E7%95%99%E8%A8%80/</loc>
     
     <lastmod>2022-07-25</lastmod>
@@ -200,6 +218,13 @@
 
   
   <url>
+    <loc>https://zkkget.github.io/tags/Mysql/</loc>
+    <lastmod>2022-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zkkget.github.io/tags/MQ/</loc>
     <lastmod>2022-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -214,14 +239,14 @@
   </url>
   
   <url>
-    <loc>https://zkkget.github.io/tags/Nginx/</loc>
+    <loc>https://zkkget.github.io/tags/Springboot/</loc>
     <lastmod>2022-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zkkget.github.io/tags/Springboot/</loc>
+    <loc>https://zkkget.github.io/tags/Nginx/</loc>
     <lastmod>2022-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -256,7 +281,21 @@
   </url>
   
   <url>
+    <loc>https://zkkget.github.io/tags/%E4%BA%8B%E5%8A%A1/</loc>
+    <lastmod>2022-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zkkget.github.io/tags/opencv/</loc>
+    <lastmod>2022-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zkkget.github.io/tags/valine/</loc>
     <lastmod>2022-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -278,13 +317,6 @@
   
   <url>
     <loc>https://zkkget.github.io/tags/Yapi/</loc>
-    <lastmod>2022-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zkkget.github.io/tags/valine/</loc>
     <lastmod>2022-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
