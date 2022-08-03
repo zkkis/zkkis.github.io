@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/374544735d0dd4104601ef98749c7f89.jpg">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/05-305138350.jpg">
 <meta property="article:published_time" content="2022-08-02T03:35:12.000Z">
-<meta property="article:modified_time" content="2022-08-03T07:19:57.074Z">
+<meta property="article:modified_time" content="2022-08-03T07:45:12.670Z">
 <meta property="article:author" content="赵KK">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
@@ -388,10 +388,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/08/02/%E9%9D%A2%E5%90%91%E9%9D%A2%E8%AF%95%E7%BC%96%E7%A8%8B/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 9.7k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 10k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 36(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 37(分)</span>
 	
 
       </div>
@@ -506,7 +506,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引，表锁。
 </code></pre>
 <h2 id="19、MVCC-是什么？它的底层原理是什么？"><a href="#19、MVCC-是什么？它的底层原理是什么？" class="headerlink" title="19、MVCC 是什么？它的底层原理是什么？"></a>19、MVCC 是什么？它的底层原理是什么？</h2><p>MVCC，多版本并发控制,它是通过读取历史版本的数据，来降低并发事务冲突，从而提高并<br>发性能的一种机制。<br>⚫ 事务版本号<br>⚫ 表的隐藏列<br>⚫ undo log<br>⚫ read view</p>
 <h2 id="20、undo-log-具体怎么回滚事务-？"><a href="#20、undo-log-具体怎么回滚事务-？" class="headerlink" title="20、undo log 具体怎么回滚事务 ？"></a>20、undo log 具体怎么回滚事务 ？</h2><p>举个例子：<br>⚫ 对于 insert 类型的 sql，会在 undo log 中记录下方才你 insert 进来的数据的 ID，当你想<br>roll back 时，根据 ID 完成精准的删除。<br>⚫ 对于 delete 类型的 sql，会在 undo log 中记录方才你删除的数据，当你回滚时会将删除<br>前的数据 insert 进去。<br>⚫ 对于 update 类型的 sql，会在 undo log 中记录下修改前的数据，回滚时只需要反向<br>update 即可。<br>⚫ 对于 select 类型的 sql，别费心了，select 不需要回滚。</p>
-<h2 id="22、索引失效的情况有哪些？"><a href="#22、索引失效的情况有哪些？" class="headerlink" title="22、索引失效的情况有哪些？"></a>22、索引失效的情况有哪些？</h2><p>⚫ like 以%开头索引无效，当 like 以&amp;结尾，索引有效。<br>36<br>⚫ or 语句前后没有同事使用索引，当且仅当 or 语句查询条件的前后列均为索引时，索引生<br>效。<br>⚫ 组合索引，使用的不是第一列索引时候，索引失效，即最左匹配规则。<br>⚫ 数据类型出现隐式转换，如 varchar 不加单引号的时候可能会自动转换为 int 类型，这个<br>时候索引失效。<br>⚫ 在索引列上使用 IS NULL 或者 IS NOT NULL 时候，索引失效，因为索引是不索引空值<br>得。<br>⚫ 在索引字段上使用，NOT、 &lt;&gt;、！= 、时候是不会使用索引的，对于这样的处理只会进<br>行全表扫描。<br>⚫ 对索引字段进行计算操作，函数操作时不会使用索引。<br>⚫ 当全表扫描速度比索引速度快的时候不会使用索引。<br>索引失效场景一：带头大哥不能死，中间兄弟不能断</p>
+<h2 id="22、索引失效的情况有哪些？"><a href="#22、索引失效的情况有哪些？" class="headerlink" title="22、索引失效的情况有哪些？"></a>22、索引失效的情况有哪些？</h2><p>⚫ like 以%开头索引无效，当 like 以&amp;结尾，索引有效。<br>⚫ or 语句前后没有同事使用索引，当且仅当 or 语句查询条件的前后列均为索引时，索引生<br>效。<br>⚫ 组合索引，使用的不是第一列索引时候，索引失效，即最左匹配规则。<br>⚫ 数据类型出现隐式转换，如 varchar 不加单引号的时候可能会自动转换为 int 类型，这个<br>时候索引失效。<br>⚫ 在索引列上使用 IS NULL 或者 IS NOT NULL 时候，索引失效，因为索引是不索引空值<br>得。<br>⚫ 在索引字段上使用，NOT、 &lt;&gt;、！= 、时候是不会使用索引的，对于这样的处理只会进<br>行全表扫描。<br>⚫ 对索引字段进行计算操作，函数操作时不会使用索引。<br>⚫ 当全表扫描速度比索引速度快的时候不会使用索引。<br>索引失效场景一：带头大哥不能死，中间兄弟不能断</p>
 <p>索引失效场景二：在索引列上做操作</p>
 <p>索引失效场景三：范围条件右边全失效</p>
 <p>索引低效场景四：select * 会降低索引的效率</p>
@@ -515,6 +515,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引，表锁。
 <p>索引失效场景七、%like%查询时的索引失效问题</p>
 <p>索引失效场景八、字符串不加单引号索引失效</p>
 <p>索引失效场景九、少用or，用or连接索引会失效</p>
+<h2 id="Spring-Bean-容器的生命周期是什么样的？"><a href="#Spring-Bean-容器的生命周期是什么样的？" class="headerlink" title="Spring Bean 容器的生命周期是什么样的？"></a>Spring Bean 容器的生命周期是什么样的？</h2><p>⚫ Bean 容器找到配置文件中 Spring Bean 的定义。<br>⚫ Bean 容器利用 Java Reflection API 创建一个 Bean 的实例。<br>⚫ 如果涉及到一些属性值 利用 set()方法设置一些属性值。<br>⚫ 如果 Bean 实现了 BeanNameAware 接口，调用 setBeanName()方法，传入 Bean 的名<br>字。<br>⚫ 如果 Bean 实现了 BeanClassLoaderAware 接口，调用 setBeanClassLoader()方法，传<br>入 ClassLoader 对象的实例。<br>⚫ 如果 Bean 实现了 BeanFactoryAware 接口，调用 setBeanFactory()方法，传入<br>BeanFactory 对象的实例。<br>⚫ 与上面的类似，如果实现了其他 *.Aware 接口，就调用相应的方法。<br>⚫ 如果有和加载这个 Bean 的 Spring 容器相关的 BeanPostProcessor 对象，执行<br>postProcessBeforeInitialization() 方法<br>39<br>⚫ 如果 Bean 实现了 InitializingBean 接口，执行 afterPropertiesSet()方法。<br>⚫ 如果 Bean 在配置文件中的定义包含 init-method 属性，执行指定的方法。<br>⚫ 如果有和加载这个 Bean 的 Spring 容器相关的 BeanPostProcessor 对象，执行<br>postProcessAfterInitialization() 方法<br>⚫ 当要销毁 Bean 的时候，如果 Bean 实现了 DisposableBean 接口，执行 destroy() 方<br>法。<br>⚫ 当要销毁 Bean 的时候，如果 Bean 在配置文件中的定义包含 destroy-method 属性，执<br>行指定的方法。</p>
 
       
     </div>

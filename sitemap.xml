@@ -272,6 +272,13 @@
 
   
   <url>
+    <loc>https://zkkget.github.io/tags/List%E9%81%8D%E5%8E%86%E5%88%A0%E9%99%A4/</loc>
+    <lastmod>2022-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zkkget.github.io/tags/CompletableFuture/</loc>
     <lastmod>2022-08-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -280,13 +287,6 @@
   
   <url>
     <loc>https://zkkget.github.io/tags/Leetcode%E7%AE%97%E6%B3%95%E9%A2%98/</loc>
-    <lastmod>2022-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zkkget.github.io/tags/List%E9%81%8D%E5%8E%86%E5%88%A0%E9%99%A4/</loc>
     <lastmod>2022-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -328,14 +328,14 @@
   </url>
   
   <url>
-    <loc>https://zkkget.github.io/tags/SpringCloudAlibaba/</loc>
+    <loc>https://zkkget.github.io/tags/Thymleaf/</loc>
     <lastmod>2022-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zkkget.github.io/tags/Thymleaf/</loc>
+    <loc>https://zkkget.github.io/tags/SpringCloudAlibaba/</loc>
     <lastmod>2022-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -391,14 +391,14 @@
   </url>
   
   <url>
-    <loc>https://zkkget.github.io/tags/Yapi/</loc>
+    <loc>https://zkkget.github.io/tags/JunitTest/</loc>
     <lastmod>2022-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zkkget.github.io/tags/JunitTest/</loc>
+    <loc>https://zkkget.github.io/tags/Yapi/</loc>
     <lastmod>2022-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
