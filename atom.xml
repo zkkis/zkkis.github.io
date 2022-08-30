@@ -6,7 +6,7 @@
   <link href="https://zkkget.github.io/atom.xml" rel="self"/>
   
   <link href="https://zkkget.github.io/"/>
-  <updated>2022-08-12T08:25:08.475Z</updated>
+  <updated>2022-08-30T06:54:11.240Z</updated>
   <id>https://zkkget.github.io/</id>
   
   <author>
@@ -17,9 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Mysql保留关键字</title>
+    <link href="https://zkkget.github.io/posts/20220830a1.html"/>
+    <id>https://zkkget.github.io/posts/20220830a1.html</id>
+    <published>2022-08-30T06:53:46.000Z</published>
+    <updated>2022-08-30T06:54:11.240Z</updated>
+    
+    <content type="html"><![CDATA[<p>MySQL关键字（保留字）列表<br>在使用MySQL的时候，一般尽量避免用关键字作为表名，如使用关键字做表名，需要按标准写法给SQL语句加<a href="%E6%88%96%E6%98%AF%E2%80%9C"></a>区分字段名和表名。</p><p>下面列出MySQL所有关键字，希望给使用MySQL的朋友提供一些参考帮助。</p><p>ADD    ALL    ALTER<br>ANALYZE    AND    AS<br>ASC    ASENSITIVE    BEFORE<br>BETWEEN    BIGINT    BINARY<br>BLOB    BOTH    BY<br>CALL    CASCADE    CASE<br>CHANGE    CHAR    CHARACTER<br>CHECK    COLLATE    COLUMN<br>CONDITION    CONNECTION    CONSTRAINT<br>CONTINUE    CONVERT    CREATE<br>CROSS    CURRENT_DATE    CURRENT_TIME<br>CURRENT_TIMESTAMP    CURRENT_USER    CURSOR<br>DATABASE    DATABASES    DAY_HOUR<br>DAY_MICROSECOND    DAY_MINUTE    DAY_SECOND<br>DEC    DECIMAL    DECLARE<br>DEFAULT    DELAYED    DELETE<br>DESC    DESCRIBE    DETERMINISTIC<br>DISTINCT    DISTINCTROW    DIV<br>DOUBLE    DROP    DUAL<br>EACH    ELSE    ELSEIF<br>ENCLOSED    ESCAPED    EXISTS<br>EXIT    EXPLAIN    FALSE<br>FETCH    FLOAT    FLOAT4<br>FLOAT8    FOR    FORCE<br>FOREIGN    FROM    FULLTEXT<br>GOTO    GRANT    GROUP<br>HAVING    HIGH_PRIORITY    HOUR_MICROSECOND<br>HOUR_MINUTE    HOUR_SECOND    IF<br>IGNORE    IN    INDEX<br>INFILE    INNER    INOUT<br>INSENSITIVE    INSERT    INT<br>INT1    INT2    INT3<br>INT4    INT8    INTEGER<br>INTERVAL    INTO    IS<br>ITERATE    JOIN    KEY<br>KEYS    KILL    LABEL<br>LEADING    LEAVE    LEFT<br>LIKE    LIMIT    LINEAR<br>LINES    LOAD    LOCALTIME<br>LOCALTIMESTAMP    LOCK    LONG<br>LONGBLOB    LONGTEXT    LOOP<br>LOW_PRIORITY    MATCH    MEDIUMBLOB<br>MEDIUMINT    MEDIUMTEXT    MIDDLEINT<br>MINUTE_MICROSECOND    MINUTE_SECOND    MOD<br>MODIFIES    NATURAL    NOT<br>NO_WRITE_TO_BINLOG    NULL    NUMERIC<br>ON    OPTIMIZE    OPTION<br>OPTIONALLY    OR    ORDER<br>OUT    OUTER    OUTFILE<br>PRECISION    PRIMARY    PROCEDURE<br>PURGE    RAID0    RANGE<br>READ    READS    REAL<br>REFERENCES    REGEXP    RELEASE<br>RENAME    REPEAT    REPLACE<br>REQUIRE    RESTRICT    RETURN<br>REVOKE    RIGHT    RLIKE<br>SCHEMA    SCHEMAS    SECOND_MICROSECOND<br>SELECT    SENSITIVE    SEPARATOR<br>SET    SHOW    SMALLINT<br>SPATIAL    SPECIFIC    SQL<br>SQLEXCEPTION    SQLSTATE    SQLWARNING<br>SQL_BIG_RESULT    SQL_CALC_FOUND_ROWS    SQL_SMALL_RESULT<br>SSL    STARTING    STRAIGHT_JOIN<br>TABLE    TERMINATED    THEN<br>TINYBLOB    TINYINT    TINYTEXT<br>TO    TRAILING    TRIGGER<br>TRUE    UNDO    UNION<br>UNIQUE    UNLOCK    UNSIGNED<br>UPDATE    USAGE    USE<br>USING    UTC_DATE    UTC_TIME<br>UTC_TIMESTAMP    VALUES    VARBINARY<br>VARCHAR    VARCHARACTER    VARYING<br>WHEN    WHERE    WHILE<br>WITH    WRITE    X509<br>XOR    YEAR_MONTH    ZEROFILL</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;MySQL关键字（保留字）列表&lt;br&gt;在使用MySQL的时候，一般尽量避免用关键字作为表名，如使用关键字做表名，需要按标准写法给SQL语句加&lt;a href=&quot;%E6%88%96%E6%98%AF%E2%80%9C&quot;&gt;&lt;/a&gt;区分字段名和表名。&lt;/p&gt;
+&lt;p&gt;下面列出MySQ</summary>
+      
+    
+    
+    
+    
+    <category term="Mysql" scheme="https://zkkget.github.io/tags/Mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>1000万数据对比ContainsAll实测</title>
-    <link href="https://zkkget.github.io/posts/20220812cl7fklql10001fsujaxkm3yin.html"/>
-    <id>https://zkkget.github.io/posts/20220812cl7fklql10001fsujaxkm3yin.html</id>
+    <link href="https://zkkget.github.io/posts/20220812cl7fu3gcp0001xguj3tx3egsl.html"/>
+    <id>https://zkkget.github.io/posts/20220812cl7fu3gcp0001xguj3tx3egsl.html</id>
     <published>2022-08-12T08:24:06.000Z</published>
     <updated>2022-08-12T08:25:08.475Z</updated>
     
@@ -40,8 +63,8 @@
   
   <entry>
     <title>面向面试编程</title>
-    <link href="https://zkkget.github.io/posts/20220802cl7fklqmv001afsuj8ard796l.html"/>
-    <id>https://zkkget.github.io/posts/20220802cl7fklqmv001afsuj8ard796l.html</id>
+    <link href="https://zkkget.github.io/posts/20220802cl7fu3gey001hxgujd5ig72ra.html"/>
+    <id>https://zkkget.github.io/posts/20220802cl7fu3gey001hxgujd5ig72ra.html</id>
     <published>2022-08-02T03:35:12.000Z</published>
     <updated>2022-08-29T07:05:10.633Z</updated>
     
@@ -62,8 +85,8 @@
   
   <entry>
     <title>CompletableFuture</title>
-    <link href="https://zkkget.github.io/posts/20220728cl7fklqlx000gfsujcsyne1lc.html"/>
-    <id>https://zkkget.github.io/posts/20220728cl7fklqlx000gfsujcsyne1lc.html</id>
+    <link href="https://zkkget.github.io/posts/20220728cl7fu3gd10006xguj4k51hj9r.html"/>
+    <id>https://zkkget.github.io/posts/20220728cl7fu3gd10006xguj4k51hj9r.html</id>
     <published>2022-07-28T02:44:05.000Z</published>
     <updated>2022-07-28T02:51:29.386Z</updated>
     
@@ -84,8 +107,8 @@
   
   <entry>
     <title>优雅永不过时</title>
-    <link href="https://zkkget.github.io/posts/20220726cl7fklqmo0011fsuj6s8g11k5.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl7fklqmo0011fsuj6s8g11k5.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl7fu3geq0011xguj88a09kd8.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl7fu3geq0011xguj88a09kd8.html</id>
     <published>2022-07-26T02:26:41.000Z</published>
     <updated>2022-07-26T02:30:41.087Z</updated>
     
@@ -105,8 +128,8 @@
   
   <entry>
     <title>Leetcode算法题</title>
-    <link href="https://zkkget.github.io/posts/20220726cl7fklqlr0008fsujdxr48pel.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl7fklqlr0008fsujdxr48pel.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl7fu3gcv0003xguj4q199o77.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl7fu3gcv0003xguj4q199o77.html</id>
     <published>2022-07-26T02:22:55.000Z</published>
     <updated>2022-07-26T02:26:11.279Z</updated>
     
@@ -129,8 +152,8 @@
   
   <entry>
     <title>蚂蚁一面整理</title>
-    <link href="https://zkkget.github.io/posts/20220726cl7fklqmq0015fsuja2e00eq3.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl7fklqmq0015fsuja2e00eq3.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl7fu3geu0019xguje0rse793.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl7fu3geu0019xguje0rse793.html</id>
     <published>2022-07-26T02:21:30.000Z</published>
     <updated>2022-07-26T02:22:19.303Z</updated>
     
@@ -151,8 +174,8 @@
   
   <entry>
     <title>List遍历删除</title>
-    <link href="https://zkkget.github.io/posts/20220726cl7fklqlp0006fsujcvg43cfp.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl7fklqlp0006fsujcvg43cfp.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl7fu3gd4000axgujhsfshmre.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl7fu3gd4000axgujhsfshmre.html</id>
     <published>2022-07-26T02:19:28.000Z</published>
     <updated>2022-07-26T02:20:44.374Z</updated>
     
@@ -174,8 +197,8 @@
   
   <entry>
     <title>Mysql海量数据存储与优化</title>
-    <link href="https://zkkget.github.io/posts/20220725cl7fklql60003fsujc59bbx5t.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl7fklql60003fsujc59bbx5t.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl7fu3gd9000hxgujfh4x1gp0.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl7fu3gd9000hxgujfh4x1gp0.html</id>
     <published>2022-07-25T08:17:47.000Z</published>
     <updated>2022-07-25T08:24:40.644Z</updated>
     
@@ -197,8 +220,8 @@
   
   <entry>
     <title>主站博客迁移之线上对事务的处理</title>
-    <link href="https://zkkget.github.io/posts/20220725cl7fklqmj000tfsuj4z54cfi7.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl7fklqmj000tfsuj4z54cfi7.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl7fu3gem000xxguj5c1k8jgv.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl7fu3gem000xxguj5c1k8jgv.html</id>
     <published>2022-07-25T08:15:07.000Z</published>
     <updated>2022-07-25T08:17:19.220Z</updated>
     
@@ -220,8 +243,8 @@
   
   <entry>
     <title>【声明】阿里云服务器导致图片不显示[可在此贴下方留言]</title>
-    <link href="https://zkkget.github.io/posts/20220725cl7fklqmm000xfsujhzog6alm.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl7fklqmm000xfsujhzog6alm.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl7fu3gdm000lxgujh5jk84kz.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl7fu3gdm000lxgujh5jk84kz.html</id>
     <published>2022-07-25T08:10:26.000Z</published>
     <updated>2022-07-25T08:11:46.075Z</updated>
     
@@ -240,8 +263,8 @@
   
   <entry>
     <title>主站博客迁移之字节跳动面经个人搜索答案</title>
-    <link href="https://zkkget.github.io/posts/20220725cl7fklqmg000nfsujaf6zhmmn.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl7fklqmg000nfsujaf6zhmmn.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl7fu3ge7000txgujcp0kae4t.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl7fu3ge7000txgujcp0kae4t.html</id>
     <published>2022-07-25T07:47:01.000Z</published>
     <updated>2022-07-26T02:30:47.107Z</updated>
     
@@ -263,8 +286,8 @@
   
   <entry>
     <title>主站博客迁移之Nginx安装与原理</title>
-    <link href="https://zkkget.github.io/posts/20220725cl7fklqlz000jfsujcpqw67vx.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl7fklqlz000jfsujcpqw67vx.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl7fu3gds000nxguj6wnw5eg6.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl7fu3gds000nxguj6wnw5eg6.html</id>
     <published>2022-07-25T07:39:59.000Z</published>
     <updated>2022-07-25T07:41:06.698Z</updated>
     
@@ -286,8 +309,8 @@
   
   <entry>
     <title>主站博客迁移之Thymleaf项目常用操作</title>
-    <link href="https://zkkget.github.io/posts/20220725cl7fklqmh000pfsuj5ona52ay.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl7fklqmh000pfsuj5ona52ay.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl7fu3ge6000sxguj301la3n9.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl7fu3ge6000sxguj301la3n9.html</id>
     <published>2022-07-25T07:36:44.000Z</published>
     <updated>2022-07-25T07:39:16.989Z</updated>
     
@@ -309,8 +332,8 @@
   
   <entry>
     <title>主站博客迁移之SpringCloudAlibaba服务注册新发现</title>
-    <link href="https://zkkget.github.io/posts/20220725cl7fklqmd000lfsujcivdgzwz.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl7fklqmd000lfsujcivdgzwz.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl7fu3gdu000pxguj8ady3wo6.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl7fu3gdu000pxguj8ady3wo6.html</id>
     <published>2022-07-25T07:18:07.000Z</published>
     <updated>2022-07-25T07:31:33.474Z</updated>
     
@@ -332,8 +355,8 @@
   
   <entry>
     <title>主站博客迁移之拒绝解析又臭又长的JSON</title>
-    <link href="https://zkkget.github.io/posts/20220725cl7fklqmx001efsuj09361cj3.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl7fklqmx001efsuj09361cj3.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl7fu3gef000wxguj85oj3qp8.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl7fu3gef000wxguj85oj3qp8.html</id>
     <published>2022-07-25T07:10:12.000Z</published>
     <updated>2022-07-25T07:11:54.562Z</updated>
     
@@ -355,8 +378,8 @@
   
   <entry>
     <title>项目实战----行政优先级分析</title>
-    <link href="https://zkkget.github.io/posts/20220510cl7fklqmw001dfsuj2bpef4wa.html"/>
-    <id>https://zkkget.github.io/posts/20220510cl7fklqmw001dfsuj2bpef4wa.html</id>
+    <link href="https://zkkget.github.io/posts/20220510cl7fu3gex001exgujboev6f1g.html"/>
+    <id>https://zkkget.github.io/posts/20220510cl7fu3gex001exgujboev6f1g.html</id>
     <published>2022-05-10T03:00:00.000Z</published>
     <updated>2022-06-13T06:24:14.000Z</updated>
     
@@ -378,8 +401,8 @@
   
   <entry>
     <title>mysql中的锁表语句查看方法汇总</title>
-    <link href="https://zkkget.github.io/posts/20220428cl7fklqlu000dfsuj3bnmg3qn.html"/>
-    <id>https://zkkget.github.io/posts/20220428cl7fklqlu000dfsuj3bnmg3qn.html</id>
+    <link href="https://zkkget.github.io/posts/20220428cl7fu3gda000jxgujcwu35apu.html"/>
+    <id>https://zkkget.github.io/posts/20220428cl7fu3gda000jxgujcwu35apu.html</id>
     <published>2022-04-28T08:48:51.000Z</published>
     <updated>2022-05-07T03:13:42.000Z</updated>
     
@@ -400,8 +423,8 @@
   
   <entry>
     <title>人工智能vs人工智障之图片识别</title>
-    <link href="https://zkkget.github.io/posts/20220407cl7fklqmm000wfsuj19h556ol.html"/>
-    <id>https://zkkget.github.io/posts/20220407cl7fklqmm000wfsuj19h556ol.html</id>
+    <link href="https://zkkget.github.io/posts/20220407cl7fu3gep000zxguj72f0cc8a.html"/>
+    <id>https://zkkget.github.io/posts/20220407cl7fu3gep000zxguj72f0cc8a.html</id>
     <published>2022-04-07T08:04:30.000Z</published>
     <updated>2022-04-21T05:56:48.000Z</updated>
     
@@ -423,8 +446,8 @@
   
   <entry>
     <title>Springboot+Netty仿微信实战设计文档</title>
-    <link href="https://zkkget.github.io/posts/20220331cl7fklqls000afsuj1yv85bn4.html"/>
-    <id>https://zkkget.github.io/posts/20220331cl7fklqls000afsuj1yv85bn4.html</id>
+    <link href="https://zkkget.github.io/posts/20220331cl7fu3gd6000exguj5zim92r3.html"/>
+    <id>https://zkkget.github.io/posts/20220331cl7fu3gd6000exguj5zim92r3.html</id>
     <published>2022-03-31T09:28:57.000Z</published>
     <updated>2022-03-31T09:46:20.000Z</updated>
     
@@ -439,28 +462,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>还在手动写单元测试？</title>
-    <link href="https://zkkget.github.io/posts/20220207cl7fklqmr0017fsuj2zh5ef00.html"/>
-    <id>https://zkkget.github.io/posts/20220207cl7fklqmr0017fsuj2zh5ef00.html</id>
-    <published>2022-02-07T06:54:05.000Z</published>
-    <updated>2022-02-09T06:04:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="JUnitGenerator安装"><a href="#JUnitGenerator安装" class="headerlink" title="JUnitGenerator安装"></a>JUnitGenerator安装</h1><p>在Idea市场里安装JUnitGenerator插件如图，重启后生效<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/junit1.png" alt="流程"></p><h1 id="设置生成路径及模板"><a href="#设置生成路径及模板" class="headerlink" title="设置生成路径及模板"></a>设置生成路径及模板</h1><p>Output Path: ${SOURCEPATH}/..//../test/java/${PACKAGE}/${FILENAME}<br>注：根据实际项目结构调整，设置为默认模板，另需要在Project Structure–&gt;Modules中设置Test文件目录，可改造为自启动，随容器启动，<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/junit2.png" alt="流程"></p><h1 id="设置Junit4-生成模板"><a href="#设置Junit4-生成模板" class="headerlink" title="设置Junit4 生成模板"></a>设置Junit4 生成模板</h1><p>支持 CommonResponse 或  Wrapper</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line">#macro (cap $strIn)$strIn.valueOf($strIn.charAt(<span class="number">0</span>)).toUpperCase()$strIn.substring(<span class="number">1</span>)#end </span><br><span class="line">#foreach ($entry in $entryList) </span><br><span class="line">#set( $testClass=<span class="string">&quot;$&#123;entry.className&#125;Test&quot;</span>) </span><br><span class="line"><span class="keyword">package</span> $entry.packageName; </span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test; </span><br><span class="line"><span class="keyword">import</span> org.junit.Before; </span><br><span class="line"><span class="keyword">import</span> org.junit.After; </span><br><span class="line"><span class="keyword">import</span> org.springframework.http.ResponseEntity;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * BSF+Junit4</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Creator</span> zhaokk</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@CreateDate</span> $&#123;Date&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@DESC</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="meta">@SuppressWarnings(&quot;all&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> $<span class="title">testClass</span> </span>&#123; </span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">final</span> String ipAndPort=<span class="string">&quot;localhost:8080/&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> String token=<span class="string">&quot;login-token&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> String extend = <span class="string">&quot;extend&quot;</span>;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> HttpHeaders requestHeaders;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Before</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        requestHeaders = <span class="keyword">new</span> HttpHeaders();</span><br><span class="line">        requestHeaders.add(<span class="string">&quot;token&quot;</span>, token);</span><br><span class="line">        requestHeaders.add(<span class="string">&quot;&quot;</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line">        </span><br><span class="line">        JunitUtils.setRequestHeaders(requestHeaders);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@After</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">#foreach($method in $entry.methodList) </span><br><span class="line">    <span class="comment">/** </span></span><br><span class="line"><span class="comment">    * </span></span><br><span class="line"><span class="comment">    * Method: $method.signature </span></span><br><span class="line"><span class="comment">    * </span></span><br><span class="line"><span class="comment">    */</span> </span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> test#cap($&#123;method.name&#125;)() <span class="keyword">throws</span> Exception &#123; </span><br><span class="line">        <span class="comment">//Make request</span></span><br><span class="line">        TestEntity testEntity=JunitUtils.checkRequest(ipAndPort,token);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Show Controller &amp; Mehtod</span></span><br><span class="line">        <span class="comment">//FIXME new $entry.packageName.$&#123;entry.className&#125;().$&#123;method.name&#125;();</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//Model 1 (Parameter is url)</span></span><br><span class="line">        <span class="comment">//Map&lt;String,String&gt; objectRequest=new HashMap();</span></span><br><span class="line">        <span class="comment">//objectRequest.put(&quot;&#123;id&#125;&quot;,&quot;1000000157729&quot;);</span></span><br><span class="line">        <span class="comment">//testEntity.setRequestObj(objectRequest);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//Model 2 (Parameter is Object)</span></span><br><span class="line">        <span class="comment">//UserLoginReq objectRequest = new UserLoginReq();//JSON.parseObject(&quot;jsonString&quot;,UserLoginReq.class)</span></span><br><span class="line">        <span class="comment">//objectRequest.setUsername(&quot;18311140968&quot;);</span></span><br><span class="line">        <span class="comment">//objectRequest.setPassword(&quot;aa123456&quot;);</span></span><br><span class="line">        <span class="comment">//testEntity.setRequestObj(objectRequest);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//Model 3 (Parameter is url &amp; Object)</span></span><br><span class="line">        <span class="comment">//Map&lt;String,String&gt; urlMap=new HashMap();</span></span><br><span class="line">        <span class="comment">//urlMap.put(&quot;&#123;pageNo&#125;&quot;,&quot;1&quot;);</span></span><br><span class="line">        <span class="comment">//urlMap.put(&quot;&#123;pageSize&#125;&quot;,&quot;10&quot;);</span></span><br><span class="line"><span class="comment">//UserLoginReq objectRequest = new UserLoginReq();//JSON.parseObject(&quot;jsonString&quot;,UserLoginReq.class)</span></span><br><span class="line">        <span class="comment">//objectRequest.setUsername(&quot;18311140968&quot;);</span></span><br><span class="line">        <span class="comment">//objectRequest.setPassword(&quot;aa123456&quot;);</span></span><br><span class="line">        <span class="comment">//testEntity.setRequestObj(objectRequest);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//model 1  and model 2 (ResponseEntity)</span></span><br><span class="line">        ResponseEntity&lt;CommonResponse&gt; responseResponseEntity=JunitUtils.getResponseEntity(testEntity);</span><br><span class="line"></span><br><span class="line"><span class="comment">//model 3 (ResponseEntity)</span></span><br><span class="line">        <span class="comment">//ResponseEntity&lt;CommonResponse&gt; responseResponseEntity=JunitUtils.getResponseEntity(urlMap,testEntity);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//ResponseEntity To Object</span></span><br><span class="line">        <span class="comment">//CommonResponse&lt;UserResp&gt; response = responseResponseEntity.getBody();</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//Check CommonResponse code is 200000</span></span><br><span class="line">        JunitUtils.checkResponse(responseResponseEntity.getBody());</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">#end </span><br><span class="line"></span><br><span class="line">#foreach($method in $entry.privateMethodList) </span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* Method: $method.signature </span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">*/</span> </span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> test#cap($&#123;method.name&#125;)() <span class="keyword">throws</span> Exception &#123; </span><br><span class="line"><span class="comment">//<span class="doctag">TODO:</span> Test goes here... </span></span><br><span class="line">#foreach($string in $method.reflectionCode) </span><br><span class="line">$string </span><br><span class="line">#end </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">#end </span><br><span class="line">&#125; </span><br><span class="line">#end</span><br><span class="line"></span><br><span class="line">代码块<span class="number">1</span>：根据ipAndPort和token 拼装基础的URL和请求头</span><br><span class="line">代码块<span class="number">2</span>：工具块，方便快速跳转到本方法的源头</span><br><span class="line">代码块<span class="number">3</span>：模式<span class="number">1</span>参数封装，一般用于GET 和DELETE 请求，纯URL</span><br><span class="line">代码块<span class="number">4</span>：模式<span class="number">2</span>参数封装，一般用于POST和PUT 请求，纯对象。支持Json字符串，如下：</span><br><span class="line">         UpdateUserByPKReq objectRequest = JunitUtils.jsonToObject(<span class="string">&quot;&#123;\&quot;name\&quot;:\&quot;接口测试-勿删\&quot;,\&quot;userNumber\&quot;:\&quot;1573195928331\&quot;&quot;</span>,UpdateUserByPKReq.class);</span><br><span class="line">          </span><br><span class="line">代码块<span class="number">5</span>：模式<span class="number">1</span>和模式<span class="number">2</span>的组合，拼装URL+对象</span><br><span class="line">代码块<span class="number">6</span>：适用于模式<span class="number">1</span>和模式<span class="number">2</span>，进行具体的请求并获得响应结果</span><br><span class="line">代码块<span class="number">7</span>：适用于模式<span class="number">3</span>，进行具体的请求并获得响应结果</span><br><span class="line">代码块<span class="number">8</span>：检查响应结果，默认<span class="number">200000</span>为成功，如果非<span class="number">200000</span>失败。如有多个状态码均为成功，可以增加成功状态码进行入参，</span><br><span class="line">         如下：JunitUtils.checkResponse(responseResponseEntity.getBody(),<span class="number">600220</span>)</span><br></pre></td></tr></table></figure><p>这里可自行改造为</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhaokk</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> $&#123;Date&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RunWith(SpringJUnit4ClassRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest(classes = com.xxx.class)</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line">workspace.xml中加入</span><br><span class="line">&lt;component name=<span class="string">&quot;PropertiesComponent&quot;</span>&gt;</span><br><span class="line">    &lt;property name=<span class="string">&quot;dynamic.classpath&quot;</span> value=<span class="string">&quot;true&quot;</span> /&gt;</span><br><span class="line">&lt;!--  --&gt;</span><br></pre></td></tr></table></figure><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/junit3.png" alt="流程"></p><h1 id="不知道大家有没有用有道云笔记的没有，经常性的新打开的笔记会在首行，但除了阅读之外，应该在最后一行继续编辑，所有大多情况下需要鼠标滑动到行尾，搜索过很多方法，不如Ctrl-A，然后→右箭头好用。mark"><a href="#不知道大家有没有用有道云笔记的没有，经常性的新打开的笔记会在首行，但除了阅读之外，应该在最后一行继续编辑，所有大多情况下需要鼠标滑动到行尾，搜索过很多方法，不如Ctrl-A，然后→右箭头好用。mark" class="headerlink" title="不知道大家有没有用有道云笔记的没有，经常性的新打开的笔记会在首行，但除了阅读之外，应该在最后一行继续编辑，所有大多情况下需要鼠标滑动到行尾，搜索过很多方法，不如Ctrl+A，然后→右箭头好用。mark"></a>不知道大家有没有用有道云笔记的没有，经常性的新打开的笔记会在首行，但除了阅读之外，应该在最后一行继续编辑，所有大多情况下需要鼠标滑动到行尾，搜索过很多方法，不如Ctrl+A，然后→右箭头好用。mark</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;JUnitGenerator安装&quot;&gt;&lt;a href=&quot;#JUnitGenerator安装&quot; class=&quot;headerlink&quot; title=&quot;JUnitGenerator安装&quot;&gt;&lt;/a&gt;JUnitGenerator安装&lt;/h1&gt;&lt;p&gt;在Idea市场里安装JUni</summary>
-      
-    
-    
-    
-    
-    <category term="JunitTest" scheme="https://zkkget.github.io/tags/JunitTest/"/>
     
   </entry>
   
