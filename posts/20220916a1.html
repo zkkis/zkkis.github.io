@@ -17,21 +17,26 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Mysql保留关键字 | 赵KK的个人博客</title>
-  <meta name="description" content="MySQL关键字（保留字）列表在使用MySQL的时候，一般尽量避免用关键字作为表名，如使用关键字做表名，需要按标准写法给SQL语句加区分字段名和表名。 下面列出MySQL所有关键字，希望给使用MySQL的朋友提供一些参考帮助。 ADD    ALL    ALTERANALYZE    AND    ASASC    ASENSITIVE    BEFOREBETWEEN    BIGINT">
+  <title>Nacos源码解析 | 赵KK的个人博客</title>
+  <meta name="description" content="总流程一、入口分析服务注册与发现@EnableDiscoveryClient 12345678910111213@Target(ElementType.TYPE)@Retention(RetentionPolicy.RUNTIME)@Documented@Inherited&#x2F;&#x2F;@Import注解用来帮助我们把一些需要定义为Bean的类导入到IOC容器里面@Import(EnableDiscover">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql保留关键字">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220830a1.html">
+<meta property="og:title" content="Nacos源码解析">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220916a1.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="MySQL关键字（保留字）列表在使用MySQL的时候，一般尽量避免用关键字作为表名，如使用关键字做表名，需要按标准写法给SQL语句加区分字段名和表名。 下面列出MySQL所有关键字，希望给使用MySQL的朋友提供一些参考帮助。 ADD    ALL    ALTERANALYZE    AND    ASASC    ASENSITIVE    BEFOREBETWEEN    BIGINT">
+<meta property="og:description" content="总流程一、入口分析服务注册与发现@EnableDiscoveryClient 12345678910111213@Target(ElementType.TYPE)@Retention(RetentionPolicy.RUNTIME)@Documented@Inherited&#x2F;&#x2F;@Import注解用来帮助我们把一些需要定义为Bean的类导入到IOC容器里面@Import(EnableDiscover">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-30T06:53:46.000Z">
-<meta property="article:modified_time" content="2022-08-30T06:54:11.240Z">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/nacos.webp">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/nacosdiscovery.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/SpringCloudCommons.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/serviceregistry.jpg">
+<meta property="article:published_time" content="2022-09-16T02:24:22.000Z">
+<meta property="article:modified_time" content="2022-09-16T08:15:48.284Z">
 <meta property="article:author" content="赵KK">
-<meta property="article:tag" content="Mysql">
+<meta property="article:tag" content="SpringCloud Nacos">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/nacos.webp">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220830a1.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220916a1.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -362,16 +367,25 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Mysql保留关键字" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Nacos源码解析" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Mysql保留关键字
+      Nacos源码解析
     </h1>
   
 
@@ -379,15 +393,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220830a1.html" class="article-date">
-	  <time datetime="2022-08-30T06:53:46.000Z" itemprop="datePublished">2022-08-30</time>
+	<a href="/posts/20220916a1.html" class="article-date">
+	  <time datetime="2022-09-16T02:24:22.000Z" itemprop="datePublished">2022-09-16</time>
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/SpringCloud-Nacos/">SpringCloud Nacos</a>
+  </span>
+
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/Mysql/" rel="tag">Mysql</a>
+	<a class="article-tag-link-link" href="/tags/SpringCloud-Nacos/" rel="tag">SpringCloud Nacos</a>
   </span>
 
 
@@ -400,22 +419,35 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220830a1.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220916a1.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 237(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 818(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>MySQL关键字（保留字）列表<br>在使用MySQL的时候，一般尽量避免用关键字作为表名，如使用关键字做表名，需要按标准写法给SQL语句加<a href="%E6%88%96%E6%98%AF%E2%80%9C"></a>区分字段名和表名。</p>
-<p>下面列出MySQL所有关键字，希望给使用MySQL的朋友提供一些参考帮助。</p>
-<p>ADD    ALL    ALTER<br>ANALYZE    AND    AS<br>ASC    ASENSITIVE    BEFORE<br>BETWEEN    BIGINT    BINARY<br>BLOB    BOTH    BY<br>CALL    CASCADE    CASE<br>CHANGE    CHAR    CHARACTER<br>CHECK    COLLATE    COLUMN<br>CONDITION    CONNECTION    CONSTRAINT<br>CONTINUE    CONVERT    CREATE<br>CROSS    CURRENT_DATE    CURRENT_TIME<br>CURRENT_TIMESTAMP    CURRENT_USER    CURSOR<br>DATABASE    DATABASES    DAY_HOUR<br>DAY_MICROSECOND    DAY_MINUTE    DAY_SECOND<br>DEC    DECIMAL    DECLARE<br>DEFAULT    DELAYED    DELETE<br>DESC    DESCRIBE    DETERMINISTIC<br>DISTINCT    DISTINCTROW    DIV<br>DOUBLE    DROP    DUAL<br>EACH    ELSE    ELSEIF<br>ENCLOSED    ESCAPED    EXISTS<br>EXIT    EXPLAIN    FALSE<br>FETCH    FLOAT    FLOAT4<br>FLOAT8    FOR    FORCE<br>FOREIGN    FROM    FULLTEXT<br>GOTO    GRANT    GROUP<br>HAVING    HIGH_PRIORITY    HOUR_MICROSECOND<br>HOUR_MINUTE    HOUR_SECOND    IF<br>IGNORE    IN    INDEX<br>INFILE    INNER    INOUT<br>INSENSITIVE    INSERT    INT<br>INT1    INT2    INT3<br>INT4    INT8    INTEGER<br>INTERVAL    INTO    IS<br>ITERATE    JOIN    KEY<br>KEYS    KILL    LABEL<br>LEADING    LEAVE    LEFT<br>LIKE    LIMIT    LINEAR<br>LINES    LOAD    LOCALTIME<br>LOCALTIMESTAMP    LOCK    LONG<br>LONGBLOB    LONGTEXT    LOOP<br>LOW_PRIORITY    MATCH    MEDIUMBLOB<br>MEDIUMINT    MEDIUMTEXT    MIDDLEINT<br>MINUTE_MICROSECOND    MINUTE_SECOND    MOD<br>MODIFIES    NATURAL    NOT<br>NO_WRITE_TO_BINLOG    NULL    NUMERIC<br>ON    OPTIMIZE    OPTION<br>OPTIONALLY    OR    ORDER<br>OUT    OUTER    OUTFILE<br>PRECISION    PRIMARY    PROCEDURE<br>PURGE    RAID0    RANGE<br>READ    READS    REAL<br>REFERENCES    REGEXP    RELEASE<br>RENAME    REPEAT    REPLACE<br>REQUIRE    RESTRICT    RETURN<br>REVOKE    RIGHT    RLIKE<br>SCHEMA    SCHEMAS    SECOND_MICROSECOND<br>SELECT    SENSITIVE    SEPARATOR<br>SET    SHOW    SMALLINT<br>SPATIAL    SPECIFIC    SQL<br>SQLEXCEPTION    SQLSTATE    SQLWARNING<br>SQL_BIG_RESULT    SQL_CALC_FOUND_ROWS    SQL_SMALL_RESULT<br>SSL    STARTING    STRAIGHT_JOIN<br>TABLE    TERMINATED    THEN<br>TINYBLOB    TINYINT    TINYTEXT<br>TO    TRAILING    TRIGGER<br>TRUE    UNDO    UNION<br>UNIQUE    UNLOCK    UNSIGNED<br>UPDATE    USAGE    USE<br>USING    UTC_DATE    UTC_TIME<br>UTC_TIMESTAMP    VALUES    VARBINARY<br>VARCHAR    VARCHARACTER    VARYING<br>WHEN    WHERE    WHILE<br>WITH    WRITE    X509<br>XOR    YEAR_MONTH    ZEROFILL</p>
+        <p>总流程<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/nacos.webp" alt="流程"><br>一、入口分析<br>服务注册与发现@EnableDiscoveryClient</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target(ElementType.TYPE)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Inherited</span></span><br><span class="line"><span class="comment">//@Import注解用来帮助我们把一些需要定义为Bean的类导入到IOC容器里面</span></span><br><span class="line"><span class="meta">@Import(EnableDiscoveryClientImportSelector.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> EnableDiscoveryClient &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * If true, the ServiceRegistry will automatically register the local server.默认为true</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">boolean</span> <span class="title">autoRegister</span><span class="params">()</span> <span class="keyword">default</span> <span class="keyword">true</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在调用autoRegister()方法时默认返回true,在本接口中还引入了ImportSelector类即@Import(EnableDiscoveryClientImportSelector.class),其中selectImports调用如下</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@Override</span></span><br><span class="line">public String[] selectImports(AnnotationMetadata metadata) &#123;</span><br><span class="line">	String[] imports <span class="operator">=</span> super.selectImports(metadata);</span><br><span class="line"></span><br><span class="line">	AnnotationAttributes attributes <span class="operator">=</span> AnnotationAttributes.fromMap(</span><br><span class="line">			metadata.getAnnotationAttributes(getAnnotationClass().getName(), <span class="literal">true</span>));</span><br><span class="line">	<span class="operator">/</span><span class="operator">/</span>获取本类的autoRegister属性</span><br><span class="line">	<span class="type">boolean</span> autoRegister <span class="operator">=</span> attributes.getBoolean(&quot;autoRegister&quot;);</span><br><span class="line"></span><br><span class="line">	if (autoRegister) &#123;</span><br><span class="line">		List<span class="operator">&lt;</span>String<span class="operator">&gt;</span> importsList <span class="operator">=</span> <span class="keyword">new</span> ArrayList<span class="operator">&lt;&gt;</span>(Arrays.asList(imports));</span><br><span class="line">		importsList.add(&quot;org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationConfiguration&quot;);</span><br><span class="line">		imports <span class="operator">=</span> importsList.toArray(<span class="keyword">new</span> String[<span class="number">0</span>]);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		Environment env <span class="operator">=</span> getEnvironment();</span><br><span class="line">		if(ConfigurableEnvironment.class.isInstance(env)) &#123;</span><br><span class="line">			ConfigurableEnvironment configEnv <span class="operator">=</span> (ConfigurableEnvironment)env;</span><br><span class="line">			LinkedHashMap<span class="operator">&lt;</span>String, Object<span class="operator">&gt;</span> map <span class="operator">=</span> <span class="keyword">new</span> LinkedHashMap<span class="operator">&lt;&gt;</span>();</span><br><span class="line">			<span class="operator">/</span><span class="operator">/</span>注入yml文件属性</span><br><span class="line">			map.put(&quot;spring.cloud.service-registry.auto-registration.enabled&quot;, <span class="literal">false</span>);</span><br><span class="line">			MapPropertySource propertySource <span class="operator">=</span> <span class="keyword">new</span> MapPropertySource(</span><br><span class="line">					&quot;springCloudDiscoveryClient&quot;, map);</span><br><span class="line">			configEnv.getPropertySources().addLast(propertySource);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> imports;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>二、META-INF/spring.factories</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.boot.autoconfigure.EnableAutoConfiguration=\</span><br><span class="line">  com.alibaba.cloud.nacos.discovery.NacosDiscoveryAutoConfiguration,\</span><br><span class="line">  com.alibaba.cloud.nacos.endpoint.NacosDiscoveryEndpointAutoConfiguration,\</span><br><span class="line">  com.alibaba.cloud.nacos.registry.NacosServiceRegistryAutoConfiguration,\</span><br><span class="line">  com.alibaba.cloud.nacos.discovery.NacosDiscoveryClientConfiguration,\</span><br><span class="line">  com.alibaba.cloud.nacos.discovery.reactive.NacosReactiveDiscoveryClientConfiguration,\</span><br><span class="line">  com.alibaba.cloud.nacos.discovery.configclient.NacosConfigServerAutoConfiguration,\</span><br><span class="line">  com.alibaba.cloud.nacos.loadbalancer.LoadBalancerNacosAutoConfiguration,\</span><br><span class="line">  com.alibaba.cloud.nacos.NacosServiceAutoConfiguration</span><br><span class="line">org.springframework.cloud.bootstrap.BootstrapConfiguration=\</span><br><span class="line">  com.alibaba.cloud.nacos.discovery.configclient.NacosDiscoveryClientConfigServiceBootstrapConfiguration</span><br><span class="line">org.springframework.context.ApplicationListener=\</span><br><span class="line">  com.alibaba.cloud.nacos.discovery.logging.NacosLoggingListener</span><br></pre></td></tr></table></figure>
+<p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/nacosdiscovery.jpg" alt="流程"><br>NacosDiscoveryAutoConfiguration</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration(proxyBeanMethods = false)</span></span><br><span class="line"><span class="meta">@ConditionalOnDiscoveryEnabled</span></span><br><span class="line"><span class="meta">@ConditionalOnNacosDiscoveryEnabled</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NacosDiscoveryAutoConfiguration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="meta">@ConditionalOnMissingBean</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> NacosDiscoveryProperties <span class="title">nacosProperties</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> NacosDiscoveryProperties();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="meta">@ConditionalOnMissingBean</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> NacosServiceDiscovery <span class="title">nacosServiceDiscovery</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">			NacosDiscoveryProperties discoveryProperties,</span></span></span><br><span class="line"><span class="params"><span class="function">			NacosServiceManager nacosServiceManager)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> NacosServiceDiscovery(discoveryProperties, nacosServiceManager);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>三、服务自动注册<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/SpringCloudCommons.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/serviceregistry.jpg" alt="流程"><br>Spring Cloud 有 Euerka、ZK、Nacos 等多种注册中心的实现，想要达到实现统一必须有一套规范，而Spring Cloud Commons 就是定义了这一规范。<br>Spring Cloud Commons里面的org.springframework.cloud.client.serviceregistry包下面有 AutoServiceRegistration、Registration、ServiceRegistry这三个接口，这是服务注册的核心接口<br>其中Registration继承了ServiceInstance,在ServiceInstance中规范了一个服务实例属性<br>1、AutoServiceRegistration用于服务自动注册。自动注册的意思就是，服务启动后自动把服务信息注册到注册中心。它的存在就是要规范实现必须要有自动注册.</p>
+<p>2、Registration存储服务信息，用于规范将什么信息注册到注册中心,</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Registration</span> <span class="keyword">extends</span> <span class="title">ServiceInstance</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ServiceInstance</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> The unique instance ID as registered.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">//注册的唯一ID</span></span><br><span class="line">	<span class="function"><span class="keyword">default</span> String <span class="title">getInstanceId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> The service ID as registered.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function">String <span class="title">getServiceId</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> The hostname of the registered service instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function">String <span class="title">getHost</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> The port of the registered service instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getPort</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> Whether the port of the registered service instance uses HTTPS.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	是否使用<span class="function">HTTPS</span></span><br><span class="line"><span class="function">	<span class="keyword">boolean</span> <span class="title">isSecure</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> The service URI address.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function">URI <span class="title">getUri</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> The key / value pair metadata associated with the service instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function">Map&lt;String, String&gt; <span class="title">getMetadata</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> The scheme of the service instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	注册服务的约束</span><br><span class="line">	<span class="function"><span class="keyword">default</span> String <span class="title">getScheme</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>3、ServiceRegistry用来注册或者注销服务</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ServiceRegistry</span>&lt;<span class="title">R</span> <span class="keyword">extends</span> <span class="title">Registration</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Registers the registration. A registration typically has information about an</span></span><br><span class="line"><span class="comment">	 * instance, such as its hostname and port.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> registration registration meta data</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">register</span><span class="params">(R registration)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Deregisters the registration.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> registration registration meta data</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">deregister</span><span class="params">(R registration)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Closes the ServiceRegistry. This is a lifecycle method.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">close</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Sets the status of the registration. The status values are determined by the</span></span><br><span class="line"><span class="comment">	 * individual implementations.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> registration The registration to update.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> status The status to set.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setStatus</span><span class="params">(R registration, String status)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Gets the status of a particular registration.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> registration The registration to query.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &lt;T&gt; The type of the status.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> The status of the registration.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	&lt;T&gt; <span class="function">T <span class="title">getStatus</span><span class="params">(R registration)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 
       
     </div>
@@ -425,7 +457,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220830a1.html" title="Mysql保留关键字" target="_blank" rel="external">https://zkkget.github.io/posts/20220830a1.html</a>
+      <a href="https://zkkget.github.io/posts/20220916a1.html" title="Nacos源码解析" target="_blank" rel="external">https://zkkget.github.io/posts/20220916a1.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -471,15 +503,20 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/20220916a1.html" title="Nacos源码解析"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/20220812cl848vz6i0001lsuj47y84ppm.html" title="1000万数据对比ContainsAll实测"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220830a1.html" title="Mysql保留关键字"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
     
   </ul>
   
