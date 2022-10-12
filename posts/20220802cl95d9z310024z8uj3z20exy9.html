@@ -21,20 +21,20 @@
   <meta name="description" content="@Service 和@Component 注解的差别？@Component spring基础的注解,被spring管理的组件或bean,用于将对象实例化到Spring容器中而@Service源码中是包含@Component注解的,也就是说service实现component的功能,但service用于服务层,处理业务逻辑 各种 Restful 请求格式以及各种 http 请求返回码。123API,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向面试编程">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220802cl95ctt8u002124uj44lv3k1g.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220802cl95d9z310024z8uj3z20exy9.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="@Service 和@Component 注解的差别？@Component spring基础的注解,被spring管理的组件或bean,用于将对象实例化到Spring容器中而@Service源码中是包含@Component注解的,也就是说service实现component的功能,但service用于服务层,处理业务逻辑 各种 Restful 请求格式以及各种 http 请求返回码。123API,">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/374544735d0dd4104601ef98749c7f89.jpg">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/05-305138350.jpg">
 <meta property="article:published_time" content="2022-08-02T03:35:12.000Z">
-<meta property="article:modified_time" content="2022-10-12T08:12:20.403Z">
+<meta property="article:modified_time" content="2022-10-12T08:25:09.072Z">
 <meta property="article:author" content="赵KK">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/374544735d0dd4104601ef98749c7f89.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220802cl95ctt8u002124uj44lv3k1g.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220802cl95d9z310024z8uj3z20exy9.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -382,7 +382,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220802cl95ctt8u002124uj44lv3k1g.html" class="article-date">
+	<a href="/posts/20220802cl95d9z310024z8uj3z20exy9.html" class="article-date">
 	  <time datetime="2022-08-02T03:35:12.000Z" itemprop="datePublished">2022-08-02</time>
 	</a>
 </span>
@@ -403,7 +403,7 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220802cl95ctt8u002124uj44lv3k1g.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220802cl95d9z310024z8uj3z20exy9.html#comments" class="article-comment-link">评论</a></span>
         
 	
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 21.6k(字)</span>
@@ -427,7 +427,7 @@
 <p>实例化（Instantiation）<br>属性赋值（Populate）<br>初始化（Initialization）<br>销毁（Destruction）<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/374544735d0dd4104601ef98749c7f89.jpg" alt="流程"></p>
 <h2 id="Spring-Boot-启动流程以及底层源码"><a href="#Spring-Boot-启动流程以及底层源码" class="headerlink" title="Spring Boot 启动流程以及底层源码"></a>Spring Boot 启动流程以及底层源码</h2><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/05-305138350.jpg" alt="流程"></p>
 <h2 id="索引的数据结构（比如-B-树）"><a href="#索引的数据结构（比如-B-树）" class="headerlink" title="索引的数据结构（比如 B+树）"></a>索引的数据结构（比如 B+树）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">B+Tree</span><br><span class="line">B+Tree相对于B-Tree有几点不同：</span><br><span class="line">非叶子节点只存储键值信息。</span><br><span class="line">所有叶子节点之间都有一个链指针。</span><br><span class="line">数据记录都存放在叶子节点中。</span><br><span class="line">查询速度快,但是占用空间</span><br><span class="line">索引结构：B-Tree B+Tree B：balance</span><br><span class="line">B-Tree：平衡二叉树</span><br><span class="line">特点：</span><br><span class="line"><span class="number">1.</span>具有数据节点</span><br><span class="line"><span class="number">2.</span>指向下层指针</span><br><span class="line"><span class="number">3.</span>指向数据指针</span><br><span class="line">缺页查询,产生IO</span><br><span class="line">B+Tree：</span><br><span class="line">特点:</span><br><span class="line"><span class="number">1.</span>具有数据节点</span><br><span class="line"><span class="number">2.</span>指向下层指针</span><br><span class="line">命中数据<span class="number">3</span>层查找后查询数据指针</span><br><span class="line">加载更快,产生更少IO</span><br><span class="line">效率：BTree更高,但从IO角度,Mysql选择B+Tree</span><br><span class="line"></span><br><span class="line">Hash 索引的特点</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Hash 索引只能够用于使用 = 或者 &lt;=&gt; 运算符的相等比较(但是速度更快)。Hash 索引不能够用于诸如 &lt; 等</span><br><span class="line">用于查找一个范围值的比较运算符。依赖于这种单值查找的系统被称为 “键-值存储”；对于这种系统,尽可能地使用 hash 索引。</span><br><span class="line">优化器不能够使用 hash 索引来加速 ORDER BY 操作。这种类型的索引不能够用于按照顺序查找下一个条目。</span><br><span class="line">MySql 无法使用 hash 索引估计两个值之间有多少行(这种情况由范围优化器来决定使用哪个索引)。如果你将一张 MyISAM 或 InnoDB 表转换成一个 hash 索引的内存表时,一些查询可能会受此影响。</span><br><span class="line">查找某行记录必须进行全键匹配。而 B-tree 索引,任何该键的左前缀都可用以查找记录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>建索引的语句</p>
+<p><font color = red>索引是为了加速对表中数据行的检索而创建的一种分散的存储结构</font><br>建索引的语句</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX idx_xxx <span class="keyword">USING</span> BTREE <span class="keyword">ON</span> tablename (字段,字段,字段);</span><br></pre></td></tr></table></figure>
 <p>索引的种类尤其是复合索引以及对应的回表和最左匹配原则</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">普通索引：最基本的索引,没有任何约束限制。</span><br><span class="line">唯一索引：和普通索引类似,但是具有唯一性约束,可以有 <span class="keyword">null</span></span><br><span class="line">主键索引：特殊的唯一索引,不允许有 <span class="keyword">null</span>,一张表最多一个主键索引</span><br><span class="line">组合索引：多列值组成一个索引,用于组合搜索,效率大于索引合并</span><br><span class="line">全文索引：对文本的内容进行分词、搜索</span><br><span class="line">覆盖索引：查询列要被所建的索引覆盖,不必读取数据行</span><br><span class="line"><span class="number">1</span>、复合索引绑定的第一个列,没有出现在查询条件中;</span><br><span class="line">举例说明：为emp表插入索引idx_age_deptid_name(age,deptid,name),但是在查询条件中未使用age,导致复合索引全部失效。</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、复合索引绑定的多个列是有顺序的,某一个列没有出现在查询条件中,存储引擎不能使用索引中该列及其后的所有列。</span><br><span class="line">举例：为emp表插入索引idx_age_deptid_name(age,deptid,name),查询时查询条件里没有deptid列,会导致复合索引中的deptid及其后的索引失效。</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>查询条件中出现某个列是范围查询的,存储引擎不能使用复合索引中该列其后的所有列。</span><br><span class="line">举例：为emp表插入索引idx_age_deptid_name(age,deptid,name),查询时查询条件里deptid列使用到了范围查询,会导致复合索引中的deptid其后的索引失效。</span><br><span class="line"></span><br><span class="line"><span class="number">4.</span>查询条件中某列使用否定条件的（!= &lt;&gt; IS NOT NULL）,存储引擎不能使用索引中该列其后的所有列。</span><br><span class="line">举例：为emp表插入索引idx_age_deptid_name(age,deptid,name),查询时查询条件里deptid列使用到了否定条件,会导致复合索引中的deptid其后的索引失效。</span><br><span class="line"></span><br><span class="line"><span class="number">5.</span>查询条件中某列使用LIKE条件后的字段是以%开头的（如：’%ABC’）,存储引擎不能使用索引中该列及其后的所有列。</span><br><span class="line">举例：为emp表插入索引idx_age_deptid_name(age,deptid,name),查询时查询条件里name列使用到了like ‘%a’,会导致复合索引中的name及其后的索引失效。</span><br><span class="line"></span><br><span class="line"><span class="number">6.</span>查询条件中某列使用函数的,存储引擎不能使用索引中该列及其后的所有列。</span><br><span class="line">举例：为emp表插入索引idx_age_deptid_name(age,deptid,name),查询时查询条件里name列使用到了like ‘%a’,会导致复合索引中的name及其后的索引失效。</span><br><span class="line"></span><br><span class="line"><span class="number">7.</span>查询条件中某列使用类型转换的（包括显示的和隐示的）,存储引擎不能使用索引中该列及其后的所有列。</span><br><span class="line">如：字符串类型的列NAME=<span class="number">3</span>,就是隐示的类型转换,将INT型转换为字符串类型。如果写为NAME=’<span class="number">3</span>’,就不是类型转换。</span><br><span class="line">举例：为emp表插入索引idx_age_deptid_name(age,deptid,name),查询时查询条件name=<span class="number">3</span>,会导致复合索引中的name及其后的索引失效。条件写成name=‘<span class="number">3</span>’,索引就不会失效。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -709,7 +709,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220802cl95ctt8u002124uj44lv3k1g.html" title="面向面试编程" target="_blank" rel="external">https://zkkget.github.io/posts/20220802cl95ctt8u002124uj44lv3k1g.html</a>
+      <a href="https://zkkget.github.io/posts/20220802cl95d9z310024z8uj3z20exy9.html" title="面向面试编程" target="_blank" rel="external">https://zkkget.github.io/posts/20220802cl95d9z310024z8uj3z20exy9.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -756,12 +756,12 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220812cl95ctt75000124uj44x9f9t6.html" title="1000万数据对比ContainsAll实测"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220812cl95d9yzv0001z8uj9zowboid.html" title="1000万数据对比ContainsAll实测"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220728cl95ctt7g000624uj8rgy8ysk.html" title="CompletableFuture"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220728cl95d9z0d0003z8uj7byrcxxz.html" title="CompletableFuture"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
