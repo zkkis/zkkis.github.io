@@ -6,7 +6,7 @@
   <link href="https://zkkget.github.io/atom.xml" rel="self"/>
   
   <link href="https://zkkget.github.io/"/>
-  <updated>2022-10-12T06:17:13.304Z</updated>
+  <updated>2022-10-12T07:22:50.037Z</updated>
   <id>https://zkkget.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://zkkget.github.io/posts/20221012a1.html"/>
     <id>https://zkkget.github.io/posts/20221012a1.html</id>
     <published>2022-10-12T06:12:47.000Z</published>
-    <updated>2022-10-12T06:17:13.304Z</updated>
+    <updated>2022-10-12T07:22:50.037Z</updated>
     
-    <content type="html"><![CDATA[<ol start="817"><li>链表组件 中等<br>给定链表头结点 head，该链表上的每个结点都有一个 唯一的整型值 。同时给定列表 nums，该列表是上述链表中整型值的一个子集。</li></ol><p>返回列表 nums 中组件的个数，这里对组件的定义为：链表中一段最长连续结点的值（该值必须在列表 nums 中）构成的集合。<br>*</p><ul><li>输入: head = [0,1,2,3], nums = [0,1,3]<br>输出: 2<br>解释: 链表中,0 和 1 是相连接的，且 nums 中不包含 2，所以 [0, 1] 是 nums 的一个组件，同理 [3] 也是一个组件，故返回 2。</li><li></li><li>输入: head = [0,1,2,3,4], nums = [0,3,1,4]<br>输出: 2<br>解释: 链表中，0 和 1 是相连接的，3 和 4 是相连接的，所以 [0, 1] 和 [3, 4] 是两个组件，故返回 2。</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public static int numComponents(ListNode head, int[] nums) &#123;</span><br><span class="line"></span><br><span class="line">        HashSet&lt;Integer&gt; set = new HashSet&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            set.add(num);</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode p = head;</span><br><span class="line">        int count =0;</span><br><span class="line">        while (p != null)&#123;</span><br><span class="line">            if(set.contains(p.val) &amp;&amp; (p.next == null  || !set.contains(p.next.val))) count++;</span><br><span class="line">            p = p.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        ListNode head = new ListNode();</span><br><span class="line">        ListNode nextNode;</span><br><span class="line">        nextNode=head;</span><br><span class="line">        int[] nodes = &#123;0,1,2&#125;;</span><br><span class="line"></span><br><span class="line">        for(int i=0;i&lt;nodes.length;i++)&#123;</span><br><span class="line">            ListNode node = new ListNode(nodes[i]);</span><br><span class="line">            nextNode.next=node;</span><br><span class="line">            nextNode=nextNode.next;</span><br><span class="line">        &#125;</span><br><span class="line">        int[] nums = &#123;0,2&#125;;</span><br><span class="line">        int i = numComponents(head, nums);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/LeetCode817.png" alt="817"></p>]]></content>
+    <content type="html"><![CDATA[<ol start="817"><li>链表组件 中等<br>给定链表头结点 head，该链表上的每个结点都有一个 唯一的整型值 。同时给定列表 nums，该列表是上述链表中整型值的一个子集。</li></ol><p>返回列表 nums 中组件的个数，这里对组件的定义为：链表中一段最长连续结点的值（该值必须在列表 nums 中）构成的集合。<br>*</p><ul><li>输入: head = [0,1,2,3], nums = [0,1,3]<br>输出: 2<br>解释: 链表中,0 和 1 是相连接的，且 nums 中不包含 2，所以 [0, 1] 是 nums 的一个组件，同理 [3] 也是一个组件，故返回 2。</li><li></li><li>输入: head = [0,1,2,3,4], nums = [0,3,1,4]<br>输出: 2<br>解释: 链表中，0 和 1 是相连接的，3 和 4 是相连接的，所以 [0, 1] 和 [3, 4] 是两个组件，故返回 2。</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public static int numComponents(ListNode head, int[] nums) &#123;</span><br><span class="line"></span><br><span class="line">        HashSet&lt;Integer&gt; set = new HashSet&lt;&gt;();</span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            set.add(num);</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode p = head;</span><br><span class="line">        int count =0;</span><br><span class="line">        while (p != null)&#123;</span><br><span class="line">            if(set.contains(p.val) &amp;&amp; (p.next == null  || !set.contains(p.next.val))) count++;</span><br><span class="line">            p = p.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        ListNode head = new ListNode();</span><br><span class="line">        ListNode nextNode;</span><br><span class="line">        nextNode=head;</span><br><span class="line">        int[] nodes = &#123;0,1,2&#125;;</span><br><span class="line"></span><br><span class="line">        for(int i=0;i&lt;nodes.length;i++)&#123;</span><br><span class="line">            ListNode node = new ListNode(nodes[i]);</span><br><span class="line">            nextNode.next=node;</span><br><span class="line">            nextNode=nextNode.next;</span><br><span class="line">        &#125;</span><br><span class="line">        int[] nums = &#123;0,2&#125;;</span><br><span class="line">        int i = numComponents(head, nums);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/817-2.jpg" alt="817"></p>]]></content>
     
     
       
@@ -142,8 +142,8 @@
   
   <entry>
     <title>1000万数据对比ContainsAll实测</title>
-    <link href="https://zkkget.github.io/posts/20220812cl958pg0t0003tgujgdib9p5o.html"/>
-    <id>https://zkkget.github.io/posts/20220812cl958pg0t0003tgujgdib9p5o.html</id>
+    <link href="https://zkkget.github.io/posts/20220812cl95b1w7t0001iwujhybtdict.html"/>
+    <id>https://zkkget.github.io/posts/20220812cl95b1w7t0001iwujhybtdict.html</id>
     <published>2022-08-12T08:24:06.000Z</published>
     <updated>2022-08-12T08:25:08.475Z</updated>
     
@@ -164,8 +164,8 @@
   
   <entry>
     <title>面向面试编程</title>
-    <link href="https://zkkget.github.io/posts/20220802cl958pg32001ztgujci1sb23p.html"/>
-    <id>https://zkkget.github.io/posts/20220802cl958pg32001ztgujci1sb23p.html</id>
+    <link href="https://zkkget.github.io/posts/20220802cl95b1wa0002iiwuj2184a8gr.html"/>
+    <id>https://zkkget.github.io/posts/20220802cl95b1wa0002iiwuj2184a8gr.html</id>
     <published>2022-08-02T03:35:12.000Z</published>
     <updated>2022-09-06T03:34:36.967Z</updated>
     
@@ -186,8 +186,8 @@
   
   <entry>
     <title>CompletableFuture</title>
-    <link href="https://zkkget.github.io/posts/20220728cl958pg0y0007tguj2n71c8ht.html"/>
-    <id>https://zkkget.github.io/posts/20220728cl958pg0y0007tguj2n71c8ht.html</id>
+    <link href="https://zkkget.github.io/posts/20220728cl95b1w8c0003iwuja2awc68o.html"/>
+    <id>https://zkkget.github.io/posts/20220728cl95b1w8c0003iwuja2awc68o.html</id>
     <published>2022-07-28T02:44:05.000Z</published>
     <updated>2022-09-05T02:55:53.648Z</updated>
     
@@ -208,8 +208,8 @@
   
   <entry>
     <title>优雅永不过时</title>
-    <link href="https://zkkget.github.io/posts/20220726cl958pg2l001itguj6cugh4rn.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl958pg2l001itguj6cugh4rn.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl95b1w9s0020iwuj9f7644kd.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl95b1w9s0020iwuj9f7644kd.html</id>
     <published>2022-07-26T02:26:41.000Z</published>
     <updated>2022-07-26T02:30:41.087Z</updated>
     
@@ -229,8 +229,8 @@
   
   <entry>
     <title>Leetcode算法题</title>
-    <link href="https://zkkget.github.io/posts/20220726cl958pg100009tguja0o2azz8.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl958pg100009tguja0o2azz8.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl95b1w8j0008iwuje8i9fkyh.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl95b1w8j0008iwuje8i9fkyh.html</id>
     <published>2022-07-26T02:22:55.000Z</published>
     <updated>2022-07-26T02:26:11.279Z</updated>
     
@@ -253,8 +253,8 @@
   
   <entry>
     <title>蚂蚁一面整理</title>
-    <link href="https://zkkget.github.io/posts/20220726cl958pg2z001rtguj2tkfhdrw.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl958pg2z001rtguj2tkfhdrw.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl95b1w9w002biwuj7dmfd6yw.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl95b1w9w002biwuj7dmfd6yw.html</id>
     <published>2022-07-26T02:21:30.000Z</published>
     <updated>2022-07-26T02:22:19.303Z</updated>
     
@@ -275,8 +275,8 @@
   
   <entry>
     <title>List遍历删除</title>
-    <link href="https://zkkget.github.io/posts/20220726cl958pg12000btguj9jy279bs.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl958pg12000btguj9jy279bs.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl95b1w8l000biwujg4e88alx.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl95b1w8l000biwujg4e88alx.html</id>
     <published>2022-07-26T02:19:28.000Z</published>
     <updated>2022-07-26T02:20:44.374Z</updated>
     
@@ -298,8 +298,8 @@
   
   <entry>
     <title>Mysql海量数据存储与优化</title>
-    <link href="https://zkkget.github.io/posts/20220725cl958pg1f000ttgujemjs5d4q.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl958pg1f000ttgujemjs5d4q.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl95b1w8o000fiwujf07melsz.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl95b1w8o000fiwujf07melsz.html</id>
     <published>2022-07-25T08:17:47.000Z</published>
     <updated>2022-07-25T08:24:40.644Z</updated>
     
@@ -321,8 +321,8 @@
   
   <entry>
     <title>主站博客迁移之线上对事务的处理</title>
-    <link href="https://zkkget.github.io/posts/20220725cl958pg1t001etguj01qcc50r.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl958pg1t001etguj01qcc50r.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl95b1w9s0021iwuj11mgg6z0.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl95b1w9s0021iwuj11mgg6z0.html</id>
     <published>2022-07-25T08:15:07.000Z</published>
     <updated>2022-07-25T08:17:19.220Z</updated>
     
@@ -344,8 +344,8 @@
   
   <entry>
     <title>【声明】阿里云服务器导致图片不显示[可在此贴下方留言]</title>
-    <link href="https://zkkget.github.io/posts/20220725cl958pg1n0014tguj4su483o7.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl958pg1n0014tguj4su483o7.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl95b1w8z000uiwuj3bj40qco.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl95b1w8z000uiwuj3bj40qco.html</id>
     <published>2022-07-25T08:10:26.000Z</published>
     <updated>2022-07-25T08:11:46.075Z</updated>
     
@@ -364,8 +364,8 @@
   
   <entry>
     <title>主站博客迁移之字节跳动面经个人搜索答案</title>
-    <link href="https://zkkget.github.io/posts/20220725cl958pg2g001gtguj4950bmi1.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl958pg2g001gtguj4950bmi1.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl95b1w9b0019iwujdka6egxd.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl95b1w9b0019iwujdka6egxd.html</id>
     <published>2022-07-25T07:47:01.000Z</published>
     <updated>2022-07-26T02:30:47.107Z</updated>
     
@@ -387,8 +387,8 @@
   
   <entry>
     <title>主站博客迁移之Nginx安装与原理</title>
-    <link href="https://zkkget.github.io/posts/20220725cl958pg1k000ztguj9ehpf4vd.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl958pg1k000ztguj9ehpf4vd.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl95b1w960011iwujhosm4z4f.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl95b1w960011iwujhosm4z4f.html</id>
     <published>2022-07-25T07:39:59.000Z</published>
     <updated>2022-07-25T07:41:06.698Z</updated>
     
@@ -410,8 +410,8 @@
   
   <entry>
     <title>主站博客迁移之Thymleaf项目常用操作</title>
-    <link href="https://zkkget.github.io/posts/20220725cl958pg1q0018tguj3k63flhn.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl958pg1q0018tguj3k63flhn.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl95b1w9a0017iwujb5whf702.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl95b1w9a0017iwujb5whf702.html</id>
     <published>2022-07-25T07:36:44.000Z</published>
     <updated>2022-07-25T07:39:16.989Z</updated>
     
@@ -433,8 +433,8 @@
   
   <entry>
     <title>主站博客迁移之SpringCloudAlibaba服务注册新发现</title>
-    <link href="https://zkkget.github.io/posts/20220725cl958pg1o0015tgujflel7x7l.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl958pg1o0015tgujflel7x7l.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl95b1w970013iwuj54vkc3u7.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl95b1w970013iwuj54vkc3u7.html</id>
     <published>2022-07-25T07:18:07.000Z</published>
     <updated>2022-07-25T07:31:33.474Z</updated>
     
@@ -456,8 +456,8 @@
   
   <entry>
     <title>主站博客迁移之拒绝解析又臭又长的JSON</title>
-    <link href="https://zkkget.github.io/posts/20220725cl958pg2n001ktgujaphud2sr.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl958pg2n001ktgujaphud2sr.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl95b1w9d001diwuj1y0cftyw.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl95b1w9d001diwuj1y0cftyw.html</id>
     <published>2022-07-25T07:10:12.000Z</published>
     <updated>2022-07-25T07:11:54.562Z</updated>
     
