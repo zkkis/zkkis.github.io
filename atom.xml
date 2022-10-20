@@ -6,7 +6,7 @@
   <link href="https://zkkget.github.io/atom.xml" rel="self"/>
   
   <link href="https://zkkget.github.io/"/>
-  <updated>2022-10-12T07:22:50.037Z</updated>
+  <updated>2022-10-20T02:15:38.967Z</updated>
   <id>https://zkkget.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>字节跳动｜字节客户端｜一二三面+hr面（已Offer）</title>
+    <link href="https://zkkget.github.io/posts/20221018a1.html"/>
+    <id>https://zkkget.github.io/posts/20221018a1.html</id>
+    <published>2022-10-18T06:23:27.000Z</published>
+    <updated>2022-10-20T02:15:38.967Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一面｜45min"><a href="#一面｜45min" class="headerlink" title="一面｜45min"></a>一面｜45min</h2><p>1.输入url到页面展示过程</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">输入url地址</span><br><span class="line">应用层进行DNS解析</span><br><span class="line">应用层生成HTTP请求报文</span><br><span class="line">传输层建立TCP连接</span><br><span class="line">网络层使用IP协议来选择路线</span><br><span class="line">数据链路层实现网络相邻节点间可靠的数据通信</span><br><span class="line">物理层传输数据</span><br><span class="line">服务器处理反向传输</span><br><span class="line">服务器返回一个 HTTP 响应</span><br><span class="line">浏览器渲染</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/qinian8/article/details/99081105</span><br></pre></td></tr></table></figure><p>2.http和https的区别</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">HTTP（HyperText Transfer Protocol：超文本传输协议）是一种用于分布式、协作式和超媒体信息系统的应用层协议。 简单来说就是一种发布和接收 HTML 页面的方法，被用于在 Web 浏览器和网站服务器之间传递信息。</span><br><span class="line">HTTP 默认工作在 TCP 协议 80 端口，用户访问网站 http:// 打头的都是标准 HTTP 服务。</span><br><span class="line"></span><br><span class="line">HTTP 协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</span><br><span class="line"></span><br><span class="line">HTTPS（Hypertext Transfer Protocol Secure：超文本传输安全协议）是一种透过计算机网络进行安全通信的传输协议。HTTPS 经由 HTTP 进行通信，但利用 SSL/TLS 来加密数据包。HTTPS 开发的主要目的，是提供对网站服务器的身份认证，保护交换数据的隐私与完整性。</span><br><span class="line"></span><br><span class="line">HTTP 明文传输，数据都是未加密的，安全性较差，HTTPS（SSL+HTTP） 数据传输过程是加密的，安全性较好。</span><br><span class="line">使用 HTTPS 协议需要到 CA（Certificate Authority，数字证书认证机构） 申请证书，一般免费证书较少，因而需要一定费用。证书颁发机构如：Symantec、Comodo、GoDaddy 和 GlobalSign 等。</span><br><span class="line">HTTP 页面响应速度比 HTTPS 快，主要是因为 HTTP 使用 TCP 三次握手建立连接，客户端和服务器需要交换 3 个包，而 HTTPS除了 TCP 的三个包，还要加上 ssl 握手需要的 9 个包，所以一共是 12 个包。</span><br><span class="line">http 和 https 使用的是完全不同的连接方式，用的端口也不一样，前者是 80，后者是 443。</span><br><span class="line">HTTPS 其实就是建构在 SSL/TLS 之上的 HTTP 协议，所以，要比较 HTTPS 比 HTTP 要更耗费服务器资源</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/guolin_blog/article/details/104546558</span><br></pre></td></tr></table></figure><p>3.数字证书的内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">1）概念：</span><br><span class="line">数字证书是数字证书在一个身份和该身份的持有者所拥有的公/私钥对之间建立了一种联系，由认证中心（CA）或者认证中心的下级认证中心颁发的。根证书是认证中心与用户建立信任关系的基础。在用户使用数字证书之前必须首先下载和安装。</span><br><span class="line"></span><br><span class="line">认证中心是一家能向用户签发数字证书以确认用户身份的管理机构。为了防止数字凭证的伪造，认证中心的公共密钥必须是可靠的，认证中心必须公布其公共密钥或由更高级别的认证中心提供一个电子凭证来证明其公共密钥的有效性，后一种方法导致了多级别认证中心的出现。</span><br><span class="line"></span><br><span class="line">2）数字证书颁发过程：</span><br><span class="line"></span><br><span class="line">数字证书颁发过程如下：用户产生了自己的密钥对，并将公共密钥及部分个人身份信息传送给一家认证中心。认证中心在核实身份后，将执行一些必要的步骤，以确信请求确实由用户发送而来，然后，认证中心将发给用户一个数字证书，该证书内附了用户和他的密钥等信息，同时还附有对认证中心公共密钥加以确认的数字证书。当用户想证明其公开密钥的合法性时，就可以提供这一数字证书。</span><br><span class="line"></span><br><span class="line">3）内容：</span><br><span class="line"></span><br><span class="line">数字证书的格式普遍采用的是X.509V3国际标准，一个标准的X.509数字证书包含以下一些内容：</span><br><span class="line"></span><br><span class="line">1、证书的版本信息；</span><br><span class="line"></span><br><span class="line">2、证书的序列号，每个证书都有一个唯一的证书序列号；</span><br><span class="line"></span><br><span class="line">3、证书所使用的签名算法；</span><br><span class="line"></span><br><span class="line">4、证书的发行机构名称，命名规则一般采用X.500格式；</span><br><span class="line"></span><br><span class="line">5、证书的有效期，通用的证书一般采用UTC时间格式；</span><br><span class="line"></span><br><span class="line">6、证书所有人的名称，命名规则一般采用X.500格式；</span><br><span class="line"></span><br><span class="line">7、证书所有人的公开密钥；</span><br><span class="line"></span><br><span class="line">8、证书发行者对证书的签名。</span><br></pre></td></tr></table></figure><p>4.对称加密和非对称加密</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对称加密：加密和解密用的是同一个密码或者同一套逻辑的加密方式。对称加密的致命性缺点就是无法保证秘钥的安全性。</span><br><span class="line">非对称加密:加密和解密用的秘钥不是同一个</span><br></pre></td></tr></table></figure><p>5.https用的是对称加密还是非对称加密</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTTPS 在内容传输的加密上使用的是对称加密，非对称加密只作用在证书验证阶段</span><br></pre></td></tr></table></figure><p>6.http头部有哪些内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">包括通用头，请求头，响应头和实体头</span><br></pre></td></tr></table></figure><p>线程和进程的区别<br>进程通信的方式<br>线程的状态怎样转移<br>封装继承和多态<br>重载和重写的区别<br>垃圾回收算法了解吗<br>怎么判断对象需要被回收<br>GC ROOTS有哪些<br>安卓四大组件<br>activity的生命周期<br>从A活动打开B活动的生命周期<br>安卓中的动画有哪些，它们的区别是什么<br>handler机制<br>知道内存泄漏吗，举个例子<br>service的两种启动模式<br>activity哪些生命周期运行在主线程中<br>oncreat能执行耗时操作吗<br>activity的四种启动模式<br>算法题一，回型打印二维数组<br>算法题二，找到数组中和为k的对（用的双指针，排序面试官要求手写，手写了快排<br>次日约了二面</p><h2 id="二面｜20min"><a href="#二面｜20min" class="headerlink" title="二面｜20min"></a>二面｜20min</h2><p>1.重载和重写的区别（重复<br>2.静态方法能不能重写.<br>3.只有返回值不同算不算重载<br>4.类的加载过程<br>5.RecyclerView的缓存机制<br>6.事件分发机制<br>7.知道ANR吗<br>8.安卓有个比hashmap更优的数据结构了解吗（不了解）<br>9.如果让你写hashmap你会怎么写（答了蹲坑法和拉链法<br>10.智商题，6L，7L杯子得到5L水<br>算法一，判断A是不是B的子树<br>二面感觉面试官很忙很快就结束了。。。以为挂了结果当天晚上约了三面</p><h2 id="三面｜50min"><a href="#三面｜50min" class="headerlink" title="三面｜50min"></a>三面｜50min</h2><p>1.问了前两面的表现具体说说<br>算法题一，给一个数n，和一个数组，用数组中的数组成最大的小于n的数，数组中的数可以重复使用（贪心）<br>算法题二，一个数组求max(a[i]-a[j])其中i小于j<br>数学题一：求log2的第10000位（答：会用二分求近似，不会做这个…换了抛硬币，应该是牛顿迭代没学过。。。<br>数学题二：AB轮流抛硬币，A先抛，抛到正面胜利，抛到反面对方接着抛，问A的胜率，等比数列求和，还好还记得等比数列求和公式。。。<br>2.数据库ACID<br>3.缺页中断<br>4.页面置换算法<br>5.http的无状态<br>6.为什么设计成无状态<br>7.你觉得什么样的代码算好的代码（瞎说挖了好多坑。。。<br>8.什么叫可拓展性好，举个例子<br>9.为啥要降低耦合度<br>10.你提到了设计模式，设计模式的七大原则是什么（7挖的坑…不会，设计模式只会单例模式<br>11.你的优势和缺陷<br>三面当天下午收到hr面邀请</p><p>hr面｜20min<br>聊了一些职业规划得问题略</p><p>作者：匿名用户<br>链接：<a href="https://leetcode.cn/circle/discuss/eBN2jJ/">https://leetcode.cn/circle/discuss/eBN2jJ/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;一面｜45min&quot;&gt;&lt;a href=&quot;#一面｜45min&quot; class=&quot;headerlink&quot; title=&quot;一面｜45min&quot;&gt;&lt;/a&gt;一面｜45min&lt;/h2&gt;&lt;p&gt;1.输入url到页面展示过程&lt;/p&gt;
+&lt;figure class=&quot;highlight pl</summary>
+      
+    
+    
+    
+    <category term="面经" scheme="https://zkkget.github.io/categories/%E9%9D%A2%E7%BB%8F/"/>
+    
+    
+    <category term="面经" scheme="https://zkkget.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode每日一题之817题链表组件</title>
@@ -142,8 +167,8 @@
   
   <entry>
     <title>1000万数据对比ContainsAll实测</title>
-    <link href="https://zkkget.github.io/posts/20220812cl95d9yzv0001z8uj9zowboid.html"/>
-    <id>https://zkkget.github.io/posts/20220812cl95d9yzv0001z8uj9zowboid.html</id>
+    <link href="https://zkkget.github.io/posts/20220812cl9gfm3s30001moujaohh20pv.html"/>
+    <id>https://zkkget.github.io/posts/20220812cl9gfm3s30001moujaohh20pv.html</id>
     <published>2022-08-12T08:24:06.000Z</published>
     <updated>2022-08-12T08:25:08.475Z</updated>
     
@@ -164,8 +189,8 @@
   
   <entry>
     <title>面向面试编程</title>
-    <link href="https://zkkget.github.io/posts/20220802cl95d9z310024z8uj3z20exy9.html"/>
-    <id>https://zkkget.github.io/posts/20220802cl95d9z310024z8uj3z20exy9.html</id>
+    <link href="https://zkkget.github.io/posts/20220802cl9gfm3tl0023mouj0s0af6et.html"/>
+    <id>https://zkkget.github.io/posts/20220802cl9gfm3tl0023mouj0s0af6et.html</id>
     <published>2022-08-02T03:35:12.000Z</published>
     <updated>2022-10-12T08:25:09.072Z</updated>
     
@@ -186,8 +211,8 @@
   
   <entry>
     <title>CompletableFuture</title>
-    <link href="https://zkkget.github.io/posts/20220728cl95d9z0d0003z8uj7byrcxxz.html"/>
-    <id>https://zkkget.github.io/posts/20220728cl95d9z0d0003z8uj7byrcxxz.html</id>
+    <link href="https://zkkget.github.io/posts/20220728cl9gfm3sa0003mouj45irawgw.html"/>
+    <id>https://zkkget.github.io/posts/20220728cl9gfm3sa0003mouj45irawgw.html</id>
     <published>2022-07-28T02:44:05.000Z</published>
     <updated>2022-09-05T02:55:53.648Z</updated>
     
@@ -208,8 +233,8 @@
   
   <entry>
     <title>优雅永不过时</title>
-    <link href="https://zkkget.github.io/posts/20220726cl95d9z2c001pz8ujas0a5j7k.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl95d9z2c001pz8ujas0a5j7k.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl9gfm3t7001cmoujh1156hqb.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl9gfm3t7001cmoujh1156hqb.html</id>
     <published>2022-07-26T02:26:41.000Z</published>
     <updated>2022-07-26T02:30:41.087Z</updated>
     
@@ -229,8 +254,8 @@
   
   <entry>
     <title>Leetcode算法题</title>
-    <link href="https://zkkget.github.io/posts/20220726cl95d9z0n0008z8ujgf8b8rp3.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl95d9z0n0008z8ujgf8b8rp3.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl9gfm3sh0008mouj7r6e1wy9.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl9gfm3sh0008mouj7r6e1wy9.html</id>
     <published>2022-07-26T02:22:55.000Z</published>
     <updated>2022-07-26T02:26:11.279Z</updated>
     
@@ -253,8 +278,8 @@
   
   <entry>
     <title>蚂蚁一面整理</title>
-    <link href="https://zkkget.github.io/posts/20220726cl95d9z33002az8uj1n6319j0.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl95d9z33002az8uj1n6319j0.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl9gfm3td001omouj8eptdktl.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl9gfm3td001omouj8eptdktl.html</id>
     <published>2022-07-26T02:21:30.000Z</published>
     <updated>2022-07-26T02:22:19.303Z</updated>
     
@@ -275,8 +300,8 @@
   
   <entry>
     <title>List遍历删除</title>
-    <link href="https://zkkget.github.io/posts/20220726cl95d9z0u000bz8uj7q4h5jfo.html"/>
-    <id>https://zkkget.github.io/posts/20220726cl95d9z0u000bz8uj7q4h5jfo.html</id>
+    <link href="https://zkkget.github.io/posts/20220726cl9gfm3sl000bmouj40quaz10.html"/>
+    <id>https://zkkget.github.io/posts/20220726cl9gfm3sl000bmouj40quaz10.html</id>
     <published>2022-07-26T02:19:28.000Z</published>
     <updated>2022-07-26T02:20:44.374Z</updated>
     
@@ -298,8 +323,8 @@
   
   <entry>
     <title>Mysql海量数据存储与优化</title>
-    <link href="https://zkkget.github.io/posts/20220725cl95d9z1a000fz8ujhwgmgy06.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl95d9z1a000fz8ujhwgmgy06.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl9gfm3sx000tmoujbjf25f6c.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl9gfm3sx000tmoujbjf25f6c.html</id>
     <published>2022-07-25T08:17:47.000Z</published>
     <updated>2022-07-25T08:24:40.644Z</updated>
     
@@ -321,8 +346,8 @@
   
   <entry>
     <title>主站博客迁移之线上对事务的处理</title>
-    <link href="https://zkkget.github.io/posts/20220725cl95d9z28001kz8uje28d8oz7.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl95d9z28001kz8uje28d8oz7.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl9gfm3te001qmoujh46n29t6.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl9gfm3te001qmoujh46n29t6.html</id>
     <published>2022-07-25T08:15:07.000Z</published>
     <updated>2022-07-25T08:17:19.220Z</updated>
     
@@ -344,8 +369,8 @@
   
   <entry>
     <title>【声明】阿里云服务器导致图片不显示[可在此贴下方留言]</title>
-    <link href="https://zkkget.github.io/posts/20220725cl95d9z21001az8ujac5g5rqc.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl95d9z21001az8ujac5g5rqc.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl9gfm3t30012mouj9oxn7azl.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl9gfm3t30012mouj9oxn7azl.html</id>
     <published>2022-07-25T08:10:26.000Z</published>
     <updated>2022-07-25T08:11:46.075Z</updated>
     
@@ -364,8 +389,8 @@
   
   <entry>
     <title>主站博客迁移之字节跳动面经个人搜索答案</title>
-    <link href="https://zkkget.github.io/posts/20220725cl95d9z2h001xz8uja6cs7a9s.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl95d9z2h001xz8uja6cs7a9s.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl9gfm3t8001fmoujagjx7gx0.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl9gfm3t8001fmoujagjx7gx0.html</id>
     <published>2022-07-25T07:47:01.000Z</published>
     <updated>2022-07-26T02:30:47.107Z</updated>
     
@@ -387,8 +412,8 @@
   
   <entry>
     <title>主站博客迁移之Nginx安装与原理</title>
-    <link href="https://zkkget.github.io/posts/20220725cl95d9z23001dz8uj45zsal79.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl95d9z23001dz8uj45zsal79.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl9gfm3t2000ymoujb7al27yr.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl9gfm3t2000ymoujb7al27yr.html</id>
     <published>2022-07-25T07:39:59.000Z</published>
     <updated>2022-07-25T07:41:06.698Z</updated>
     
@@ -410,8 +435,8 @@
   
   <entry>
     <title>主站博客迁移之Thymleaf项目常用操作</title>
-    <link href="https://zkkget.github.io/posts/20220725cl95d9z25001gz8uj87r5fefh.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl95d9z25001gz8uj87r5fefh.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl9gfm3sx000vmouj9nkkceez.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl9gfm3sx000vmouj9nkkceez.html</id>
     <published>2022-07-25T07:36:44.000Z</published>
     <updated>2022-07-25T07:39:16.989Z</updated>
     
@@ -433,8 +458,8 @@
   
   <entry>
     <title>主站博客迁移之SpringCloudAlibaba服务注册新发现</title>
-    <link href="https://zkkget.github.io/posts/20220725cl95d9z25001fz8uj2hhzfyg3.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl95d9z25001fz8uj2hhzfyg3.html</id>
+    <link href="https://zkkget.github.io/posts/20220725cl9gfm3t40015mouj5b2p9ybf.html"/>
+    <id>https://zkkget.github.io/posts/20220725cl9gfm3t40015mouj5b2p9ybf.html</id>
     <published>2022-07-25T07:18:07.000Z</published>
     <updated>2022-07-25T07:31:33.474Z</updated>
     
@@ -451,29 +476,6 @@
     
     
     <category term="SpringCloudAlibaba" scheme="https://zkkget.github.io/tags/SpringCloudAlibaba/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>主站博客迁移之拒绝解析又臭又长的JSON</title>
-    <link href="https://zkkget.github.io/posts/20220725cl95d9z28001jz8uj0z1l0mnq.html"/>
-    <id>https://zkkget.github.io/posts/20220725cl95d9z28001jz8uj0z1l0mnq.html</id>
-    <published>2022-07-25T07:10:12.000Z</published>
-    <updated>2022-07-25T07:11:54.562Z</updated>
-    
-    <content type="html"><![CDATA[<p>在日常工作中，不管是因为接收前端返回约定格式的JSON字符串，还是因为需要约定格式请求第三方服务，或者需要将前端画像xml解析成JSON，再或者需要接入第三方短信，供应商，数据提供商的JSON数据，或是需要提供对外暴露接口的API，可见解析JSON是一个常见操作。</p><p>JSON是一个轻量级的数据交换格式。</p><p>一：表单数据由数据库实体对象接收</p><p>常见的前后端约定字段，指定字段名称后，由数据库实体接收序列化后的表单数据，无序解析。</p><p>二：JSONObject解析</p><p>前后端约定格式，实体接收String类型，通过JSONObject解析JSON，JSONArray等操作</p><p>例如：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;children&quot;</span>: [</span><br><span class="line">            </span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&quot;createBy&quot;</span>: <span class="string">&quot;admin&quot;</span>,</span><br><span class="line">        <span class="string">&quot;createTime&quot;</span>: <span class="number">1521171180000</span>,</span><br><span class="line">        <span class="string">&quot;icon&quot;</span>: <span class="string">&quot;fa fa-gear&quot;</span>,</span><br><span class="line">        <span class="string">&quot;menuId&quot;</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">&quot;menuName&quot;</span>: <span class="string">&quot;系统管理&quot;</span>,</span><br><span class="line">        <span class="string">&quot;menuType&quot;</span>: <span class="string">&quot;M&quot;</span>,</span><br><span class="line">        <span class="string">&quot;orderNum&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;params&quot;</span>: &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;parentId&quot;</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;perms&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;target&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;url&quot;</span>: <span class="string">&quot;#&quot;</span>,</span><br><span class="line">        <span class="string">&quot;visible&quot;</span>: <span class="string">&quot;0&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;children&quot;</span>: [</span><br><span class="line">            </span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&quot;createBy&quot;</span>: <span class="string">&quot;admin&quot;</span>,</span><br><span class="line">        <span class="string">&quot;createTime&quot;</span>: <span class="number">1521171180000</span>,</span><br><span class="line">        <span class="string">&quot;icon&quot;</span>: <span class="string">&quot;fa fa-video-camera&quot;</span>,</span><br><span class="line">        <span class="string">&quot;menuId&quot;</span>: <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;menuName&quot;</span>: <span class="string">&quot;系统监控&quot;</span>,</span><br><span class="line">        <span class="string">&quot;menuType&quot;</span>: <span class="string">&quot;M&quot;</span>,</span><br><span class="line">        <span class="string">&quot;orderNum&quot;</span>: <span class="string">&quot;2&quot;</span>,</span><br><span class="line">        <span class="string">&quot;params&quot;</span>: &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;parentId&quot;</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;perms&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;target&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;url&quot;</span>: <span class="string">&quot;#&quot;</span>,</span><br><span class="line">        <span class="string">&quot;visible&quot;</span>: <span class="string">&quot;0&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;children&quot;</span>: [</span><br><span class="line">            </span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&quot;createBy&quot;</span>: <span class="string">&quot;admin&quot;</span>,</span><br><span class="line">        <span class="string">&quot;createTime&quot;</span>: <span class="number">1521171180000</span>,</span><br><span class="line">        <span class="string">&quot;icon&quot;</span>: <span class="string">&quot;fa fa-bars&quot;</span>,</span><br><span class="line">        <span class="string">&quot;menuId&quot;</span>: <span class="number">3</span>,</span><br><span class="line">        <span class="string">&quot;menuName&quot;</span>: <span class="string">&quot;系统工具&quot;</span>,</span><br><span class="line">        <span class="string">&quot;menuType&quot;</span>: <span class="string">&quot;M&quot;</span>,</span><br><span class="line">        <span class="string">&quot;orderNum&quot;</span>: <span class="string">&quot;3&quot;</span>,</span><br><span class="line">        <span class="string">&quot;params&quot;</span>: &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;parentId&quot;</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;perms&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;target&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;url&quot;</span>: <span class="string">&quot;#&quot;</span>,</span><br><span class="line">        <span class="string">&quot;visible&quot;</span>: <span class="string">&quot;0&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>通过JSONObject以及解析JSONArray获取<br>三：接入第三方API</p><p>接入第三方API，或者按约定调用第三方服务时，你会发现约定了又臭有长的JSON格式，包含特定字段，包含token，包含秘钥，一个详细数据解析接口，上百个字段是常见的，而且多种格式嵌套解析，如果单纯将收到的字符串手动转化成JSONObject，还要判空，还要层层遍历，还要验证数据的有效性，这是在是不小的工作量。</p><p>改造方法：提取最长，覆盖字段最全的作为实体列接收，含有List数据就由List接收，最外层K值由字段接收，涉及类型判断需按约定传不同数值的，定义为枚举，秘钥等特殊Key值MD5加解密传递。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果url是空，则认为是解析历史数据 不需要拼装请求</span></span><br><span class="line">        <span class="keyword">if</span> (url != <span class="keyword">null</span> &amp;&amp; !<span class="string">&quot;&quot;</span>.equals(url)) &#123;</span><br><span class="line">            Client client = <span class="keyword">new</span> Client();</span><br><span class="line">            Map&lt;String, String&gt; params = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</span><br><span class="line">            <span class="keyword">if</span> (<span class="string">&quot;mobileReli&quot;</span>.equals(interfaceCode)) &#123; <span class="comment">//if类型判断定义为枚举      </span></span><br><span class="line">                String infoJson = String.format(<span class="string">&quot;&#123;\&quot;phone\&quot;:\&quot;%s\&quot;,\&quot;name\&quot;:\&quot;%s\&quot;,\&quot;curDate\&quot;:\&quot;%s\&quot;&#125;&quot;</span>,</span><br><span class="line">                        applyRecord.getPhone(), applyRecord.getName(), applyRecord.getFlashblackDate());</span><br><span class="line">                StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">                <span class="keyword">long</span> time = System.currentTimeMillis();<span class="comment">//重复度高的字段由优特实体类接收</span></span><br><span class="line">                sb.append(secret + <span class="string">&quot;!&quot;</span> + appKey + <span class="string">&quot;!&quot;</span> + time + <span class="string">&quot;!&quot;</span> + applyRecord.getName() + <span class="string">&quot;!&quot;</span></span><br><span class="line">                        + applyRecord.getPhone() + <span class="string">&quot;!&quot;</span> + secret + <span class="string">&quot;!&quot;</span>);</span><br><span class="line">                sign = hdsClient.md5(sb.toString());</span><br><span class="line">                String param = String.format(<span class="string">&quot;appKey=%s&amp;infoJson=%s&amp;sign=%s&amp;time=%s&quot;</span>, appKey, infoJson, sign, time);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    jsonData = hdsClient.getResult(url, param);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    <span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;DSModel&quot;</span>.equals(interfaceCode)) &#123;</span><br><span class="line">                String infoJson = String.format(<span class="string">&quot;&#123;\&quot;mobile\&quot;:\&quot;%s\&quot;,\&quot;name\&quot;:\&quot;%s\&quot;,\&quot;starttime\&quot;:\&quot;%s\&quot;&#125;&quot;</span>,</span><br><span class="line">                        applyRecord.getPhone(), applyRecord.getName(), applyRecord.getFlashblackDate());</span><br><span class="line">                StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">                <span class="keyword">long</span> time = System.currentTimeMillis();</span><br><span class="line">                sb.append(secret + <span class="string">&quot;!&quot;</span> + appKey + <span class="string">&quot;!&quot;</span> + time + <span class="string">&quot;!&quot;</span> + applyRecord.getName() + <span class="string">&quot;!&quot;</span></span><br><span class="line">                        + applyRecord.getPhone() + <span class="string">&quot;!&quot;</span> + applyRecord.getFlashblackDate() + <span class="string">&quot;!&quot;</span> + secret + <span class="string">&quot;!&quot;</span>);</span><br><span class="line">                sign = hdsClient.md5(sb.toString());</span><br><span class="line">                String param = String.format(<span class="string">&quot;appKey=%s&amp;infoJson=%s&amp;sign=%s&amp;time=%s&quot;</span>, appKey, infoJson, sign, time);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    jsonData = hdsClient.getResult(url, param);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    <span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;addressDetection&quot;</span>.equals(interfaceCode)) &#123;   </span><br><span class="line">                String infoJson = String.format(<span class="string">&quot;&#123;\&quot;phone\&quot;:\&quot;%s\&quot;,\&quot;address\&quot;:\&quot;%s\&quot;,\&quot;curDate\&quot;:\&quot;%s\&quot;&#125;&quot;</span>,</span><br><span class="line">                        applyRecord.getPhone(), applyRecord.getAddress(), applyRecord.getFlashblackDate());</span><br><span class="line">                StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">                <span class="keyword">long</span> time = System.currentTimeMillis();</span><br><span class="line">                sb.append(secret + <span class="string">&quot;!&quot;</span> + appKey + <span class="string">&quot;!&quot;</span> + time + <span class="string">&quot;!&quot;</span> + applyRecord.getPhone() + <span class="string">&quot;!&quot;</span></span><br><span class="line">                        + applyRecord.getAddress() + <span class="string">&quot;!&quot;</span> + applyRecord.getFlashblackDate() + <span class="string">&quot;!&quot;</span> + secret + <span class="string">&quot;!&quot;</span>);</span><br><span class="line">                sign = hdsClient.md5(sb.toString());</span><br><span class="line">                String param = String.format(<span class="string">&quot;appKey=%s&amp;infoJson=%s&amp;sign=%s&amp;time=%s&quot;</span>, appKey, infoJson, sign, time);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    jsonData = hdsClient.getResult(url, param);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    <span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">InterfaceCodeEnum</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    InterfaceCode1(<span class="number">1</span>,<span class="string">&quot;mobileReli&quot;</span>),</span><br><span class="line">    InterfaceCode2(<span class="number">2</span>,<span class="string">&quot;DSModel&quot;</span>),</span><br><span class="line">    InterfaceCode3(<span class="number">3</span>,<span class="string">&quot;addressDetection&quot;</span>),</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Integer code;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    InterfaceCodeEnum(Integer code, String name) &#123;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getNameBycode</span><span class="params">(Integer code)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (code == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (InterfaceCodeEnum a : InterfaceCodeEnum.values()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (a.code.equals(code)) &#123;</span><br><span class="line">                <span class="keyword">return</span> a.name;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InterfaceCodeResult</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//基础信息</span></span><br><span class="line">    <span class="keyword">private</span> Base base;</span><br><span class="line">    <span class="comment">//秘钥信息</span></span><br><span class="line">    <span class="keyword">private</span> AuthInfo authInfo;</span><br><span class="line">    <span class="comment">//外层字段封装为对象接收</span></span><br><span class="line">    <span class="keyword">private</span> AddressResult  addressResult;</span><br><span class="line">    <span class="comment">//重复多层信息List接收</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Flashblack&gt; flashblack;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>当接收到JSON字符串时</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">InterfaceCodeResult codeResult=JSONObject.parseObject(InterfaceCodeResult.getRequestInfo(),InterfaceCodeResult.class);</span><br><span class="line">if(PreInterfaceStatus.equals(codeResult.base.getTyep()))&#123;</span><br><span class="line">  return JavaConvertUtil.conversion(codeResult, CodeParams.class);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>仅需要判断多个类型即可，对应字段会自动解析，当接收又臭又长的XML解析还需要后端验证时，需要封装Util类进行验证调用</p><p>同步更新至微信公众号，请搜索:赵KK日常技术记录，不定时更新文章内容</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在日常工作中，不管是因为接收前端返回约定格式的JSON字符串，还是因为需要约定格式请求第三方服务，或者需要将前端画像xml解析成JSON，再或者需要接入第三方短信，供应商，数据提供商的JSON数据，或是需要提供对外暴露接口的API，可见解析JSON是一个常见操作。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="JSON" scheme="https://zkkget.github.io/tags/JSON/"/>
     
   </entry>
   

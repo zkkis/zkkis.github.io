@@ -17,21 +17,23 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>主站博客迁移之Nginx安装与原理 | 赵KK的个人博客</title>
-  <meta name="description" content="官网http:&#x2F;&#x2F;nginx.org&#x2F;需要的素材 1234pcre-8.37.tar.gzopenssl-1.0.1t.tar.gzzlib-1.2.8.tar.gznginx-1.11.1.tar.gz 1.1.安装pcre解压缩pcre-xx.tar.gz包进入解压缩目录，执行.&#x2F;configure如果提示，需要提前安装gcc++进入安装光盘目录的软件包(&#x2F;media&#x2F;CentOSXX&#x2F;Pac">
+  <title>如何删除valine评论 | 赵KK的个人博客</title>
+  <meta name="description" content="1.登陆leancloud 2.找到结构话数据–comment3.将测试数据一一删掉">
 <meta property="og:type" content="article">
-<meta property="og:title" content="主站博客迁移之Nginx安装与原理">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220725cl95d9z23001dz8uj45zsal79.html">
+<meta property="og:title" content="如何删除valine评论">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220126cl9gfm3tb001kmouj11xddynm.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="官网http:&#x2F;&#x2F;nginx.org&#x2F;需要的素材 1234pcre-8.37.tar.gzopenssl-1.0.1t.tar.gzzlib-1.2.8.tar.gznginx-1.11.1.tar.gz 1.1.安装pcre解压缩pcre-xx.tar.gz包进入解压缩目录，执行.&#x2F;configure如果提示，需要提前安装gcc++进入安装光盘目录的软件包(&#x2F;media&#x2F;CentOSXX&#x2F;Pac">
+<meta property="og:description" content="1.登陆leancloud 2.找到结构话数据–comment3.将测试数据一一删掉">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-25T07:39:59.000Z">
-<meta property="article:modified_time" content="2022-07-25T07:41:06.698Z">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/cloud.png">
+<meta property="article:published_time" content="2022-01-26T03:29:50.000Z">
+<meta property="article:modified_time" content="2022-01-26T03:36:14.000Z">
 <meta property="article:author" content="赵KK">
-<meta property="article:tag" content="Nginx">
+<meta property="article:tag" content="valine">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/cloud.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220725cl95d9z23001dz8uj45zsal79.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220126cl9gfm3tb001kmouj11xddynm.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -235,7 +237,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/MQ/">MQ</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringCloud-Nacos/">SpringCloud Nacos</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Springboot/">Springboot</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/MQ/">MQ</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringCloud-Nacos/">SpringCloud Nacos</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Springboot/">Springboot</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -245,7 +247,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CompletableFuture/" rel="tag">CompletableFuture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ContainsAll/" rel="tag">ContainsAll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/" rel="tag">JSON</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JunitTest/" rel="tag">JunitTest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag">Leetcode算法题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List%E9%81%8D%E5%8E%86%E5%88%A0%E9%99%A4/" rel="tag">List遍历删除</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MQ/" rel="tag">MQ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud-Nacos/" rel="tag">SpringCloud Nacos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloudAlibaba/" rel="tag">SpringCloudAlibaba</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/" rel="tag">Springboot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Thymleaf/" rel="tag">Thymleaf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yapi/" rel="tag">Yapi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/" rel="tag">opencv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/valine/" rel="tag">valine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E5%8A%A1/" rel="tag">事务</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A0%A1%E5%9E%92%E6%9C%BA/" rel="tag">堡垒机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E6%88%98/" rel="tag">实战</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" rel="tag">面试,字节跳动</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CompletableFuture/" rel="tag">CompletableFuture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ContainsAll/" rel="tag">ContainsAll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/" rel="tag">JSON</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JunitTest/" rel="tag">JunitTest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag">Leetcode算法题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List%E9%81%8D%E5%8E%86%E5%88%A0%E9%99%A4/" rel="tag">List遍历删除</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MQ/" rel="tag">MQ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud-Nacos/" rel="tag">SpringCloud Nacos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloudAlibaba/" rel="tag">SpringCloudAlibaba</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/" rel="tag">Springboot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Thymleaf/" rel="tag">Thymleaf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yapi/" rel="tag">Yapi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/" rel="tag">opencv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/valine/" rel="tag">valine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E5%8A%A1/" rel="tag">事务</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A0%A1%E5%9E%92%E6%9C%BA/" rel="tag">堡垒机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E6%88%98/" rel="tag">实战</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" rel="tag">面试,字节跳动</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -255,7 +257,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/CompletableFuture/" style="font-size: 13px;">CompletableFuture</a> <a href="/tags/ContainsAll/" style="font-size: 13px;">ContainsAll</a> <a href="/tags/JSON/" style="font-size: 13px;">JSON</a> <a href="/tags/JunitTest/" style="font-size: 13px;">JunitTest</a> <a href="/tags/Leetcode%E7%AE%97%E6%B3%95%E9%A2%98/" style="font-size: 13px;">Leetcode算法题</a> <a href="/tags/List%E9%81%8D%E5%8E%86%E5%88%A0%E9%99%A4/" style="font-size: 13px;">List遍历删除</a> <a href="/tags/MQ/" style="font-size: 13px;">MQ</a> <a href="/tags/MySQL/" style="font-size: 13px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 13.5px;">Mysql</a> <a href="/tags/Nginx/" style="font-size: 13px;">Nginx</a> <a href="/tags/SpringCloud-Nacos/" style="font-size: 13px;">SpringCloud Nacos</a> <a href="/tags/SpringCloudAlibaba/" style="font-size: 13px;">SpringCloudAlibaba</a> <a href="/tags/Springboot/" style="font-size: 13.5px;">Springboot</a> <a href="/tags/Thymleaf/" style="font-size: 13px;">Thymleaf</a> <a href="/tags/Yapi/" style="font-size: 13px;">Yapi</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/opencv/" style="font-size: 13px;">opencv</a> <a href="/tags/valine/" style="font-size: 13px;">valine</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 13px;">事务</a> <a href="/tags/%E5%A0%A1%E5%9E%92%E6%9C%BA/" style="font-size: 13px;">堡垒机</a> <a href="/tags/%E5%AE%9E%E6%88%98/" style="font-size: 13px;">实战</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.5px;">面试</a> <a href="/tags/%E9%9D%A2%E8%AF%95-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 13px;">面试,字节跳动</a>
+      <a href="/tags/CompletableFuture/" style="font-size: 13px;">CompletableFuture</a> <a href="/tags/ContainsAll/" style="font-size: 13px;">ContainsAll</a> <a href="/tags/JSON/" style="font-size: 13px;">JSON</a> <a href="/tags/JunitTest/" style="font-size: 13px;">JunitTest</a> <a href="/tags/Leetcode%E7%AE%97%E6%B3%95%E9%A2%98/" style="font-size: 13px;">Leetcode算法题</a> <a href="/tags/List%E9%81%8D%E5%8E%86%E5%88%A0%E9%99%A4/" style="font-size: 13px;">List遍历删除</a> <a href="/tags/MQ/" style="font-size: 13px;">MQ</a> <a href="/tags/MySQL/" style="font-size: 13px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 13.5px;">Mysql</a> <a href="/tags/Nginx/" style="font-size: 13px;">Nginx</a> <a href="/tags/SpringCloud-Nacos/" style="font-size: 13px;">SpringCloud Nacos</a> <a href="/tags/SpringCloudAlibaba/" style="font-size: 13px;">SpringCloudAlibaba</a> <a href="/tags/Springboot/" style="font-size: 13.5px;">Springboot</a> <a href="/tags/Thymleaf/" style="font-size: 13px;">Thymleaf</a> <a href="/tags/Yapi/" style="font-size: 13px;">Yapi</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/opencv/" style="font-size: 13px;">opencv</a> <a href="/tags/valine/" style="font-size: 13px;">valine</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 13px;">事务</a> <a href="/tags/%E5%A0%A1%E5%9E%92%E6%9C%BA/" style="font-size: 13px;">堡垒机</a> <a href="/tags/%E5%AE%9E%E6%88%98/" style="font-size: 13px;">实战</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 13px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.5px;">面试</a> <a href="/tags/%E9%9D%A2%E8%AF%95-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 13px;">面试,字节跳动</a>
     </div>
   </div>
 
@@ -264,7 +266,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -276,6 +278,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/20221018a1.html" class="title">字节跳动｜字节客户端｜一二三面+hr面（已Offer）</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-10-18T06:23:27.000Z" itemprop="datePublished">2022-10-18</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -336,21 +353,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/posts/20220830a1.html" class="title">Mysql保留关键字</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-08-30T06:53:46.000Z" itemprop="datePublished">2022-08-30</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -364,14 +366,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-主站博客迁移之Nginx安装与原理" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-如何删除valine评论" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      主站博客迁移之Nginx安装与原理
+      如何删除valine评论
     </h1>
   
 
@@ -379,15 +381,15 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220725cl95d9z23001dz8uj45zsal79.html" class="article-date">
-	  <time datetime="2022-07-25T07:39:59.000Z" itemprop="datePublished">2022-07-25</time>
+	<a href="/posts/20220126cl9gfm3tb001kmouj11xddynm.html" class="article-date">
+	  <time datetime="2022-01-26T03:29:50.000Z" itemprop="datePublished">2022-01-26</time>
 	</a>
 </span>
         
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/Nginx/" rel="tag">Nginx</a>
+	<a class="article-tag-link-link" href="/tags/valine/" rel="tag">valine</a>
   </span>
 
 
@@ -400,35 +402,21 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220725cl95d9z23001dz8uj45zsal79.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220126cl9gfm3tb001kmouj11xddynm.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 960(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 22(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>官网<a target="_blank" rel="noopener" href="http://nginx.org/">http://nginx.org/</a><br>需要的素材</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pcre-<span class="number">8.37</span>.tar.gz</span><br><span class="line">openssl-<span class="number">1.0</span>.1t.tar.gz</span><br><span class="line">zlib-<span class="number">1.2</span><span class="number">.8</span>.tar.gz</span><br><span class="line">nginx-<span class="number">1.11</span><span class="number">.1</span>.tar.gz</span><br></pre></td></tr></table></figure>
-<p>1.1.安装pcre<br>解压缩pcre-xx.tar.gz包<br>进入解压缩目录，执行./configure<br>如果提示，需要提前安装gcc++<br>进入安装光盘目录的软件包(/media/CentOSXX/Package)<br>执行</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh libstdc++-devel-<span class="number">4.4</span><span class="number">.7</span>-<span class="number">17.</span>el6.x86_64.rpm</span><br><span class="line">rpm -ivh gcc-c++-<span class="number">4.4</span><span class="number">.7</span>-<span class="number">17.</span>el6.x86_64.rpm</span><br></pre></td></tr></table></figure>
-<p>./configure完成后，回到pcre目录下执行make，再执行make install<br>2. 安装openssl</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、 解压缩openssl-xx.tar.gz包。</span><br><span class="line"><span class="number">2</span>、 进入解压缩目录，执行./config</span><br><span class="line"><span class="number">3</span>、 make &amp;&amp; make install</span><br><span class="line"><span class="number">3.</span> 安装zlib</span><br><span class="line"><span class="number">1</span>、 解压缩zlib-xx.tar.gz包。</span><br><span class="line"><span class="number">2</span>、 进入解压缩目录，执行./configure。</span><br><span class="line"><span class="number">3</span>、 make &amp;&amp; make install</span><br><span class="line"><span class="number">4.</span> 安装nginx</span><br><span class="line"><span class="number">1</span>、 解压缩nginx-xx.tar.gz包。</span><br><span class="line"><span class="number">2</span>、 进入解压缩目录，执行./configure。</span><br><span class="line"><span class="number">3</span>、 make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>nginx无法启动: libpcre.so.1/libpcre.so.0: cannot<br>open shared object file解决办法<br>解决方法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/lib/libpcre.so.1 /lib64</span><br><span class="line">32位系统则：</span><br><span class="line">ln -s /usr/local/lib/libpcre.so.1 /lib</span><br></pre></td></tr></table></figure>
-
-<p>在/usr/local/nginx/sbin目录下<br>执行 ./nginx<br>启动命令 在/usr/local/nginx/sbin目录下<br>执行 ./nginx<br>关闭命令 在/usr/local/nginx/sbin目录下<br>执行 ./nginx -s stop<br>重新加载命令 在/usr/local/nginx/sbin目录下<br>执行 ./nginx -s reload<br>设置nginx为自启动服务<br>修改linux 启动脚本/etc/rc.d/rc<br>加入 :<br>/usr/local/nginx/sbin/nginx<br>5、配置nginx.conf</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">......</span><br><span class="line">upstream myserver&#123;</span><br><span class="line">ip_hash;<span class="comment">//ip取哈希码  与反向代理服务器取模 分在那一台</span></span><br><span class="line">server <span class="number">115.28</span><span class="number">.52</span><span class="number">.63</span>:<span class="number">8080</span> weight=<span class="number">1</span>;</span><br><span class="line">server <span class="number">115.28</span><span class="number">.52</span><span class="number">.63</span>:<span class="number">8180</span> weight=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">.....</span><br><span class="line">server&#123;</span><br><span class="line">location / &#123;</span><br><span class="line">.........</span><br><span class="line">proxy_pass http:<span class="comment">//myserver;</span></span><br><span class="line">proxy_connect_timeout <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line">.........</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>master-workers的机制的好处<br>首先，对于每个worker进程来说，独立的进程，不需要加锁，<br>所以省掉了锁带来的开销，同时在编程以及问题查找时，也会方<br>便很多。<br>其次，采用独立的进程，可以让互相之间不会影响，一个进程<br>退出后，其它进程还在工作，服务不会中断，master进程则很快启<br>动新的worker进程。当然，worker进程的异常退出，肯定是程序有<br>bug了，异常退出，会导致当前worker上的所有请求失败，不过不<br>会影响到所有请求，所以降低了风险<br>需要设置多少个worker<br>Nginx 同redis类似都采用了io多路复用机制，每个<br>worker都是一个独立的进程，但每个进程里只有一个主线<br>程，通过异步非阻塞的方式来处理请求， 即使是千上万个<br>请求也不在话下。每个worker的线程可以把一个cpu的性<br>能发挥到极致。<br>所以worker数和服务器的cpu数相等是最为适宜的。设<br>少了会浪费cpu，设多了会造成cpu频繁切换上下文带来的<br>损耗。</p>
-<p>//静态资源请求 2个<br>//动态资源请求 4个</p>
-<p>#设置worker数量。<br>worker_processes 4<br>#work绑定cpu(4 work绑定4cpu)。<br>worker_cpu_affinity 0001 0010 0100 1000<br>#work绑定cpu (4 work绑定8cpu中的4个) 。<br>worker_cpu_affinity 0000001 00000010 00000100<br>00001000<br>连接数worker_connection<br>• 这个值是表示每个worker进程所能建立连接的最大值，所以，一个nginx<br>能建立的最大连接数，应该是worker_connections * worker_processes。<br>当然，这里说的是最大连接数，对于HTTP请求本地资源来说，能够支持的<br>最大并发数量是worker_connections * worker_processes，如果是支持<br>http1.1的浏览器每次访问要占两个连接，所以普通的静态访问最大并发数<br>是： worker_connections * worker_processes /2，而如果是HTTP作<br>为反向代理来说，最大并发数量应该是worker_connections *<br>worker_processes/4。因为作为反向代理服务器，每个并发会建立与客<br>户端的连接和与后端服务的连接，会占用两个连接。</p>
-<p>worker_connections * worker_processes /2 静态<br>worker_connections * worker_processes /4 动态</p>
-<p>work最先处理请求 nobody表示权限最低 路人甲<br>use epoll</p>
+        <p>1.登陆leancloud</p>
+<p>2.找到结构话数据–comment<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/cloud.png" alt="流程"><br>3.将测试数据一一删掉</p>
 
       
     </div>
@@ -438,7 +426,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220725cl95d9z23001dz8uj45zsal79.html" title="主站博客迁移之Nginx安装与原理" target="_blank" rel="external">https://zkkget.github.io/posts/20220725cl95d9z23001dz8uj45zsal79.html</a>
+      <a href="https://zkkget.github.io/posts/20220126cl9gfm3tb001kmouj11xddynm.html" title="如何删除valine评论" target="_blank" rel="external">https://zkkget.github.io/posts/20220126cl9gfm3tb001kmouj11xddynm.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -485,12 +473,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220725cl95d9z2h001xz8uja6cs7a9s.html" title="主站博客迁移之字节跳动面经个人搜索答案"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220127cl9gfm3t50017mouj299z8thn.html" title="【置顶】Springboot之---强大的Servlet"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220725cl95d9z25001gz8uj87r5fefh.html" title="主站博客迁移之Thymleaf项目常用操作"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220114cl9gfm3th001smoujfynceku1.html" title="开源堡垒机jumpserver安装部署"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
