@@ -18,23 +18,24 @@
   
   
   <title>面向面试编程 | 赵KK的个人博客</title>
-  <meta name="description" content="@Service 和@Component 注解的差别？@Component spring基础的注解,被spring管理的组件或bean,用于将对象实例化到Spring容器中而@Service源码中是包含@Component注解的,也就是说service实现component的功能,但service用于服务层,处理业务逻辑 各种 Restful 请求格式以及各种 http 请求返回码。123API,">
+  <meta name="description" content="欢迎订阅关注公众号 2023年2月2日09:58:57更新1.请介绍下java中基本数据类型以及它们的使用场景Java八大数据类型：（1）整数类型：byte、short、int、long（2）小数类型：float、double（3）字符类型：char（4）布尔类型：boolean引用数据类型String 2.为什么定义了这些基本数据类型后还要定义包装类？之所以需要包装类型，就是因为java是一个面">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向面试编程">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220802cldh645l6002w78uj0ricd793.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220802cldnz6rd60021jsuj2i7p4oc0.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="@Service 和@Component 注解的差别？@Component spring基础的注解,被spring管理的组件或bean,用于将对象实例化到Spring容器中而@Service源码中是包含@Component注解的,也就是说service实现component的功能,但service用于服务层,处理业务逻辑 各种 Restful 请求格式以及各种 http 请求返回码。123API,">
+<meta property="og:description" content="欢迎订阅关注公众号 2023年2月2日09:58:57更新1.请介绍下java中基本数据类型以及它们的使用场景Java八大数据类型：（1）整数类型：byte、short、int、long（2）小数类型：float、double（3）字符类型：char（4）布尔类型：boolean引用数据类型String 2.为什么定义了这些基本数据类型后还要定义包装类？之所以需要包装类型，就是因为java是一个面">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/qslttrsa2s3vk_e9df3686c1494d9eb234e4b331aeed24.jpg">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/374544735d0dd4104601ef98749c7f89.jpg">
 <meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/05-305138350.jpg">
 <meta property="article:published_time" content="2022-08-02T03:35:12.000Z">
-<meta property="article:modified_time" content="2023-01-29T09:16:31.634Z">
+<meta property="article:modified_time" content="2023-02-03T03:36:40.611Z">
 <meta property="article:author" content="赵KK">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/374544735d0dd4104601ef98749c7f89.jpg">
+<meta name="twitter:image" content="https://ucc.alicdn.com/pic/developer-ecology/qslttrsa2s3vk_e9df3686c1494d9eb234e4b331aeed24.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220802cldh645l6002w78uj0ricd793.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220802cldnz6rd60021jsuj2i7p4oc0.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -382,7 +383,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220802cldh645l6002w78uj0ricd793.html" class="article-date">
+	<a href="/posts/20220802cldnz6rd60021jsuj2i7p4oc0.html" class="article-date">
 	  <time datetime="2022-08-02T03:35:12.000Z" itemprop="datePublished">2022-08-02</time>
 	</a>
 </span>
@@ -403,20 +404,31 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220802cldh645l6002w78uj0ricd793.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220802cldnz6rd60021jsuj2i7p4oc0.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 21.6k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 22.3k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 80(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 82(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="Service-和-Component-注解的差别？"><a href="#Service-和-Component-注解的差别？" class="headerlink" title="@Service 和@Component 注解的差别？"></a>@Service 和@Component 注解的差别？</h2><p>@Component spring基础的注解,被spring管理的组件或bean,用于将对象实例化到Spring容器中<br>而@Service源码中是包含@Component注解的,也就是说service实现component的功能,但service用于服务层,处理业务逻辑</p>
+        <p>欢迎订阅关注公众号<br><img src="https://ucc.alicdn.com/pic/developer-ecology/qslttrsa2s3vk_e9df3686c1494d9eb234e4b331aeed24.jpg" alt="qrcode_for_gh_cc4c9f1a9521_258.jpg"></p>
+<h2 id="2023年2月2日09-58-57更新"><a href="#2023年2月2日09-58-57更新" class="headerlink" title="2023年2月2日09:58:57更新"></a>2023年2月2日09:58:57更新</h2><h2 id="1-请介绍下java中基本数据类型以及它们的使用场景"><a href="#1-请介绍下java中基本数据类型以及它们的使用场景" class="headerlink" title="1.请介绍下java中基本数据类型以及它们的使用场景"></a>1.请介绍下java中基本数据类型以及它们的使用场景</h2><p>Java八大数据类型：<br>（1）整数类型：byte、short、int、long<br>（2）小数类型：float、double<br>（3）字符类型：char<br>（4）布尔类型：boolean<br>引用数据类型<br>String</p>
+<h2 id="2-为什么定义了这些基本数据类型后还要定义包装类？"><a href="#2-为什么定义了这些基本数据类型后还要定义包装类？" class="headerlink" title="2.为什么定义了这些基本数据类型后还要定义包装类？"></a>2.为什么定义了这些基本数据类型后还要定义包装类？</h2><p>之所以需要包装类型，就是因为java是一个面向对象的语言，然而基本数据类型不具备面向对象的特性，当我们把基本数据类型包装成包装类型之后，它就具有了面向对象的特性。而且，在往ArrayList、HashMap这些容器传数据的时候，基本类型int和double是传输不进去的，因为容器都是装object类型的，所以需要转为包装类型进行传输。每一个基本数据类型都有对应的包装类型.</p>
+<h2 id="3-包装类和String类有什么相同点吗？"><a href="#3-包装类和String类有什么相同点吗？" class="headerlink" title="3.包装类和String类有什么相同点吗？"></a>3.包装类和String类有什么相同点吗？</h2><p>都允许为null或空,<br>包装类除Float,Double并没有实现常量池技术,其他的和String类都存放在常量池中。</p>
+<h2 id="4-包装类是否重写了equals方法，为什么？"><a href="#4-包装类是否重写了equals方法，为什么？" class="headerlink" title="4.包装类是否重写了equals方法，为什么？"></a>4.包装类是否重写了equals方法，为什么？</h2><p>是的,先看他是否内存相等,如果不相等</p>
+<h2 id="5-请问我使用Integer定义两个数字，它们值都等于100，使用-和equals方式分别比较它们是否相等？"><a href="#5-请问我使用Integer定义两个数字，它们值都等于100，使用-和equals方式分别比较它们是否相等？" class="headerlink" title="5.请问我使用Integer定义两个数字，它们值都等于100，使用 == 和equals方式分别比较它们是否相等？"></a>5.请问我使用Integer定义两个数字，它们值都等于100，使用 == 和equals方式分别比较它们是否相等？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">都是<span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">Integer a =<span class="number">100</span>;</span><br><span class="line">Integer b =<span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">System.out.println(a == b);</span><br><span class="line">System.out.println(a.equals(b));</span><br><span class="line"></span><br><span class="line">输出</span><br><span class="line"><span class="keyword">true</span></span><br><span class="line"><span class="keyword">true</span></span><br><span class="line">-------</span><br><span class="line">Integer a =<span class="number">200</span>;</span><br><span class="line">Integer b =<span class="number">200</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">System.out.println(a == b);</span><br><span class="line">System.out.println(a.equals(b));</span><br><span class="line"></span><br><span class="line">输出</span><br><span class="line"><span class="keyword">false</span></span><br><span class="line"><span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-导致上面结果原因是什么？如果我把值都改成200呢，结果会发生什么改变？"><a href="#6-导致上面结果原因是什么？如果我把值都改成200呢，结果会发生什么改变？" class="headerlink" title="6.导致上面结果原因是什么？如果我把值都改成200呢，结果会发生什么改变？"></a>6.导致上面结果原因是什么？如果我把值都改成200呢，结果会发生什么改变？</h2><p>在内存中的缓存值是相等的。优先比较内存，200超过127的大小范围==是不相等的</p>
+<h2 id="7-我如何验证上述结果原因？"><a href="#7-我如何验证上述结果原因？" class="headerlink" title="7.我如何验证上述结果原因？"></a>7.我如何验证上述结果原因？</h2><p>Integer的缓存机制：为了节省内存和提高性能，Integer类在内部通过使用相同的对象引用实现缓存和重用，Integer类默认在-128 ~ 127 之间，可以通过 -XX:AutoBoxCacheMax进行修改，且这种机制仅在自动装箱的时候有用，在使用构造器创建Integer对象时无用。</p>
+<h2 id="8-哪些包装类是带缓存的？默认值是多少？"><a href="#8-哪些包装类是带缓存的？默认值是多少？" class="headerlink" title="8.哪些包装类是带缓存的？默认值是多少？"></a>8.哪些包装类是带缓存的？默认值是多少？</h2><p>Integer 、Byte 、Short 、Long 、Character 五大包装类都有缓冲机制，且缓冲的默认值范围都是-128~127</p>
+<p>而Float,Double,Boolean 三大包装类并没有缓冲机制。</p>
+<h2 id="9-我是否可以改变缓存值区间？怎么做？"><a href="#9-我是否可以改变缓存值区间？怎么做？" class="headerlink" title="9.我是否可以改变缓存值区间？怎么做？"></a>9.我是否可以改变缓存值区间？怎么做？</h2><p>可以通过 -XX:AutoBoxCacheMax进行修改，且这种机制仅在自动装箱的时候有用，在使用构造器创建Integer对象时无用。</p>
+<h2 id="Service-和-Component-注解的差别？"><a href="#Service-和-Component-注解的差别？" class="headerlink" title="@Service 和@Component 注解的差别？"></a>@Service 和@Component 注解的差别？</h2><p>@Component spring基础的注解,被spring管理的组件或bean,用于将对象实例化到Spring容器中<br>而@Service源码中是包含@Component注解的,也就是说service实现component的功能,但service用于服务层,处理业务逻辑</p>
 <h2 id="各种-Restful-请求格式以及各种-http-请求返回码。"><a href="#各种-Restful-请求格式以及各种-http-请求返回码。" class="headerlink" title="各种 Restful 请求格式以及各种 http 请求返回码。"></a>各种 Restful 请求格式以及各种 http 请求返回码。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">API,英文全称Application Programming Interface,翻译为“应用程序编程接口”。就是将一些功能（逻辑）封装成组件,目的是提供一个应用程序接口给其它程序与开发人员访问,而这些访问人员不需要访问源码以及理解内部工作原理就可以直接使用</span><br><span class="line">RESTFUL是一种网络应用程序的设计风格和开发方式,基于HTTP,可以使用 XML 格式定义或 JSON 格式定义。最常用的数据格式是JSON。由于JSON能直接被JavaScript读取,所以,使用JSON格式的REST风格的API具有简单、易读、易用的特点。</span><br><span class="line">而http返回状态码常见200.400.500等</span><br></pre></td></tr></table></figure>
 <h2 id="Transactional-事务里的事务隔离级别和事务传播机制概念。"><a href="#Transactional-事务里的事务隔离级别和事务传播机制概念。" class="headerlink" title="@Transactional 事务里的事务隔离级别和事务传播机制概念。"></a>@Transactional 事务里的事务隔离级别和事务传播机制概念。</h2><p>定义一个事务受其他并发事务影响程度。事务并发引发的问题。</p>
 <p>脏读：一个事务读取到另一个事务修改但还未提交的数据<br>不可重复读：一个事务读取数据之后,该数据被其他事务修改,此时第一个事务读取到的事务就是错误的（强调修改）<br>幻读：一个事务读取了某些数据,没提交再读取时数据多了或者少了,类似幻觉（强调增删）<br>丢失修改：两个事务都读取了数据,其中一个事务修改之后,另一个事务也做了修改,前者的修改丢失</p>
@@ -709,7 +721,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220802cldh645l6002w78uj0ricd793.html" title="面向面试编程" target="_blank" rel="external">https://zkkget.github.io/posts/20220802cldh645l6002w78uj0ricd793.html</a>
+      <a href="https://zkkget.github.io/posts/20220802cldnz6rd60021jsuj2i7p4oc0.html" title="面向面试编程" target="_blank" rel="external">https://zkkget.github.io/posts/20220802cldnz6rd60021jsuj2i7p4oc0.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -756,12 +768,12 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220812cldh645j0000178uj58ut3g3w.html" title="1000万数据对比ContainsAll实测"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220812cldnz6rbn0001jsujd0cp39si.html" title="1000万数据对比ContainsAll实测"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220728cldh645jd000678ujbdskgsqp.html" title="CompletableFuture"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220728cldnz6rbr0003jsujeusb83uk.html" title="CompletableFuture"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
