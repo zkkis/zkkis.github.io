@@ -17,18 +17,23 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>404 Not Found：该页无法显示 | 赵KK的个人博客</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="404 Not Found：该页无法显示">
-<meta property="og:url" content="https://zkkget.github.io/404.html">
+  <title>java并发编程专题连载系列 | 赵KK的个人博客</title>
+  <meta name="description" content="曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,决定再次根据官网和书籍进行整理,并尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…如果你没有在类的设计中考虑并发访问的因素,需要使用上面的3种方法对类的设计作重大的修改,所以修复程序的问题并不像听上去那样轻而易举。一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。网易云课堂知识大纲相关官方文档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java并发编程专题连载系列">
+<meta property="og:url" content="https://zkkget.github.io/posts/20230207a1.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
+<meta property="og:description" content="曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,决定再次根据官网和书籍进行整理,并尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…如果你没有在类的设计中考虑并发访问的因素,需要使用上面的3种方法对类的设计作重大的修改,所以修复程序的问题并不像听上去那样轻而易举。一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。网易云课堂知识大纲相关官方文档">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-22T06:47:24.497Z">
-<meta property="article:modified_time" content="2021-10-28T02:41:14.000Z">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/1a200f88c7024d5fb7258886178e7165.jpg">
+<meta property="article:published_time" content="2023-02-07T06:14:39.000Z">
+<meta property="article:modified_time" content="2023-02-07T09:48:58.257Z">
 <meta property="article:author" content="赵KK">
+<meta property="article:tag" content="并发编程专题">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/1a200f88c7024d5fb7258886178e7165.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/404.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20230207a1.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -359,16 +364,25 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%BE%E7%BB%8F%E6%95%B4%E7%90%86%E8%BF%87%E4%B8%80%E4%B8%AA%E5%B9%B6%E5%8F%91%E4%B8%93%E9%A2%98%E7%9A%84%E8%BF%9E%E8%BD%BD%E7%B3%BB%E5%88%97-%E4%BD%86%E7%94%B1%E4%BA%8E%E6%97%B6%E9%97%B4%E4%B9%85%E8%BF%9C-%E4%B8%94%E6%9F%A5%E9%98%85%E8%B5%84%E6%96%99%E6%9C%89%E9%99%90-%E5%86%B3%E5%AE%9A%E5%86%8D%E6%AC%A1%E6%A0%B9%E6%8D%AE%E5%AE%98%E7%BD%91%E5%92%8C%E4%B9%A6%E7%B1%8D%E8%BF%9B%E8%A1%8C%E6%95%B4%E7%90%86-%E5%B9%B6%E5%B0%BD%E9%87%8F%E6%8C%89%E7%85%A7%E9%A1%B9%E7%9B%AE%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E8%BF%9B%E8%A1%8C%E4%B8%BE%E4%BE%8B%E3%80%82%E7%94%B1%E4%BA%8E%E6%97%B6%E9%97%B4%E6%9C%89%E9%99%90-%E6%9C%AC%E6%96%87%E5%B0%86%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%9B%E8%A1%8C%E6%9B%B4%E6%96%B0%E2%80%A6"><span class="toc-number">1.</span> <span class="toc-text">曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,决定再次根据官网和书籍进行整理,并尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%B2%A1%E6%9C%89%E5%9C%A8%E7%B1%BB%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%AD%E8%80%83%E8%99%91%E5%B9%B6%E5%8F%91%E8%AE%BF%E9%97%AE%E7%9A%84%E5%9B%A0%E7%B4%A0-%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E4%B8%8A%E9%9D%A2%E7%9A%843%E7%A7%8D%E6%96%B9%E6%B3%95%E5%AF%B9%E7%B1%BB%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%BD%9C%E9%87%8D%E5%A4%A7%E7%9A%84%E4%BF%AE%E6%94%B9-%E6%89%80%E4%BB%A5%E4%BF%AE%E5%A4%8D%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%97%AE%E9%A2%98%E5%B9%B6%E4%B8%8D%E5%83%8F%E5%90%AC%E4%B8%8A%E5%8E%BB%E9%82%A3%E6%A0%B7%E8%BD%BB%E8%80%8C%E6%98%93%E4%B8%BE%E3%80%82%E4%B8%80%E5%BC%80%E5%A7%8B%E5%B0%B1%E5%B0%86%E4%B8%80%E4%B8%AA%E7%B1%BB%E8%AE%BE%E8%AE%A1%E6%88%90%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84-%E6%AF%94%E5%9C%A8%E5%90%8E%E6%9C%9F%E9%87%8D%E6%96%B0%E4%BF%AE%E5%A4%8D%E5%AE%83%E6%9B%B4%E5%AE%B9%E6%98%93%E3%80%82"><span class="toc-number">2.</span> <span class="toc-text">如果你没有在类的设计中考虑并发访问的因素,需要使用上面的3种方法对类的设计作重大的修改,所以修复程序的问题并不像听上去那样轻而易举。一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91"><span class="toc-number">2.1.</span> <span class="toc-text">并发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">2.3.</span> <span class="toc-text">为什么需要多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="toc-number">2.4.</span> <span class="toc-text">线程安全问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="toc-number">2.5.</span> <span class="toc-text">线程状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B"><span class="toc-number">2.6.</span> <span class="toc-text">新创建线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">2.6.1.</span> <span class="toc-text">示例</span></a></li></ol></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
-  <article id="page-" class="article article-type-page" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-java并发编程专题连载系列" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      404 Not Found：该页无法显示
+      java并发编程专题连载系列
     </h1>
   
 
@@ -376,12 +390,22 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/404.html" class="article-date">
-	  <time datetime="2022-06-22T06:47:24.497Z" itemprop="datePublished">2022-06-22</time>
+	<a href="/posts/20230207a1.html" class="article-date">
+	  <time datetime="2023-02-07T06:14:39.000Z" itemprop="datePublished">2023-02-07</time>
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%93%E9%A2%98/">并发编程专题</a>
+  </span>
+
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%93%E9%A2%98/" rel="tag">并发编程专题</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -392,21 +416,34 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/404.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20230207a1.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.6k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 7(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <script type="text/javascript" src="//www.qq.com/404/search_children.js" charset="utf-8" homePageUrl="<%- config.url %>" homePageName="回到我的主页"></script>
-
+        <h1 id="曾经整理过一个并发专题的连载系列-但由于时间久远-且查阅资料有限-决定再次根据官网和书籍进行整理-并尽量按照项目实际应用遇到的问题进行举例。由于时间有限-本文将长时间进行更新…"><a href="#曾经整理过一个并发专题的连载系列-但由于时间久远-且查阅资料有限-决定再次根据官网和书籍进行整理-并尽量按照项目实际应用遇到的问题进行举例。由于时间有限-本文将长时间进行更新…" class="headerlink" title="曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,决定再次根据官网和书籍进行整理,并尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…"></a>曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,决定再次根据官网和书籍进行整理,并尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…</h1><h1 id="如果你没有在类的设计中考虑并发访问的因素-需要使用上面的3种方法对类的设计作重大的修改-所以修复程序的问题并不像听上去那样轻而易举。一开始就将一个类设计成是线程安全的-比在后期重新修复它更容易。"><a href="#如果你没有在类的设计中考虑并发访问的因素-需要使用上面的3种方法对类的设计作重大的修改-所以修复程序的问题并不像听上去那样轻而易举。一开始就将一个类设计成是线程安全的-比在后期重新修复它更容易。" class="headerlink" title="如果你没有在类的设计中考虑并发访问的因素,需要使用上面的3种方法对类的设计作重大的修改,所以修复程序的问题并不像听上去那样轻而易举。一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。"></a>如果你没有在类的设计中考虑并发访问的因素,需要使用上面的3种方法对类的设计作重大的修改,所以修复程序的问题并不像听上去那样轻而易举。一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。</h1><p>网易云课堂知识大纲<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/1a200f88c7024d5fb7258886178e7165.jpg" alt="知识大纲"><br>相关官方文档：<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html">https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html</a></p>
+<h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><p>多线程程序在较低的层次上扩展了多任务的概念：一个程序同时执行多个任务。通常，<br>每一个任务称为一个线程（ thread), 它是线程控制的简称。可以同时运行一个以上线程的程<br>序称为多线程程序（multithreaded)。</p>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>在java api文档中原文对Thread类解释如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A thread is a thread of execution in a program. The Java Virtual Machine allows an application to have multiple threads of execution running concurrently.</span><br><span class="line">Every thread has a priority. Threads with higher priority are executed in preference to threads with lower priority. Each thread may or may not also be marked as a daemon. When code running in some thread creates a new Thread object, the new thread has its priority initially set equal to the priority of the creating thread, and is a daemon thread if and only if the creating thread is a daemon.</span><br><span class="line"></span><br><span class="line">When a Java Virtual Machine starts up, there is usually a single non-daemon thread (which typically calls the method named main of some designated class). The Java Virtual Machine continues to execute threads until either of the following occurs:</span><br><span class="line"></span><br><span class="line">The exit method of class Runtime has been called and the security manager has permitted the exit operation to take place.</span><br><span class="line">All threads that are not daemon threads have died, either by returning from t</span><br></pre></td></tr></table></figure>
+<p>译文</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">线程是程序中的执行线程。 Java虚拟机允许应用程序同时运行多个执行线程。</span><br><span class="line">每个线程都有一个优先级。优先级较高的线程优先执行优先级较低的线程。每个线程可能也可能不会标记为守护程序。当在某些线程中运行的代码创建一个新线程时，新线程的优先级最初设置等于创建线程的优先级，并且仅当创建线程是守护程序时，才是守护程序线程。</span><br><span class="line">当Java虚拟机启动时，通常会有一个非daemon线程（通常调用某些指定类的主题的方法）。 Java虚拟机继续执行线程，直到发生以下任何一个：</span><br><span class="line"></span><br><span class="line">已经调用了类运行时的退出方法，安全管理器已允许进行退出操作。</span><br><span class="line">所有不是守护程序线程的线程都死了，要么从T返回</span><br></pre></td></tr></table></figure>
+<p>对于本段话则可以进行提问</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">什么是守护线程？</span><br><span class="line">什么是daemon线程？</span><br></pre></td></tr></table></figure>
+<h2 id="为什么需要多线程"><a href="#为什么需要多线程" class="headerlink" title="为什么需要多线程"></a>为什么需要多线程</h2><p>1.资源利用,多CPU系统中提高CPU利用率<br>2.提高应用程序响应,程序的运行效率会提高<br>3.编译程序优化指令执行次序，使得缓存能够得到更加合理地利用</p>
+<h2 id="线程安全问题"><a href="#线程安全问题" class="headerlink" title="线程安全问题"></a>线程安全问题</h2><p>多线程并发执行时,对共享内存中共享对象的属性发生修改时所导致的数据冲突问题,称之为线程安全问题</p>
+<p>即使你的程序没有显式地创建任何线程,框架也可能为你创建了一些线程,这些线程<br>调用的代码必须是线程安全的(thread-safe)。这一点给开发人员的设计和实现赋予了更<br>重要的一份责任,因为开发线程安全的类要比非线程安全的类需要更加仔细,进行更多的<br>分析。</p>
+<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><p>线程可以有如下 6 种状态：<br>•New (新创建）<br>•Runnable (可运行）<br>•Blocked (被阻塞）<br>•Waiting (等待）<br>•Timed waiting (计时等待）<br>•Terminated (被终止）<br>下一节对每一种状态进行解释。<br>要确定一个线程的当前状态， 可调用 getState 方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">public enum State &#123;</span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a thread which has not yet started.</span><br><span class="line">         */</span><br><span class="line">        NEW,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a runnable thread.  A thread in the runnable</span><br><span class="line">         * state is executing in the Java virtual machine but it may</span><br><span class="line">         * be waiting for other resources from the operating system</span><br><span class="line">         * such as processor.</span><br><span class="line">         */</span><br><span class="line">        RUNNABLE,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a thread blocked waiting for a monitor lock.</span><br><span class="line">         * A thread in the blocked state is waiting for a monitor lock</span><br><span class="line">         * to enter a synchronized block/method or</span><br><span class="line">         * reenter a synchronized block/method after calling</span><br><span class="line">         * &#123;@link Object#wait() Object.wait&#125;.</span><br><span class="line">         */</span><br><span class="line">        BLOCKED,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a waiting thread.</span><br><span class="line">         * A thread is in the waiting state due to calling one of the</span><br><span class="line">         * following methods:</span><br><span class="line">         * &lt;ul&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link Object#wait() Object.wait&#125; with no timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #join() Thread.join&#125; with no timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#park() LockSupport.park&#125;&lt;/li&gt;</span><br><span class="line">         * &lt;/ul&gt;</span><br><span class="line">         *</span><br><span class="line">         * &lt;p&gt;A thread in the waiting state is waiting for another thread to</span><br><span class="line">         * perform a particular action.</span><br><span class="line">         *</span><br><span class="line">         * For example, a thread that has called &lt;tt&gt;Object.wait()&lt;/tt&gt;</span><br><span class="line">         * on an object is waiting for another thread to call</span><br><span class="line">         * &lt;tt&gt;Object.notify()&lt;/tt&gt; or &lt;tt&gt;Object.notifyAll()&lt;/tt&gt; on</span><br><span class="line">         * that object. A thread that has called &lt;tt&gt;Thread.join()&lt;/tt&gt;</span><br><span class="line">         * is waiting for a specified thread to terminate.</span><br><span class="line">         */</span><br><span class="line">        WAITING,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a waiting thread with a specified waiting time.</span><br><span class="line">         * A thread is in the timed waiting state due to calling one of</span><br><span class="line">         * the following methods with a specified positive waiting time:</span><br><span class="line">         * &lt;ul&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #sleep Thread.sleep&#125;&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link Object#wait(long) Object.wait&#125; with timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #join(long) Thread.join&#125; with timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#parkNanos LockSupport.parkNanos&#125;&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#parkUntil LockSupport.parkUntil&#125;&lt;/li&gt;</span><br><span class="line">         * &lt;/ul&gt;</span><br><span class="line">         */</span><br><span class="line">        TIMED_WAITING,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a terminated thread.</span><br><span class="line">         * The thread has completed execution.</span><br><span class="line">         */</span><br><span class="line">        TERMINATED;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="新创建线程"><a href="#新创建线程" class="headerlink" title="新创建线程"></a>新创建线程</h2><p>当用 new 操作符创建一个新线程时，如 newThread(r)， 该线程还没有开始运行。这意味<br>着它的状态是 new。当一个线程处于新创建状态时，程序还没有开始运行线程中的代码。在<br>线程运行之前还有一些基础工作要做。<br>那么所有创建线程的本质都是new Thread()</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(()-&gt;&#123; System.out.printf(<span class="string">&quot;线程%s 正在执行&quot;</span>,Thread.currentThread().getName()); &#125;,<span class="string">&quot;thread-01&quot;</span>).start();</span><br><span class="line">        System.out.printf(<span class="string">&quot;线程%s 是否有存活%s&quot;</span>,Thread.currentThread().getName(),Thread.currentThread().isAlive());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">控制台输出</span><br><span class="line">线程main 是否有存活<span class="keyword">true</span>线程thread-<span class="number">01</span> 正在执行Disconnected from the target VM, address: <span class="string">&#x27;127.0.0.1:53273&#x27;</span>, transport: <span class="string">&#x27;socket&#x27;</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <div class="article-footer">
@@ -415,7 +452,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/404.html" title="404 Not Found：该页无法显示" target="_blank" rel="external">https://zkkget.github.io/404.html</a>
+      <a href="https://zkkget.github.io/posts/20230207a1.html" title="java并发编程专题连载系列" target="_blank" rel="external">https://zkkget.github.io/posts/20230207a1.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -446,12 +483,37 @@
   </article>
   
     
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
 
   
 </div>
 
   <nav class="bar bar-footer clearfix" data-stick-bottom>
   <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/posts/20221018a1.html" title="字节跳动｜字节客户端｜一二三面+hr面（已Offer）"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
   
   
   <!-- Button trigger modal -->
@@ -513,6 +575,11 @@
 
 
 
+            {% if post.top %}
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          {% endif %}
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -579,6 +646,39 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '5qofQKP6PLlRGj9AKdN2wFy8-gzGzoHsz',
+    appKey: 'MUjdIW5XaUutRWAdIFu4IdxP',
+    placeholder: '来都来了，说点啥吧~',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
