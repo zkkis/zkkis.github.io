@@ -17,23 +17,29 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>mysql中的锁表语句查看方法汇总 | 赵KK的个人博客</title>
-  <meta name="description" content="1234567891011121314mysql&gt; show status like &amp;#x27;Table%&amp;#x27;;+----------------------------+----------+| Variable_name        | Value |+----------------------------+----------+| Table_locks_immedia">
+  <title>主站博客迁移之SpringCloudAlibaba服务注册新发现 | 赵KK的个人博客</title>
+  <meta name="description" content="2018.09.21「小马哥技术周报」- 第一期《Spring Cloud 服务发现新选择 - Alibaba Nacos Discovery 基本是刚出来的时候就已经讲了，现在都2020了不太适合大规模的分布式服务发现ZAB算法内存型，有内存限制 Springcloudcommons as servicediscovery load balancing  circuit breakEnableD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql中的锁表语句查看方法汇总">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220428cle2e0g680010louj6zu36qr0.html">
+<meta property="og:title" content="主站博客迁移之SpringCloudAlibaba服务注册新发现">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220725cle2ho1py0019jsuj4t836yuq.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="1234567891011121314mysql&gt; show status like &amp;#x27;Table%&amp;#x27;;+----------------------------+----------+| Variable_name        | Value |+----------------------------+----------+| Table_locks_immedia">
+<meta property="og:description" content="2018.09.21「小马哥技术周报」- 第一期《Spring Cloud 服务发现新选择 - Alibaba Nacos Discovery 基本是刚出来的时候就已经讲了，现在都2020了不太适合大规模的分布式服务发现ZAB算法内存型，有内存限制 Springcloudcommons as servicediscovery load balancing  circuit breakEnableD">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/mysql.png">
-<meta property="article:published_time" content="2022-04-28T08:48:51.000Z">
-<meta property="article:modified_time" content="2022-09-15T09:34:18.463Z">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud1.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud2.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud3.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud4.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud5.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud6.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud7.jpg">
+<meta property="article:published_time" content="2022-07-25T07:18:07.000Z">
+<meta property="article:modified_time" content="2022-07-25T07:31:33.474Z">
 <meta property="article:author" content="赵KK">
-<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="SpringCloudAlibaba">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/mysql.png">
+<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud1.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220428cle2e0g680010louj6zu36qr0.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220725cle2ho1py0019jsuj4t836yuq.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -364,25 +370,16 @@
 
   
   
-<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
-  <div class="slimContent">
-    <nav id="toc" class="article-toc">
-      <h3 class="toc-title">文章目录</h3>
-      
-    </nav>
-  </div>
-</aside>
-
 <main class="main" role="main">
   <div class="content">
-  <article id="post-mysql中的锁表语句查看方法汇总" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-主站博客迁移之SpringCloudAlibaba服务注册新发现" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      mysql中的锁表语句查看方法汇总
+      主站博客迁移之SpringCloudAlibaba服务注册新发现
     </h1>
   
 
@@ -390,20 +387,15 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220428cle2e0g680010louj6zu36qr0.html" class="article-date">
-	  <time datetime="2022-04-28T08:48:51.000Z" itemprop="datePublished">2022-04-28</time>
+	<a href="/posts/20220725cle2ho1py0019jsuj4t836yuq.html" class="article-date">
+	  <time datetime="2022-07-25T07:18:07.000Z" itemprop="datePublished">2022-07-25</time>
 	</a>
 </span>
         
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
-  </span>
-
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/MySQL/" rel="tag">MySQL</a>
+	<a class="article-tag-link-link" href="/tags/SpringCloudAlibaba/" rel="tag">SpringCloudAlibaba</a>
   </span>
 
 
@@ -416,52 +408,37 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220428cle2e0g680010louj6zu36qr0.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220725cle2ho1py0019jsuj4t836yuq.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.3k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 758(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show status like <span class="string">&#x27;Table%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Variable_name        | Value |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Table_locks_immediate | <span class="number">105</span>         |</span><br><span class="line"></span><br><span class="line">| Table_locks_waited   | <span class="number">3</span>           |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>Table_locks_immediate    26839653<br>Table_locks_waited            0<br>Table_open_cache_hits    3<br>Table_open_cache_misses    2<br>Table_open_cache_overflows    2</p>
-<p>Table_locks_immediate  指的是能够立即获得表级锁的次数</p>
-<p>Table_locks_waited  指的是不能立即获取表级锁而需要等待的次数</p>
-<p>Table_open_cache_hits  表缓存被命中的次数</p>
-<p>Table_open_cache_misses 表缓存未被命中的次数</p>
-<p>Table_open_cache_overflows  就是上面说的淘汰的instance（table cache）的数量</p>
-<p>查看正在被锁定的的表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">OPEN</span> TABLES <span class="keyword">where</span> In_use <span class="operator">&gt;</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-
-<p>怎么查找mysql中的锁表语句</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> processlist;</span><br><span class="line">与<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> information_schema.processlist效果相同</span><br></pre></td></tr></table></figure>
-<p>SHOW PROCESSLIST显示哪些线程正在运行。您也可以使用mysqladmin processlist语句得到此信息。如果您有SUPER权限，您可以看到所有线程。否则，您只能看到您自己的线程（也就是，与您正在使用的MySQL账户相关的线程）。如果有线程在update或者insert 某个表，此时进程的status为updating 或者 sending data。<br>show processlist 是显示用户正在运行的线程，需要注意的是，除了 root 用户能看到所有正在运行的线程外，其他用户都只能看到自己正在运行的线程，看不到其它用户正在运行的线程。除非单独个这个用户赋予了PROCESS 权限<br>– 查看那些表锁到了</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">OPEN</span> TABLES <span class="keyword">where</span> In_use <span class="operator">&gt;</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<p>– 查看进程号</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> processlist;</span><br></pre></td></tr></table></figure>
-<p>–删除进程</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill <span class="number">1085850</span>；</span><br></pre></td></tr></table></figure>
-<p> <img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/mysql.png" alt="流程"></p>
-<p>Id: 就是这个线程的唯一标识，当我们发现这个线程有问题的时候，可以通过 kill 命令，加上这个Id值将这个线程杀掉。前面我们说了show processlist 显示的信息时来自information_schema.processlist 表，所以这个Id就是这个表的主键。<br>User: 就是指启动这个线程的用户。<br>Host: 记录了发送请求的客户端的 IP 和 端口号。通过这些信息在排查问题的时候，我们可以定位到是哪个客户端的哪个进程发送的请求。<br>DB: 当前执行的命令是在哪一个数据库上。如果没有指定数据库，则该值为 NULL 。<br>Command: 是指此刻该线程正在执行的命令。这个很复杂，下面单独解释<br>Time: 表示该线程处于当前状态的时间。<br>State: 线程的状态，和 Command 对应，下面单独解释。<br>Info: 一般记录的是线程执行的语句。默认只显示前100个字符，也就是你看到的语句可能是截断了的，要看全部信息，需要使用 show full processlist。<br>下面我们单独看一下 Command 的值：<br>Binlog Dump: 主节点正在将二进制日志 ，同步到从节点<br>Change User: 正在执行一个 change-user 的操作<br>Close Stmt: 正在关闭一个Prepared Statement 对象<br>Connect: 一个从节点连上了主节点<br>Connect Out: 一个从节点正在连主节点<br>Create DB: 正在执行一个create-database 的操作<br>Daemon: 服务器内部线程，而不是来自客户端的链接<br>Debug: 线程正在生成调试信息<br>Delayed Insert: 该线程是一个延迟插入的处理程序<br>Drop DB: 正在执行一个 drop-database 的操作<br>Execute: 正在执行一个 Prepared Statement<br>Fetch: 正在从Prepared Statement 中获取执行结果<br>Field List: 正在获取表的列信息<br>Init DB: 该线程正在选取一个默认的数据库<br>Kill : 正在执行 kill 语句，杀死指定线程<br>Long Data: 正在从Prepared Statement 中检索 long data<br>Ping: 正在处理 server-ping 的请求<br>Prepare: 该线程正在准备一个 Prepared Statement<br>ProcessList: 该线程正在生成服务器线程相关信息<br>Query: 该线程正在执行一个语句<br>Quit: 该线程正在退出<br>Refresh：该线程正在刷表，日志或缓存；或者在重置状态变量，或者在复制服务器信息<br>Register Slave： 正在注册从节点<br>Reset Stmt: 正在重置 prepared statement<br>Set Option: 正在设置或重置客户端的 statement-execution 选项<br>Shutdown: 正在关闭服务器<br>Sleep: 正在等待客户端向它发送执行语句<br>Statistics: 该线程正在生成 server-status 信息<br>Table Dump: 正在发送表的内容到从服务器<br>Time: Unused</p>
-<p>那么MySQL突然飙升,首先查询当下主库内正在运行的线程以及是否有占用资源的SQL。然后执行分析info语句，看此次SQL是否是新发版功能引起，如果是新功能引起，立即回滚。</p>
-<p>– 查询非 Sleep 状态的链接，按消耗时间倒序展示，自己加条件过滤</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> id, db, <span class="keyword">user</span>, host, command, <span class="type">time</span>, state, info</span><br><span class="line"><span class="keyword">from</span> information_schema.processlist</span><br><span class="line"><span class="keyword">where</span> command <span class="operator">!=</span> <span class="string">&#x27;Sleep&#x27;</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="type">time</span> <span class="keyword">desc</span> </span><br></pre></td></tr></table></figure>
-<p>其次查看CAT，但是CAT中除了Heartbeat报表GC异常以外，只有一条一分钟的SQL，并没有其他超时SQL</p>
-<p>然后查看Grafana可以看到飙升时间在7点18分</p>
-<p>在这个时间段查询PMM</p>
-<p>没有异常，但是在其他服务中查询到有长达10分钟SQL未返回。</p>
-<p>运行show full processlist命令查看是否有线程递增的情况</p>
-<p>查询发现每一秒都有一个SQL在查询，经过代码分析，是某个接口前端轮询调用每秒都在进行查询导致的，没想到一个查询频率超高的SQL能导致CPU超高</p>
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-<iframe src="//player.bilibili.com/player.html?aid=90978812&cid=155358422&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;" ></iframe></div>
-
+        <p>2018.09.21「小马哥技术周报」- 第一期《Spring Cloud 服务发现新选择 - Alibaba Nacos Discovery</p>
+<p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud1.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud2.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud3.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud4.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud5.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud6.jpg" alt="流程"><br>基本是刚出来的时候就已经讲了，现在都2020了<br>不太适合大规模的分布式服务发现ZAB算法<br>内存型，有内存限制</p>
+<p>Springcloudcommons as servicediscovery load balancing  circuit break<br>EnableDiscoveryClient是通用API</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">DiscoveryClient</span> <span class="keyword">extends</span> <span class="title">Ordered</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> DEFAULT_ORDER = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">String <span class="title">description</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">List&lt;ServiceInstance&gt; <span class="title">getInstances</span><span class="params">(String serviceId)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">List&lt;String&gt; <span class="title">getServices</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">int</span> <span class="title">getOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现类的其中一种</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EurekaDiscoveryClient</span> <span class="keyword">implements</span> <span class="title">DiscoveryClient</span> </span>&#123;</span><br><span class="line">    实现方法的返回值的ServiceInstance源码</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ServiceInstance</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> String <span class="title">getInstanceId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    zk是唯一标识；eureka是ip+服务名</span><br><span class="line">    <span class="function">String <span class="title">getServiceId</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">String <span class="title">getHost</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getPort</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//是否是HTTPs协议or not</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isSecure</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">URI <span class="title">getUri</span><span class="params">()</span></span>;</span><br><span class="line">    源信息  zk是又专门存储字段  补充信息</span><br><span class="line">    <span class="function">Map&lt;String, String&gt; <span class="title">getMetadata</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">default</span> String <span class="title">getScheme</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在Eureka传递序列化或反序列化通过metadata传递，相关的开销比较大<br>超类接口Registration cloud commons 继承了上面的serviceInstance<br>现在的位置<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud7.jpg" alt="流程"></p>
+<p>空继承，为了扩展</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ServiceRegistry</span>&lt;<span class="title">R</span> <span class="keyword">extends</span> <span class="title">Registration</span>&gt; </span>&#123;</span><br><span class="line">    注册</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">register</span><span class="params">(R registration)</span></span>;</span><br><span class="line">    de解除注册</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">deregister</span><span class="params">(R registration)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">close</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setStatus</span><span class="params">(R registration, String status)</span></span>;</span><br><span class="line"></span><br><span class="line">    &lt;T&gt; <span class="function">T <span class="title">getStatus</span><span class="params">(R registration)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Nacos的实现注册"><a href="#Nacos的实现注册" class="headerlink" title="Nacos的实现注册"></a>Nacos的实现注册</h2><p> com.alibaba.nacos.api.naming;NamingService<br>现在我下载源码总是下不下来，以为是maven出问题，忘记因为其他项目公用maven，导致maven配置的是私服地址，改下maven就行了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">F:\cloud2020&gt;mvn dependency:resolve -Dclassifier=sources</span><br><span class="line">[INFO] Scanning <span class="keyword">for</span> projects...</span><br><span class="line">Downloading from nexus-server: xxx</span><br><span class="line">ependencies/<span class="number">2.2</span><span class="number">.2</span>.RELEASE/spring-boot-dependencies-<span class="number">2.2</span><span class="number">.2</span>.RELEASE.pom</span><br><span class="line">Downloading from nexus-server: xxx</span><br><span class="line">-dependencies/Hoxton.SR1/spring-cloud-dependencies-Hoxton.SR1.pom</span><br><span class="line">Downloading from nexus-server: xxx</span><br><span class="line">-dependencies/<span class="number">2.1</span><span class="number">.0</span>.RELEASE/spring-cloud-alibaba-dependencies-<span class="number">2.1</span><span class="number">.0</span>.RELEASE.pom</span><br></pre></td></tr></table></figure>
+<p>namingSpace有很多重载方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">NamingService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * register a instance to service</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> serviceName name of service</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> ip          instance ip</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> port        instance port</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> NacosException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">registerInstance</span><span class="params">(String serviceName, String ip, <span class="keyword">int</span> port)</span> <span class="keyword">throws</span> NacosException</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * register a instance to service</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> serviceName name of service</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> groupName   group of service</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> ip          instance ip</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> port        instance port</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> NacosException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">registerInstance</span><span class="params">(String serviceName, String groupName, String ip, <span class="keyword">int</span> port)</span> <span class="keyword">throws</span> NacosException</span>;</span><br></pre></td></tr></table></figure>
+<p>返回的是Instance</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * get all instances of a service</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> serviceName name of service</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> A list of instance</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> NacosException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> 服务名   是否健康</span><br><span class="line"><span class="function">List&lt;Instance&gt; <span class="title">getAllInstances</span><span class="params">(String serviceName)</span> <span class="keyword">throws</span> NacosException</span>;</span><br><span class="line">Ribbon--&gt;server  </span><br><span class="line">Eureka==&gt;ServiceInstance</span><br></pre></td></tr></table></figure>
+<p>namingSpace以及instance都是Nacos的Api,而registration是Spring 为了适配实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">register</span><span class="params">(Registration registration)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isEmpty(registration.getServiceId())) &#123;</span><br><span class="line">        log.warn(<span class="string">&quot;No service to register for nacos client...&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        String serviceId = registration.getServiceId();</span><br><span class="line">        <span class="comment">//this.getNacosInstanceFromRegistration  get  set</span></span><br><span class="line">        Instance instance = <span class="keyword">this</span>.getNacosInstanceFromRegistration(registration);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            放入nacos  注册中心持久化  可以连db</span><br><span class="line">            <span class="keyword">this</span>.namingService.registerInstance(serviceId, instance);</span><br><span class="line">            log.info(<span class="string">&quot;nacos registry, &#123;&#125; &#123;&#125;:&#123;&#125; register finished&quot;</span>, <span class="keyword">new</span> Object[]&#123;serviceId, instance.getIp(), instance.getPort()&#125;);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception var5) &#123;</span><br><span class="line">            log.error(<span class="string">&quot;nacos registry, &#123;&#125; register failed...&#123;&#125;,&quot;</span>, <span class="keyword">new</span> Object[]&#123;serviceId, registration.toString(), var5&#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>放入nacos  注册中心持久化  可以连db<br>this.namingService.registerInstance(serviceId, instance);<br>Nacos  =Naming +config server<br>上面的实现类图可以看到ZK的实现<br>org.springframework.cloud.zookeeper.serviceregistry;<br>ZK的注册 反注册就跟现在的Nacos有一定程度的相似<br>注解驱动<br>依赖注入<br>外部化配置<br>事件驱动<br>github.com/nacos-group/nacos-spring-project<br>github.com/nacos-group/nacos-spring-boot-project</p>
 
       
     </div>
@@ -471,7 +448,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220428cle2e0g680010louj6zu36qr0.html" title="mysql中的锁表语句查看方法汇总" target="_blank" rel="external">https://zkkget.github.io/posts/20220428cle2e0g680010louj6zu36qr0.html</a>
+      <a href="https://zkkget.github.io/posts/20220725cle2ho1py0019jsuj4t836yuq.html" title="主站博客迁移之SpringCloudAlibaba服务注册新发现" target="_blank" rel="external">https://zkkget.github.io/posts/20220725cle2ho1py0019jsuj4t836yuq.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -518,23 +495,14 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220510cle2e0g700029loujeem2g5bb.html" title="项目实战----行政优先级分析"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220725cle2ho1q9001djsujc8skaaze.html" title="主站博客迁移之Thymleaf项目常用操作"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220407cle2e0g6o001llouj25r06smc.html" title="人工智能vs人工智障之图片识别"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220725cle2ho1qd001jjsuj9juw23l9.html" title="主站博客迁移之拒绝解析又臭又长的JSON"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
-    
-    <li class="toggle-toc">
-      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
-        <span>[&nbsp;</span><span>文章目录</span>
-        <i class="text-collapsed icon icon-anchor"></i>
-        <i class="text-in icon icon-close"></i>
-        <span>]</span>
-      </a>
-    </li>
     
   </ul>
   
