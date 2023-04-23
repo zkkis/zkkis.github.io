@@ -6,7 +6,7 @@
   <link href="https://zkkget.github.io/atom.xml" rel="self"/>
   
   <link href="https://zkkget.github.io/"/>
-  <updated>2023-02-13T05:41:07.673Z</updated>
+  <updated>2023-04-23T02:24:35.417Z</updated>
   <id>https://zkkget.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日早报60s</title>
+    <link href="https://zkkget.github.io/posts/20230423a1.html"/>
+    <id>https://zkkget.github.io/posts/20230423a1.html</id>
+    <published>2023-04-23T02:21:18.000Z</published>
+    <updated>2023-04-23T02:24:35.417Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://api.03c3.cn/zb/" alt="每日60S"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://api.03c3.cn/zb/&quot; alt=&quot;每日60S&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>java并发编程专题连载系列</title>
@@ -191,8 +212,8 @@
   
   <entry>
     <title>1000万数据对比ContainsAll实测</title>
-    <link href="https://zkkget.github.io/posts/20220812cle2ib9y30001d4uje9kt7j51.html"/>
-    <id>https://zkkget.github.io/posts/20220812cle2ib9y30001d4uje9kt7j51.html</id>
+    <link href="https://zkkget.github.io/posts/20220812clgssdqcf0001kguj5wr5g9f6.html"/>
+    <id>https://zkkget.github.io/posts/20220812clgssdqcf0001kguj5wr5g9f6.html</id>
     <published>2022-08-12T08:24:06.000Z</published>
     <updated>2022-08-12T08:25:08.475Z</updated>
     
@@ -213,8 +234,8 @@
   
   <entry>
     <title>面向面试编程</title>
-    <link href="https://zkkget.github.io/posts/20220802cle2iba00002id4ujf4cjdhqr.html"/>
-    <id>https://zkkget.github.io/posts/20220802cle2iba00002id4ujf4cjdhqr.html</id>
+    <link href="https://zkkget.github.io/posts/20220802clgssdqdu002akguj9hxledrg.html"/>
+    <id>https://zkkget.github.io/posts/20220802clgssdqdu002akguj9hxledrg.html</id>
     <published>2022-08-02T03:35:12.000Z</published>
     <updated>2023-02-07T06:14:38.861Z</updated>
     
@@ -235,8 +256,8 @@
   
   <entry>
     <title>CompletableFuture</title>
-    <link href="https://zkkget.github.io/posts/20220728cle2ib9y90003d4uj5i8icuj8.html"/>
-    <id>https://zkkget.github.io/posts/20220728cle2ib9y90003d4uj5i8icuj8.html</id>
+    <link href="https://zkkget.github.io/posts/20220728clgssdqcj0003kguj5cmp78vi.html"/>
+    <id>https://zkkget.github.io/posts/20220728clgssdqcj0003kguj5cmp78vi.html</id>
     <published>2022-07-28T02:44:05.000Z</published>
     <updated>2022-09-05T02:55:53.648Z</updated>
     
@@ -257,8 +278,8 @@
   
   <entry>
     <title>优雅永不过时</title>
-    <link href="https://zkkget.github.io/posts/20220726cle2ib9zs0020d4uj07dsa35s.html"/>
-    <id>https://zkkget.github.io/posts/20220726cle2ib9zs0020d4uj07dsa35s.html</id>
+    <link href="https://zkkget.github.io/posts/20220726clgssdqdm001nkguje3fv58ex.html"/>
+    <id>https://zkkget.github.io/posts/20220726clgssdqdm001nkguje3fv58ex.html</id>
     <published>2022-07-26T02:26:41.000Z</published>
     <updated>2022-07-26T02:30:41.087Z</updated>
     
@@ -278,8 +299,8 @@
   
   <entry>
     <title>Leetcode算法题</title>
-    <link href="https://zkkget.github.io/posts/20220726cle2ib9ye0008d4uja23wcezy.html"/>
-    <id>https://zkkget.github.io/posts/20220726cle2ib9ye0008d4uja23wcezy.html</id>
+    <link href="https://zkkget.github.io/posts/20220726clgssdqcp0008kguj8eq33o9f.html"/>
+    <id>https://zkkget.github.io/posts/20220726clgssdqcp0008kguj8eq33o9f.html</id>
     <published>2022-07-26T02:22:55.000Z</published>
     <updated>2022-07-26T02:26:11.279Z</updated>
     
@@ -302,8 +323,8 @@
   
   <entry>
     <title>蚂蚁一面整理</title>
-    <link href="https://zkkget.github.io/posts/20220726cle2ib9zw002ad4uj813ba5b2.html"/>
-    <id>https://zkkget.github.io/posts/20220726cle2ib9zw002ad4uj813ba5b2.html</id>
+    <link href="https://zkkget.github.io/posts/20220726clgssdqdr0020kgujh1pgedxv.html"/>
+    <id>https://zkkget.github.io/posts/20220726clgssdqdr0020kgujh1pgedxv.html</id>
     <published>2022-07-26T02:21:30.000Z</published>
     <updated>2022-07-26T02:22:19.303Z</updated>
     
@@ -324,8 +345,8 @@
   
   <entry>
     <title>List遍历删除</title>
-    <link href="https://zkkget.github.io/posts/20220726cle2ib9yi000ed4uj58foa6ty.html"/>
-    <id>https://zkkget.github.io/posts/20220726cle2ib9yi000ed4uj58foa6ty.html</id>
+    <link href="https://zkkget.github.io/posts/20220726clgssdqcr000bkgujftbl6ciw.html"/>
+    <id>https://zkkget.github.io/posts/20220726clgssdqcr000bkgujftbl6ciw.html</id>
     <published>2022-07-26T02:19:28.000Z</published>
     <updated>2022-07-26T02:20:44.374Z</updated>
     
@@ -347,8 +368,8 @@
   
   <entry>
     <title>Mysql海量数据存储与优化</title>
-    <link href="https://zkkget.github.io/posts/20220725cle2ib9ym000hd4ujbz26g4kv.html"/>
-    <id>https://zkkget.github.io/posts/20220725cle2ib9ym000hd4ujbz26g4kv.html</id>
+    <link href="https://zkkget.github.io/posts/20220725clgssdqcw000hkgujfok2dmap.html"/>
+    <id>https://zkkget.github.io/posts/20220725clgssdqcw000hkgujfok2dmap.html</id>
     <published>2022-07-25T08:17:47.000Z</published>
     <updated>2022-07-25T08:24:40.644Z</updated>
     
@@ -370,8 +391,8 @@
   
   <entry>
     <title>Spring事务管理报错Transaction rolled back because it has been marked as rollback-only</title>
-    <link href="https://zkkget.github.io/posts/20220725cle2ib9z50018d4ujakbfaso8.html"/>
-    <id>https://zkkget.github.io/posts/20220725cle2ib9z50018d4ujakbfaso8.html</id>
+    <link href="https://zkkget.github.io/posts/20220725clgssdqd8000ukguj6p8o8jz5.html"/>
+    <id>https://zkkget.github.io/posts/20220725clgssdqd8000ukguj6p8o8jz5.html</id>
     <published>2022-07-25T08:15:07.000Z</published>
     <updated>2023-02-13T05:40:56.041Z</updated>
     
@@ -395,8 +416,8 @@
   
   <entry>
     <title>【声明】阿里云服务器导致图片不显示[可在此贴下方留言]</title>
-    <link href="https://zkkget.github.io/posts/20220725cle2ib9zf001id4uj7z0mbtpf.html"/>
-    <id>https://zkkget.github.io/posts/20220725cle2ib9zf001id4uj7z0mbtpf.html</id>
+    <link href="https://zkkget.github.io/posts/20220725clgssdqdg0017kguj53qjh06y.html"/>
+    <id>https://zkkget.github.io/posts/20220725clgssdqdg0017kguj53qjh06y.html</id>
     <published>2022-07-25T08:10:26.000Z</published>
     <updated>2023-02-08T07:59:55.623Z</updated>
     
@@ -415,8 +436,8 @@
   
   <entry>
     <title>主站博客迁移之字节跳动面经个人搜索答案</title>
-    <link href="https://zkkget.github.io/posts/20220725cle2ib9zo001td4uj46oh9d6x.html"/>
-    <id>https://zkkget.github.io/posts/20220725cle2ib9zo001td4uj46oh9d6x.html</id>
+    <link href="https://zkkget.github.io/posts/20220725clgssdqdp001tkguj0lue3c37.html"/>
+    <id>https://zkkget.github.io/posts/20220725clgssdqdp001tkguj0lue3c37.html</id>
     <published>2022-07-25T07:47:01.000Z</published>
     <updated>2022-07-26T02:30:47.107Z</updated>
     
@@ -438,8 +459,8 @@
   
   <entry>
     <title>主站博客迁移之Nginx安装与原理</title>
-    <link href="https://zkkget.github.io/posts/20220725cle2ib9zi001ld4ujd8jd436t.html"/>
-    <id>https://zkkget.github.io/posts/20220725cle2ib9zi001ld4ujd8jd436t.html</id>
+    <link href="https://zkkget.github.io/posts/20220725clgssdqdj001ikguj0slpcqbz.html"/>
+    <id>https://zkkget.github.io/posts/20220725clgssdqdj001ikguj0slpcqbz.html</id>
     <published>2022-07-25T07:39:59.000Z</published>
     <updated>2022-07-25T07:41:06.698Z</updated>
     
@@ -456,29 +477,6 @@
     
     
     <category term="Nginx" scheme="https://zkkget.github.io/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>主站博客迁移之Thymleaf项目常用操作</title>
-    <link href="https://zkkget.github.io/posts/20220725cle2ib9zl001qd4ujdl19fpmc.html"/>
-    <id>https://zkkget.github.io/posts/20220725cle2ib9zl001qd4ujdl19fpmc.html</id>
-    <published>2022-07-25T07:36:44.000Z</published>
-    <updated>2022-07-25T07:39:16.989Z</updated>
-    
-    <content type="html"><![CDATA[<p>Thymleaf搭配Springboot完成页面渲染，整理下日常开发中常见常用操作<br>1.下拉框动态被选中</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;label <span class="keyword">for</span>=<span class="string">&quot;inputLevel&quot;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-6 col-form-label form-label&quot;</span>&gt;用户等级:&lt;/label&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><br><span class="line">&lt;select id=<span class="string">&quot;inputLevel&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control&quot;</span> name=<span class="string">&quot;level&quot;</span>&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;selected&#x27;:req.level==null?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;</span><br><span class="line">全部</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;1&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;false&#x27;:req.level==&#x27;1&#x27;?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;<span class="number">1</span>级</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;2&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;false&#x27;:req.level==&#x27;2&#x27;?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;<span class="number">2</span>级</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>2.动态复选框选中(判断List是否包含)</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">&quot;checkbox&quot;</span></span><br><span class="line">  th:id=<span class="string">&quot;&#x27;checkboxResource&#x27; + $&#123;resourceEn.key&#125;&quot;</span></span><br><span class="line">  th:checked=<span class="string">&quot;$&#123;null==req.resourceIdList?&#x27;false&#x27;:#arrays.contains(req.resourceIdList, #strings.toString(resourceEn.key))?&#x27;checked&#x27;:&#x27;false&#x27;&#125;&quot;</span></span><br><span class="line">  name=<span class="string">&quot;resourceIdList&quot;</span> th:value=<span class="string">&quot;$&#123;resourceEn.key&#125;&quot;</span>&gt;</span><br><span class="line">  &lt;label th:text=<span class="string">&quot;$&#123;resourceEn.value.name&#125;&quot;</span> th:<span class="keyword">for</span>=<span class="string">&quot;&#x27;checkboxResource&#x27; + $&#123;resourceEn.key&#125;&quot;</span>&gt;&lt;/label&gt;</span><br></pre></td></tr></table></figure><p>3.onclick动态传值</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=<span class="string">&quot;button&quot;</span> th:text=<span class="string">&quot;*&#123;status&#125;==0?&#x27;开启&#x27;:&#x27;关闭&#x27;&quot;</span></span><br><span class="line">th:attr=<span class="string">&quot;disabled=*&#123;status==10?true:false&#125;&quot;</span></span><br><span class="line">th:data-id=<span class="string">&quot;$&#123;supplier.id&#125;&quot;</span></span><br><span class="line">th:data-status=<span class="string">&quot;*&#123;status==0?1:0&#125;&quot;</span></span><br><span class="line">th:<span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;*&#123;status ==0||status!=1&#125;?&#x27;btn btn-block btn-success&#x27;:&#x27;btn btn-block btn-danger&#x27;&quot;</span></span><br><span class="line">onclick=<span class="string">&quot;enable(this.getAttribute(&#x27;data-id&#x27;),this.getAttribute(&#x27;data-status&#x27;))&quot;</span>&gt;&lt;/button&gt;</span><br></pre></td></tr></table></figure><p>4.日期格式化</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;td th:text=<span class="string">&quot;*&#123;#dates.format(updateTime, &#x27;yyyy-MM-dd HH:mm:ss&#x27;)&#125;&quot;</span>&gt;</span><br></pre></td></tr></table></figure><p>5.保留小数点后两位</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;label <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;ml-3&quot;</span> th:<span class="keyword">if</span>=<span class="string">&quot;*&#123;price ne 1.0&#125;&quot;</span> th:text=<span class="string">&quot;*&#123;#numbers.formatDecimal(price * 10,0,2)&#125;&quot;</span>&gt;&lt;/label&gt;</span><br></pre></td></tr></table></figure><p>6.点击详情/编辑回显下拉被选中</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;select <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control select2bs4&quot;</span> style=<span class="string">&quot;width: 100%;&quot;</span> name=<span class="string">&quot;id&quot;</span>&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;&quot;</span> selected=<span class="string">&quot;selected&quot;</span>&gt;==请选择==&lt;/option&gt;</span><br><span class="line">&lt;option th:each=<span class="string">&quot;user : $&#123;users&#125;&quot;</span> th:selected=<span class="string">&quot;$&#123;user.id eq dept.id&#125;&quot;</span>  th:text=<span class="string">&quot;$&#123;user.Name&#125;&quot;</span>&gt;&lt;/option&gt;&lt;/select&gt;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Thymleaf搭配Springboot完成页面渲染，整理下日常开发中常见常用操作&lt;br&gt;1.下拉框动态被选中&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class</summary>
-      
-    
-    
-    
-    
-    <category term="Thymleaf" scheme="https://zkkget.github.io/tags/Thymleaf/"/>
     
   </entry>
   
