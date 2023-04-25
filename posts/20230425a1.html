@@ -17,23 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>java并发编程专题连载系列 | 赵KK的个人博客</title>
-  <meta name="description" content="曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,本次尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。网易云课堂知识大纲相关官方文档：https:&#x2F;&#x2F;docs.oracle.com&#x2F;javase&#x2F;7&#x2F;docs&#x2F;api&#x2F;java&#x2F;lang&#x2F;Thread.html 并发多线程程序在较低的层次上扩展">
+  <title>A工具大合集【不定期更新】 | 赵KK的个人博客</title>
+  <meta name="description" content="免费GPT网站合集：AI网站：www.aitoolist.cnAI网站工具：www.futurepedia.io自动做PPT：beautiful AIai工具网站也可以：www.ainav.cn百度云文生图:https:&#x2F;&#x2F;ai.baidu.com&#x2F;creativity&#x2F;imageeditor阿里云文生图https:&#x2F;&#x2F;help.aliyun.com&#x2F;document_detail&#x2F;477804.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java并发编程专题连载系列">
-<meta property="og:url" content="https://zkkget.github.io/posts/20230207a1.html">
+<meta property="og:title" content="A工具大合集【不定期更新】">
+<meta property="og:url" content="https://zkkget.github.io/posts/20230425a1.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,本次尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。网易云课堂知识大纲相关官方文档：https:&#x2F;&#x2F;docs.oracle.com&#x2F;javase&#x2F;7&#x2F;docs&#x2F;api&#x2F;java&#x2F;lang&#x2F;Thread.html 并发多线程程序在较低的层次上扩展">
+<meta property="og:description" content="免费GPT网站合集：AI网站：www.aitoolist.cnAI网站工具：www.futurepedia.io自动做PPT：beautiful AIai工具网站也可以：www.ainav.cn百度云文生图:https:&#x2F;&#x2F;ai.baidu.com&#x2F;creativity&#x2F;imageeditor阿里云文生图https:&#x2F;&#x2F;help.aliyun.com&#x2F;document_detail&#x2F;477804.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/1a200f88c7024d5fb7258886178e7165.jpg">
-<meta property="article:published_time" content="2023-02-07T06:14:39.000Z">
-<meta property="article:modified_time" content="2023-02-13T05:41:07.673Z">
+<meta property="article:published_time" content="2023-04-25T12:12:52.000Z">
+<meta property="article:modified_time" content="2023-04-25T12:13:41.920Z">
 <meta property="article:author" content="赵KK">
-<meta property="article:tag" content="并发编程专题">
+<meta property="article:tag" content="A工具大合集">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/1a200f88c7024d5fb7258886178e7165.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20230207a1.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20230425a1.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -364,25 +362,16 @@
 
   
   
-<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
-  <div class="slimContent">
-    <nav id="toc" class="article-toc">
-      <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%BE%E7%BB%8F%E6%95%B4%E7%90%86%E8%BF%87%E4%B8%80%E4%B8%AA%E5%B9%B6%E5%8F%91%E4%B8%93%E9%A2%98%E7%9A%84%E8%BF%9E%E8%BD%BD%E7%B3%BB%E5%88%97-%E4%BD%86%E7%94%B1%E4%BA%8E%E6%97%B6%E9%97%B4%E4%B9%85%E8%BF%9C-%E4%B8%94%E6%9F%A5%E9%98%85%E8%B5%84%E6%96%99%E6%9C%89%E9%99%90-%E6%9C%AC%E6%AC%A1%E5%B0%BD%E9%87%8F%E6%8C%89%E7%85%A7%E9%A1%B9%E7%9B%AE%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E8%BF%9B%E8%A1%8C%E4%B8%BE%E4%BE%8B%E3%80%82%E7%94%B1%E4%BA%8E%E6%97%B6%E9%97%B4%E6%9C%89%E9%99%90-%E6%9C%AC%E6%96%87%E5%B0%86%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%9B%E8%A1%8C%E6%9B%B4%E6%96%B0%E2%80%A6%E4%B8%80%E5%BC%80%E5%A7%8B%E5%B0%B1%E5%B0%86%E4%B8%80%E4%B8%AA%E7%B1%BB%E8%AE%BE%E8%AE%A1%E6%88%90%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84-%E6%AF%94%E5%9C%A8%E5%90%8E%E6%9C%9F%E9%87%8D%E6%96%B0%E4%BF%AE%E5%A4%8D%E5%AE%83%E6%9B%B4%E5%AE%B9%E6%98%93%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,本次尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91"><span class="toc-number">2.</span> <span class="toc-text">并发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">为什么需要多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">线程安全问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="toc-number">6.</span> <span class="toc-text">线程状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B"><span class="toc-number">7.</span> <span class="toc-text">新创建线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">7.1.</span> <span class="toc-text">示例</span></a></li></ol></li></ol>
-    </nav>
-  </div>
-</aside>
-
 <main class="main" role="main">
   <div class="content">
-  <article id="post-java并发编程专题连载系列" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-A工具大合集【不定期更新】" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      java并发编程专题连载系列
+      A工具大合集【不定期更新】
     </h1>
   
 
@@ -390,20 +379,15 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20230207a1.html" class="article-date">
-	  <time datetime="2023-02-07T06:14:39.000Z" itemprop="datePublished">2023-02-07</time>
+	<a href="/posts/20230425a1.html" class="article-date">
+	  <time datetime="2023-04-25T12:12:52.000Z" itemprop="datePublished">2023-04-25</time>
 	</a>
 </span>
         
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%93%E9%A2%98/">并发编程专题</a>
-  </span>
-
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%93%E9%A2%98/" rel="tag">并发编程专题</a>
+	<a class="article-tag-link-link" href="/tags/A%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%90%88%E9%9B%86/" rel="tag">A工具大合集</a>
   </span>
 
 
@@ -416,34 +400,61 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20230207a1.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20230425a1.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.5k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.2k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 7(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="曾经整理过一个并发专题的连载系列-但由于时间久远-且查阅资料有限-本次尽量按照项目实际应用遇到的问题进行举例。由于时间有限-本文将长时间进行更新…一开始就将一个类设计成是线程安全的-比在后期重新修复它更容易。"><a href="#曾经整理过一个并发专题的连载系列-但由于时间久远-且查阅资料有限-本次尽量按照项目实际应用遇到的问题进行举例。由于时间有限-本文将长时间进行更新…一开始就将一个类设计成是线程安全的-比在后期重新修复它更容易。" class="headerlink" title="曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,本次尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。"></a>曾经整理过一个并发专题的连载系列,但由于时间久远,且查阅资料有限,本次尽量按照项目实际应用遇到的问题进行举例。由于时间有限,本文将长时间进行更新…一开始就将一个类设计成是线程安全的,比在后期重新修复它更容易。</h2><p>网易云课堂知识大纲<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/1a200f88c7024d5fb7258886178e7165.jpg" alt="知识大纲"><br>相关官方文档：<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html">https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html</a></p>
-<h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><p>多线程程序在较低的层次上扩展了多任务的概念：一个程序同时执行多个任务。通常，<br>每一个任务称为一个线程（ thread), 它是线程控制的简称。可以同时运行一个以上线程的程<br>序称为多线程程序（multithreaded)。</p>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>在java api文档中原文对Thread类解释如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A thread is a thread of execution in a program. The Java Virtual Machine allows an application to have multiple threads of execution running concurrently.</span><br><span class="line">Every thread has a priority. Threads with higher priority are executed in preference to threads with lower priority. Each thread may or may not also be marked as a daemon. When code running in some thread creates a new Thread object, the new thread has its priority initially set equal to the priority of the creating thread, and is a daemon thread if and only if the creating thread is a daemon.</span><br><span class="line"></span><br><span class="line">When a Java Virtual Machine starts up, there is usually a single non-daemon thread (which typically calls the method named main of some designated class). The Java Virtual Machine continues to execute threads until either of the following occurs:</span><br><span class="line"></span><br><span class="line">The exit method of class Runtime has been called and the security manager has permitted the exit operation to take place.</span><br><span class="line">All threads that are not daemon threads have died, either by returning from t</span><br></pre></td></tr></table></figure>
-<p>译文</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">线程是程序中的执行线程。 Java虚拟机允许应用程序同时运行多个执行线程。</span><br><span class="line">每个线程都有一个优先级。优先级较高的线程优先执行优先级较低的线程。每个线程可能也可能不会标记为守护程序。当在某些线程中运行的代码创建一个新线程时，新线程的优先级最初设置等于创建线程的优先级，并且仅当创建线程是守护程序时，才是守护程序线程。</span><br><span class="line">当Java虚拟机启动时，通常会有一个非daemon线程（通常调用某些指定类的主题的方法）。 Java虚拟机继续执行线程，直到发生以下任何一个：</span><br><span class="line"></span><br><span class="line">已经调用了类运行时的退出方法，安全管理器已允许进行退出操作。</span><br><span class="line">所有不是守护程序线程的线程都死了，要么从T返回</span><br></pre></td></tr></table></figure>
-<p>对于本段话则可以进行提问</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">什么是守护线程？</span><br><span class="line">什么是daemon线程？</span><br></pre></td></tr></table></figure>
-<h2 id="为什么需要多线程"><a href="#为什么需要多线程" class="headerlink" title="为什么需要多线程"></a>为什么需要多线程</h2><p>1.资源利用,多CPU系统中提高CPU利用率<br>2.提高应用程序响应,程序的运行效率会提高<br>3.编译程序优化指令执行次序，使得缓存能够得到更加合理地利用</p>
-<h2 id="线程安全问题"><a href="#线程安全问题" class="headerlink" title="线程安全问题"></a>线程安全问题</h2><p>多线程并发执行时,对共享内存中共享对象的属性发生修改时所导致的数据冲突问题,称之为线程安全问题</p>
-<p>即使你的程序没有显式地创建任何线程,框架也可能为你创建了一些线程,这些线程<br>调用的代码必须是线程安全的(thread-safe)。这一点给开发人员的设计和实现赋予了更<br>重要的一份责任,因为开发线程安全的类要比非线程安全的类需要更加仔细,进行更多的<br>分析。</p>
-<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><p>线程可以有如下 6 种状态：<br>•New (新创建）<br>•Runnable (可运行）<br>•Blocked (被阻塞）<br>•Waiting (等待）<br>•Timed waiting (计时等待）<br>•Terminated (被终止）<br>下一节对每一种状态进行解释。<br>要确定一个线程的当前状态， 可调用 getState 方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">public enum State &#123;</span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a thread which has not yet started.</span><br><span class="line">         */</span><br><span class="line">        NEW,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a runnable thread.  A thread in the runnable</span><br><span class="line">         * state is executing in the Java virtual machine but it may</span><br><span class="line">         * be waiting for other resources from the operating system</span><br><span class="line">         * such as processor.</span><br><span class="line">         */</span><br><span class="line">        RUNNABLE,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a thread blocked waiting for a monitor lock.</span><br><span class="line">         * A thread in the blocked state is waiting for a monitor lock</span><br><span class="line">         * to enter a synchronized block/method or</span><br><span class="line">         * reenter a synchronized block/method after calling</span><br><span class="line">         * &#123;@link Object#wait() Object.wait&#125;.</span><br><span class="line">         */</span><br><span class="line">        BLOCKED,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a waiting thread.</span><br><span class="line">         * A thread is in the waiting state due to calling one of the</span><br><span class="line">         * following methods:</span><br><span class="line">         * &lt;ul&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link Object#wait() Object.wait&#125; with no timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #join() Thread.join&#125; with no timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#park() LockSupport.park&#125;&lt;/li&gt;</span><br><span class="line">         * &lt;/ul&gt;</span><br><span class="line">         *</span><br><span class="line">         * &lt;p&gt;A thread in the waiting state is waiting for another thread to</span><br><span class="line">         * perform a particular action.</span><br><span class="line">         *</span><br><span class="line">         * For example, a thread that has called &lt;tt&gt;Object.wait()&lt;/tt&gt;</span><br><span class="line">         * on an object is waiting for another thread to call</span><br><span class="line">         * &lt;tt&gt;Object.notify()&lt;/tt&gt; or &lt;tt&gt;Object.notifyAll()&lt;/tt&gt; on</span><br><span class="line">         * that object. A thread that has called &lt;tt&gt;Thread.join()&lt;/tt&gt;</span><br><span class="line">         * is waiting for a specified thread to terminate.</span><br><span class="line">         */</span><br><span class="line">        WAITING,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a waiting thread with a specified waiting time.</span><br><span class="line">         * A thread is in the timed waiting state due to calling one of</span><br><span class="line">         * the following methods with a specified positive waiting time:</span><br><span class="line">         * &lt;ul&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #sleep Thread.sleep&#125;&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link Object#wait(long) Object.wait&#125; with timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #join(long) Thread.join&#125; with timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#parkNanos LockSupport.parkNanos&#125;&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#parkUntil LockSupport.parkUntil&#125;&lt;/li&gt;</span><br><span class="line">         * &lt;/ul&gt;</span><br><span class="line">         */</span><br><span class="line">        TIMED_WAITING,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a terminated thread.</span><br><span class="line">         * The thread has completed execution.</span><br><span class="line">         */</span><br><span class="line">        TERMINATED;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="新创建线程"><a href="#新创建线程" class="headerlink" title="新创建线程"></a>新创建线程</h2><p>当用 new 操作符创建一个新线程时，如 newThread(r)， 该线程还没有开始运行。这意味<br>着它的状态是 new。当一个线程处于新创建状态时，程序还没有开始运行线程中的代码。在<br>线程运行之前还有一些基础工作要做。<br>那么所有创建线程的本质都是new Thread()</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(()-&gt;&#123; System.out.printf(<span class="string">&quot;线程%s 正在执行&quot;</span>,Thread.currentThread().getName()); &#125;,<span class="string">&quot;thread-01&quot;</span>).start();</span><br><span class="line">        System.out.printf(<span class="string">&quot;线程%s 是否有存活%s&quot;</span>,Thread.currentThread().getName(),Thread.currentThread().isAlive());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">控制台输出</span><br><span class="line">线程main 是否有存活<span class="keyword">true</span>线程thread-<span class="number">01</span> 正在执行Disconnected from the target VM, address: <span class="string">&#x27;127.0.0.1:53273&#x27;</span>, transport: <span class="string">&#x27;socket&#x27;</span></span><br></pre></td></tr></table></figure>
+        <p>免费GPT网站合集：<br>AI网站：<a target="_blank" rel="noopener" href="http://www.aitoolist.cn/">www.aitoolist.cn</a><br>AI网站工具：<a target="_blank" rel="noopener" href="http://www.futurepedia.io/">www.futurepedia.io</a><br>自动做PPT：beautiful AI<br>ai工具网站也可以：<a target="_blank" rel="noopener" href="http://www.ainav.cn/">www.ainav.cn</a><br>百度云文生图:<a target="_blank" rel="noopener" href="https://ai.baidu.com/creativity/imageeditor">https://ai.baidu.com/creativity/imageeditor</a><br>阿里云文生图<br><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/477804.html">https://help.aliyun.com/document_detail/477804.html</a><br>图文生图<br><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/477821.html">https://help.aliyun.com/document_detail/477821.html</a><br>文生图、图生图<br><a target="_blank" rel="noopener" href="https://www.apispace.com/23329/api/aigc/apiDocument?apiId=11993">https://www.apispace.com/23329/api/aigc/apiDocument?apiId=11993</a><br>腾讯云:<br>文生图<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/1668/88064">https://cloud.tencent.com/document/product/1668/88064</a><br>图生图<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/1668/88066">https://cloud.tencent.com/document/product/1668/88066</a></p>
+<h2 id="PPT工具"><a href="#PPT工具" class="headerlink" title="PPT工具"></a>PPT工具</h2><p>gamma ppt:<a target="_blank" rel="noopener" href="https://gamma.app/signup?r=sqgovd3iif5btr4">https://gamma.app/signup?r=sqgovd3iif5btr4</a><br>Tome：<a target="_blank" rel="noopener" href="https://beta.tome.app/">https://beta.tome.app/</a><br>Gamma：<a target="_blank" rel="noopener" href="https://gamma.app/">https://gamma.app/</a><br>chatBA：<a target="_blank" rel="noopener" href="https://www.chatba.com/">https://www.chatba.com/</a><br>iA presenter：<a target="_blank" rel="noopener" href="https://ia.net/presenter">https://ia.net/presenter</a><br>chronicle：<a target="_blank" rel="noopener" href="https://chroniclehq.com/">https://chroniclehq.com/</a><br>beautiful.ai <a target="_blank" rel="noopener" href="https://www.beautiful.ai/">https://www.beautiful.ai/</a></p>
+<p>##导出PDF转PPT<br><a target="_blank" rel="noopener" href="https://smallpdf.com/cn/pdf-converter">https://smallpdf.com/cn/pdf-converter</a></p>
+<p>chatgpt大合集</p>
+<p><a target="_blank" rel="noopener" href="https://chat.huashuyunai.com/#/pages/index/index">https://chat.huashuyunai.com/#/pages/index/index</a></p>
+<p><a target="_blank" rel="noopener" href="https://chat.extkj.cn/#/chat/1002">https://chat.extkj.cn/#/chat/1002</a></p>
+<p><a target="_blank" rel="noopener" href="https://chat.aidutu.cn/#/chat/1002">https://chat.aidutu.cn/#/chat/1002</a></p>
+<p><a target="_blank" rel="noopener" href="https://supremes.pro/">https://supremes.pro/</a></p>
+<p><a target="_blank" rel="noopener" href="https://ai-toolbox.codefuture.top/">https://ai-toolbox.codefuture.top/</a></p>
+<p><a target="_blank" rel="noopener" href="https://chat.intercat.cn/web/">https://chat.intercat.cn/web/</a></p>
+<p><a target="_blank" rel="noopener" href="https://yiyan.baidu.com/welcome">https://yiyan.baidu.com/welcome</a> </p>
+<p><a target="_blank" rel="noopener" href="https://effidit.qq.com/">https://effidit.qq.com/</a> </p>
+<p><a target="_blank" rel="noopener" href="https://www.giiso.com/#/">https://www.giiso.com/#/</a></p>
+<p>人工智能回顾 <a target="_blank" rel="noopener" href="https://pan.quark.cn/s/8c38f4d8b1ad">https://pan.quark.cn/s/8c38f4d8b1ad</a></p>
+<p>154页GPT中文文档<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/0c96b9e30a72">https://pan.quark.cn/s/0c96b9e30a72</a></p>
+<p>免费GPT工具<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/c2a744fffcf8">https://pan.quark.cn/s/c2a744fffcf8</a></p>
+<p>10000张AI底模型<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/245045838beb">https://pan.quark.cn/s/245045838beb</a></p>
+<p>SD大模型<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/d22153d8926c">https://pan.quark.cn/s/d22153d8926c</a></p>
+<p>Lora模型<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/ff0357cb4cef">https://pan.quark.cn/s/ff0357cb4cef</a></p>
+<p>「timat.png」链接：<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/f2d552d4e75d">https://pan.quark.cn/s/f2d552d4e75d</a></p>
+<p>免费GPT网站合集，gamma网站，AI PPT网站 .txt 链接：<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/046fc66de367">https://pan.quark.cn/s/046fc66de367</a></p>
+<p>PPT超级市场.txt，中文写作AI，在线markdown教学，全球技术新闻，超级好用得浏览器小组件 链接：<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/f92aed00f13f">https://pan.quark.cn/s/f92aed00f13f</a></p>
+<p>以下是10余款AI免费PPT工具网站的推荐：</p>
+<p>Canva（<a target="_blank" rel="noopener" href="https://www.canva.com/%EF%BC%89">https://www.canva.com/）</a><br>Canva是一款非常强大的在线平台，可以用来创建各种视觉元素，包括PPT幻灯片。Canva使用简单，提供了大量的模板、样式和设计元素，并且支持AI技术，可以根据用户的需要自动调整视觉元素。</p>
+<p>Zoho Show（<a target="_blank" rel="noopener" href="https://www.zoho.com/show/%EF%BC%89">https://www.zoho.com/show/）</a><br>Zoho Show是一款在线PPT工具，支持AI技术，可以根据用户的要求自动排版和设计幻灯片。Zoho Show提供了许多模板和主题，使得用户可以快速创建出漂亮的PPT。</p>
+<p>Prezi（<a target="_blank" rel="noopener" href="https://prezi.com/%EF%BC%89">https://prezi.com/）</a><br>Prezi是一种非线性的演示工具，使用了AI和动画技术，可以使演示更加生动有趣。Prezi提供了许多主题和模板，还可以自由移动和缩放画布上的元素，给用户更大的自由度。</p>
+<p>Visme（<a target="_blank" rel="noopener" href="https://www.visme.co/%EF%BC%89">https://www.visme.co/）</a><br>Visme是一款科技感强的PPT工具，支持AI技术，可以根据用户的选择自动生成幻灯片。Visme提供了许多图标、图表等视觉元素，在用户创建演示时会自动进行排版和布局优化</p>
+<p><a target="_blank" rel="noopener" href="https://chat.theb.ai/">https://chat.theb.ai/</a><br><a target="_blank" rel="noopener" href="https://chatforai.com/">https://chatforai.com/</a><br><a target="_blank" rel="noopener" href="https://chatgpt.h7ml.cn/">https://chatgpt.h7ml.cn/</a><br><a target="_blank" rel="noopener" href="https://poe.com/">https://poe.com/</a><br><a target="_blank" rel="noopener" href="https://chatgpt.poshist.cn/">https://chatgpt.poshist.cn/</a><br><a target="_blank" rel="noopener" href="https://gpt.h7ml.cn/">https://gpt.h7ml.cn/</a><br><a target="_blank" rel="noopener" href="https://chat.wxredcover.cn/">https://chat.wxredcover.cn/</a><br><a target="_blank" rel="noopener" href="https://chat.yqcloud.top/">https://chat.yqcloud.top/</a><br><a target="_blank" rel="noopener" href="https://chat.forchange.cn/">https://chat.forchange.cn/</a><br><a target="_blank" rel="noopener" href="https://ai.v2less.com/">https://ai.v2less.com/</a> 访问密码：lessismore<br><a target="_blank" rel="noopener" href="https://www.aicodehelper.com/">https://www.aicodehelper.com/</a><br><a target="_blank" rel="noopener" href="https://ai-toolbox.codefuture.top/">https://ai-toolbox.codefuture.top/</a><br><a target="_blank" rel="noopener" href="https://chilloutai.com/">https://chilloutai.com/</a><br><a target="_blank" rel="noopener" href="https://harry-potter.openai-lab.com/">https://harry-potter.openai-lab.com</a><br><a target="_blank" rel="noopener" href="https://wordstory.streamlit.app/">https://wordstory.streamlit.app/</a><br><a target="_blank" rel="noopener" href="https://hotoke.ai/">https://hotoke.ai/</a><br><a target="_blank" rel="noopener" href="https://chat.geekr.dev/">https://chat.geekr.dev/</a><br><a target="_blank" rel="noopener" href="https://desk.im/">https://desk.im</a><br><a target="_blank" rel="noopener" href="https://xc.com/">https://xc.com/</a><br><a target="_blank" rel="noopener" href="https://chat.51buygpt.com/">https://chat.51buygpt.com/</a><br><a target="_blank" rel="noopener" href="https://freechatgpt.chat/">https://freechatgpt.chat/</a><br><a target="_blank" rel="noopener" href="https://askai.ws/">https://askai.ws/</a><br><a target="_blank" rel="noopener" href="https://ai.yiios.com/">https://ai.yiios.com/</a><br><a target="_blank" rel="noopener" href="http://chat.apigpt.cn/">http://chat.apigpt.cn/</a><br><a target="_blank" rel="noopener" href="https://94gpt.com/">https://94gpt.com/</a><br><a target="_blank" rel="noopener" href="https://www.teach-anything.com/">https://www.teach-anything.com/</a><br><a target="_blank" rel="noopener" href="http://itecheasy.com.cn/">http://itecheasy.com.cn/</a><br><a target="_blank" rel="noopener" href="https://trychatgp.com/">https://trychatgp.com/</a><br><a target="_blank" rel="noopener" href="https://chatgpt.ddiu.io/">https://chatgpt.ddiu.io/</a><br><a target="_blank" rel="noopener" href="https://ai117.com/">https://ai117.com/</a><br><a target="_blank" rel="noopener" href="http://chat.livepo.top/">http://chat.livepo.top/</a><br><a target="_blank" rel="noopener" href="https://freechatgpt.lol/">https://freechatgpt.lol/</a><br><a target="_blank" rel="noopener" href="https://freegpt.cc/">https://freegpt.cc</a><br><a target="_blank" rel="noopener" href="https://ai.ls/">https://ai.ls</a><br><a target="_blank" rel="noopener" href="https://chat.alpaca-bi.com/">https://chat.alpaca-bi.com/</a><br><a target="_blank" rel="noopener" href="https://chat.paoying.net/">https://chat.paoying.net/</a><br><a target="_blank" rel="noopener" href="https://chat.eaten.fun/">https://chat.eaten.fun/</a><br><a target="_blank" rel="noopener" href="https://www.askopenai.cn/">https://www.askopenai.cn/</a><br><a target="_blank" rel="noopener" href="https://chat.h7ml.cn/">https://chat.h7ml.cn/</a><br><a target="_blank" rel="noopener" href="https://chatgpt-flutter.h7ml.cn/">https://chatgpt-flutter.h7ml.cn/</a><br><a target="_blank" rel="noopener" href="https://www.aitoolgpt.com/">https://www.aitoolgpt.com/</a><br><a target="_blank" rel="noopener" href="https://www.chatsverse.xyz/">https://www.chatsverse.xyz/</a></p>
+<p>在线体验 ChatGPT 的网站集合，UI 界面与官方相似。</p>
+<p>Chat TGBot：<a target="_blank" rel="noopener" href="https://chat.tgbot.co/">https://chat.tgbot.co/</a><br>BAI Chat：<a target="_blank" rel="noopener" href="https://chat.theb.ai/">https://chat.theb.ai/</a><br>ChatGPT 国产镜像：<a target="_blank" rel="noopener" href="https://ai.bo-e.com/">https://ai.bo-e.com/</a><br>ZYT.IM：<a target="_blank" rel="noopener" href="https://zyt.im/#/chat/">https://zyt.im/#/chat/</a><br>Fast GPT：<a target="_blank" rel="noopener" href="https://fastgpt.app/">https://fastgpt.app/</a><br>Free GPT：<a target="_blank" rel="noopener" href="https://freegpt.one/">https://freegpt.one/</a><br>AI EDU：<a target="_blank" rel="noopener" href="https://aigcfun.com/%E3%80%81https://chat.forchange.cn/">https://aigcfun.com/、https://chat.forchange.cn/</a><br>Chat LivePo：<a target="_blank" rel="noopener" href="https://chat.livepo.top/">https://chat.livepo.top/</a><br>AI 小思：<a target="_blank" rel="noopener" href="https://chatgpt-web-production-facc.up.railway.app/">https://chatgpt-web-production-facc.up.railway.app/</a></p>
+<p>SlideSalad<br>Beautiful.ai<br>Slidebean<br>Visme<br>Zoho Show<br>Genially<br>Renderforest<br>PowerPoint Designer<br>SlideDog<br>HelloSlide</p>
+<p>PPT模板大市场<br><a target="_blank" rel="noopener" href="https://www.pptsupermarket.com/?ref=lovejay.top">https://www.pptsupermarket.com/?ref=lovejay.top</a></p>
+<p>中文写作AI<br><a target="_blank" rel="noopener" href="https://xiezuocat.com/">https://xiezuocat.com/</a></p>
+<p>在线markdown教学<br><a target="_blank" rel="noopener" href="https://markdown.com.cn/editor/">https://markdown.com.cn/editor/</a></p>
+<p>全球技术新闻<br><a target="_blank" rel="noopener" href="https://www.freebuf.com/">https://www.freebuf.com/</a><br>超级好用得浏览器小组件<br><a target="_blank" rel="noopener" href="https://go.itab.link/">https://go.itab.link/</a></p>
+<p>免费下载PPT的网站：</p>
+<p>Slides Carnival:<a target="_blank" rel="noopener" href="https://www.slidescarnival.com/">https://www.slidescarnival.com/</a><br>PPT Template:<a target="_blank" rel="noopener" href="https://www.ppttemplate.net/">https://www.ppttemplate.net/</a><br>Free PowerPoint Templates:<a target="_blank" rel="noopener" href="https://www.free-power-point-templates.com/">https://www.free-power-point-templates.com/</a><br>PoweredTemplate:<a target="_blank" rel="noopener" href="https://www.poweredtemplate.com/">https://www.poweredtemplate.com/</a><br>Presentation Magazine:<a target="_blank" rel="noopener" href="https://www.presentationmagazine.com/free-powerpoint-templates/">https://www.presentationmagazine.com/free-powerpoint-templates/</a><br>FPPT:<a target="_blank" rel="noopener" href="https://www.free-power-point-templates.com/">https://www.free-power-point-templates.com/</a><br>24Slides:<a target="_blank" rel="noopener" href="https://24slides.com/free-powerpoint-templates/">https://24slides.com/free-powerpoint-templates/</a><br>Canva:<a target="_blank" rel="noopener" href="https://www.canva.com/templates/presentations/">https://www.canva.com/templates/presentations/</a><br>Pikbest:<a target="_blank" rel="noopener" href="https://www.pikbest.com/free-powerpoint-templates/">https://www.pikbest.com/free-powerpoint-templates/</a><br>Template.net:<a target="_blank" rel="noopener" href="https://www.template.net/business/powerpoint-templates/free">https://www.template.net/business/powerpoint-templates/free</a><br>免费图片压缩的网站：</p>
+<p>TinyPNG:<a target="_blank" rel="noopener" href="https://tinypng.com/">https://tinypng.com/</a><br>CompressJPEG:<a target="_blank" rel="noopener" href="https://compressjpeg.com/">https://compressjpeg.com/</a><br>ImageOptim:<a target="_blank" rel="noopener" href="https://imageoptim.com/">https://imageoptim.com/</a><br>Kraken.io:<a target="_blank" rel="noopener" href="https://kraken.io/">https://kraken.io/</a><br>ResizeImage.net:<a target="_blank" rel="noopener" href="https://www.resizeimage.net/">https://www.resizeimage.net/</a><br>Online-Convert:<a target="_blank" rel="noopener" href="https://www.online-convert.com/image/to-jpeg">https://www.online-convert.com/image/to-jpeg</a><br>Imgix:<a target="_blank" rel="noopener" href="https://imgix.net/">https://imgix.net/</a><br>Webpizer:<a target="_blank" rel="noopener" href="https://webpizer.app/">https://webpizer.app/</a><br>FastStone Image Viewer:<a target="_blank" rel="noopener" href="https://www.faststone.org/imageviewer/index.html">https://www.faststone.org/imageviewer/index.html</a><br>GIMP:<a target="_blank" rel="noopener" href="https://www.gimp.org/">https://www.gimp.org/</a></p>
+<p>免费的AI生成PPT网站，以下是其中几个：</p>
+<p>Slides Carnival:<a target="_blank" rel="noopener" href="https://www.slidescarnival.com/">https://www.slidescarnival.com/</a><br>Canva:<a target="_blank" rel="noopener" href="https://www.canva.com/templates/presentations/">https://www.canva.com/templates/presentations/</a><br>Prezi:<a target="_blank" rel="noopener" href="https://prezi.com/slide-generator/">https://prezi.com/slide-generator/</a><br>Google Slides:<a target="_blank" rel="noopener" href="https://www.google.com/slides/about/">https://www.google.com/slides/about/</a><br>Zoho Show:<a target="_blank" rel="noopener" href="https://www.zoho.com/slide-show/">https://www.zoho.com/slide-show/</a><br>Visme:<a target="_blank" rel="noopener" href="https://www.visme.co/create/presentations/">https://www.visme.co/create/presentations/</a><br>Slidebean:<a target="_blank" rel="noopener" href="https://slidebean.com/free-powerpoint-templates/">https://slidebean.com/free-powerpoint-templates/</a><br>SlideSalad:<a target="_blank" rel="noopener" href="https://slidesalad.com/free-powerpoint-templates/">https://slidesalad.com/free-powerpoint-templates/</a></p>
+<p>免费的AI绘图网站，以下是其中几个：</p>
+<p>Deep Dream Generator(深度梦境生成器)：<a target="_blank" rel="noopener" href="https://deepdreamgenerator.com/">https://deepdreamgenerator.com/</a><br>NeuralStyler(神经风格化)：<a target="_blank" rel="noopener" href="https://neuralstyler.com/">https://neuralstyler.com/</a><br>Artisto(艺术家)：<a target="_blank" rel="noopener" href="https://artisto.net/">https://artisto.net/</a><br>AI Painter(AI画家)：<a target="_blank" rel="noopener" href="https://aipainter.art/">https://aipainter.art/</a><br>PaintsChainer(画链)：<a target="_blank" rel="noopener" href="https://paintschainer.com/">https://paintschainer.com/</a></p>
 
       
     </div>
@@ -453,7 +464,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20230207a1.html" title="java并发编程专题连载系列" target="_blank" rel="external">https://zkkget.github.io/posts/20230207a1.html</a>
+      <a href="https://zkkget.github.io/posts/20230425a1.html" title="A工具大合集【不定期更新】" target="_blank" rel="external">https://zkkget.github.io/posts/20230425a1.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -499,24 +510,11 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/20230423a1.html" title="每日早报60s"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/20221018a1.html" title="字节跳动｜字节客户端｜一二三面+hr面（已Offer）"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20230423a1.html" title="每日早报60s"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
-    
-    <li class="toggle-toc">
-      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
-        <span>[&nbsp;</span><span>文章目录</span>
-        <i class="text-collapsed icon icon-anchor"></i>
-        <i class="text-in icon icon-close"></i>
-        <span>]</span>
-      </a>
-    </li>
     
   </ul>
   
