@@ -21,7 +21,7 @@
   <meta name="description" content="想学习CompletableFuture，因此查询资料发现CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。CompletableFuture实现了CompletionStage和Future接口。需要先了解Future接口什么是Future？简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CompletableFuture">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220728clgygpcpj0009p8ujeeybhf56.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220728clgygryob00091kuj74k5e90d.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="想学习CompletableFuture，因此查询资料发现CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。CompletableFuture实现了CompletionStage和Future接口。需要先了解Future接口什么是Future？简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是">
 <meta property="og:locale" content="zh_CN">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Completion.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220728clgygpcpj0009p8ujeeybhf56.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220728clgygryob00091kuj74k5e90d.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -266,7 +266,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -278,6 +278,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/20230427a1.html" class="title">温馨提示：本站所有资料仅供学习交流,严禁用于商业用途,请于24小时内删除</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-04-27T01:46:24.000Z" itemprop="datePublished">2023-04-27</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -338,21 +353,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/leetcode/">leetcode</a>
-              </p>
-              <p class="item-title">
-                <a href="/posts/20221012a1.html" class="title">LeetCode每日一题之817题链表组件</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-10-12T06:12:47.000Z" itemprop="datePublished">2022-10-12</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -381,7 +381,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220728clgygpcpj0009p8ujeeybhf56.html" class="article-date">
+	<a href="/posts/20220728clgygryob00091kuj74k5e90d.html" class="article-date">
 	  <time datetime="2022-07-28T02:44:05.000Z" itemprop="datePublished">2022-07-28</time>
 	</a>
 </span>
@@ -402,7 +402,7 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220728clgygpcpj0009p8ujeeybhf56.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220728clgygryob00091kuj74k5e90d.html#comments" class="article-comment-link">评论</a></span>
         
 	
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 7.1k(字)</span>
@@ -531,7 +531,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220728clgygpcpj0009p8ujeeybhf56.html" title="CompletableFuture" target="_blank" rel="external">https://zkkget.github.io/posts/20220728clgygpcpj0009p8ujeeybhf56.html</a>
+      <a href="https://zkkget.github.io/posts/20220728clgygryob00091kuj74k5e90d.html" title="CompletableFuture" target="_blank" rel="external">https://zkkget.github.io/posts/20220728clgygryob00091kuj74k5e90d.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -578,12 +578,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220802clgygpcqu002hp8ujdaurfjge.html" title="面向面试编程"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220802clgygryq5002k1kuj2p7dfv6c.html" title="面向面试编程"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220726clgygpcql001tp8ujc6wifll4.html" title="优雅永不过时"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220726clgygrypo001t1kuj2izte05l.html" title="优雅永不过时"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
