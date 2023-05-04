@@ -411,7 +411,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20221008a1.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 860(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 951(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
@@ -421,7 +421,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="LeetCode870题"><a href="#LeetCode870题" class="headerlink" title="LeetCode870题"></a>LeetCode870题</h2><p>给定两个大小相等的数组nums1和nums2，nums1相对于 nums2 的优势可以用满足nums1[i] &gt; nums2[i]的索引 i的数目来描述。</p>
+        <div id="readmore-container"><h2 id="LeetCode870题"><a href="#LeetCode870题" class="headerlink" title="LeetCode870题"></a>LeetCode870题</h2><p>给定两个大小相等的数组nums1和nums2，nums1相对于 nums2 的优势可以用满足nums1[i] &gt; nums2[i]的索引 i的数目来描述。</p>
 <p>返回 nums1的任意排列，使其相对于 nums2的优势最大化</p>
 <p>示例 1：</p>
 <p>输入：nums1 = [2,7,11,15], nums2 = [1,10,4,11]<br>输出：[2,11,7,15]<br>示例 2：</p>
@@ -437,7 +437,35 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span>[] advantageCount(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">    <span class="keyword">int</span> n = nums1.length;</span><br><span class="line">    <span class="comment">// 给 nums2 降序排序</span></span><br><span class="line">    PriorityQueue&lt;<span class="keyword">int</span>[]&gt; maxpq = <span class="keyword">new</span> PriorityQueue&lt;&gt;(</span><br><span class="line">        (<span class="keyword">int</span>[] pair1, <span class="keyword">int</span>[] pair2) -&gt; &#123; </span><br><span class="line">            <span class="keyword">return</span> pair2[<span class="number">1</span>] - pair1[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        maxpq.offer(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, nums2[i]&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 给 nums1 升序排序</span></span><br><span class="line">    Arrays.sort(nums1);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// nums1[left] 是最小值，nums1[right] 是最大值</span></span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (!maxpq.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] pair = maxpq.poll();</span><br><span class="line">        <span class="comment">// maxval 是 nums2 中的最大值，index 是对应索引</span></span><br><span class="line">        <span class="keyword">int</span> index = pair[<span class="number">0</span>], maxval = pair[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (maxval &lt; nums1[right]) &#123;</span><br><span class="line">            <span class="comment">// 如果 nums1[right] 能胜过 maxval，那就直接上</span></span><br><span class="line">            res[index] = nums1[right];</span><br><span class="line">            right--;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 战胜不过，就用最小值去送</span></span><br><span class="line">            res[index] = nums1[left];</span><br><span class="line">            left++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h2 id="官网解法"><a href="#官网解法" class="headerlink" title="官网解法"></a>官网解法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] advantageCount(int[] nums1, int[] nums2) &#123;</span><br><span class="line">        int n = nums1.length;</span><br><span class="line">        Integer[] idx1 = new Integer[n];</span><br><span class="line">        Integer[] idx2 = new Integer[n];</span><br><span class="line">        for (int i = 0; i &lt; n; ++i) &#123;</span><br><span class="line">            idx1[i] = i;</span><br><span class="line">            idx2[i] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(idx1, (i, j) -&gt; nums1[i] - nums1[j]);</span><br><span class="line">        Arrays.sort(idx2, (i, j) -&gt; nums2[i] - nums2[j]);</span><br><span class="line"></span><br><span class="line">        int[] ans = new int[n];</span><br><span class="line">        int left = 0, right = n - 1;</span><br><span class="line">        for (int i = 0; i &lt; n; ++i) &#123;</span><br><span class="line">            if (nums1[idx1[i]] &gt; nums2[idx2[left]]) &#123;</span><br><span class="line">                ans[idx2[left]] = nums1[idx1[i]];</span><br><span class="line">                ++left;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                ans[idx2[right]] = nums1[idx1[i]];</span><br><span class="line">                --right;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>作者：LeetCode-Solution<br>链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/advantage-shuffle/solution/you-shi-xi-pai-by-leetcode-solution-sqsf/">https://leetcode.cn/problems/advantage-shuffle/solution/you-shi-xi-pai-by-leetcode-solution-sqsf/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</div>
 
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "365",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		
       
     </div>
     <div class="article-footer">

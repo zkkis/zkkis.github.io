@@ -417,17 +417,17 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20221018a1.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 3.8k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 3.9k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 14(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 15(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="一面｜45min"><a href="#一面｜45min" class="headerlink" title="一面｜45min"></a>一面｜45min</h2><p>1.输入url到页面展示过程</p>
+        <div id="readmore-container"><h2 id="一面｜45min"><a href="#一面｜45min" class="headerlink" title="一面｜45min"></a>一面｜45min</h2><p>1.输入url到页面展示过程</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">输入url地址</span><br><span class="line">应用层进行DNS解析</span><br><span class="line">应用层生成HTTP请求报文</span><br><span class="line">传输层建立TCP连接</span><br><span class="line">网络层使用IP协议来选择路线</span><br><span class="line">数据链路层实现网络相邻节点间可靠的数据通信</span><br><span class="line">物理层传输数据</span><br><span class="line">服务器处理反向传输</span><br><span class="line">服务器返回一个 HTTP 响应</span><br><span class="line">浏览器渲染</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/qinian8/article/details/99081105</span><br></pre></td></tr></table></figure>
 <p>2.http和https的区别</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">HTTP（HyperText Transfer Protocol：超文本传输协议）是一种用于分布式、协作式和超媒体信息系统的应用层协议。 简单来说就是一种发布和接收 HTML 页面的方法，被用于在 Web 浏览器和网站服务器之间传递信息。</span><br><span class="line">HTTP 默认工作在 TCP 协议 80 端口，用户访问网站 http:// 打头的都是标准 HTTP 服务。</span><br><span class="line"></span><br><span class="line">HTTP 协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</span><br><span class="line"></span><br><span class="line">HTTPS（Hypertext Transfer Protocol Secure：超文本传输安全协议）是一种透过计算机网络进行安全通信的传输协议。HTTPS 经由 HTTP 进行通信，但利用 SSL/TLS 来加密数据包。HTTPS 开发的主要目的，是提供对网站服务器的身份认证，保护交换数据的隐私与完整性。</span><br><span class="line"></span><br><span class="line">HTTP 明文传输，数据都是未加密的，安全性较差，HTTPS（SSL+HTTP） 数据传输过程是加密的，安全性较好。</span><br><span class="line">使用 HTTPS 协议需要到 CA（Certificate Authority，数字证书认证机构） 申请证书，一般免费证书较少，因而需要一定费用。证书颁发机构如：Symantec、Comodo、GoDaddy 和 GlobalSign 等。</span><br><span class="line">HTTP 页面响应速度比 HTTPS 快，主要是因为 HTTP 使用 TCP 三次握手建立连接，客户端和服务器需要交换 3 个包，而 HTTPS除了 TCP 的三个包，还要加上 ssl 握手需要的 9 个包，所以一共是 12 个包。</span><br><span class="line">http 和 https 使用的是完全不同的连接方式，用的端口也不一样，前者是 80，后者是 443。</span><br><span class="line">HTTPS 其实就是建构在 SSL/TLS 之上的 HTTP 协议，所以，要比较 HTTPS 比 HTTP 要更耗费服务器资源</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/guolin_blog/article/details/104546558</span><br></pre></td></tr></table></figure>
@@ -470,7 +470,35 @@
 <p>5.http的无状态<br>6.为什么设计成无状态<br>7.你觉得什么样的代码算好的代码（瞎说挖了好多坑。。。<br>SOLLID<br>8.什么叫可拓展性好，举个例子<br>对扩展开放，对修改关闭<br>9.为啥要降低耦合度<br>10.你提到了设计模式，设计模式的七大原则是什么（7挖的坑…不会，设计模式只会单例模式<br>单一职责原则（Single Responsibility Principle）；—-通俗地说，即一个类只负责一项职责<br>开闭原则（Open Closed Principle）；—-开放-关闭原则表示软件实体 (类、模块、函数等等) 应该是可以被扩展的，但是不可被修改<br>里氏替换原则（Liskov Substitution Principle）；—-子类可以扩展父类的功能，但不能改变父类原有的功能<br>迪米特法则（Law of Demeter），又叫“最少知道法则”；—-最少知道原则，它表示一个对象应该对其它对象保持最少的了解。通俗来说就是，只与直接的朋友通信<br>接口隔离原则（Interface Segregation Principle）；—-客户端不应该依赖它不需要的接口；一个类对另一个类的依赖应该建立在最小的接口上。<br>依赖倒置原则（Dependence Inversion Principle）。—面向接口编程，理解了面向接口编程，也就理解了依赖倒转<br>组合/聚合复用原则 (Composite/Aggregate Reuse Principle)—-在一个新的对象里面使用一些已有的对象，使之成为新对象的一部分; 新的对象通过向这些对象的委派达到复用已有功能的目的。<br>11.你的优势和缺陷<br>三面当天下午收到hr面邀请</p>
 <p>hr面｜20min<br>聊了一些职业规划得问题略</p>
 <p>作者：匿名用户<br>链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/circle/discuss/eBN2jJ/">https://leetcode.cn/circle/discuss/eBN2jJ/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</div>
 
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "365",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		
       
     </div>
     <div class="article-footer">
