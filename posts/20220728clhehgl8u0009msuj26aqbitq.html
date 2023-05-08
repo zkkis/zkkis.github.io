@@ -21,7 +21,7 @@
   <meta name="description" content="想学习CompletableFuture，因此查询资料发现CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。CompletableFuture实现了CompletionStage和Future接口。需要先了解Future接口什么是Future？简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CompletableFuture">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220728clhe6dfxf000gh0uj5ri340ag.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220728clhehgl8u0009msuj26aqbitq.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="想学习CompletableFuture，因此查询资料发现CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。CompletableFuture实现了CompletionStage和Future接口。需要先了解Future接口什么是Future？简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是">
 <meta property="og:locale" content="zh_CN">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Completion.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220728clhe6dfxf000gh0uj5ri340ag.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220728clhehgl8u0009msuj26aqbitq.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -381,7 +381,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220728clhe6dfxf000gh0uj5ri340ag.html" class="article-date">
+	<a href="/posts/20220728clhehgl8u0009msuj26aqbitq.html" class="article-date">
 	  <time datetime="2022-07-28T02:44:05.000Z" itemprop="datePublished">2022-07-28</time>
 	</a>
 </span>
@@ -402,7 +402,7 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220728clhe6dfxf000gh0uj5ri340ag.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220728clhehgl8u0009msuj26aqbitq.html#comments" class="article-comment-link">评论</a></span>
         
 	
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 7.2k(字)</span>
@@ -453,7 +453,7 @@
 <p>这里调用的runAsync()方法没有使用ForkJoinPool的线程，而是使用了Executors.newSingleThreadExecutor()中的线程。runAsync()其实效果跟单开一个线程一样。<br>supplyAsync()</p>
 <p>supply有供应的意思，supplyAsync就可以理解为异步供应，查看supplyAsync()方法入参可以知道，其有两个入参：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Supplier supplier,</span><br><span class="line">Executor executor</span><br></pre></td></tr></table></figure>
-<p>这里先简单介绍下Supplier接口，Supplier接口是JDK8引入的新特性，它也是用于创建对象的，只不过调用Supplier的get()方法时，才会去通过构造方法去创建对象，并且每次创建出的对象都不一样。Supplier常用语法为：Supplier<MySupplier> sup= MySupplier::new;<br>再展示代码例子之前，再讲一个thenAccept()方法，可以发现thenAccept()方法的入参如下：</p>
+<p>这里先简单介绍下Supplier接口，Supplier接口是JDK8引入的新特性，它也是用于创建对象的，只不过调用Supplier的get()方法时，才会去通过构造方法去创建对象，并且每次创建出的对象都不一样。Supplier常用语法为：Supplier<MySupplier> sup= MySupplier::new;<br>再展示代码例子之前，再讲一个thenAccept()方法，可以发现thenAccept()方法的入参如下：</MySupplier></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Comsumer&lt;? super T&gt;</span><br><span class="line">Comsumer接口同样是java8新引入的特性，它有两个重要接口方法：</span><br><span class="line"></span><br><span class="line">accept()</span><br><span class="line">andThen()</span><br><span class="line">thenAccept()可以理解为接收CompletableFuture的结果然后再进行处理。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>下面看下supplyAsync()和thenAccept()的例子：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public void thenApply() throws Exception &#123;</span><br><span class="line">        ExecutorService executorService = Executors.newFixedThreadPool(2);</span><br><span class="line">        CompletableFuture cf = CompletableFuture.supplyAsync(() -&gt; &#123; //实现了Supplier的get()方法</span><br><span class="line">            try &#123;</span><br><span class="line">                Thread.sleep(2000);</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(&quot;supplyAsync &quot; + Thread.currentThread().getName());</span><br><span class="line">            return &quot;hello &quot;;</span><br><span class="line">        &#125;,executorService).thenAccept(s -&gt; &#123; //实现了Comsumper的accept()方法</span><br><span class="line">            try &#123;</span><br><span class="line">                thenApply_test(s + &quot;world&quot;);</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        System.out.println(Thread.currentThread().getName());</span><br><span class="line">        while (true) &#123;</span><br><span class="line">            if (cf.isDone()) &#123;</span><br><span class="line">                System.out.println(&quot;CompletedFuture...isDown&quot;);</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -559,7 +559,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220728clhe6dfxf000gh0uj5ri340ag.html" title="CompletableFuture" target="_blank" rel="external">https://zkkget.github.io/posts/20220728clhe6dfxf000gh0uj5ri340ag.html</a>
+      <a href="https://zkkget.github.io/posts/20220728clhehgl8u0009msuj26aqbitq.html" title="CompletableFuture" target="_blank" rel="external">https://zkkget.github.io/posts/20220728clhehgl8u0009msuj26aqbitq.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -606,12 +606,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220802clhe6dfyh003kh0uj9cshahhy.html" title="面向面试编程"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220802clhehgla5003hmsuj4mopd9jl.html" title="面向面试编程"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220726clhe6dfxy001nh0uj92ij6iua.html" title="优雅永不过时"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220726clhehgl9o001tmsujg7vd5rrz.html" title="优雅永不过时"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

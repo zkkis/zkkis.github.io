@@ -21,7 +21,7 @@
   <meta name="description" content="【置顶】 留言请点击友链留言室或者在文章底部留言 官网http:&#x2F;&#x2F;rocketmq.apache.org&#x2F;release_notes&#x2F;release-notes-4.3.2&#x2F; 中文文档https:&#x2F;&#x2F;rocketmq-1.gitbook.io&#x2F;rocketmq-connector&#x2F;quick-start&#x2F;qian-qi-zhun-bei&#x2F;dan-ji-huan-jing idea调试工具http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RocketMq从入门到放弃">
-<meta property="og:url" content="https://zkkget.github.io/posts/20211028clhe6dfxh000hh0uj5828d2p1.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20211028clhehgl94000omsujeyidgozi.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="【置顶】 留言请点击友链留言室或者在文章底部留言 官网http:&#x2F;&#x2F;rocketmq.apache.org&#x2F;release_notes&#x2F;release-notes-4.3.2&#x2F; 中文文档https:&#x2F;&#x2F;rocketmq-1.gitbook.io&#x2F;rocketmq-connector&#x2F;quick-start&#x2F;qian-qi-zhun-bei&#x2F;dan-ji-huan-jing idea调试工具http">
 <meta property="og:locale" content="zh_CN">
@@ -40,7 +40,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktMq.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20211028clhe6dfxh000hh0uj5828d2p1.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20211028clhehgl94000omsujeyidgozi.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -397,7 +397,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20211028clhe6dfxh000hh0uj5828d2p1.html" class="article-date">
+	<a href="/posts/20211028clhehgl94000omsujeyidgozi.html" class="article-date">
 	  <time datetime="2021-10-28T07:46:52.000Z" itemprop="datePublished">2021-10-28</time>
 	</a>
 </span>
@@ -423,7 +423,7 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20211028clhe6dfxh000hh0uj5828d2p1.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20211028clhehgl94000omsujeyidgozi.html#comments" class="article-comment-link">评论</a></span>
         
 	
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 3.8k(字)</span>
@@ -462,7 +462,7 @@
 <p>RokectMq架构<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq7.jpg" alt="rocketMq"></p>
 <h1 id="存储结构是什么样的？"><a href="#存储结构是什么样的？" class="headerlink" title="存储结构是什么样的？"></a>存储结构是什么样的？</h1><p>RocketMQ消息的存储是由ConsumeQueue和CommitLog配合完成的</p>
 <p>CommitLog：消息真正的物理存储文件是CommitLog，默认一个文件一个G，存储的是Topic，QueueId和Message，一个存储满了会自动创建一个新的。<br>ConsumeQueue：是消息的逻辑队列，类似数据库的索引文件，存储的是指向物理存储的地址，为了加快消息的读取速度。消费者消费某条消息时，先查询索引获取CommitLog的对应的物理地址。每个Topic下的每个Message Queue都有一个对应的ConsumeQueue文件，文件很小，通常会加载到内存中。如果该文件丢失或者损坏，可以通过CommitLog恢复<br>IndexFile：也是个索引文件，为了消息查询提供了一种通过key或时间区间来查询消息的方法，这种通过IndexFile来查找消息的方法不影响发送与消费消息的主流程</p>
-<h1 id="如何保证消息不丢失？"><a href="#如何保证消息不丢失？" class="headerlink" title="如何保证消息不丢失？"></a>如何保证消息不丢失？</h1><p>RocketMq提供消息持久化机制，消息的刷盘策略分为同步刷盘和异步刷盘。同步刷盘即刷盘成功后再返回一个成功信息，能够保证数据一定保存成功，但是会降低系统吞吐量，异步刷盘与同步刷盘相反，我一般会采用同步刷盘的策略来保证消息不会丢失。<br>RocketMq采用的文件系统存储而不是关系型数据库存储，因为在一般情况下文件系统的性能是比数据库性能高的<br>而RocketMq为了提高文件系统的读写的高性能，做了两点优化。第一点是采用顺序写的方式，这样可以大大提高磁盘写的性能。第二点采用了零拷贝，原来的文件读取流程是：从磁盘复制数据到内核态内存；从内核态内存复制到用户态内存；从用户态内存复制到网络驱动，最后从网络驱动复制到网卡中发送，零拷贝则省去了从内核态内存复制到用户态内存的这一过程，提高了读取的性能，但是零拷贝对文件大小有要求，所以RocketMq的持久化文件<font color=#0099ff size=3 face="黑体">commitlog默认为1G</font>。<br>commitlog是存储了RocketMq的消息等核心信息，除此之外，还提供可一个ConsumeQueue作为持久化文件的索引，提高查询的效率，一般文件比较小，都是加载在内存中。除了ConsumeQueue之外，还会存储一个IndexFile文件，用来提供针对某一个key或者时间区间的查询。</p>
+<h1 id="如何保证消息不丢失？"><a href="#如何保证消息不丢失？" class="headerlink" title="如何保证消息不丢失？"></a>如何保证消息不丢失？</h1><p>RocketMq提供消息持久化机制，消息的刷盘策略分为同步刷盘和异步刷盘。同步刷盘即刷盘成功后再返回一个成功信息，能够保证数据一定保存成功，但是会降低系统吞吐量，异步刷盘与同步刷盘相反，我一般会采用同步刷盘的策略来保证消息不会丢失。<br>RocketMq采用的文件系统存储而不是关系型数据库存储，因为在一般情况下文件系统的性能是比数据库性能高的<br>而RocketMq为了提高文件系统的读写的高性能，做了两点优化。第一点是采用顺序写的方式，这样可以大大提高磁盘写的性能。第二点采用了零拷贝，原来的文件读取流程是：从磁盘复制数据到内核态内存；从内核态内存复制到用户态内存；从用户态内存复制到网络驱动，最后从网络驱动复制到网卡中发送，零拷贝则省去了从内核态内存复制到用户态内存的这一过程，提高了读取的性能，但是零拷贝对文件大小有要求，所以RocketMq的持久化文件<font color="#0099ff" size="3" face="黑体">commitlog默认为1G</font>。<br>commitlog是存储了RocketMq的消息等核心信息，除此之外，还提供可一个ConsumeQueue作为持久化文件的索引，提高查询的效率，一般文件比较小，都是加载在内存中。除了ConsumeQueue之外，还会存储一个IndexFile文件，用来提供针对某一个key或者时间区间的查询。</p>
 <h1 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h1><h2 id="Producer负载均衡"><a href="#Producer负载均衡" class="headerlink" title="Producer负载均衡"></a>Producer负载均衡</h2><p>Producer端，每个实例在发消息的时候，默认会轮询所有的message queue发送，以达到让消息平均落在不同的queue上。而由于queue可以散落在不同的broker，所以消息就发送到不同的broker下</p>
 <h2 id="Consumer负载均衡"><a href="#Consumer负载均衡" class="headerlink" title="Consumer负载均衡"></a>Consumer负载均衡</h2><p>如果consumer实例的数量比message queue的总数量还多的话，多出来的consumer实例将无法分到queue，也就无法消费到消息，也就无法起到分摊负载的作用了。所以需要控制让queue的总数量大于等于consumer的数量。</p>
 <p>消费者的集群模式–启动多个消费者就可以保证消费者的负载均衡（均摊队列）</p>
@@ -537,7 +537,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20211028clhe6dfxh000hh0uj5828d2p1.html" title="RocketMq从入门到放弃" target="_blank" rel="external">https://zkkget.github.io/posts/20211028clhe6dfxh000hh0uj5828d2p1.html</a>
+      <a href="https://zkkget.github.io/posts/20211028clhehgl94000omsujeyidgozi.html" title="RocketMq从入门到放弃" target="_blank" rel="external">https://zkkget.github.io/posts/20211028clhehgl94000omsujeyidgozi.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -584,7 +584,7 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220106clhe6dfy7002eh0uj197l3idg.html" title="还在手动维护Yapi?"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220106clhehgla4003gmsujbaeng971.html" title="还在手动维护Yapi?"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
