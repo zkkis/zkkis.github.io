@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://zkkget.github.io/posts/20230425a1/4.png">
 <meta property="og:image" content="https://zkkget.github.io/posts/20230425a1/5.png">
 <meta property="article:published_time" content="2023-04-25T12:12:52.000Z">
-<meta property="article:modified_time" content="2023-05-09T01:38:12.539Z">
+<meta property="article:modified_time" content="2023-05-09T01:42:07.463Z">
 <meta property="article:author" content="赵KK">
 <meta property="article:tag" content="AI工具大合集">
 <meta name="twitter:card" content="summary">
@@ -466,8 +466,9 @@
 
     var headings = document.getElementsByTagName('h1');
     for (var i = 0; i < headings.length; i++) {
-      headings[i].classList.add("title-red");
-    }
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    headings[i].style.color = "#" + randomColor;
+  }
   </script>
 
 </head>
