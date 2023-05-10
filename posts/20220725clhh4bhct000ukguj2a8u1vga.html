@@ -21,7 +21,7 @@
   <meta name="description" content="事务是我们平时项目中对数据操作最为直接、常用的方式，现在无论是大小公司都离不开对事务的操作，伴随业务的提升，客户量的积累也大大增加了对事务管理的难度。在本章节中将会讲到如下内容： 1234567891、线上环境对roll back only 的处理2、线上环境对嵌套事务的解决方案3、11个demo分析事务失效的场景4、分布式事务5、事务也能异步 1、线上环境对roll back only 的处理与">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring事务管理报错Transaction rolled back because it has been marked as rollback-only">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220725clhg4nyw9000w5suj6gk41uz5.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220725clhh4bhct000ukguj2a8u1vga.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="事务是我们平时项目中对数据操作最为直接、常用的方式，现在无论是大小公司都离不开对事务的操作，伴随业务的提升，客户量的积累也大大增加了对事务管理的难度。在本章节中将会讲到如下内容： 1234567891、线上环境对roll back only 的处理2、线上环境对嵌套事务的解决方案3、11个demo分析事务失效的场景4、分布式事务5、事务也能异步 1、线上环境对roll back only 的处理与">
 <meta property="og:locale" content="zh_CN">
@@ -31,7 +31,7 @@
 <meta property="article:tag" content="事务">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220725clhg4nyw9000w5suj6gk41uz5.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220725clhh4bhct000ukguj2a8u1vga.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -264,7 +264,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -276,6 +276,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/20230510a1.html" class="title">不限次数的AI对标ChatGPT提高生产力无需魔法</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-10T02:37:16.000Z" itemprop="datePublished">2023-05-10</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -336,21 +351,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A560s/">每日早报60s</a>
-              </p>
-              <p class="item-title">
-                <a href="/posts/20230423a1.html" class="title">每日早报60s</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2023-04-23T02:21:18.000Z" itemprop="datePublished">2023-04-23</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -388,7 +388,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220725clhg4nyw9000w5suj6gk41uz5.html" class="article-date">
+	<a href="/posts/20220725clhh4bhct000ukguj2a8u1vga.html" class="article-date">
 	  <time datetime="2022-07-25T08:15:07.000Z" itemprop="datePublished">2022-07-25</time>
 	</a>
 </span>
@@ -414,7 +414,7 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220725clhg4nyw9000w5suj6gk41uz5.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220725clhh4bhct000ukguj2a8u1vga.html#comments" class="article-comment-link">评论</a></span>
         
 	
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 5.5k(字)</span>
@@ -490,7 +490,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220725clhg4nyw9000w5suj6gk41uz5.html" title="Spring事务管理报错Transaction rolled back because it has been marked as rollback-only" target="_blank" rel="external">https://zkkget.github.io/posts/20220725clhg4nyw9000w5suj6gk41uz5.html</a>
+      <a href="https://zkkget.github.io/posts/20220725clhh4bhct000ukguj2a8u1vga.html" title="Spring事务管理报错Transaction rolled back because it has been marked as rollback-only" target="_blank" rel="external">https://zkkget.github.io/posts/20220725clhh4bhct000ukguj2a8u1vga.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -537,12 +537,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220725clhg4nyw2000j5sujff1s1om3.html" title="Mysql海量数据存储与优化"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220725clhh4bhcn000hkguj7pxyddnq.html" title="Mysql海量数据存储与优化"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220725clhg4nywm001b5suj2k128n0s.html" title="【声明】阿里云服务器导致图片不显示[可在此贴下方留言]"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220725clhh4bhd5001ekguj0bcu1wu7.html" title="【声明】阿里云服务器导致图片不显示[可在此贴下方留言]"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
