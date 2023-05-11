@@ -17,23 +17,30 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>mysql中的锁表语句查看方法汇总 | 赵KK的个人博客</title>
-  <meta name="description" content="1234567891011121314mysql&gt; show status like &amp;#x27;Table%&amp;#x27;;+----------------------------+----------+| Variable_name        | Value |+----------------------------+----------+| Table_locks_immedia">
+  <title>RocketMq从入门到放弃 | 赵KK的个人博客</title>
+  <meta name="description" content="【置顶】 留言请点击友链留言室或者在文章底部留言 官网http:&#x2F;&#x2F;rocketmq.apache.org&#x2F;release_notes&#x2F;release-notes-4.3.2&#x2F; 中文文档https:&#x2F;&#x2F;rocketmq-1.gitbook.io&#x2F;rocketmq-connector&#x2F;quick-start&#x2F;qian-qi-zhun-bei&#x2F;dan-ji-huan-jing idea调试工具http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql中的锁表语句查看方法汇总">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220428clhiyt5qx00141cuj86z0bmov.html">
+<meta property="og:title" content="RocketMq从入门到放弃">
+<meta property="og:url" content="https://zkkget.github.io/posts/20211028clhiz6djz000m0oujf0k78bt6.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="1234567891011121314mysql&gt; show status like &amp;#x27;Table%&amp;#x27;;+----------------------------+----------+| Variable_name        | Value |+----------------------------+----------+| Table_locks_immedia">
+<meta property="og:description" content="【置顶】 留言请点击友链留言室或者在文章底部留言 官网http:&#x2F;&#x2F;rocketmq.apache.org&#x2F;release_notes&#x2F;release-notes-4.3.2&#x2F; 中文文档https:&#x2F;&#x2F;rocketmq-1.gitbook.io&#x2F;rocketmq-connector&#x2F;quick-start&#x2F;qian-qi-zhun-bei&#x2F;dan-ji-huan-jing idea调试工具http">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/mysql.png">
-<meta property="article:published_time" content="2022-04-28T08:48:51.000Z">
-<meta property="article:modified_time" content="2022-09-15T09:34:18.463Z">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktMq.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq1.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq2.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq3.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq4.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq5.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq6.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq7.jpg">
+<meta property="article:published_time" content="2021-10-28T07:46:52.000Z">
+<meta property="article:modified_time" content="2022-09-20T07:08:49.977Z">
 <meta property="article:author" content="赵KK">
-<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="MQ">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/mysql.png">
+<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktMq.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220428clhiyt5qx00141cuj86z0bmov.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20211028clhiz6djz000m0oujf0k78bt6.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -368,21 +375,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E3%80%90%E7%BD%AE%E9%A1%B6%E3%80%91-%E7%95%99%E8%A8%80%E8%AF%B7%E7%82%B9%E5%87%BB%E5%8F%8B%E9%93%BE%E7%95%99%E8%A8%80%E5%AE%A4%E6%88%96%E8%80%85%E5%9C%A8%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8%E7%95%99%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">【置顶】 留言请点击友链留言室或者在文章底部留言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%98%E7%BD%91"><span class="toc-number">2.</span> <span class="toc-text">官网</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3"><span class="toc-number">3.</span> <span class="toc-text">中文文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#idea%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-number">4.</span> <span class="toc-text">idea调试工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85RocketMQ"><span class="toc-number">5.</span> <span class="toc-text">Windows环境下安装RocketMQ</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="toc-number">6.</span> <span class="toc-text">基本配置项</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#java%E6%95%B4%E5%90%88MQ"><span class="toc-number">7.</span> <span class="toc-text">java整合MQ</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">存储结构是什么样的？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%B6%88%E6%81%AF%E4%B8%8D%E4%B8%A2%E5%A4%B1%EF%BC%9F"><span class="toc-number">9.</span> <span class="toc-text">如何保证消息不丢失？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-number">10.</span> <span class="toc-text">负载均衡</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Producer%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-number">10.1.</span> <span class="toc-text">Producer负载均衡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Consumer%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-number">10.2.</span> <span class="toc-text">Consumer负载均衡</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E9%87%8D%E8%AF%95%E6%9C%BA%E5%88%B6"><span class="toc-number">11.</span> <span class="toc-text">消息重试机制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%A1%BA%E5%BA%8F%E6%B6%88%E6%81%AF%E7%9A%84%E9%87%8D%E8%AF%95"><span class="toc-number">11.1.</span> <span class="toc-text">1. 顺序消息的重试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%97%A0%E5%BA%8F%E6%B6%88%E6%81%AF%E7%9A%84%E9%87%8D%E8%AF%95"><span class="toc-number">11.2.</span> <span class="toc-text">2. 无序消息的重试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B6%88%E8%B4%B9%E5%B9%82%E7%AD%89"><span class="toc-number">12.</span> <span class="toc-text">消费幂等</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BA%A7%E7%94%9F%E9%87%8D%E5%A4%8D%E6%B6%88%E6%81%AF%EF%BC%9F"><span class="toc-number">12.1.</span> <span class="toc-text">1. 什么时候产生重复消息？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="toc-number">12.2.</span> <span class="toc-text">2. 处理方式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AAMq%EF%BC%9F"><span class="toc-number">13.</span> <span class="toc-text">如何设计一个Mq？</span></a></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-mysql中的锁表语句查看方法汇总" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-RocketMq从入门到放弃" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      mysql中的锁表语句查看方法汇总
+      RocketMq从入门到放弃
     </h1>
   
 
@@ -390,20 +397,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220428clhiyt5qx00141cuj86z0bmov.html" class="article-date">
-	  <time datetime="2022-04-28T08:48:51.000Z" itemprop="datePublished">2022-04-28</time>
+	<a href="/posts/20211028clhiz6djz000m0oujf0k78bt6.html" class="article-date">
+	  <time datetime="2021-10-28T07:46:52.000Z" itemprop="datePublished">2021-10-28</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+    <a class="article-category-link" href="/categories/MQ/">MQ</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/MySQL/" rel="tag">MySQL</a>
+	<a class="article-tag-link-link" href="/tags/MQ/" rel="tag">MQ</a>
   </span>
 
 
@@ -416,52 +423,83 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220428clhiyt5qx00141cuj86z0bmov.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20211028clhiz6djz000m0oujf0k78bt6.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.4k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 3.8k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 5(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 14(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <div id="readmore-container"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show status like <span class="string">&#x27;Table%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Variable_name        | Value |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Table_locks_immediate | <span class="number">105</span>         |</span><br><span class="line"></span><br><span class="line">| Table_locks_waited   | <span class="number">3</span>           |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>Table_locks_immediate    26839653<br>Table_locks_waited            0<br>Table_open_cache_hits    3<br>Table_open_cache_misses    2<br>Table_open_cache_overflows    2</p>
-<p>Table_locks_immediate  指的是能够立即获得表级锁的次数</p>
-<p>Table_locks_waited  指的是不能立即获取表级锁而需要等待的次数</p>
-<p>Table_open_cache_hits  表缓存被命中的次数</p>
-<p>Table_open_cache_misses 表缓存未被命中的次数</p>
-<p>Table_open_cache_overflows  就是上面说的淘汰的instance（table cache）的数量</p>
-<p>查看正在被锁定的的表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">OPEN</span> TABLES <span class="keyword">where</span> In_use <span class="operator">&gt;</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+        <div id="readmore-container"><h1 id="【置顶】-留言请点击友链留言室或者在文章底部留言"><a href="#【置顶】-留言请点击友链留言室或者在文章底部留言" class="headerlink" title="【置顶】 留言请点击友链留言室或者在文章底部留言"></a>【置顶】 留言请点击友链留言室或者在文章底部留言</h1><p><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktMq.jpg" alt="mq"></p>
+<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a target="_blank" rel="noopener" href="http://rocketmq.apache.org/release_notes/release-notes-4.3.2/">http://rocketmq.apache.org/release_notes/release-notes-4.3.2/</a></p>
+<h1 id="中文文档"><a href="#中文文档" class="headerlink" title="中文文档"></a>中文文档</h1><p><a target="_blank" rel="noopener" href="https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing">https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing</a></p>
+<h1 id="idea调试工具"><a href="#idea调试工具" class="headerlink" title="idea调试工具"></a>idea调试工具</h1><p><a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/idea/2019.1/debug-tool-window.html">https://www.jetbrains.com/help/idea/2019.1/debug-tool-window.html</a><br><a target="_blank" rel="noopener" href="https://github.com/DillonDong/notes">https://github.com/DillonDong/notes</a></p>
+<h1 id="Windows环境下安装RocketMQ"><a href="#Windows环境下安装RocketMQ" class="headerlink" title="Windows环境下安装RocketMQ"></a>Windows环境下安装RocketMQ</h1><p>一.预备环境<br>1.系统<br>Windows<br>2. 环境<br>JDK1.8、Maven、Git<br>二. RocketMQ部署<br>1.下载<br>1.1地址：<a target="_blank" rel="noopener" href="http://rocketmq.apache.org/release_notes/release-notes-4.3.0/">http://rocketmq.apache.org/release_notes/release-notes-4.3.0/</a><br>1.2选择‘Binary’进行下载<br><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq1.jpg" alt="rocketMq"><br>1.3解压已下载工程<br><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq2.jpg" alt="rocketMq"><br>2. 配置<br>2.1 系统环境变量配置<br>变量名：ROCKETMQ_HOME<br>变量值：MQ解压路径\MQ文件夹名<br>eg、ROCKETMQ_HOME=D:\dev\rocketmq-all-4.3.0-bin-release<br>3. 启动<br>3.1 启动NAMESERVER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqnamesrv.cmd’，启动NAMESERVER。成功后会弹出提示框，此框勿关闭。<br><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq3.jpg" alt="rocketMq"><br>3.2 启动BROKER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true’，启动BROKER。成功后会弹出提示框，此框勿关闭</p>
+<ol start="2">
+<li>编译启动<br>用CMD进入‘\rocketmq-externals\rocketmq-console’文件夹，执行‘mvn clean package -Dmaven.test.skip=true’，编译生成。<br>编译成功之后，Cmd进入‘target’文件夹，执行‘java -jar rocketmq-console-ng-1.0.0.jar’，启动‘rocketmq-console-ng-1.0.0.jar’。</li>
+<li>测试<br>浏览器中输入‘127.0.0.1:配置端口’，成功后即可查看。<br>eg：<a target="_blank" rel="noopener" href="http://127.0.0.1:8088/">http://127.0.0.1:8088</a><br><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq4.jpg" alt="rocketMq"></li>
+</ol>
+<h1 id="基本配置项"><a href="#基本配置项" class="headerlink" title="基本配置项"></a>基本配置项</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">server.contextPath=</span><br><span class="line">server.port=8088</span><br><span class="line">#spring.application.index=true</span><br><span class="line">spring.application.name=rocketmq-console</span><br><span class="line">spring.http.encoding.charset=UTF-8</span><br><span class="line">spring.http.encoding.enabled=true</span><br><span class="line">spring.http.encoding.force=true</span><br><span class="line">logging.config=classpath:logback.xml</span><br><span class="line">#if this value is empty,use env value rocketmq.config.namesrvAddr  NAMESRV_ADDR | now, you can set it in ops page.default localhost:9876</span><br><span class="line">rocketmq.config.namesrvAddr=127.0.0.1:9876</span><br><span class="line">#if you use rocketmq version &lt; 3.5.8, rocketmq.config.isVIPChannel should be false.default true</span><br><span class="line">rocketmq.config.isVIPChannel=</span><br><span class="line">#rocketmq-console&#x27;s data path:dashboard/monitor</span><br><span class="line">rocketmq.config.dataPath=/tmp/rocketmq-console/data</span><br><span class="line">#set it false if you don&#x27;t want use dashboard.default true</span><br><span class="line">rocketmq.config.enableDashBoardCollect=true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="java整合MQ"><a href="#java整合MQ" class="headerlink" title="java整合MQ"></a>java整合MQ</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RockermqproducerApplicationTests</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;apache.rocketmq.producer.producerGroup&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String producerGroup;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * NameServer 地址</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;apache.rocketmq.namesrvAddr&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String namesrvAddr;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextLoads</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//生产者的组名</span></span><br><span class="line">        DefaultMQProducer producer=<span class="keyword">new</span> DefaultMQProducer(producerGroup);</span><br><span class="line">        <span class="comment">//指定NameServer地址，多个地址以 ; 隔开</span></span><br><span class="line">        producer.setNamesrvAddr(namesrvAddr);</span><br><span class="line">        <span class="comment">//消息发送失败重试次数</span></span><br><span class="line">        producer.setRetryTimesWhenSendFailed(<span class="number">3</span>);</span><br><span class="line">        <span class="comment">//异步发送失败重试次数</span></span><br><span class="line">        producer.setRetryTimesWhenSendAsyncFailed(<span class="number">3</span>);</span><br><span class="line">        <span class="comment">//消息没有发送成功，是否发送到另外一个Broker中</span></span><br><span class="line">        producer.setRetryAnotherBrokerWhenNotStoreOK(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line"> </span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">             * Producer对象在使用之前必须要调用start初始化，初始化一次即可</span></span><br><span class="line"><span class="comment">             * 注意：切记不可以在每次发送消息时，都调用start方法</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            producer.start();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">10000</span>;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Message msg=<span class="keyword">new</span> Message(<span class="string">&quot;topic_example_java&quot;</span>,<span class="string">&quot;TagA&quot;</span>,(<span class="string">&quot;Hello Java Demo RocketMQ:&quot;</span>+i).getBytes(Charset.defaultCharset()));</span><br><span class="line">                SendResult result=producer.send(msg);</span><br><span class="line">                System.out.println(<span class="string">&quot;消息发送结果：&quot;</span>+result);</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">            producer.shutdown();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>消息消费顺序：全局消息顺序<br>  局部消息顺序</p>
+<p>保证局部消息的顺序<br>只在一个队列保证一个人消费<br>消费时，同一个OrderId获取到的肯定是同一个队列。</p>
+<p>消息存储结构</p>
+<p>刷盘机制：同步刷盘<br>异步刷盘<br>RocketMQ的消息是存储到磁盘上的，这样既能保证断电后恢复， 又可以让存储的消息量超出内存的限制。RocketMQ为了提高性能，会尽可能地保证磁盘的<br>顺序写。消息在通过Producer写入RocketMQ的时 候，有两种写磁盘方式，分布式同步刷盘和异步刷盘<br><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq5.jpg" alt="rocketMq"></p>
+<p>顺序消息消费及时监控处理<br>对于顺序消息，当消费者消费消息失败后，消息队列 RocketMQ 会自动不断进行消息重试（每次间隔时间为 1 秒），这时，应用会出现消息消费被阻塞的情况。因此，在使用顺序消息时，务必保证应用能够及时监控并处理消费失败的情况，避免阻塞现象的发生<br><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq6.jpg" alt="rocketMq"></p>
+<p>消费幂等：若某操作执行多次或一次对系统产生的结果是相同的，则称该操作是幂等的<br>例如支付场景，因为网络原因导致二次消费，会不会造成重复扣款</p>
+<blockquote>
+<p>RocketMq的文件存储系统有两点优化以保证性能：</p>
+</blockquote>
+<blockquote>
+<p>消息存储（顺序写）：RocketMQ的消息用顺序写,保证了消息存储的速度。目前的高性能磁盘，顺序写速度可以达到600MB/s，<br>超过了一般网卡的传输速度，但是磁盘随机写的速度只有大概100KB/s<br>消息发送（零拷贝）：将本机磁盘文件的内容发送到客户端需要进行多次复制，比如从磁盘复制数据到内核态内存；从内核态内存复制到用户态内存；从用户态内存复制到网络驱动，&gt;最后从网络驱动复制到网卡中。RocketMq采用Java中零拷贝的技术，让从内核态内存复制到用户态内存这一步省略，直接赋值到网络驱动中<br>零拷贝技术有个限制是不能超过2G，所以RocketMQ默认设置单个CommitLog日志数据文件为1G</p>
+</blockquote>
+<p>RokectMq架构<br><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq7.jpg" alt="rocketMq"></p>
+<h1 id="存储结构是什么样的？"><a href="#存储结构是什么样的？" class="headerlink" title="存储结构是什么样的？"></a>存储结构是什么样的？</h1><p>RocketMQ消息的存储是由ConsumeQueue和CommitLog配合完成的</p>
+<p>CommitLog：消息真正的物理存储文件是CommitLog，默认一个文件一个G，存储的是Topic，QueueId和Message，一个存储满了会自动创建一个新的。<br>ConsumeQueue：是消息的逻辑队列，类似数据库的索引文件，存储的是指向物理存储的地址，为了加快消息的读取速度。消费者消费某条消息时，先查询索引获取CommitLog的对应的物理地址。每个Topic下的每个Message Queue都有一个对应的ConsumeQueue文件，文件很小，通常会加载到内存中。如果该文件丢失或者损坏，可以通过CommitLog恢复<br>IndexFile：也是个索引文件，为了消息查询提供了一种通过key或时间区间来查询消息的方法，这种通过IndexFile来查找消息的方法不影响发送与消费消息的主流程</p>
+<h1 id="如何保证消息不丢失？"><a href="#如何保证消息不丢失？" class="headerlink" title="如何保证消息不丢失？"></a>如何保证消息不丢失？</h1><p>RocketMq提供消息持久化机制，消息的刷盘策略分为同步刷盘和异步刷盘。同步刷盘即刷盘成功后再返回一个成功信息，能够保证数据一定保存成功，但是会降低系统吞吐量，异步刷盘与同步刷盘相反，我一般会采用同步刷盘的策略来保证消息不会丢失。<br>RocketMq采用的文件系统存储而不是关系型数据库存储，因为在一般情况下文件系统的性能是比数据库性能高的<br>而RocketMq为了提高文件系统的读写的高性能，做了两点优化。第一点是采用顺序写的方式，这样可以大大提高磁盘写的性能。第二点采用了零拷贝，原来的文件读取流程是：从磁盘复制数据到内核态内存；从内核态内存复制到用户态内存；从用户态内存复制到网络驱动，最后从网络驱动复制到网卡中发送，零拷贝则省去了从内核态内存复制到用户态内存的这一过程，提高了读取的性能，但是零拷贝对文件大小有要求，所以RocketMq的持久化文件<font color="#0099ff" size="3" face="黑体">commitlog默认为1G</font>。<br>commitlog是存储了RocketMq的消息等核心信息，除此之外，还提供可一个ConsumeQueue作为持久化文件的索引，提高查询的效率，一般文件比较小，都是加载在内存中。除了ConsumeQueue之外，还会存储一个IndexFile文件，用来提供针对某一个key或者时间区间的查询。</p>
+<h1 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h1><h2 id="Producer负载均衡"><a href="#Producer负载均衡" class="headerlink" title="Producer负载均衡"></a>Producer负载均衡</h2><p>Producer端，每个实例在发消息的时候，默认会轮询所有的message queue发送，以达到让消息平均落在不同的queue上。而由于queue可以散落在不同的broker，所以消息就发送到不同的broker下</p>
+<h2 id="Consumer负载均衡"><a href="#Consumer负载均衡" class="headerlink" title="Consumer负载均衡"></a>Consumer负载均衡</h2><p>如果consumer实例的数量比message queue的总数量还多的话，多出来的consumer实例将无法分到queue，也就无法消费到消息，也就无法起到分摊负载的作用了。所以需要控制让queue的总数量大于等于consumer的数量。</p>
+<p>消费者的集群模式–启动多个消费者就可以保证消费者的负载均衡（均摊队列）</p>
+<p>默认使用的是均摊队列：会按照queue的数量和实例的数量平均分配queue给每个实例，这样每个消费者可以均摊消费的队列</p>
+<h1 id="消息重试机制"><a href="#消息重试机制" class="headerlink" title="消息重试机制"></a>消息重试机制</h1><h2 id="1-顺序消息的重试"><a href="#1-顺序消息的重试" class="headerlink" title="1. 顺序消息的重试"></a>1. 顺序消息的重试</h2><p>对于顺序消息，当消费者消费消息失败后，消息队列 RocketMQ 会自动不断进行消息重试（每次间隔时间为 1 秒），这时，应用会出现消息消费被阻塞的情况。</p>
+<p>因此，在使用顺序消息时，务必保证应用能够及时监控并处理消费失败的情况，避免阻塞现象的发生。</p>
+<h2 id="2-无序消息的重试"><a href="#2-无序消息的重试" class="headerlink" title="2. 无序消息的重试"></a>2. 无序消息的重试</h2><p>对于无序消息（普通、定时、延时、事务消息），当消费者消费消息失败时，您可以通过设置返回状态达到消息重试的结果。</p>
+<p>无序消息的重试只针对集群消费方式生效；广播方式不提供失败重试特性，即消费失败后，失败消息不再重试，继续消费新的消息。</p>
+<p>消息队列 RocketMQ 默认允许每条消息最多重试 16 次，将会在接下来的 4 小时 46 分钟之内进行 16 次重试，如果依然失败就会进入死信队列。</p>
+<p>一条消息无论重试多少次，这些重试消息的 Message ID 不会改变。</p>
+<p>也可以通过配置，让其不再重试，但是不建议这样</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MessageListenerImpl</span> <span class="keyword">implements</span> <span class="title">MessageListener</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Action <span class="title">consume</span><span class="params">(Message message, ConsumeContext context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            doConsumeMessage(message);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">            <span class="comment">//捕获消费逻辑中的所有异常，并返回 Action.CommitMessage;</span></span><br><span class="line">            <span class="keyword">return</span> Action.CommitMessage;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//消息处理正常，直接返回 Action.CommitMessage;</span></span><br><span class="line">        <span class="keyword">return</span> Action.CommitMessage;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="消费幂等"><a href="#消费幂等" class="headerlink" title="消费幂等"></a>消费幂等</h1><p>消息队列 RocketMQ 消费者在接收到消息以后，有必要根据业务上的唯一 Key 对消息做幂等处理的必要性。</p>
+<h2 id="1-什么时候产生重复消息？"><a href="#1-什么时候产生重复消息？" class="headerlink" title="1. 什么时候产生重复消息？"></a>1. 什么时候产生重复消息？</h2><p>在互联网应用中，尤其在网络不稳定的情况下，消息队列 RocketMQ 的消息有可能会出现重复，这个重复简单可以概括为以下情况：</p>
+<p>发送时消息重复</p>
+<p>当一条消息已被成功发送到服务端并完成持久化，此时出现了网络闪断或者客户端宕机，导致服务端对客户端应答失败。 如果此时生产者意识到消息发送失败并尝试再次发送消息，消费者后续会收到两条内容相同并且 Message ID 也相同的消息。</p>
+<p>消费时消息重复</p>
+<p>消息消费的场景下，消息已投递到消费者并完成业务处理，当客户端给服务端反馈应答的时候网络闪断。 为了保证消息至少被消费一次，消息队列 RocketMQ 的服务端将在网络恢复后再次尝试投递之前已被处理过的消息，消费者后续会收到两条内容相同并且 Message ID 也相同的消息。</p>
+<p>负载均衡时消息重复（包括但不限于网络抖动、Broker 重启以及订阅方应用重启）</p>
+<p>当消息队列 RocketMQ 的 Broker 或客户端重启、扩容或缩容时，会触发 Rebalance，此时消费者可能会收到重复消息。</p>
+<h2 id="2-处理方式"><a href="#2-处理方式" class="headerlink" title="2. 处理方式"></a>2. 处理方式</h2><p>因为 Message ID 有可能出现冲突（重复）的情况，所以真正安全的幂等处理，不建议以 Message ID 作为处理依据。 最好的方式是以业务唯一标识作为幂等处理的关键依据，而业务的唯一标识可以通过消息 Key 进行设置：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Message message = <span class="keyword">new</span> Message();</span><br><span class="line">message.setKey(<span class="string">&quot;ORDERID_100&quot;</span>);</span><br><span class="line">SendResult sendResult = producer.send(message);</span><br></pre></td></tr></table></figure>
+<p>订阅方收到消息时可以根据消息的 Key 进行幂等处理：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">consumer.subscribe(<span class="string">&quot;ons_test&quot;</span>, <span class="string">&quot;*&quot;</span>, <span class="keyword">new</span> MessageListener() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Action <span class="title">consume</span><span class="params">(Message message, ConsumeContext context)</span> </span>&#123;</span><br><span class="line">        String key = message.getKey()</span><br><span class="line">        <span class="comment">// 根据业务唯一标识的 key 做幂等处理</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>怎么查找mysql中的锁表语句</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> processlist;</span><br><span class="line">与<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> information_schema.processlist效果相同</span><br></pre></td></tr></table></figure>
-<p>SHOW PROCESSLIST显示哪些线程正在运行。您也可以使用mysqladmin processlist语句得到此信息。如果您有SUPER权限，您可以看到所有线程。否则，您只能看到您自己的线程（也就是，与您正在使用的MySQL账户相关的线程）。如果有线程在update或者insert 某个表，此时进程的status为updating 或者 sending data。<br>show processlist 是显示用户正在运行的线程，需要注意的是，除了 root 用户能看到所有正在运行的线程外，其他用户都只能看到自己正在运行的线程，看不到其它用户正在运行的线程。除非单独个这个用户赋予了PROCESS 权限<br>– 查看那些表锁到了</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">OPEN</span> TABLES <span class="keyword">where</span> In_use <span class="operator">&gt;</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<p>– 查看进程号</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> processlist;</span><br></pre></td></tr></table></figure>
-<p>–删除进程</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill <span class="number">1085850</span>；</span><br></pre></td></tr></table></figure>
-<p> <img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/mysql.png" alt="流程"></p>
-<p>Id: 就是这个线程的唯一标识，当我们发现这个线程有问题的时候，可以通过 kill 命令，加上这个Id值将这个线程杀掉。前面我们说了show processlist 显示的信息时来自information_schema.processlist 表，所以这个Id就是这个表的主键。<br>User: 就是指启动这个线程的用户。<br>Host: 记录了发送请求的客户端的 IP 和 端口号。通过这些信息在排查问题的时候，我们可以定位到是哪个客户端的哪个进程发送的请求。<br>DB: 当前执行的命令是在哪一个数据库上。如果没有指定数据库，则该值为 NULL 。<br>Command: 是指此刻该线程正在执行的命令。这个很复杂，下面单独解释<br>Time: 表示该线程处于当前状态的时间。<br>State: 线程的状态，和 Command 对应，下面单独解释。<br>Info: 一般记录的是线程执行的语句。默认只显示前100个字符，也就是你看到的语句可能是截断了的，要看全部信息，需要使用 show full processlist。<br>下面我们单独看一下 Command 的值：<br>Binlog Dump: 主节点正在将二进制日志 ，同步到从节点<br>Change User: 正在执行一个 change-user 的操作<br>Close Stmt: 正在关闭一个Prepared Statement 对象<br>Connect: 一个从节点连上了主节点<br>Connect Out: 一个从节点正在连主节点<br>Create DB: 正在执行一个create-database 的操作<br>Daemon: 服务器内部线程，而不是来自客户端的链接<br>Debug: 线程正在生成调试信息<br>Delayed Insert: 该线程是一个延迟插入的处理程序<br>Drop DB: 正在执行一个 drop-database 的操作<br>Execute: 正在执行一个 Prepared Statement<br>Fetch: 正在从Prepared Statement 中获取执行结果<br>Field List: 正在获取表的列信息<br>Init DB: 该线程正在选取一个默认的数据库<br>Kill : 正在执行 kill 语句，杀死指定线程<br>Long Data: 正在从Prepared Statement 中检索 long data<br>Ping: 正在处理 server-ping 的请求<br>Prepare: 该线程正在准备一个 Prepared Statement<br>ProcessList: 该线程正在生成服务器线程相关信息<br>Query: 该线程正在执行一个语句<br>Quit: 该线程正在退出<br>Refresh：该线程正在刷表，日志或缓存；或者在重置状态变量，或者在复制服务器信息<br>Register Slave： 正在注册从节点<br>Reset Stmt: 正在重置 prepared statement<br>Set Option: 正在设置或重置客户端的 statement-execution 选项<br>Shutdown: 正在关闭服务器<br>Sleep: 正在等待客户端向它发送执行语句<br>Statistics: 该线程正在生成 server-status 信息<br>Table Dump: 正在发送表的内容到从服务器<br>Time: Unused</p>
-<p>那么MySQL突然飙升,首先查询当下主库内正在运行的线程以及是否有占用资源的SQL。然后执行分析info语句，看此次SQL是否是新发版功能引起，如果是新功能引起，立即回滚。</p>
-<p>– 查询非 Sleep 状态的链接，按消耗时间倒序展示，自己加条件过滤</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> id, db, <span class="keyword">user</span>, host, command, <span class="type">time</span>, state, info</span><br><span class="line"><span class="keyword">from</span> information_schema.processlist</span><br><span class="line"><span class="keyword">where</span> command <span class="operator">!=</span> <span class="string">&#x27;Sleep&#x27;</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="type">time</span> <span class="keyword">desc</span> </span><br></pre></td></tr></table></figure>
-<p>其次查看CAT，但是CAT中除了Heartbeat报表GC异常以外，只有一条一分钟的SQL，并没有其他超时SQL</p>
-<p>然后查看Grafana可以看到飙升时间在7点18分</p>
-<p>在这个时间段查询PMM</p>
-<p>没有异常，但是在其他服务中查询到有长达10分钟SQL未返回。</p>
-<p>运行show full processlist命令查看是否有线程递增的情况</p>
-<p>查询发现每一秒都有一个SQL在查询，经过代码分析，是某个接口前端轮询调用每秒都在进行查询导致的，没想到一个查询频率超高的SQL能导致CPU超高</p>
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-<iframe src="//player.bilibili.com/player.html?aid=90978812&cid=155358422&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;"></iframe></div>
-
+<p>接下来，就需要根据业务进行处理：</p>
+<p>拿个数据要写库，先根据主键查一下，如果这数据都有了，你就别插入了，只需要更新一下；或者可以设置一个唯一索引<br>如果是写Redis，每次操作都是set，天然可以保证幂等性<br>如果不是上面两种场景，需要让生产者发送每条数据的时候，里面加一个全局唯一的id，类似订单id之类的东西；<strong>消费者需要先根据这个id去比如redis里查一下，之前消费过吗？</strong>如果没有消费过，你就处理，然后这个id写redis。如果消费过了，那你就别处理了，保证别重复处理相同的消息即可。<br>如何解决消息积压的问题？<br>这个可能出现在消费端出了问题，不消费了，或者消费的极其极其慢，导致大量的消息无法消费，最后消息队列集群的磁盘都快写满了</p>
+<p>首先最重要的就是修复消费者，接着最大的问题就是在消费者重启后，如何快速处理积压的消息？</p>
+<p>新建一个topic，临时建立好原先10倍或者20倍的queue数量<br>接着扩容临时的consumer，此时消费速度是原来的十几倍<br>等快速消费完积压数据之后，得恢复原先部署架构，重新用原先的consumer机器来消费消息</p>
+<h1 id="如何设计一个Mq？"><a href="#如何设计一个Mq？" class="headerlink" title="如何设计一个Mq？"></a>如何设计一个Mq？</h1><p>是上面内容的一个总结，需要分点进行设计</p>
+<p>扩展性</p>
+<p>生产者的扩展性<br>消息队列的扩展性<br>消费者的扩展性<br>高可用性</p>
+<p>如何设计刷盘策略？<br>如何保证消息0丢失？<br>如何保证在其中有机器宕机时，保障服务可用？<br>消息重试机制</p>
+<p>当一个消息没有被消费时，如何进行重试，保证消息一定被消费？<br>当消费端不可用时，如何保证消费端重启后，依然可以消费消息？<br>心跳检测机制</p>
+<p>如何检测生产者、消息队列和消费者是否宕机？<br>负载均衡模式</p>
+<p>如何做到消息生产以及消费的负载均衡？<br>顺序消息</p>
+<p>如何实现顺序消息？</p>
 </div>
 
 			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
@@ -499,7 +537,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220428clhiyt5qx00141cuj86z0bmov.html" title="mysql中的锁表语句查看方法汇总" target="_blank" rel="external">https://zkkget.github.io/posts/20220428clhiyt5qx00141cuj86z0bmov.html</a>
+      <a href="https://zkkget.github.io/posts/20211028clhiz6djz000m0oujf0k78bt6.html" title="RocketMq从入门到放弃" target="_blank" rel="external">https://zkkget.github.io/posts/20211028clhiz6djz000m0oujf0k78bt6.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -546,13 +584,9 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220510clhiyt5rz003j1cujbnv6b3tr.html" title="项目实战----行政优先级分析"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220106clhiz6dlm003i0oujdf24gxwf.html" title="还在手动维护Yapi?"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
-    
-    <li class="next">
-      <a href="/posts/20220407clhiyt5rc001v1cuj6ckw0dx5.html" title="人工智能vs人工智障之图片识别"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
     
     
     <li class="toggle-toc">
