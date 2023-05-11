@@ -21,7 +21,7 @@
   <meta name="description" content="临时高可用架构方案如下 一，安装mysql数据库 1 ，安装（步骤省略） 1234567891011121314151617181920212223yum -y localinstall http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;mysql-repo&#x2F;mysql57-community-release-el7.rpmyum install -y mysql-community-serv">
 <meta property="og:type" content="article">
 <meta property="og:title" content="开源堡垒机jumpserver安装部署">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220114clhiz9dqz0026tkujehr25o8e.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220114clhizea4p002740ujexw1h6t5.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="临时高可用架构方案如下 一，安装mysql数据库 1 ，安装（步骤省略） 1234567891011121314151617181920212223yum -y localinstall http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;mysql-repo&#x2F;mysql57-community-release-el7.rpmyum install -y mysql-community-serv">
 <meta property="og:locale" content="zh_CN">
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220114clhiz9dqz0026tkujehr25o8e.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220114clhizea4p002740ujexw1h6t5.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -61,7 +61,7 @@
       
       <div class="profile-block text-center">
         <a id="avatar" href="https://kkget.github.io/" target="_blank">
-          <img class="img-circle img-rotate" src="/img/loading.gif" data-original="/images/avatar.jpg" width="200" height="200">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
         </a>
         <h2 id="name" class="hidden-xs hidden-sm">赵kk</h2>
         <h3 id="title" class="hidden-xs hidden-sm hidden-md">java Developer &amp; pm</h3>
@@ -382,7 +382,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220114clhiz9dqz0026tkujehr25o8e.html" class="article-date">
+	<a href="/posts/20220114clhizea4p002740ujexw1h6t5.html" class="article-date">
 	  <time datetime="2022-01-14T07:18:48.000Z" itemprop="datePublished">2022-01-14</time>
 	</a>
 </span>
@@ -403,7 +403,7 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220114clhiz9dqz0026tkujehr25o8e.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220114clhizea4p002740ujexw1h6t5.html#comments" class="article-comment-link">评论</a></span>
         
 	
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1k(字)</span>
@@ -416,7 +416,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <div id="readmore-container"><h1 id="临时高可用架构方案如下"><a href="#临时高可用架构方案如下" class="headerlink" title="临时高可用架构方案如下"></a>临时高可用架构方案如下</h1><p><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA.png" alt="流程"></p>
+        <div id="readmore-container"><h1 id="临时高可用架构方案如下"><a href="#临时高可用架构方案如下" class="headerlink" title="临时高可用架构方案如下"></a>临时高可用架构方案如下</h1><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA.png" alt="流程"></p>
 <p>一，安装mysql数据库</p>
 <p>1 ，安装（步骤省略）</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">yum -y localinstall http:<span class="comment">//mirrors.ustc.edu.cn/mysql-repo/mysql57-community-release-el7.rpm</span></span><br><span class="line"></span><br><span class="line">yum install -y mysql-community-server</span><br><span class="line"></span><br><span class="line">systemctl enable mysqld</span><br><span class="line"></span><br><span class="line">systemctl start mysqld</span><br><span class="line"></span><br><span class="line"><span class="number">2</span> ，数据库授权</span><br><span class="line"></span><br><span class="line">mysql –uroot</span><br><span class="line"></span><br><span class="line">create database jumpserver <span class="keyword">default</span> charset <span class="string">&#x27;utf8&#x27;</span> ;</span><br><span class="line"></span><br><span class="line">set global validate_password_policy = LOW ;</span><br><span class="line"></span><br><span class="line">create user <span class="string">&#x27;jumpserver&#x27;</span> @<span class="string">&#x27;%&#x27;</span> identified by <span class="string">&#x27; z&amp;cemb2iqYPiC$N3&#x27;</span> ;</span><br><span class="line"></span><br><span class="line">grant all on jumpserver . * to <span class="string">&#x27;jumpserver&#x27;</span> @<span class="string">&#x27;%&#x27;</span> ;</span><br><span class="line"></span><br><span class="line">flush privileges ;</span><br><span class="line"></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
@@ -443,7 +443,7 @@
 <p>五，登录验证服务</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">登录：localhost</span><br><span class="line"></span><br><span class="line">默认账号：admin   默认密码：admin</span><br></pre></td></tr></table></figure>
 
-<p><img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA1.png" alt="流程"></p>
+<p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA1.png" alt="流程"></p>
 <p>六，部署高可用jumpserver服务</p>
 <p>另外一台服务器上部署jumpserver服务，连接第一台服务器得mysql数据库</p>
 <p>部署步骤如下：</p>
@@ -491,7 +491,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220114clhiz9dqz0026tkujehr25o8e.html" title="开源堡垒机jumpserver安装部署" target="_blank" rel="external">https://zkkget.github.io/posts/20220114clhiz9dqz0026tkujehr25o8e.html</a>
+      <a href="https://zkkget.github.io/posts/20220114clhizea4p002740ujexw1h6t5.html" title="开源堡垒机jumpserver安装部署" target="_blank" rel="external">https://zkkget.github.io/posts/20220114clhizea4p002740ujexw1h6t5.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -506,7 +506,7 @@
     <figure class="media">
       <div class="media-left">
         <a href="https://kkget.github.io/" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/img/loading.gif" data-original="/images/avatar.jpg" class="img-rounded w-full" alt="">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
         </a>
       </div>
       <div class="media-body">
@@ -538,12 +538,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220126clhiz9dqw0021tkuj5xeu9b3p.html" title="如何删除valine评论"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220126clhizea4n002240uj7ia59f84.html" title="如何删除valine评论"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220106clhiz9drc003gtkuj9e2m8ik1.html" title="还在手动维护Yapi?"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220106clhizea57003h40uj6g9c7puc.html" title="还在手动维护Yapi?"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
@@ -578,14 +578,14 @@
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade active in" id="alipay">
               <div class="donate-payimg">
-                <img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220826100219.jpg" alt="扫码支持" title="扫一扫" />
+                <img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220826100219.jpg" alt="扫码支持" title="扫一扫" />
               </div>
               <p class="text-muted mv">扫码打赏，你说多少就多少</p>
               <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="wechatpay">
               <div class="donate-payimg">
-                <img src="/img/loading.gif" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220112102818.png" alt="扫码支持" title="扫一扫" />
+                <img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220112102818.png" alt="扫码支持" title="扫一扫" />
               </div>
               <p class="text-muted mv">扫码打赏，你说多少就多少</p>
               <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
@@ -749,20 +749,7 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/01/assets/haru01.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script>
-        <style>
-            [bg-lazy] {
-                background-image: none !important;
-                background-color: #eee !important;
-            }
-        </style>
-        <script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 1,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/01/assets/haru01.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 <!--<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script> -->
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/clicklove.js"></script>
