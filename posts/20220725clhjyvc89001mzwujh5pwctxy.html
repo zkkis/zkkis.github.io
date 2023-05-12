@@ -17,20 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>优雅永不过时 | 赵KK的个人博客</title>
-  <meta name="description" content="无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法 优雅的关闭流java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭 try catch finally 12345678910111213141516BufferedReader in &#x3D; null;try &amp;">
+  <title>主站博客迁移之Thymleaf项目常用操作 | 赵KK的个人博客</title>
+  <meta name="description" content="Thymleaf搭配Springboot完成页面渲染，整理下日常开发中常见常用操作1.下拉框动态被选中 1234567891011121314151617&lt;label for&#x3D;&quot;inputLevel&quot;class&#x3D;&quot;col-6 col-form-label form-label&quot;&gt;用户等级:&lt;&#x2F;label&gt;&lt;div class&#x3D;&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="优雅永不过时">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220726clhizea4l001z40uje95m21u6.html">
+<meta property="og:title" content="主站博客迁移之Thymleaf项目常用操作">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220725clhjyvc89001mzwujh5pwctxy.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法 优雅的关闭流java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭 try catch finally 12345678910111213141516BufferedReader in &#x3D; null;try &amp;">
+<meta property="og:description" content="Thymleaf搭配Springboot完成页面渲染，整理下日常开发中常见常用操作1.下拉框动态被选中 1234567891011121314151617&lt;label for&#x3D;&quot;inputLevel&quot;class&#x3D;&quot;col-6 col-form-label form-label&quot;&gt;用户等级:&lt;&#x2F;label&gt;&lt;div class&#x3D;&amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-26T02:26:41.000Z">
-<meta property="article:modified_time" content="2022-07-26T02:30:41.087Z">
+<meta property="article:published_time" content="2022-07-25T07:36:44.000Z">
+<meta property="article:modified_time" content="2022-07-25T07:39:16.989Z">
 <meta property="article:author" content="赵KK">
+<meta property="article:tag" content="Thymleaf">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220726clhizea4l001z40uje95m21u6.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220725clhjyvc89001mzwujh5pwctxy.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -363,14 +364,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-优雅永不过时" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-主站博客迁移之Thymleaf项目常用操作" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      优雅永不过时
+      主站博客迁移之Thymleaf项目常用操作
     </h1>
   
 
@@ -378,12 +379,17 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220726clhizea4l001z40uje95m21u6.html" class="article-date">
-	  <time datetime="2022-07-26T02:26:41.000Z" itemprop="datePublished">2022-07-26</time>
+	<a href="/posts/20220725clhjyvc89001mzwujh5pwctxy.html" class="article-date">
+	  <time datetime="2022-07-25T07:36:44.000Z" itemprop="datePublished">2022-07-25</time>
 	</a>
 </span>
         
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Thymleaf/" rel="tag">Thymleaf</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -394,10 +400,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220726clhizea4l001z40uje95m21u6.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220725clhjyvc89001mzwujh5pwctxy.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 633(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 637(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
@@ -407,17 +413,18 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <div id="readmore-container"><p>无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法</p>
-<p>优雅的关闭流<br>java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭</p>
-<p>try catch finally</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader in = null;</span><br><span class="line">try &#123;</span><br><span class="line">			....</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;finally &#123;</span><br><span class="line">			try &#123;</span><br><span class="line">				if (in != null) &#123;</span><br><span class="line">					in.close();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; catch (Exception e2) &#123;</span><br><span class="line">				e2.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">try winth resource</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try (final BufferedReader in = new BufferedReader(new InputStreamReader((new URL(url + &quot;?&quot; + param)).openConnection().getInputStream()));PrintWriter out =new PrintWriter(response.getWriter()))&#123;</span><br><span class="line"></span><br><span class="line">	...	</span><br><span class="line">	&#125;catch&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>Netty 优雅的关闭流程<br>1<br>shutdownGracefully()<br>Lambda表达式<br>list求交集</p>
-<p>1<br>List<Long> collect = list1.stream().filter(list2::contains).collect(Collectors.toList());<br>设计模式代替if else,策略模式，模板模式<br>代码整洁度，例如多注入service，按着高矮胖瘦排列，视觉舒适，controller求求你别写业务代码了</Long></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public  List getRandomList(List&lt;?&gt; paramList,int count)&#123;</span><br><span class="line">        if(count==0)&#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        Random random=new Random();</span><br><span class="line">        List&lt;Integer&gt; tempList=new ArrayList&lt;&gt;();//临时存放产生的list索引，去除重复的索引</span><br><span class="line">        List newList=new ArrayList();//生成新的list集合</span><br><span class="line">        int temp=0;</span><br><span class="line">        if(count&lt;=1)&#123;//如果数据小于1，取一条数据</span><br><span class="line">            temp = random.nextInt(paramList.size());</span><br><span class="line">            newList.add(paramList.get(temp));</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            for(int i=0;i&lt;Math.ceil(count);i++)&#123;</span><br><span class="line">                temp=random.nextInt(paramList.size());//初始化一个随机数，将产生的随机数作为被抽list的索引</span><br><span class="line">                if(!tempList.contains(temp))&#123;//判断随机抽取的随机数</span><br><span class="line">                    tempList.add(temp);</span><br><span class="line">                    newList.add(paramList.get(temp));</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    i--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return newList;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>优雅判空<br>个人喜欢Assert判空，至于java8的Optional并没体会到优雅之处，日常StringUtils，Collections，isNoBlank等，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public String testOptional(Test test) &#123;</span><br><span class="line">        return Optional.ofNullable(test).flatMap(Test::getTest3)</span><br><span class="line">                .flatMap(Test3::getTest2)</span><br><span class="line">                .map(Test2::getInfo)</span><br><span class="line">                .orElse(&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">看起来挺优雅，但日常没体会到</span><br><span class="line">还有日常常用的instanceof</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">else if (f instanceof TreeBin) &#123;</span><br><span class="line">        validated = true;</span><br><span class="line">        TreeBin&lt;K,V&gt; t = (TreeBin&lt;K,V&gt;)f;</span><br><span class="line">        TreeNode&lt;K,V&gt; r, p;</span><br><span class="line">        if ((r = t.root) != null &amp;&amp;</span><br><span class="line">            (p = r.findTreeNode(hash, key, null)) != null) &#123;</span><br><span class="line">            V pv = p.val;</span><br><span class="line">            if (cv == null || cv == pv ||</span><br><span class="line">                (pv != null &amp;&amp; cv.equals(pv))) &#123;</span><br><span class="line">                oldVal = pv;</span><br><span class="line">                if (value != null)</span><br><span class="line">                    p.val = value;</span><br><span class="line">                else if (t.removeTreeNode(p))</span><br><span class="line">                    setTabAt(tab, i, untreeify(t.first));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
+        <div id="readmore-container"><p>Thymleaf搭配Springboot完成页面渲染，整理下日常开发中常见常用操作<br>1.下拉框动态被选中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;label <span class="keyword">for</span>=<span class="string">&quot;inputLevel&quot;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-6 col-form-label form-label&quot;</span>&gt;用户等级:&lt;/label&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><br><span class="line">&lt;select id=<span class="string">&quot;inputLevel&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control&quot;</span> name=<span class="string">&quot;level&quot;</span>&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;selected&#x27;:req.level==null?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;</span><br><span class="line">全部</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;1&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;false&#x27;:req.level==&#x27;1&#x27;?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;<span class="number">1</span>级</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;2&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;false&#x27;:req.level==&#x27;2&#x27;?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;<span class="number">2</span>级</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>2.动态复选框选中(判断List是否包含)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">&quot;checkbox&quot;</span></span><br><span class="line">  th:id=<span class="string">&quot;&#x27;checkboxResource&#x27; + $&#123;resourceEn.key&#125;&quot;</span></span><br><span class="line">  th:checked=<span class="string">&quot;$&#123;null==req.resourceIdList?&#x27;false&#x27;:#arrays.contains(req.resourceIdList, #strings.toString(resourceEn.key))?&#x27;checked&#x27;:&#x27;false&#x27;&#125;&quot;</span></span><br><span class="line">  name=<span class="string">&quot;resourceIdList&quot;</span> th:value=<span class="string">&quot;$&#123;resourceEn.key&#125;&quot;</span>&gt;</span><br><span class="line">  &lt;label th:text=<span class="string">&quot;$&#123;resourceEn.value.name&#125;&quot;</span> th:<span class="keyword">for</span>=<span class="string">&quot;&#x27;checkboxResource&#x27; + $&#123;resourceEn.key&#125;&quot;</span>&gt;&lt;/label&gt;</span><br></pre></td></tr></table></figure>
+<p>3.onclick动态传值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=<span class="string">&quot;button&quot;</span> th:text=<span class="string">&quot;*&#123;status&#125;==0?&#x27;开启&#x27;:&#x27;关闭&#x27;&quot;</span></span><br><span class="line">th:attr=<span class="string">&quot;disabled=*&#123;status==10?true:false&#125;&quot;</span></span><br><span class="line">th:data-id=<span class="string">&quot;$&#123;supplier.id&#125;&quot;</span></span><br><span class="line">th:data-status=<span class="string">&quot;*&#123;status==0?1:0&#125;&quot;</span></span><br><span class="line">th:<span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;*&#123;status ==0||status!=1&#125;?&#x27;btn btn-block btn-success&#x27;:&#x27;btn btn-block btn-danger&#x27;&quot;</span></span><br><span class="line">onclick=<span class="string">&quot;enable(this.getAttribute(&#x27;data-id&#x27;),this.getAttribute(&#x27;data-status&#x27;))&quot;</span>&gt;&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p>4.日期格式化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;td th:text=<span class="string">&quot;*&#123;#dates.format(updateTime, &#x27;yyyy-MM-dd HH:mm:ss&#x27;)&#125;&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>5.保留小数点后两位</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;label <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;ml-3&quot;</span> th:<span class="keyword">if</span>=<span class="string">&quot;*&#123;price ne 1.0&#125;&quot;</span> th:text=<span class="string">&quot;*&#123;#numbers.formatDecimal(price * 10,0,2)&#125;&quot;</span>&gt;&lt;/label&gt;</span><br></pre></td></tr></table></figure>
+<p>6.点击详情/编辑回显下拉被选中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;select <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control select2bs4&quot;</span> style=<span class="string">&quot;width: 100%;&quot;</span> name=<span class="string">&quot;id&quot;</span>&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;&quot;</span> selected=<span class="string">&quot;selected&quot;</span>&gt;==请选择==&lt;/option&gt;</span><br><span class="line">&lt;option th:each=<span class="string">&quot;user : $&#123;users&#125;&quot;</span> th:selected=<span class="string">&quot;$&#123;user.id eq dept.id&#125;&quot;</span>  th:text=<span class="string">&quot;$&#123;user.Name&#125;&quot;</span>&gt;&lt;/option&gt;&lt;/select&gt;</span><br></pre></td></tr></table></figure></div>
 
 			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
 			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
@@ -454,7 +461,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220726clhizea4l001z40uje95m21u6.html" title="优雅永不过时" target="_blank" rel="external">https://zkkget.github.io/posts/20220726clhizea4l001z40uje95m21u6.html</a>
+      <a href="https://zkkget.github.io/posts/20220725clhjyvc89001mzwujh5pwctxy.html" title="主站博客迁移之Thymleaf项目常用操作" target="_blank" rel="external">https://zkkget.github.io/posts/20220725clhjyvc89001mzwujh5pwctxy.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -501,12 +508,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220728clhizea3a000640uj7ufh6fqe.html" title="CompletableFuture"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220725clhjyvc8a001pzwuj5fb3f6ld.html" title="主站博客迁移之Nginx安装与原理"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220726clhizea3j000f40uj9sm2asyf.html" title="Leetcode算法题"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220725clhjyvc87001izwuj51djd4ot.html" title="主站博客迁移之SpringCloudAlibaba服务注册新发现"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
