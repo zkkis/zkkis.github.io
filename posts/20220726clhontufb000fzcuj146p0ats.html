@@ -17,20 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>优雅永不过时 | 赵KK的个人博客</title>
-  <meta name="description" content="无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法 优雅的关闭流java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭 try catch finally 12345678910111213141516BufferedReader in &#x3D; null;try &amp;">
+  <title>List遍历删除 | 赵KK的个人博客</title>
+  <meta name="description" content="方法一： 12345678910111213141516171819public static void main(String[] args) &amp;#123;       List&lt;String&gt; list &#x3D; new ArrayList&lt;&gt;();       list.add(&quot;a&quot;);       list.add(&quot;ab&quot;);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="优雅永不过时">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220726clhokjy1z001y5wuj0qbrg9fg.html">
+<meta property="og:title" content="List遍历删除">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220726clhontufb000fzcuj146p0ats.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法 优雅的关闭流java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭 try catch finally 12345678910111213141516BufferedReader in &#x3D; null;try &amp;">
+<meta property="og:description" content="方法一： 12345678910111213141516171819public static void main(String[] args) &amp;#123;       List&lt;String&gt; list &#x3D; new ArrayList&lt;&gt;();       list.add(&quot;a&quot;);       list.add(&quot;ab&quot;);">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-26T02:26:41.000Z">
-<meta property="article:modified_time" content="2022-07-26T02:30:41.087Z">
+<meta property="article:published_time" content="2022-07-26T02:19:28.000Z">
+<meta property="article:modified_time" content="2022-07-26T02:20:44.374Z">
 <meta property="article:author" content="赵KK">
+<meta property="article:tag" content="List遍历删除">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220726clhokjy1z001y5wuj0qbrg9fg.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220726clhontufb000fzcuj146p0ats.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -363,14 +364,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-优雅永不过时" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-List遍历删除" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      优雅永不过时
+      List遍历删除
     </h1>
   
 
@@ -378,12 +379,17 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220726clhokjy1z001y5wuj0qbrg9fg.html" class="article-date">
-	  <time datetime="2022-07-26T02:26:41.000Z" itemprop="datePublished">2022-07-26</time>
+	<a href="/posts/20220726clhontufb000fzcuj146p0ats.html" class="article-date">
+	  <time datetime="2022-07-26T02:19:28.000Z" itemprop="datePublished">2022-07-26</time>
 	</a>
 </span>
         
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/List%E9%81%8D%E5%8E%86%E5%88%A0%E9%99%A4/" rel="tag">List遍历删除</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -394,10 +400,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220726clhokjy1z001y5wuj0qbrg9fg.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220726clhontufb000fzcuj146p0ats.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 542(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 360(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
@@ -407,17 +413,12 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法</p>
-<p>优雅的关闭流<br>java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭</p>
-<p>try catch finally</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader in = null;</span><br><span class="line">try &#123;</span><br><span class="line">			....</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;finally &#123;</span><br><span class="line">			try &#123;</span><br><span class="line">				if (in != null) &#123;</span><br><span class="line">					in.close();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; catch (Exception e2) &#123;</span><br><span class="line">				e2.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">try winth resource</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try (final BufferedReader in = new BufferedReader(new InputStreamReader((new URL(url + &quot;?&quot; + param)).openConnection().getInputStream()));PrintWriter out =new PrintWriter(response.getWriter()))&#123;</span><br><span class="line"></span><br><span class="line">	...	</span><br><span class="line">	&#125;catch&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>Netty 优雅的关闭流程<br>1<br>shutdownGracefully()<br>Lambda表达式<br>list求交集</p>
-<p>1<br>List<Long> collect = list1.stream().filter(list2::contains).collect(Collectors.toList());<br>设计模式代替if else,策略模式，模板模式<br>代码整洁度，例如多注入service，按着高矮胖瘦排列，视觉舒适，controller求求你别写业务代码了</Long></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public  List getRandomList(List&lt;?&gt; paramList,int count)&#123;</span><br><span class="line">        if(count==0)&#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        Random random=new Random();</span><br><span class="line">        List&lt;Integer&gt; tempList=new ArrayList&lt;&gt;();//临时存放产生的list索引，去除重复的索引</span><br><span class="line">        List newList=new ArrayList();//生成新的list集合</span><br><span class="line">        int temp=0;</span><br><span class="line">        if(count&lt;=1)&#123;//如果数据小于1，取一条数据</span><br><span class="line">            temp = random.nextInt(paramList.size());</span><br><span class="line">            newList.add(paramList.get(temp));</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            for(int i=0;i&lt;Math.ceil(count);i++)&#123;</span><br><span class="line">                temp=random.nextInt(paramList.size());//初始化一个随机数，将产生的随机数作为被抽list的索引</span><br><span class="line">                if(!tempList.contains(temp))&#123;//判断随机抽取的随机数</span><br><span class="line">                    tempList.add(temp);</span><br><span class="line">                    newList.add(paramList.get(temp));</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    i--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return newList;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>优雅判空<br>个人喜欢Assert判空，至于java8的Optional并没体会到优雅之处，日常StringUtils，Collections，isNoBlank等，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public String testOptional(Test test) &#123;</span><br><span class="line">        return Optional.ofNullable(test).flatMap(Test::getTest3)</span><br><span class="line">                .flatMap(Test3::getTest2)</span><br><span class="line">                .map(Test2::getInfo)</span><br><span class="line">                .orElse(&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">看起来挺优雅，但日常没体会到</span><br><span class="line">还有日常常用的instanceof</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">else if (f instanceof TreeBin) &#123;</span><br><span class="line">        validated = true;</span><br><span class="line">        TreeBin&lt;K,V&gt; t = (TreeBin&lt;K,V&gt;)f;</span><br><span class="line">        TreeNode&lt;K,V&gt; r, p;</span><br><span class="line">        if ((r = t.root) != null &amp;&amp;</span><br><span class="line">            (p = r.findTreeNode(hash, key, null)) != null) &#123;</span><br><span class="line">            V pv = p.val;</span><br><span class="line">            if (cv == null || cv == pv ||</span><br><span class="line">                (pv != null &amp;&amp; cv.equals(pv))) &#123;</span><br><span class="line">                oldVal = pv;</span><br><span class="line">                if (value != null)</span><br><span class="line">                    p.val = value;</span><br><span class="line">                else if (t.removeTreeNode(p))</span><br><span class="line">                    setTabAt(tab, i, untreeify(t.first));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+        <p>方法一：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">       list.add(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;ab&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;ad&quot;</span>);</span><br><span class="line">       Iterator&lt;String&gt; iterator = list.iterator();</span><br><span class="line">       <span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">           String next = iterator.next();</span><br><span class="line">           <span class="keyword">if</span>(<span class="string">&quot;a&quot;</span>.equals(next)||<span class="string">&quot;c&quot;</span>.equals(next))&#123;</span><br><span class="line">               iterator.remove();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       System.out.println(JSONObject.toJSONString(list));</span><br><span class="line">   &#125;</span><br><span class="line">输出：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span></span><br><span class="line">[<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;ad&quot;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>方法二</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;ab&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;ad&quot;</span>);</span><br><span class="line">      	list.removeIf(s-&gt;<span class="string">&quot;a&quot;</span>.equals(s)||<span class="string">&quot;c&quot;</span>.equals(s));</span><br><span class="line">        System.out.println(JSONObject.toJSONString(list));</span><br><span class="line">    &#125;</span><br><span class="line">异常操作</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;abcd&quot;</span>);</span><br><span class="line">list.removeIf(s -&gt; <span class="string">&quot;a&quot;</span>.equals(s) || <span class="string">&quot;c&quot;</span>.equals(s));</span><br><span class="line">System.out.println(JSONObject.toJSONString(list));</span><br><span class="line">Exception in thread <span class="string">&quot;main&quot;</span> java.lang.UnsupportedOperationException</span><br><span class="line">        原因</span><br><span class="line"><span class="meta">@SafeVarargs</span></span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;varargs&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T &gt; List &lt; T &gt; asList(T...a)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@serial</span> include</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayList</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">AbstractList</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">        <span class="keyword">implements</span> <span class="title">RandomAccess</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">AbstractList做任何操作都是异常</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span> <span class="params">( <span class="keyword">int</span> index, E element)</span></span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * &#123;<span class="doctag">@inheritDoc</span>&#125;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;This implementation always throws an</span></span><br><span class="line"><span class="comment"> * &#123;<span class="doctag">@code</span> UnsupportedOperationException&#125;.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> UnsupportedOperationException &#123;<span class="doctag">@inheritDoc</span>&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> IndexOutOfBoundsException     &#123;<span class="doctag">@inheritDoc</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">remove</span> <span class="params">( <span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException();</span><br><span class="line">&#125;</span><br><span class="line">修改</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String [] str=&#123;<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>,<span class="string">&quot;abcd&quot;</span>&#125;;</span><br><span class="line">List&lt;String&gt; strs = Arrays.asList(str);</span><br><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">list.addAll(strs);</span><br><span class="line">list.removeIf(s-&gt;<span class="string">&quot;a&quot;</span>.equals(s)||<span class="string">&quot;c&quot;</span>.equals(s));</span><br><span class="line">System.out.println(JSONObject.toJSONString(list));</span><br></pre></td></tr></table></figure>
       
     </div>
     <div class="article-footer">
@@ -426,7 +427,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220726clhokjy1z001y5wuj0qbrg9fg.html" title="优雅永不过时" target="_blank" rel="external">https://zkkget.github.io/posts/20220726clhokjy1z001y5wuj0qbrg9fg.html</a>
+      <a href="https://zkkget.github.io/posts/20220726clhontufb000fzcuj146p0ats.html" title="List遍历删除" target="_blank" rel="external">https://zkkget.github.io/posts/20220726clhontufb000fzcuj146p0ats.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -473,12 +474,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220728clhokjy0q00065wujgi5q9s6d.html" title="CompletableFuture"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220726clhontug8002nzcuj82hadbjj.html" title="蚂蚁一面整理"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220726clhokjy0y00095wujgo9t1kc1.html" title="Leetcode算法题"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220725clhontufe000jzcujebo6dulk.html" title="Mysql海量数据存储与优化"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
