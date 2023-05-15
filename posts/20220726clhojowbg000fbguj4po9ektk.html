@@ -21,7 +21,7 @@
   <meta name="description" content="方法一： 12345678910111213141516171819public static void main(String[] args) &amp;#123;       List&lt;String&gt; list &#x3D; new ArrayList&lt;&gt;();       list.add(&quot;a&quot;);       list.add(&quot;ab&quot;);">
 <meta property="og:type" content="article">
 <meta property="og:title" content="List遍历删除">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220726clhoa35yb000gc8uj9sd92kho.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220726clhojowbg000fbguj4po9ektk.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="方法一： 12345678910111213141516171819public static void main(String[] args) &amp;#123;       List&lt;String&gt; list &#x3D; new ArrayList&lt;&gt;();       list.add(&quot;a&quot;);       list.add(&quot;ab&quot;);">
 <meta property="og:locale" content="zh_CN">
@@ -31,7 +31,7 @@
 <meta property="article:tag" content="List遍历删除">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220726clhoa35yb000gc8uj9sd92kho.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220726clhojowbg000fbguj4po9ektk.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -379,7 +379,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220726clhoa35yb000gc8uj9sd92kho.html" class="article-date">
+	<a href="/posts/20220726clhojowbg000fbguj4po9ektk.html" class="article-date">
 	  <time datetime="2022-07-26T02:19:28.000Z" itemprop="datePublished">2022-07-26</time>
 	</a>
 </span>
@@ -400,10 +400,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220726clhoa35yb000gc8uj9sd92kho.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220726clhojowbg000fbguj4po9ektk.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 451(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 360(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
@@ -413,40 +413,12 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <div id="readmore-container"><p>方法一：</p>
+        <p>方法一：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">       list.add(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;ab&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;ad&quot;</span>);</span><br><span class="line">       Iterator&lt;String&gt; iterator = list.iterator();</span><br><span class="line">       <span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">           String next = iterator.next();</span><br><span class="line">           <span class="keyword">if</span>(<span class="string">&quot;a&quot;</span>.equals(next)||<span class="string">&quot;c&quot;</span>.equals(next))&#123;</span><br><span class="line">               iterator.remove();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       System.out.println(JSONObject.toJSONString(list));</span><br><span class="line">   &#125;</span><br><span class="line">输出：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span></span><br><span class="line">[<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;ad&quot;</span>]</span><br></pre></td></tr></table></figure>
 
 <p>方法二</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;ab&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;ad&quot;</span>);</span><br><span class="line">      	list.removeIf(s-&gt;<span class="string">&quot;a&quot;</span>.equals(s)||<span class="string">&quot;c&quot;</span>.equals(s));</span><br><span class="line">        System.out.println(JSONObject.toJSONString(list));</span><br><span class="line">    &#125;</span><br><span class="line">异常操作</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;abcd&quot;</span>);</span><br><span class="line">list.removeIf(s -&gt; <span class="string">&quot;a&quot;</span>.equals(s) || <span class="string">&quot;c&quot;</span>.equals(s));</span><br><span class="line">System.out.println(JSONObject.toJSONString(list));</span><br><span class="line">Exception in thread <span class="string">&quot;main&quot;</span> java.lang.UnsupportedOperationException</span><br><span class="line">        原因</span><br><span class="line"><span class="meta">@SafeVarargs</span></span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;varargs&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T &gt; List &lt; T &gt; asList(T...a)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@serial</span> include</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayList</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">AbstractList</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">        <span class="keyword">implements</span> <span class="title">RandomAccess</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">AbstractList做任何操作都是异常</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span> <span class="params">( <span class="keyword">int</span> index, E element)</span></span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * &#123;<span class="doctag">@inheritDoc</span>&#125;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;This implementation always throws an</span></span><br><span class="line"><span class="comment"> * &#123;<span class="doctag">@code</span> UnsupportedOperationException&#125;.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> UnsupportedOperationException &#123;<span class="doctag">@inheritDoc</span>&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> IndexOutOfBoundsException     &#123;<span class="doctag">@inheritDoc</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">remove</span> <span class="params">( <span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException();</span><br><span class="line">&#125;</span><br><span class="line">修改</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String [] str=&#123;<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>,<span class="string">&quot;abcd&quot;</span>&#125;;</span><br><span class="line">List&lt;String&gt; strs = Arrays.asList(str);</span><br><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">list.addAll(strs);</span><br><span class="line">list.removeIf(s-&gt;<span class="string">&quot;a&quot;</span>.equals(s)||<span class="string">&quot;c&quot;</span>.equals(s));</span><br><span class="line">System.out.println(JSONObject.toJSONString(list));</span><br></pre></td></tr></table></figure></div>
-
-			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
-			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
-			<script>
-			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
-			if (!isMobile) {
-				try {
-					var plugin = new ReadmorePlugin();
-					plugin.init({
-						"type": "hexo",
-						"id": "readmore-container",
-						"name": "赵KK日常技术记录",
-						"blogId": "62435-1742912502174-081",
-						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
-						"keyword": "验证码",
-						"random": "1",
-						"height": "auto",
-						"expires": "14",
-						"lockToc": "yes",
-						"interval": "60",
-						"baseUrl": ""
-					});
-				} catch(e) {
-					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
-				}
-			}
-			</script>
-		
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String [] str=&#123;<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>,<span class="string">&quot;abcd&quot;</span>&#125;;</span><br><span class="line">List&lt;String&gt; strs = Arrays.asList(str);</span><br><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">list.addAll(strs);</span><br><span class="line">list.removeIf(s-&gt;<span class="string">&quot;a&quot;</span>.equals(s)||<span class="string">&quot;c&quot;</span>.equals(s));</span><br><span class="line">System.out.println(JSONObject.toJSONString(list));</span><br></pre></td></tr></table></figure>
       
     </div>
     <div class="article-footer">
@@ -455,7 +427,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220726clhoa35yb000gc8uj9sd92kho.html" title="List遍历删除" target="_blank" rel="external">https://zkkget.github.io/posts/20220726clhoa35yb000gc8uj9sd92kho.html</a>
+      <a href="https://zkkget.github.io/posts/20220726clhojowbg000fbguj4po9ektk.html" title="List遍历删除" target="_blank" rel="external">https://zkkget.github.io/posts/20220726clhojowbg000fbguj4po9ektk.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -502,12 +474,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220726clhoa35zf002mc8uj2ov6cj4x.html" title="蚂蚁一面整理"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220726clhojowcn002mbguj6mb9f365.html" title="蚂蚁一面整理"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220725clhoa35ye000kc8ujb3qfhs24.html" title="Mysql海量数据存储与优化"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220725clhojowbp000pbgujezdbd5el.html" title="Mysql海量数据存储与优化"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

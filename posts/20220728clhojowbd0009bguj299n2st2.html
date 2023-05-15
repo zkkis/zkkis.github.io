@@ -21,7 +21,7 @@
   <meta name="description" content="想学习CompletableFuture，因此查询资料发现CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。CompletableFuture实现了CompletionStage和Future接口。需要先了解Future接口什么是Future？简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CompletableFuture">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220728clhoa35y80009c8ujc0spf780.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220728clhojowbd0009bguj299n2st2.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="想学习CompletableFuture，因此查询资料发现CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。CompletableFuture实现了CompletionStage和Future接口。需要先了解Future接口什么是Future？简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是">
 <meta property="og:locale" content="zh_CN">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Completion.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220728clhoa35y80009c8ujc0spf780.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220728clhojowbd0009bguj299n2st2.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -381,7 +381,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220728clhoa35y80009c8ujc0spf780.html" class="article-date">
+	<a href="/posts/20220728clhojowbd0009bguj299n2st2.html" class="article-date">
 	  <time datetime="2022-07-28T02:44:05.000Z" itemprop="datePublished">2022-07-28</time>
 	</a>
 </span>
@@ -402,20 +402,20 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220728clhoa35y80009c8ujc0spf780.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220728clhojowbd0009bguj299n2st2.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 7.2k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 7.1k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 31(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 30(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <div id="readmore-container"><p>想学习CompletableFuture，因此查询资料发现<br>CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。<br>CompletableFuture实现了CompletionStage和Future接口。<br>需要先了解Future接口<br>什么是Future？<br>简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是一个延迟计算的Future对象，这个Future对象是Dart内置的，有自己的队列策略，它将要操作的事件放入EventQueue中，在队列中的事件按照先进先出的原则去逐一处理事件，当事件处理完成后，将结果返回给Future对象。</p>
+        <p>想学习CompletableFuture，因此查询资料发现<br>CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。<br>CompletableFuture实现了CompletionStage和Future接口。<br>需要先了解Future接口<br>什么是Future？<br>简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是一个延迟计算的Future对象，这个Future对象是Dart内置的，有自己的队列策略，它将要操作的事件放入EventQueue中，在队列中的事件按照先进先出的原则去逐一处理事件，当事件处理完成后，将结果返回给Future对象。</p>
 <p>在这个过程中涉及到了异步和等待：</p>
 <p>异步：就是不用阻塞当前线程，来等待该线程任务处理完成再去执行其他任务。<br>等待：await，声明运算为延迟执行<br>async和await<br>首先看一个例子：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">getData() async&#123;</span><br><span class="line">   return await http.get(Uri.encodeFull(url), headers: &#123;&quot;Accept&quot;: &quot;application/json&quot;&#125;);</span><br><span class="line">&#125;</span><br><span class="line">//然后调用函数来获取结果</span><br><span class="line">String data = getData();</span><br></pre></td></tr></table></figure>
@@ -522,35 +522,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">run end ...</span><br><span class="line">run end ...</span><br><span class="line">time = 1596010020281</span><br></pre></td></tr></table></figure>
 <p>小结： 通过这个小示例，终于理解到了“源任务”和“依赖任务”之间的调用关系，以及CompletableFuture的基本运作原理。然而CompletableFuture还有其他的方法需要去深入分析，由于篇幅所限就不再赘述，感兴趣的读者可以以debug的模式去一点一点分析CompletableFuture其他方法的底层原理。这里不得不说Java并发包作者Doug Lea大神真的太厉害了，阅读他的源码之后，可以发现他写的代码不能以技术来形容，而应该使用“艺术”来形容。</p>
 <p>总结<br>CompletableFuture底层由于借助了魔法类Unsafe的相关CAS方法，除了get或join结果之外，其他方法都实现了无锁操作。<br>CompletableFuture实现了CompletionStage接口，因而具备了链式调用的能力，CompletionStage提供了either、apply、run以及then等相关方法，使得CompletableFuture可以使用各种应用场景。<br>CompletableFuture中有“源任务”和“依赖任务”，“源任务”的完成能够触发“依赖任务”的执行，这里的完成可以是返回正常结果或者是异常。<br>CompletableFuture默认使用ForkJoinPool，也可以使用指定线程池来执行任务。</p>
-</div>
 
-			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
-			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
-			<script>
-			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
-			if (!isMobile) {
-				try {
-					var plugin = new ReadmorePlugin();
-					plugin.init({
-						"type": "hexo",
-						"id": "readmore-container",
-						"name": "赵KK日常技术记录",
-						"blogId": "62435-1742912502174-081",
-						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
-						"keyword": "验证码",
-						"random": "1",
-						"height": "auto",
-						"expires": "14",
-						"lockToc": "yes",
-						"interval": "60",
-						"baseUrl": ""
-					});
-				} catch(e) {
-					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
-				}
-			}
-			</script>
-		
       
     </div>
     <div class="article-footer">
@@ -559,7 +531,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220728clhoa35y80009c8ujc0spf780.html" title="CompletableFuture" target="_blank" rel="external">https://zkkget.github.io/posts/20220728clhoa35y80009c8ujc0spf780.html</a>
+      <a href="https://zkkget.github.io/posts/20220728clhojowbd0009bguj299n2st2.html" title="CompletableFuture" target="_blank" rel="external">https://zkkget.github.io/posts/20220728clhojowbd0009bguj299n2st2.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -606,12 +578,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220802clhoa35zm002xc8uj6g2p9w0q.html" title="面向面试编程"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220802clhojowd0003nbguj5j7y95wh.html" title="面向面试编程"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220726clhoa35z7001yc8ujbqhr8e1g.html" title="优雅永不过时"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220726clhojowcd001ybguj5ia614m1.html" title="优雅永不过时"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
