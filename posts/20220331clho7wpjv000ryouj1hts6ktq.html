@@ -17,24 +17,30 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>开源堡垒机jumpserver安装部署 | 赵KK的个人博客</title>
-  <meta name="description" content="临时高可用架构方案如下 一，安装mysql数据库 1 ，安装（步骤省略） 1234567891011121314151617181920212223yum -y localinstall http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;mysql-repo&#x2F;mysql57-community-release-el7.rpmyum install -y mysql-community-serv">
+  <title>Springboot+Netty仿微信实战设计文档 | 赵KK的个人博客</title>
+  <meta name="description" content="日期：2021-12-28版本号：1.0.0作者：kk 1   编写目的 1.1    术语与定义 1.2    引用标准和规范 1.3    参考资料2    系统总体框架 2.1    设计目标 2.2    总体技术路线 2.3    架构概览 2.3.1    架构总览图 2.3.2    功能一览图3功能展示 1.1编写目的 体验APP通讯,实现聊天功能以及聊天项目的设计思路，选用高性能">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开源堡垒机jumpserver安装部署">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220114clho7vbnm002bpsuj6t9ef3x6.html">
+<meta property="og:title" content="Springboot+Netty仿微信实战设计文档">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220331clho7wpjv000ryouj1hts6ktq.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="临时高可用架构方案如下 一，安装mysql数据库 1 ，安装（步骤省略） 1234567891011121314151617181920212223yum -y localinstall http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;mysql-repo&#x2F;mysql57-community-release-el7.rpmyum install -y mysql-community-serv">
+<meta property="og:description" content="日期：2021-12-28版本号：1.0.0作者：kk 1   编写目的 1.1    术语与定义 1.2    引用标准和规范 1.3    参考资料2    系统总体框架 2.1    设计目标 2.2    总体技术路线 2.3    架构概览 2.3.1    架构总览图 2.3.2    功能一览图3功能展示 1.1编写目的 体验APP通讯,实现聊天功能以及聊天项目的设计思路，选用高性能">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA.png">
-<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA1.png">
-<meta property="article:published_time" content="2022-01-14T07:18:48.000Z">
-<meta property="article:modified_time" content="2022-01-14T07:25:30.000Z">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E6%94%B9%E7%AD%BE%E6%B5%81%E7%A8%8Bv1.1%20(1).png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E6%B5%81%E7%A8%8Bv1.1.jpg">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/dssm.png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF.png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220110164204.png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220110164157.png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220110164201.png">
+<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220110164204.png">
+<meta property="article:published_time" content="2022-03-31T09:28:57.000Z">
+<meta property="article:modified_time" content="2022-09-15T09:33:34.351Z">
 <meta property="article:author" content="赵KK">
-<meta property="article:tag" content="堡垒机">
+<meta property="article:tag" content="Springboot">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA.png">
+<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E6%94%B9%E7%AD%BE%E6%B5%81%E7%A8%8Bv1.1%20(1).png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220114clho7vbnm002bpsuj6t9ef3x6.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220331clho7wpjv000ryouj1hts6ktq.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -367,14 +373,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-开源堡垒机jumpserver安装部署" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Springboot-netty仿微信实战设计文档" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      开源堡垒机jumpserver安装部署
+      Springboot+Netty仿微信实战设计文档
     </h1>
   
 
@@ -382,15 +388,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220114clho7vbnm002bpsuj6t9ef3x6.html" class="article-date">
-	  <time datetime="2022-01-14T07:18:48.000Z" itemprop="datePublished">2022-01-14</time>
+	<a href="/posts/20220331clho7wpjv000ryouj1hts6ktq.html" class="article-date">
+	  <time datetime="2022-03-31T09:28:57.000Z" itemprop="datePublished">2022-03-31</time>
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Springboot/">Springboot</a>
+  </span>
+
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/%E5%A0%A1%E5%9E%92%E6%9C%BA/" rel="tag">堡垒机</a>
+	<a class="article-tag-link-link" href="/tags/Springboot/" rel="tag">Springboot</a>
   </span>
 
 
@@ -403,58 +414,37 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220114clho7vbnm002bpsuj6t9ef3x6.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220331clho7wpjv000ryouj1hts6ktq.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 7(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <div id="readmore-container"><h1 id="临时高可用架构方案如下"><a href="#临时高可用架构方案如下" class="headerlink" title="临时高可用架构方案如下"></a>临时高可用架构方案如下</h1><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA.png" alt="流程"></p>
-<p>一，安装mysql数据库</p>
-<p>1 ，安装（步骤省略）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">yum -y localinstall http:<span class="comment">//mirrors.ustc.edu.cn/mysql-repo/mysql57-community-release-el7.rpm</span></span><br><span class="line"></span><br><span class="line">yum install -y mysql-community-server</span><br><span class="line"></span><br><span class="line">systemctl enable mysqld</span><br><span class="line"></span><br><span class="line">systemctl start mysqld</span><br><span class="line"></span><br><span class="line"><span class="number">2</span> ，数据库授权</span><br><span class="line"></span><br><span class="line">mysql –uroot</span><br><span class="line"></span><br><span class="line">create database jumpserver <span class="keyword">default</span> charset <span class="string">&#x27;utf8&#x27;</span> ;</span><br><span class="line"></span><br><span class="line">set global validate_password_policy = LOW ;</span><br><span class="line"></span><br><span class="line">create user <span class="string">&#x27;jumpserver&#x27;</span> @<span class="string">&#x27;%&#x27;</span> identified by <span class="string">&#x27; z&amp;cemb2iqYPiC$N3&#x27;</span> ;</span><br><span class="line"></span><br><span class="line">grant all on jumpserver . * to <span class="string">&#x27;jumpserver&#x27;</span> @<span class="string">&#x27;%&#x27;</span> ;</span><br><span class="line"></span><br><span class="line">flush privileges ;</span><br><span class="line"></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+        <div id="readmore-container"><p>日期：2021-12-28<br>版本号：1.0.0<br>作者：kk</p>
+<p>1   编写目的<br> 1.1    术语与定义<br> 1.2    引用标准和规范<br> 1.3    参考资料<br>2    系统总体框架<br> 2.1    设计目标<br> 2.2    总体技术路线<br> 2.3    架构概览<br> 2.3.1    架构总览图<br> 2.3.2    功能一览图<br>3功能展示</p>
+<p>1.1编写目的</p>
+<p>体验APP通讯,实现聊天功能以及聊天项目的设计思路，选用高性能传输非阻塞的netty框架进行开发,秒级响应</p>
+<p>接入websocket技术应用聊天消息的已读未读，还有聊天消息的测试与联调</p>
+<p>Netty心跳检测机制</p>
+<p>云服务器构建项目，引入CICD，以及Devops构建,接入监控体系，一秒钟定位异常</p>
+<p>针对登陆不同场景，结合桥接模式进行项目改造，代码review<br>1.2 术语与定义<br>Netty：Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers &amp; clients.<br>NLP:自然语言处理(NLP，Natural Language Processing) 是研究人与计算机交互的语言问题的一门学科。按照技术实现难度的不同，这类系统可以分成简单匹配式、模糊匹配式和段落理解式三种类型。<br>推荐系统：帮助用户找到想要的商品</p>
+<p>1.3 引用标准和规范<br>1.阿里巴巴开发规范<br>2.接口使用规范<br>3.开发过程规范<br>4.异常管理规范<br>1.4参考资料<br>《阿里巴巴开发规范》–阿里官方Java代码规范标准<br>Netty实战</p>
+<p>2系统总体框架<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E6%94%B9%E7%AD%BE%E6%B5%81%E7%A8%8Bv1.1%20(1).png" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E6%B5%81%E7%A8%8Bv1.1.jpg" alt="流程"><br>2.1设计目标<br>目标：旨在模拟微信APP体验实时通讯理念,秒级响应用户请求，由前后端统一处理消息，模拟从登陆/注册-&gt;用户个人信息维护-&gt;交友聊天等主流程。<br>玩转云服务器，从容面对IM聊天业务，延伸场景:自住回复机器人等。<br>技术扩展<br>1.登陆：用户登陆保存用户信息到缓存，以便用户第二次打开app可实现不输入密码登陆，并对密码进行MD5加密。<br>2.登陆时生成全局唯一id，根据id的调用谷歌的com.google.zxing.BarcodeFormat生成个人二维码并进行保存，当加好友，扫一扫时可进行唯一id判断来添加维护好友关系。<br>3.登陆后可进行个人信息维护，角色管理，查看数据，页面配置，黑名单管理等，朋友圈既是一个社区型评论功能化系统，可进行功能复用。<br>4.站在业务角度分析一次聊天事件的流程<br>5.当出现用户群后，根据DSSM模型分析用户行为。<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/dssm.png" alt="流程"><br>6.Netty源码解读<br>7.云服务项目部署<br>2.2总体技术路线<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF.png" alt="流程"><br>2.3系统架构<br>1、以业务分析为输入，以总体的企业应用架构为原则，按着不同区域划分，由于本次基础以聊天业务为入口，侧重点不同，在此不做分析。<br>2、业务可配置性实时变化，引入apollo<br>3、定位用户ip，上传用户真实ip定位用户位置，引入iP2region，举例说明：即为了用户的隐私安全，定位用户的位置，第一时间定位报警用户行为的位置。<br>4、随着公司的业务的不断发展，当基础的系统逐步成型以后。业务运营就需要开始做⽤户的拉新和促活,从⽽保障 DUA 的增速以及最终 ROI 转换<br>3.功能展示<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220110164204.png" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220110164157.png" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220110164201.png" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220110164204.png" alt="流程"><br>4.延伸问题：DSSM(Deep Structured Semantic Models)<br>也叫深度语义匹配模型，最早是微软发表的一篇应用于NLP领域中计算语义相似度任务的文章。深度语义匹配模型当用户量达到一定群体，分析用户行为，精准推送用户广告，喜好分析等成了我们不可或缺的一个话题。通过打标签，关联分组，给不同数据源的关联，这里涉及到两种建模：一种是自然兴趣建模，根据用户操作终端行为获得user-item关联，给不同的数据源打标获得item-tag关联，最后将上面两种关联进行join操作得到user-tag的关联实现给用户打上兴趣标签，这里相当于是从标签维度为广告主推荐人群；另一种就是商业兴趣建模，在自然兴趣建模的基础上，从广告维度为广告主推荐人群，那么就需要目前大火的DSSM双塔模型了。<br>那么平时最多的用户喜好数据来源哪里？<br>1.输入法<br>输入搜素引擎：根据用户的每日输入词都可推算你的历史组词，当然可分析此行为找出关联性最多的词组进行特征分析，将用户标签、用户属性、项目属性、用户操作行为、聚类算法、基于用户、基于项目、基于内容等混合推荐。<br>2.点击日志<br>短视频平台/海量曝光日志，根据用户多次点击的同tag类视频进行爱好分析，比如滑雪视频，你点击一次，首页就会出现多篇推荐，然后在产生一次点击，就会源源不断的进行推荐<br>其实第一次看这篇论文的时候，有点云里雾里，我不得不再次进行阅读，但结合推荐系统来看更容理解，推荐算法大致可以分为以下几类<br>基于流行度的算法<br>协同过滤算法<br>基于内容的算法<br>基于模型的算法<br>混合算法<br>在次就不展开讨论，只个人结合资料查阅，而DSSM更像是在基于模型的基础上，完成推荐任务，跟分治算法，回溯算法等不谋而合<br>5.朋友圈设计：点赞+评论<br>结合社区内容设计，将朋友圈视为新的一个tab展示，并将社区属性的评论与点赞进行集成展示。<br>对于点赞和评论的博文可参考个人公众号文章<br>点赞功能设计</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//mp.weixin.qq.com/s?__biz=Mzg2ODA3NjA1MA==&amp;mid=2247484981&amp;idx=1&amp;sn=569bc3d748026dd8c2814e33a3e916d0&amp;chksm=ceb09948f9c7105e203e09e4bb1d30de17bba55a68f7d4df71ccb55c8e34871e2b02b7a1f9ed&amp;token=889485161&amp;lang=zh_CN#rd</span></span><br></pre></td></tr></table></figure>
+<p>本次着重介绍评论系统<br>1.使用递归开发评论功能，并改造为极简循环调用，防止递归层次太深<br>大多数的评论功能可<br>1、单一消息体：分为主评论，然后层级下逐一排列回复，消息体之间一对多<br>2、嵌套消息体：即分为主评论，层级以下可互相回复评论，但展示层级是在同为第二层(着重解释)<br>3、套娃消息体：即可对每条评论进行回复，除主消息体外，都视为第二层，且可对第二层消息体进行回复，每次回复视为一层，消息体为一对多中的多又是一对多~</p>
+<h1 id="单一消息体"><a href="#单一消息体" class="headerlink" title="单一消息体"></a>单一消息体</h1><p>数据库设计：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">CREATE TABLE `comment_msg` (</span><br><span class="line">  `id` varchar(<span class="number">64</span>) NOT NULL,</span><br><span class="line">  `send_user_id` varchar(<span class="number">64</span>) NOT NULL,</span><br><span class="line">  `accept_user_id` varchar(<span class="number">64</span>) NOT NULL,</span><br><span class="line">  `msg` varchar(<span class="number">255</span>) NOT NULL,</span><br><span class="line">  `sign_flag` <span class="keyword">int</span>(<span class="number">1</span>) NOT NULL COMMENT <span class="string">&#x27;消息是否签收状态\r\n1：签收\r\n0：未签收\r\n&#x27;</span>,</span><br><span class="line">  `create_time` datetime NOT NULL COMMENT <span class="string">&#x27;发送请求的事件&#x27;</span>,</span><br><span class="line">  <span class="function">PRIMARY <span class="title">KEY</span> <span class="params">(`id`)</span></span></span><br><span class="line"><span class="function">) ENGINE</span>=InnoDB DEFAULT CHARSET=utf8mb4</span><br></pre></td></tr></table></figure>
+<p>即展示所有主题评论下的所有评论即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from comment_msg where send_user_id=#&#123;send_user_id&#125;</span><br></pre></td></tr></table></figure>
 
-
-<p>二，安装jumperver</p>
-<p>1 ，下载安装包</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /data</span><br><span class="line"></span><br><span class="line">wget https:<span class="comment">//github.com/jumpserver/installer/releases/download/v2.16.3/jumpserver-installer-v2.16.3.tar.gz</span></span><br><span class="line"></span><br><span class="line">tar -xf jumpserver-installer-v2<span class="number">.16</span><span class="number">.3</span>.tar.gz</span><br><span class="line"></span><br><span class="line">cd jumpserver-installer-v2<span class="number">.16</span><span class="number">.3</span></span><br></pre></td></tr></table></figure>
-<p>2 ，调整配置模板</p>
-<h1 id="根据需要修改配置文件模板-如果不清楚用途可以跳过修改"><a href="#根据需要修改配置文件模板-如果不清楚用途可以跳过修改" class="headerlink" title="根据需要修改配置文件模板, 如果不清楚用途可以跳过修改"></a>根据需要修改配置文件模板, 如果不清楚用途可以跳过修改</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat config-example.txt</span><br></pre></td></tr></table></figure>
-<h1 id="以下设置如果为空系统会自动生成随机字符串填入"><a href="#以下设置如果为空系统会自动生成随机字符串填入" class="headerlink" title="以下设置如果为空系统会自动生成随机字符串填入"></a>以下设置如果为空系统会自动生成随机字符串填入</h1><h2 id="迁移请修改-SECRET-KEY-和-BOOTSTRAP-TOKEN-为原来的设置"><a href="#迁移请修改-SECRET-KEY-和-BOOTSTRAP-TOKEN-为原来的设置" class="headerlink" title="迁移请修改 SECRET_KEY 和 BOOTSTRAP_TOKEN 为原来的设置"></a>迁移请修改 SECRET_KEY 和 BOOTSTRAP_TOKEN 为原来的设置</h2><h2 id="完整参数文档-https-docs-jumpserver-org-zh-master-admin-guide-env"><a href="#完整参数文档-https-docs-jumpserver-org-zh-master-admin-guide-env" class="headerlink" title="完整参数文档 https://docs.jumpserver.org/zh/master/admin-guide/env/"></a>完整参数文档 <a target="_blank" rel="noopener" href="https://docs.jumpserver.org/zh/master/admin-guide/env/">https://docs.jumpserver.org/zh/master/admin-guide/env/</a></h2><h2 id="MySQL-配置-USE-EXTERNAL-MYSQL-1-表示使用外置数据库-请输入正确的-MySQL-信息"><a href="#MySQL-配置-USE-EXTERNAL-MYSQL-1-表示使用外置数据库-请输入正确的-MySQL-信息" class="headerlink" title="MySQL 配置, USE_EXTERNAL_MYSQL=1 表示使用外置数据库, 请输入正确的 MySQL 信息"></a>MySQL 配置, USE_EXTERNAL_MYSQL=1 表示使用外置数据库, 请输入正确的 MySQL 信息</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">USE_EXTERNAL_MYSQL=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">DB_HOST= <span class="number">10.0</span><span class="number">.77</span><span class="number">.38</span></span><br><span class="line"></span><br><span class="line">DB_PORT= <span class="number">3306</span></span><br><span class="line"></span><br><span class="line">DB_USER= jumpserver</span><br><span class="line"></span><br><span class="line">DB_PASSWORD= z&amp;cemb2iqYPiC$N3</span><br><span class="line"></span><br><span class="line">DB_NAME= jumpserver</span><br><span class="line"></span><br><span class="line">  （ # 主要关注数据库相关配置文件）</span><br></pre></td></tr></table></figure>
-<p>3 ，安装 jumpserver 服务</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="meta">@jumpserver</span>-slave /data/jumpserver-installer-v2<span class="number">.16</span><span class="number">.3</span>]$ ./jmsctl.sh install</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       ██╗██╗   ██╗███╗   ███╗██████╗ ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗</span><br><span class="line"></span><br><span class="line">       ██║██║   ██║████╗ ████║██╔══██╗██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗</span><br><span class="line"></span><br><span class="line">       ██║██║   ██║██╔████╔██║██████╔╝███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝</span><br><span class="line"></span><br><span class="line">  ██   ██║██║   ██║██║╚██╔╝██║██╔═══╝ ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗</span><br><span class="line"></span><br><span class="line">  ╚█████╔╝╚██████╔╝██║ ╚═╝ ██║██║     ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║</span><br><span class="line"></span><br><span class="line">   ╚════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝</span><br><span class="line"></span><br><span class="line">                                                                     Version:  v2<span class="number">.16</span><span class="number">.3</span></span><br><span class="line"></span><br><span class="line">需要手动操作的内容如下：</span><br><span class="line"></span><br><span class="line">    是否需要自定义 docker 存储目录, 默认将使用目录 /<span class="keyword">var</span>/lib/docker? (y/n)  (默认为 n): n</span><br><span class="line"></span><br><span class="line">    是否需要支持 IPv6? (y/n)  (默认为 n): n</span><br><span class="line"></span><br><span class="line">   是否需要自定义持久化存储, 默认将使用目录 /opt/jumpserver? (y/n)  (默认为 n): <span class="function">y</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">   Persistent storage <span class="title">directory</span> <span class="params">(<span class="keyword">default</span> /opt/jumpserver)</span>: /data/jumpserver</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">   是否使用外部 MySQL? <span class="params">(y/n)</span>  <span class="params">(默认为 n)</span>: y</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">   请输入 MySQL 的主机地址 <span class="params">(无默认值)</span>: 10.0.77.38</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">   请输入 MySQL 的端口 <span class="params">(默认为<span class="number">3306</span>)</span>: 3306</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">   请输入 MySQL 的数据库<span class="params">(事先做好授权)</span> <span class="params">(默认为jumpserver)</span>: jumpserver</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">   请输入 MySQL 的用户名 <span class="params">(无默认值)</span>: jumpserver</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">   请输入 MySQL 的密码 <span class="params">(无默认值)</span>: z&amp;cemb2iqYPiC$N3</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">    是否使用外部 Redis? <span class="params">(y/n)</span>  <span class="params">(默认为 n)</span>: n</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">    是否需要配置 JumpServer 对外访问端口? <span class="params">(y/n)</span>  <span class="params">(默认为 n)</span>: n</span></span><br><span class="line"><span class="function"></span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>三，修改docker数据目录</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#默认docker安装的数据目录为/var/lib/docker，需要迁移到数据盘/data/目录下</span><br><span class="line"></span><br><span class="line">mv -f /var/lib/docker /data/docker</span><br><span class="line"></span><br><span class="line">ln -sf /data/docker /var/lib/docker</span><br><span class="line"></span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-
-<p>四，启动服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 安装完成后配置文件 /opt/jumpserver/config/config.txt</span><br><span class="line"></span><br><span class="line">cd /data/jumpserver-installer-v2.16.3</span><br><span class="line"></span><br><span class="line"># 启动</span><br><span class="line"></span><br><span class="line">./jmsctl.sh start</span><br><span class="line"></span><br><span class="line"># 其他常用操作</span><br><span class="line"></span><br><span class="line"># 停止</span><br><span class="line"></span><br><span class="line">./jmsctl.sh down</span><br><span class="line"></span><br><span class="line"># 卸载</span><br><span class="line"></span><br><span class="line">./jmsctl.sh uninstall</span><br><span class="line"></span><br><span class="line"># 帮助</span><br><span class="line"></span><br><span class="line">./jmsctl.sh –h</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>五，登录验证服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">登录：localhost</span><br><span class="line"></span><br><span class="line">默认账号：admin   默认密码：admin</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA1.png" alt="流程"></p>
-<p>六，部署高可用jumpserver服务</p>
-<p>另外一台服务器上部署jumpserver服务，连接第一台服务器得mysql数据库</p>
-<p>部署步骤如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1 ，下载安装包</span><br><span class="line"></span><br><span class="line">cd /data</span><br><span class="line"></span><br><span class="line">wget https://github.com/jumpserver/installer/releases/download/v2.16.3/jumpserver-installer-v2.16.3.tar.gz</span><br><span class="line"></span><br><span class="line">tar -xf jumpserver-installer-v2.16.3.tar.gz</span><br><span class="line"></span><br><span class="line">cd jumpserver-installer-v2.16.3</span><br></pre></td></tr></table></figure>
-<p>2 ，安装服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver-slave /data/jumpserver-installer-v2.16.3]$ ./jmsctl.sh install</span><br><span class="line"></span><br><span class="line">是否需要自定义 docker 存储目录, 默认将使用目录 /var/lib/docker? (y/n)  (默认为 n): n</span><br><span class="line"></span><br><span class="line">是否需要支持 IPv6? (y/n)  (默认为 n): n</span><br><span class="line"></span><br><span class="line">是否需要自定义持久化存储, 默认将使用目录 /opt/jumpserver? (y/n)  (默认为 n): y</span><br><span class="line"></span><br><span class="line">   Persistent storage directory (default /opt/jumpserver): /data/jumpserver</span><br><span class="line"></span><br><span class="line">是否使用外部 MySQL? (y/n)  (默认为 n): y</span><br><span class="line"></span><br><span class="line">   请输入 MySQL 的主机地址 (无默认值): 10.0.77.38</span><br><span class="line"></span><br><span class="line">   请输入 MySQL 的端口 (默认为3306): 3306</span><br><span class="line"></span><br><span class="line">   请输入 MySQL 的数据库(事先做好授权) (默认为jumpserver): jumpserver</span><br><span class="line"></span><br><span class="line">   请输入 MySQL 的用户名 (无默认值): jumpserver</span><br><span class="line"></span><br><span class="line">   请输入 MySQL 的密码 (无默认值): z&amp;cemb2iqYPiC$N3</span><br></pre></td></tr></table></figure>
-<p>3 ，修改 docker 默认数据目录</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mv -f /var/lib/docker /data/docker</span><br><span class="line"></span><br><span class="line">ln -sf /data/docker /var/lib/docker</span><br><span class="line"></span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-<p>4 ，启动服务</p>
-<h1 id="安装完成后配置文件-opt-jumpserver-config-config-txt"><a href="#安装完成后配置文件-opt-jumpserver-config-config-txt" class="headerlink" title="安装完成后配置文件 /opt/jumpserver/config/config.txt"></a>安装完成后配置文件 /opt/jumpserver/config/config.txt</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/jumpserver-installer-v2.16.3</span><br></pre></td></tr></table></figure>
-<h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./jmsctl.sh start</span><br></pre></td></tr></table></figure></div>
+<h1 id="嵌套消息体"><a href="#嵌套消息体" class="headerlink" title="嵌套消息体"></a>嵌套消息体</h1></div>
 
 			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
 			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
@@ -491,7 +481,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220114clho7vbnm002bpsuj6t9ef3x6.html" title="开源堡垒机jumpserver安装部署" target="_blank" rel="external">https://zkkget.github.io/posts/20220114clho7vbnm002bpsuj6t9ef3x6.html</a>
+      <a href="https://zkkget.github.io/posts/20220331clho7wpjv000ryouj1hts6ktq.html" title="Springboot+Netty仿微信实战设计文档" target="_blank" rel="external">https://zkkget.github.io/posts/20220331clho7wpjv000ryouj1hts6ktq.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -538,12 +528,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220126clho7vbnk0024psuj22n62fqn.html" title="如何删除valine评论"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220407clho7wpkg001vyoujek92gpi9.html" title="人工智能vs人工智障之图片识别"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220106clho7vbnq002ppsuj09sd8zbu.html" title="还在手动维护Yapi?"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220207clho7wpko002qyouj8kegh0wk.html" title="还在手动写单元测试？"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
