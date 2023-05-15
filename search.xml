@@ -334,7 +334,7 @@
   </entry>
   <entry>
     <title>Spring事务管理报错Transaction rolled back because it has been marked as rollback-only</title>
-    <url>/posts/20220725clho6urm1000xa4uj1h0ehxan.html</url>
+    <url>/posts/20220725clho7byh3000wvwuj5jice9qn.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>事务是我们平时项目中对数据操作最为直接、常用的方式，现在无论是大小公司都离不开对事务的操作，伴随业务的提升，客户量的积累也大大增加了对事务管理的难度。<br>在本章节中将会讲到如下内容：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1、线上环境对roll back only 的处理</span><br><span class="line"></span><br><span class="line">2、线上环境对嵌套事务的解决方案</span><br><span class="line"></span><br><span class="line">3、11个demo分析事务失效的场景</span><br><span class="line"></span><br><span class="line">4、分布式事务</span><br><span class="line"></span><br><span class="line">5、事务也能异步</span><br></pre></td></tr></table></figure>
 <p>1、线上环境对roll back only 的处理与产生</p>
@@ -399,7 +399,7 @@
   </entry>
   <entry>
     <title>【声明】阿里云服务器导致图片不显示[可在此贴下方留言]</title>
-    <url>/posts/20220725clho6urm6001ca4ujb45hfxp0.html</url>
+    <url>/posts/20220725clho7byh9001bvwuj78wb5lgz.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>1.图片服务器原因不定期修复…紧急修复中….<br>2.重要重要【图片不显示，请更换为火狐浏览器打开！！！或者手机在微信中打开也可食用】,放大图片更清晰<br>3.服务器内存过小,2020年10月13日后续部分内容将图片转至腾讯云<br>4.2d妹子会叫,有问题请留言<br>5.阿里云服务器到期,后续将不再续费,个人项目停止维护</p>
 </div>
 
@@ -433,7 +433,7 @@
   </entry>
   <entry>
     <title>【置顶】Springboot之---强大的Servlet</title>
-    <url>/posts/20220127clho6urm40014a4uj3b5g39fh.html</url>
+    <url>/posts/20220127clho7byh60014vwuj5v684524.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h4 id="If-I-have-seen-further-it-is-by-standing-on-the-shoulders-of-giants"><a href="#If-I-have-seen-further-it-is-by-standing-on-the-shoulders-of-giants" class="headerlink" title="If I have seen further, it is by standing on the shoulders of giants"></a>If I have seen further, it is by standing on the shoulders of giants</h4><h4 id="如果我比别人看得更远-那是因为我站在巨人的肩膀上"><a href="#如果我比别人看得更远-那是因为我站在巨人的肩膀上" class="headerlink" title="如果我比别人看得更远,那是因为我站在巨人的肩膀上"></a>如果我比别人看得更远,那是因为我站在巨人的肩膀上</h4><h3 id="如今回头看下Servlet不仅如此强大-还具有很强烈的参考意义-能在现如今流行的大部分框架中找到它的影子。下面文章不止与探索Servlet-可能在其中穿插其他的关联知识点-旨在能从此次的学习中获取更多的知识点参考资料总结-转化为自己的理解输出-在文中我尽量以截图-复制全限定类名的方式记录-以便感兴趣的再次查找。"><a href="#如今回头看下Servlet不仅如此强大-还具有很强烈的参考意义-能在现如今流行的大部分框架中找到它的影子。下面文章不止与探索Servlet-可能在其中穿插其他的关联知识点-旨在能从此次的学习中获取更多的知识点参考资料总结-转化为自己的理解输出-在文中我尽量以截图-复制全限定类名的方式记录-以便感兴趣的再次查找。" class="headerlink" title="如今回头看下Servlet不仅如此强大,还具有很强烈的参考意义,能在现如今流行的大部分框架中找到它的影子。下面文章不止与探索Servlet,可能在其中穿插其他的关联知识点,旨在能从此次的学习中获取更多的知识点参考资料总结,转化为自己的理解输出,在文中我尽量以截图+复制全限定类名的方式记录,以便感兴趣的再次查找。"></a>如今回头看下Servlet不仅如此强大,还具有很强烈的参考意义,能在现如今流行的大部分框架中找到它的影子。下面文章不止与探索Servlet,可能在其中穿插其他的关联知识点,旨在能从此次的学习中获取更多的知识点参考资料总结,转化为自己的理解输出,在文中我尽量以截图+复制全限定类名的方式记录,以便感兴趣的再次查找。</h3><h2 id="Springboot与Servlet"><a href="#Springboot与Servlet" class="headerlink" title="Springboot与Servlet"></a>Springboot与Servlet</h2><p>在springboot中内嵌了Tomcat容器,而Tomcat又是Servlet的容器,Springboot就与Servlet产生了紧密的联系。<br>在分析各个类时,注意下每个类所在的包是如何在tomcat与boot之间跨越的~</p>
 <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>1、初始化<br>2、处理请求<br>3、销毁<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/servlet.png" alt="流程"></p>
 <h3 id="应用上下文ServletContext"><a href="#应用上下文ServletContext" class="headerlink" title="应用上下文ServletContext"></a>应用上下文ServletContext</h3><p>应用上下文即可看做：一次请求到达,到响应结束的过程中间的catlog,即阅读中结合上下文语境,是一个广义定义。<br>为什么说到上下文呢？来看下ServletContext的实现,第一个经典实现既是ApplicationContext我们不止在一次源码和应用中见到它,另外加载器目前有两种选择：ContextLoaderListener和ContextLoaderServlet。其功能是完全相同。会在下文进行介绍</p>
@@ -750,7 +750,7 @@
   </entry>
   <entry>
     <title>RocketMq从入门到放弃</title>
-    <url>/posts/20211028clho6urlu000ja4uj9vsfa12e.html</url>
+    <url>/posts/20211028clho7bygx000lvwujedrnapal.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="【置顶】-留言请点击友链留言室或者在文章底部留言"><a href="#【置顶】-留言请点击友链留言室或者在文章底部留言" class="headerlink" title="【置顶】 留言请点击友链留言室或者在文章底部留言"></a>【置顶】 留言请点击友链留言室或者在文章底部留言</h1><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktMq.jpg" alt="mq"></p>
 <h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a href="http://rocketmq.apache.org/release_notes/release-notes-4.3.2/">http://rocketmq.apache.org/release_notes/release-notes-4.3.2/</a></p>
 <h1 id="中文文档"><a href="#中文文档" class="headerlink" title="中文文档"></a>中文文档</h1><p><a href="https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing">https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing</a></p>
@@ -1542,7 +1542,7 @@
   </entry>
   <entry>
     <title>1000万数据对比ContainsAll实测</title>
-    <url>/posts/20220812clho6urld0001a4uj4gs31dbe.html</url>
+    <url>/posts/20220812clho7bygh0001vwujgfsy1zle.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">timeoutReminder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; list2 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000000</span>; i++) &#123;</span><br><span class="line">            Random random = <span class="keyword">new</span> Random();</span><br><span class="line">            list.add(getRandomString(random.nextInt(<span class="number">100</span>)));</span><br><span class="line">            list2.add(getRandomString(random.nextInt(<span class="number">100</span>)));</span><br><span class="line">        &#125;</span><br><span class="line">        StopWatch stopWatch = <span class="keyword">new</span> StopWatch();</span><br><span class="line">        stopWatch.start();</span><br><span class="line">        list.containsAll(list2);</span><br><span class="line">        stopWatch.stop();</span><br><span class="line">        System.out.println(stopWatch.getTotalTimeSeconds());</span><br><span class="line">        StopWatch stopWatch2 = <span class="keyword">new</span> StopWatch();</span><br><span class="line">        stopWatch2.start();</span><br><span class="line">        CollectionUtils.containsAll(list, list2);</span><br><span class="line">        stopWatch2.stop();</span><br><span class="line">        System.out.println(stopWatch2.getTotalTimeSeconds());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"><span class="number">0.571</span></span><br><span class="line"><span class="number">17.27</span></span><br><span class="line"></span><br><span class="line">源码 java.util.List#<span class="function">containsAll</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"> <span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span> </span>&#123;</span><br><span class="line">        Object[] es = getArray();</span><br><span class="line">        <span class="keyword">int</span> len = es.length;</span><br><span class="line">        <span class="keyword">for</span> (Object e : c) &#123;</span><br><span class="line">            <span class="keyword">if</span> (indexOfRange(e, es, <span class="number">0</span>, len) &lt; <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">      <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">indexOfRange</span><span class="params">(Object o, Object[] es, <span class="keyword">int</span> from, <span class="keyword">int</span> to)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (o == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = from; i &lt; to; i++)</span><br><span class="line">                <span class="keyword">if</span> (es[i] == <span class="keyword">null</span>)</span><br><span class="line">                    <span class="keyword">return</span> i;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = from; i &lt; to; i++)</span><br><span class="line">                <span class="keyword">if</span> (o.equals(es[i]))</span><br><span class="line">                    <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">源码org.apache.commons.collections4.CollectionUtils#containsAll</span><br><span class="line"></span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Returns &lt;code&gt;true&lt;/code&gt; iff all elements of &#123;<span class="doctag">@code</span> coll2&#125; are also contained</span></span><br><span class="line"><span class="comment">     * in &#123;<span class="doctag">@code</span> coll1&#125;. The cardinality of values in &#123;<span class="doctag">@code</span> coll2&#125; is not taken into account,</span></span><br><span class="line"><span class="comment">     * which is the same behavior as &#123;<span class="doctag">@link</span> Collection#containsAll(Collection)&#125;.</span></span><br><span class="line"><span class="comment">     * &lt;p&gt;</span></span><br><span class="line"><span class="comment">     * In other words, this method returns &lt;code&gt;true&lt;/code&gt; iff the</span></span><br><span class="line"><span class="comment">     * &#123;<span class="doctag">@link</span> #intersection&#125; of &lt;i&gt;coll1&lt;/i&gt; and &lt;i&gt;coll2&lt;/i&gt; has the same cardinality as</span></span><br><span class="line"><span class="comment">     * the set of unique values from &#123;<span class="doctag">@code</span> coll2&#125;. In case &#123;<span class="doctag">@code</span> coll2&#125; is empty, &#123;<span class="doctag">@code</span> true&#125;</span></span><br><span class="line"><span class="comment">     * will be returned.</span></span><br><span class="line"><span class="comment">     * &lt;p&gt;</span></span><br><span class="line"><span class="comment">     * This method is intended as a replacement for &#123;<span class="doctag">@link</span> Collection#containsAll(Collection)&#125;</span></span><br><span class="line"><span class="comment">     * with a guaranteed runtime complexity of &#123;<span class="doctag">@code</span> O(n + m)&#125;. Depending on the type of</span></span><br><span class="line"><span class="comment">     * &#123;<span class="doctag">@link</span> Collection&#125; provided, this method will be much faster than calling</span></span><br><span class="line"><span class="comment">     * &#123;<span class="doctag">@link</span> Collection#containsAll(Collection)&#125; instead, though this will come at the</span></span><br><span class="line"><span class="comment">     * cost of an additional space complexity O(n).</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> coll1  the first collection, must not be null</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> coll2  the second collection, must not be null</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> &lt;code&gt;true&lt;/code&gt; iff the intersection of the collections has the same cardinality</span></span><br><span class="line"><span class="comment">     *   as the set of unique elements from the second collection</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@since</span> 4.0</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">containsAll</span><span class="params">(<span class="keyword">final</span> Collection&lt;?&gt; coll1, <span class="keyword">final</span> Collection&lt;?&gt; coll2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (coll2.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">final</span> Iterator&lt;?&gt; it = coll1.iterator();</span><br><span class="line">            <span class="keyword">final</span> Set&lt;Object&gt; elementsAlreadySeen = <span class="keyword">new</span> HashSet&lt;Object&gt;();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">final</span> Object nextElement : coll2) &#123;</span><br><span class="line">                <span class="keyword">if</span> (elementsAlreadySeen.contains(nextElement)) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">boolean</span> foundCurrentElement = <span class="keyword">false</span>;</span><br><span class="line">                <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">                    <span class="keyword">final</span> Object p = it.next();</span><br><span class="line">                    elementsAlreadySeen.add(p);</span><br><span class="line">                    <span class="keyword">if</span> (nextElement == <span class="keyword">null</span> ? p == <span class="keyword">null</span> : nextElement.equals(p)) &#123;</span><br><span class="line">                        foundCurrentElement = <span class="keyword">true</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (foundCurrentElement) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 </div>
 
@@ -1579,7 +1579,7 @@
   </entry>
   <entry>
     <title>面向面试编程</title>
-    <url>/posts/20220802clho6urmr002wa4uj413s3usr.html</url>
+    <url>/posts/20220802clho7byhy002xvwujamy003rf.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h2 id="2023年2月2日09-58-57更新"><a href="#2023年2月2日09-58-57更新" class="headerlink" title="2023年2月2日09:58:57更新"></a>2023年2月2日09:58:57更新</h2><p>提问：请问什么是java中函数式接口？<br>回答：只定义了一个抽象方法的接口。(如果你也是这个回答，很遗憾肯定是不及格的)</p>
 <p>原答案中对于此回答不是很认可，我不知道是处于语法的严谨还是个人角度理解的不同，在官方文档中如下</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Package java.util.function Description</span><br><span class="line">Functional interfaces provide target types for lambda expressions and method references. Each functional interface has a single abstract method, called the functional method for that functional interface, to which the lambda expression&#x27;s parameter and return types are matched or adapted. Functional interfaces can provide a target type in multiple contexts, such as assignment context, method invocation, or cast context:</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1980,7 +1980,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>CompletableFuture</title>
-    <url>/posts/20220728clho6urlm0009a4ujg40l9p1y.html</url>
+    <url>/posts/20220728clho7bygl0003vwujc6o3euc7.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>想学习CompletableFuture，因此查询资料发现<br>CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。<br>CompletableFuture实现了CompletionStage和Future接口。<br>需要先了解Future接口<br>什么是Future？<br>简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是一个延迟计算的Future对象，这个Future对象是Dart内置的，有自己的队列策略，它将要操作的事件放入EventQueue中，在队列中的事件按照先进先出的原则去逐一处理事件，当事件处理完成后，将结果返回给Future对象。</p>
 <p>在这个过程中涉及到了异步和等待：</p>
 <p>异步：就是不用阻塞当前线程，来等待该线程任务处理完成再去执行其他任务。<br>等待：await，声明运算为延迟执行<br>async和await<br>首先看一个例子：</p>
@@ -2123,7 +2123,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>优雅永不过时</title>
-    <url>/posts/20220726clho6urmh001ya4ujcg6jb43i.html</url>
+    <url>/posts/20220726clho7byhk001yvwuje29o54wr.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法</p>
 <p>优雅的关闭流<br>java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭</p>
 <p>try catch finally</p>
@@ -2166,7 +2166,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>Leetcode算法题</title>
-    <url>/posts/20220726clho6urlo000ba4uj5qcx674j.html</url>
+    <url>/posts/20220726clho7bygr000bvwujhcox5f4p.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>一：力扣第14题 编写一个函数来查找字符串数组中的最长公共前缀<br>官方解法：<br>##方法一：横向扫描</p>
 <p>如果在尚未遍历完所有的字符串时，最长公共前缀已经是空串，则最长公共前缀一定是空串，因此不需要继续遍历剩下的字符串，直接返回空串即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String longestCommonPrefix(String[] strs) &#123;</span><br><span class="line">        if (strs == null || strs.length == 0) &#123;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        String prefix = strs[0];</span><br><span class="line">        int count = strs.length;</span><br><span class="line">        for (int i = 1; i &lt; count; i++) &#123;</span><br><span class="line">            prefix = longestCommonPrefix(prefix, strs[i]);</span><br><span class="line">            if (prefix.length() == 0) &#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return prefix;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String longestCommonPrefix(String str1, String str2) &#123;</span><br><span class="line">        int length = Math.min(str1.length(), str2.length());</span><br><span class="line">        int index = 0;</span><br><span class="line">        while (index &lt; length &amp;&amp; str1.charAt(index) == str2.charAt(index)) &#123;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        return str1.substring(0, index);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">复杂度分析</span><br><span class="line">时间复杂度：O(mn)O(mn)，其中 mm 是字符串数组中的字符串的平均长度，nn 是字符串的数量。最坏情况下，字符串数组中的每个字符串的每个字符都会被比较一次。</span><br><span class="line">空间复杂度：O(1)O(1)。使用的额外空间复杂度为常数。</span><br><span class="line">作者：LeetCode-Solution</span><br><span class="line">链接：https://leetcode-cn.com/problems/longest-common-prefix/solution/zui-chang-gong-gong-qian-zhui-by-leetcode-solution/</span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
@@ -2247,7 +2247,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>蚂蚁一面整理</title>
-    <url>/posts/20220726clho6urmo002ma4uj87364c0y.html</url>
+    <url>/posts/20220726clho7byhv002nvwuja08r3d0x.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>java的同步容器，并发容器？<br>同步：即每次只有一个线程访问容器状态。<br>并发：即每次可有多个线程访问容器状态。<br>同步容器：Vector，HashTable<br>并发容器：ConCurrentHashMap，CopeyOnwrite<br>–当并发读远多于修改的场景下需要使用List和Set时，可以考虑使用CopyOnWriteArrayList和CopyOnWriteArraySet；<br>–当需要并发使用&lt;Key, Value&gt;键值对存取数据时，可以使用ConcurrentHashMap；<br>–当要保证并发&lt;Key, Value&gt;键值对有序时可以使用ConcurrentSkipListMap。</p>
 <p>ArrayList和LinkedList的插入和访问的复杂度<br>即数组与链表的访问插入复杂度<br>1&gt;.数组在访问时可通过下标直接查询，复杂度O(1),链表复杂度O(n)<br>2&gt;.数组插入时数组下标需要移动O(n)，链表直接操作指针O(1)<br>反射原理—&gt;</p>
 <blockquote>
@@ -2343,7 +2343,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>List遍历删除</title>
-    <url>/posts/20220726clho6urlq000fa4uj9lelgy8i.html</url>
+    <url>/posts/20220726clho7bygt000fvwuj9j0n52qj.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>方法一：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">       list.add(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;ab&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;ad&quot;</span>);</span><br><span class="line">       Iterator&lt;String&gt; iterator = list.iterator();</span><br><span class="line">       <span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">           String next = iterator.next();</span><br><span class="line">           <span class="keyword">if</span>(<span class="string">&quot;a&quot;</span>.equals(next)||<span class="string">&quot;c&quot;</span>.equals(next))&#123;</span><br><span class="line">               iterator.remove();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       System.out.println(JSONObject.toJSONString(list));</span><br><span class="line">   &#125;</span><br><span class="line">输出：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span></span><br><span class="line">[<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;ad&quot;</span>]</span><br></pre></td></tr></table></figure>
 
@@ -2384,7 +2384,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>Mysql海量数据存储与优化</title>
-    <url>/posts/20220725clho6urlv000ma4ujhlz33y8u.html</url>
+    <url>/posts/20220725clho7bygw000jvwujh3yw7by6.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>我坚信，机会永远属于有准备的人，我们与其羡慕他人的成功，不如从此刻起，积累足够多的知识和面试经验，为将来进入更好的公司做充足的准备<br>本片文章将会根据资料学习深入Mysql的设计与优化<br>1、Mysql基础知识</p>
 <p>2、Mysql架构原理和存储机制</p>
 <p>3、Mysql高可用方案</p>
@@ -2442,7 +2442,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>主站博客迁移之字节跳动面经个人搜索答案</title>
-    <url>/posts/20220725clho6urme001ra4uj4ylq0lmm.html</url>
+    <url>/posts/20220725clho7byhi001rvwujdd9h5vjr.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>问题来源<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%AD%97%E8%8A%82%E9%9D%A2%E8%AF%95%E9%A2%98.jpg" alt="流程"></p>
 <h1 id="1-线程池参数的含义？"><a href="#1-线程池参数的含义？" class="headerlink" title="1.线程池参数的含义？"></a>1.线程池参数的含义？</h1><p>int corePoolSize：常驻线程数<br>int maximumPoolSize：线程池同时执行的最大线程数，&gt;=1<br>long keepAliveTime:空闲线程的存活时间<br>TimeUnit unit：keepAliveTime的单位<br>BlockingQueueworkQueue：被提交等待被执行的任务<br>ThreadFactory threadFactory：工作线程的线程工厂<br>RejectedExecutionHandler handler：线程池拒绝策略<br>线程池拒绝策略</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">当线程池的任务缓存队列已满并且线程池中的线程数目达到maximumPoolSize时，</span><br><span class="line">如果还有任务到来就会采取任务拒绝策略，通常有以下四种策略：</span><br><span class="line">ThreadPoolExecutor.AbortPolicy:丢弃任务并抛出RejectedExecutionException异常。</span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor.DiscardPolicy：丢弃任务，但是不抛出异常。 </span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor.DiscardOldestPolicy：丢弃队列最前面的任务，然后重新提交被拒绝的任务 </span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor.CallerRunsPolicy：由调用线程（提交任务的线程）处理该任务</span><br></pre></td></tr></table></figure>
@@ -2550,7 +2550,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>主站博客迁移之Nginx安装与原理</title>
-    <url>/posts/20220725clho6urm9001ja4ujddg53yvu.html</url>
+    <url>/posts/20220725clho7byhd001ivwuj6ef2gnor.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>官网<a href="http://nginx.org/">http://nginx.org/</a><br>需要的素材</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">pcre-<span class="number">8.37</span>.tar.gz</span><br><span class="line">openssl-<span class="number">1.0</span>.1t.tar.gz</span><br><span class="line">zlib-<span class="number">1.2</span><span class="number">.8</span>.tar.gz</span><br><span class="line">nginx-<span class="number">1.11</span><span class="number">.1</span>.tar.gz</span><br></pre></td></tr></table></figure>
 <p>1.1.安装pcre<br>解压缩pcre-xx.tar.gz包<br>进入解压缩目录，执行./configure<br>如果提示，需要提前安装gcc++<br>进入安装光盘目录的软件包(/media/CentOSXX/Package)<br>执行</p>
@@ -2602,7 +2602,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>主站博客迁移之Thymleaf项目常用操作</title>
-    <url>/posts/20220725clho6urmd001pa4uj2czw376o.html</url>
+    <url>/posts/20220725clho7byhg001pvwuj38i2cbhb.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>Thymleaf搭配Springboot完成页面渲染，整理下日常开发中常见常用操作<br>1.下拉框动态被选中</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;label <span class="keyword">for</span>=<span class="string">&quot;inputLevel&quot;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-6 col-form-label form-label&quot;</span>&gt;用户等级:&lt;/label&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><br><span class="line">&lt;select id=<span class="string">&quot;inputLevel&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control&quot;</span> name=<span class="string">&quot;level&quot;</span>&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;selected&#x27;:req.level==null?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;</span><br><span class="line">全部</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;1&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;false&#x27;:req.level==&#x27;1&#x27;?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;<span class="number">1</span>级</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;2&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;false&#x27;:req.level==&#x27;2&#x27;?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;<span class="number">2</span>级</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <p>2.动态复选框选中(判断List是否包含)</p>
@@ -2649,7 +2649,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>主站博客迁移之SpringCloudAlibaba服务注册新发现</title>
-    <url>/posts/20220725clho6urma001ma4ujajbd41wk.html</url>
+    <url>/posts/20220725clho7byhe001lvwujh36t3a96.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>2018.09.21「小马哥技术周报」- 第一期《Spring Cloud 服务发现新选择 - Alibaba Nacos Discovery</p>
 <p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud1.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud2.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud3.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud4.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud5.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud6.jpg" alt="流程"><br>基本是刚出来的时候就已经讲了，现在都2020了<br>不太适合大规模的分布式服务发现ZAB算法<br>内存型，有内存限制</p>
 <p>Springcloudcommons as servicediscovery load balancing  circuit break<br>EnableDiscoveryClient是通用API</p>
@@ -2703,7 +2703,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>主站博客迁移之拒绝解析又臭又长的JSON</title>
-    <url>/posts/20220725clho6urmf001ua4ujfwy488gg.html</url>
+    <url>/posts/20220725clho7byhj001uvwuj7j5j4hd2.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>在日常工作中，不管是因为接收前端返回约定格式的JSON字符串，还是因为需要约定格式请求第三方服务，或者需要将前端画像xml解析成JSON，再或者需要接入第三方短信，供应商，数据提供商的JSON数据，或是需要提供对外暴露接口的API，可见解析JSON是一个常见操作。</p>
 <p>JSON是一个轻量级的数据交换格式。</p>
 <p>一：表单数据由数据库实体对象接收</p>
@@ -2756,7 +2756,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>项目实战----行政优先级分析</title>
-    <url>/posts/20220510clho6urmq002ua4ujcohi8u65.html</url>
+    <url>/posts/20220510clho7byhx002vvwuj6jrsczak.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>在现有地点中解析其地点优先级,最小到区县,当前区县可指定作业优先级,当绑定优先级数据后的数据应在选择时优先展示。</p>
 <h2 id="行政优先级维护"><a href="#行政优先级维护" class="headerlink" title="行政优先级维护"></a>行政优先级维护</h2><p>采用百度地图数据很行行政区域编码维护,考虑到现有数据是人工维护,获取其省市区县可能不准确,所以先根据其经纬度定位后可准确获取其省市区县,然后再进行编码维护。</p>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>地点北京市东城区天安门，百度坐标116.403963,39.915119</p>
@@ -2804,7 +2804,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>mysql中的锁表语句查看方法汇总</title>
-    <url>/posts/20220428clho6urm50019a4uj1x4t8zi9.html</url>
+    <url>/posts/20220428clho7byh70017vwuj609x6fix.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">mysql&gt; show status like <span class="string">&#x27;Table%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Variable_name        | Value |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Table_locks_immediate | <span class="number">105</span>         |</span><br><span class="line"></span><br><span class="line">| Table_locks_waited   | <span class="number">3</span>           |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>Table_locks_immediate    26839653<br>Table_locks_waited            0<br>Table_open_cache_hits    3<br>Table_open_cache_misses    2<br>Table_open_cache_overflows    2</p>
 <p>Table_locks_immediate  指的是能够立即获得表级锁的次数</p>
@@ -2876,7 +2876,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>人工智能vs人工智障之图片识别</title>
-    <url>/posts/20220407clho6urmg001va4uj2fzme8hx.html</url>
+    <url>/posts/20220407clho7byhj001vvwuj0wvi4ri3.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>从车牌识别到图片的相似度处理。开始的目的是识别车牌，以供研究opencv的,在接触车牌的识别的过程中,接触到java的tess4j以及java整合opencv的过程,但是车牌识别效率很低。人为识别是很清晰的但是仍然解析不出来。</p>
 <h2 id="1-Tess4j"><a href="#1-Tess4j" class="headerlink" title="1.Tess4j"></a>1.Tess4j</h2><p>引入依赖</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;!-- https:<span class="comment">//mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j --&gt;</span></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;net.sourceforge.tess4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;tess4j&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">3.4</span><span class="number">.8</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
@@ -2924,7 +2924,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>Springboot+Netty仿微信实战设计文档</title>
-    <url>/posts/20220331clho6urlw000pa4ujdnyaau5n.html</url>
+    <url>/posts/20220331clho7bygz000rvwuj2ho5fjkr.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>日期：2021-12-28<br>版本号：1.0.0<br>作者：kk</p>
 <p>1   编写目的<br> 1.1    术语与定义<br> 1.2    引用标准和规范<br> 1.3    参考资料<br>2    系统总体框架<br> 2.1    设计目标<br> 2.2    总体技术路线<br> 2.3    架构概览<br> 2.3.1    架构总览图<br> 2.3.2    功能一览图<br>3功能展示</p>
 <p>1.1编写目的</p>
@@ -2980,7 +2980,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>还在手动写单元测试？</title>
-    <url>/posts/20220207clho6urmp002oa4ujaloodxc7.html</url>
+    <url>/posts/20220207clho7byhv002pvwuj621nh84m.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="JUnitGenerator安装"><a href="#JUnitGenerator安装" class="headerlink" title="JUnitGenerator安装"></a>JUnitGenerator安装</h1><p>在Idea市场里安装JUnitGenerator插件如图，重启后生效<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/junit1.png" alt="流程"></p>
 <h1 id="设置生成路径及模板"><a href="#设置生成路径及模板" class="headerlink" title="设置生成路径及模板"></a>设置生成路径及模板</h1><p>Output Path: ${SOURCEPATH}/..//../test/java/${PACKAGE}/${FILENAME}<br>注：根据实际项目结构调整，设置为默认模板，另需要在Project Structure–&gt;Modules中设置Test文件目录，可改造为自启动，随容器启动，<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/junit2.png" alt="流程"></p>
 <h1 id="设置Junit4-生成模板"><a href="#设置Junit4-生成模板" class="headerlink" title="设置Junit4 生成模板"></a>设置Junit4 生成模板</h1><p>支持 CommonResponse 或  Wrapper</p>
@@ -3025,7 +3025,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>如何删除valine评论</title>
-    <url>/posts/20220126clho6urmi0023a4ujg21d674a.html</url>
+    <url>/posts/20220126clho7byhn0024vwujgyvb98bz.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>1.登陆leancloud</p>
 <p>2.找到结构话数据–comment<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/cloud.png" alt="流程"><br>3.将测试数据一一删掉</p>
 </div>
@@ -3063,7 +3063,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>开源堡垒机jumpserver安装部署</title>
-    <url>/posts/20220114clho6urml002aa4uj2jau0042.html</url>
+    <url>/posts/20220114clho7byhp002bvwuj7iuxhdh1.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="临时高可用架构方案如下"><a href="#临时高可用架构方案如下" class="headerlink" title="临时高可用架构方案如下"></a>临时高可用架构方案如下</h1><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA.png" alt="流程"></p>
 <p>一，安装mysql数据库</p>
 <p>1 ，安装（步骤省略）</p>
@@ -3137,7 +3137,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>还在手动维护Yapi?</title>
-    <url>/posts/20220106clho6urmq002sa4ujfy89259t.html</url>
+    <url>/posts/20220106clho7byhx002tvwuj884s1szt.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="【置顶】-留言请点击友链留言室或者在文章底部留言"><a href="#【置顶】-留言请点击友链留言室或者在文章底部留言" class="headerlink" title="【置顶】 留言请点击友链留言室或者在文章底部留言"></a>【置顶】 留言请点击友链留言室或者在文章底部留言</h1><p>因前后端人员通过接口定义字段，返回值等对接时非常苦恼，没有一个很好的平台维护，后端每次迭代都要写开发文档，需求变化，多系统联调等，给前后端联调造成阻塞。</p>
 <h1 id="1、后端开发文档编写规范"><a href="#1、后端开发文档编写规范" class="headerlink" title="1、后端开发文档编写规范"></a>1、后端开发文档编写规范</h1><p>1）文档模板统一使用：xxx系统开发文档-模板.docx<br>2）后端每次迭代需要编写开发文档，并进行技术评审（前端、后端、测试、产品参与）<br>3）文档的命名方式：《产品名称-V版本号-设计开发文档-编写人》<br>4) 文档统一保存<br>5）后端必须在编写业务代码前，优先设计API（Swagger），并提供给测试和前端，最大化并行迭代。<br>6）允许特殊情况延期提供API，如：需求变化、多系统联调等。</p>
 <h1 id="Swagger使用规范"><a href="#Swagger使用规范" class="headerlink" title="Swagger使用规范"></a>Swagger使用规范</h1><p>1）后端开发人员必须使用Swagger<br>2）API接口定义参数时，要明确备注信息和是否必须，样例如下：<br>public class SupplierReq {<br>   @NotEmpty(message = “姓名必填”)<br>   @ApiModelProperty(value = “员工姓名”, required = true)<br>   private String name;</p>
