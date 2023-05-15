@@ -21,7 +21,7 @@
   <meta name="description" content="问题来源 1.线程池参数的含义？int corePoolSize：常驻线程数int maximumPoolSize：线程池同时执行的最大线程数，&gt;&#x3D;1long keepAliveTime:空闲线程的存活时间TimeUnit unit：keepAliveTime的单位BlockingQueueworkQueue：被提交等待被执行的任务ThreadFactory threadFactory：工作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="主站博客迁移之字节跳动面经个人搜索答案">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220725clhojowc9001qbgujg9fhgtpx.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220725clhojxpo0001resujaqkgaxei.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="问题来源 1.线程池参数的含义？int corePoolSize：常驻线程数int maximumPoolSize：线程池同时执行的最大线程数，&gt;&#x3D;1long keepAliveTime:空闲线程的存活时间TimeUnit unit：keepAliveTime的单位BlockingQueueworkQueue：被提交等待被执行的任务ThreadFactory threadFactory：工作">
 <meta property="og:locale" content="zh_CN">
@@ -37,7 +37,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%AD%97%E8%8A%82%E9%9D%A2%E8%AF%95%E9%A2%98.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220725clhojowc9001qbgujg9fhgtpx.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220725clhojxpo0001resujaqkgaxei.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -385,7 +385,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220725clhojowc9001qbgujg9fhgtpx.html" class="article-date">
+	<a href="/posts/20220725clhojxpo0001resujaqkgaxei.html" class="article-date">
 	  <time datetime="2022-07-25T07:47:01.000Z" itemprop="datePublished">2022-07-25</time>
 	</a>
 </span>
@@ -406,10 +406,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220725clhojowc9001qbgujg9fhgtpx.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220725clhojxpo0001resujaqkgaxei.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 6.9k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 7k(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 27(分)</span>
@@ -419,7 +419,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>问题来源<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%AD%97%E8%8A%82%E9%9D%A2%E8%AF%95%E9%A2%98.jpg" alt="流程"></p>
+        <div id="readmore-container"><p>问题来源<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%AD%97%E8%8A%82%E9%9D%A2%E8%AF%95%E9%A2%98.jpg" alt="流程"></p>
 <h1 id="1-线程池参数的含义？"><a href="#1-线程池参数的含义？" class="headerlink" title="1.线程池参数的含义？"></a>1.线程池参数的含义？</h1><p>int corePoolSize：常驻线程数<br>int maximumPoolSize：线程池同时执行的最大线程数，&gt;=1<br>long keepAliveTime:空闲线程的存活时间<br>TimeUnit unit：keepAliveTime的单位<br>BlockingQueueworkQueue：被提交等待被执行的任务<br>ThreadFactory threadFactory：工作线程的线程工厂<br>RejectedExecutionHandler handler：线程池拒绝策略<br>线程池拒绝策略</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">当线程池的任务缓存队列已满并且线程池中的线程数目达到maximumPoolSize时，</span><br><span class="line">如果还有任务到来就会采取任务拒绝策略，通常有以下四种策略：</span><br><span class="line">ThreadPoolExecutor.AbortPolicy:丢弃任务并抛出RejectedExecutionException异常。</span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor.DiscardPolicy：丢弃任务，但是不抛出异常。 </span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor.DiscardOldestPolicy：丢弃队列最前面的任务，然后重新提交被拒绝的任务 </span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor.CallerRunsPolicy：由调用线程（提交任务的线程）处理该任务</span><br></pre></td></tr></table></figure>
 <h1 id="2-innodb的索引实现"><a href="#2-innodb的索引实现" class="headerlink" title="2.innodb的索引实现"></a>2.innodb的索引实现</h1><p>1.表数据文件本身是按照B+tree组织的一个索引文件结构<br>2.聚集索引叶子结点包含了完整的数据记,这个索引的key是数据表的主键</p>
@@ -491,7 +491,35 @@
 <p>可以同时实现排它锁和共享锁模式（独占、共享），站在一个使用者的角度，AQS的功能主要分为两类：独占和共享。它的所有子类中，要么实现并使用了它的独占功能的api，要么使用了共享锁的功能，而不会同时使用两套api，即便是最有名的子类ReentrantReadWriteLock也是通过两个内部类读锁和写锁分别实现了两套api来实现的。</p>
 <p>3、AQS的大致实现思路<br>AQS内部维护了一个CLH队列来管理锁。线程会首先尝试获取锁，如果失败就将当前线程及等待状态等信息包装成一个node节点加入到同步队列sync queue里。 接着会不断的循环尝试获取锁，条件是当前节点为head的直接后继才会尝试。如果失败就会阻塞自己直到自己被唤醒。而当持有锁的线程释放锁的时候，会唤醒队列中的后继线程。</p>
 <p>CLH(Craig,Landin,and Hagersten)队列是一个虚拟的双向队列（虚拟的双向队列即不存在队列实例，仅存在结点之间的关联关系）。AQS是将每条请求共享资源的线程封装成一个CLH锁队列的一个结点（Node）来实现锁的分配。</p>
-<h1 id="Spring-主要思想-IOC-AOP"><a href="#Spring-主要思想-IOC-AOP" class="headerlink" title="Spring 主要思想 IOC,AOP"></a>Spring 主要思想 IOC,AOP</h1>
+<h1 id="Spring-主要思想-IOC-AOP"><a href="#Spring-主要思想-IOC-AOP" class="headerlink" title="Spring 主要思想 IOC,AOP"></a>Spring 主要思想 IOC,AOP</h1></div>
+
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "14",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		
       
     </div>
     <div class="article-footer">
@@ -500,7 +528,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220725clhojowc9001qbgujg9fhgtpx.html" title="主站博客迁移之字节跳动面经个人搜索答案" target="_blank" rel="external">https://zkkget.github.io/posts/20220725clhojowc9001qbgujg9fhgtpx.html</a>
+      <a href="https://zkkget.github.io/posts/20220725clhojxpo0001resujaqkgaxei.html" title="主站博客迁移之字节跳动面经个人搜索答案" target="_blank" rel="external">https://zkkget.github.io/posts/20220725clhojxpo0001resujaqkgaxei.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -547,12 +575,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220725clhojowc20019bgujf9f13d25.html" title="【声明】阿里云服务器导致图片不显示[可在此贴下方留言]"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220725clhojxpnq0019esujcaoacnm4.html" title="【声明】阿里云服务器导致图片不显示[可在此贴下方留言]"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220725clhojowc6001jbgujhxhx9epn.html" title="主站博客迁移之Nginx安装与原理"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220725clhojxpnu001jesujg9uchur6.html" title="主站博客迁移之Nginx安装与原理"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

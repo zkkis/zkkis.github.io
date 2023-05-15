@@ -397,17 +397,17 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20230509a1.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 415(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 506(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>在Spring Boot应用中,有几种常见的停止方式:</p>
+        <div id="readmore-container"><p>在Spring Boot应用中,有几种常见的停止方式:</p>
 <ol>
 <li>使用CTRL+C:这是最简单的停止方式,但不推荐在生产环境使用。因为它会立即终止进程,没有机会实现优雅关闭。</li>
 <li>使用SIGTERM信号:发送SIGTERM信号到Spring Boot进程的PID,Spring Boot会注册一个ShutdownHook来优雅关闭应用。这是生产环境推荐的停止方式。</li>
@@ -418,7 +418,35 @@
 <p>curl -X POST <a target="_blank" rel="noopener" href="http://localhost:8080/exit">http://localhost:8080/exit</a><br>5. 调用ApplicationContext的close方法:通过在程序中直接调用<code>applicationContext.close()</code>方法关闭应用上下文来触发关闭。</p>
 <p>@Autowired<br>private ConfigurableApplicationContext applicationContext;</p>
 <p>public void exit() {<br>    applicationContext.close();<br>}<br>然后通过HTTP请求、JMX等方式调用该<code>exit()</code>方法。<br>总之,在生产环境中推荐使用Actuator接口的方式或发送SIGINT/SIGTERM信号的方式来关闭Spring Boot应用。这些方式能够实现优雅关闭,释放资源。而CTRL+C方式只适合在开发环境使用。<br>正确关闭SpringBoot应用,以释放应用占用的资源,这一点在生产环境尤其重要。我们在开发和运维Spring Boot应用时,需要清楚各种停止方式的区别,选用适合的方式</p>
+</div>
 
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "14",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		
       
     </div>
     <div class="article-footer">

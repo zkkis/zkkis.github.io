@@ -518,9 +518,37 @@
     
   </header>
   <div class="article-body">
-    <p>过往业务：从事过供应链,电商，风控，信贷，共享时代，网络靶场等产品，现从事互联网出行电商领域，追求优雅风格代码，能力有限，寻求改变…</p>
+    <div id="readmore-container"><p>过往业务：从事过供应链,电商，风控，信贷，共享时代，网络靶场等产品，现从事互联网出行电商领域，追求优雅风格代码，能力有限，寻求改变…</p>
 <p>个人公众号意在记录作者学习过程，日常开发遇到的问题及解决方案，欢迎投稿，指正</p>
+</div>
 
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "14",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		
   </div>
 </article>
 

@@ -18,10 +18,12 @@
   
   
   <title>每日早报60s | 赵KK的个人博客</title>
-  <meta property="og:type" content="article">
+  <meta name="description" content="var isMobile &#x3D; navigator.userAgent.match(&#x2F;(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phon">
+<meta property="og:type" content="article">
 <meta property="og:title" content="每日早报60s">
 <meta property="og:url" content="https://zkkget.github.io/posts/20230423a1.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
+<meta property="og:description" content="var isMobile &#x3D; navigator.userAgent.match(&#x2F;(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phon">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://api.03c3.cn/zb/">
 <meta property="og:image" content="https://v2.alapi.cn/api/zaobao?token=BX2vvKW28gktjrPr&format=image">
@@ -418,7 +420,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20230423a1.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 91(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -428,8 +430,36 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p><img src="https://api.03c3.cn/zb/" alt="每日60S"><br><img src="https://v2.alapi.cn/api/zaobao?token=BX2vvKW28gktjrPr&format=image" alt="60s-for-news"></p>
+        <div id="readmore-container"><p><img src="https://api.03c3.cn/zb/" alt="每日60S"><br><img src="https://v2.alapi.cn/api/zaobao?token=BX2vvKW28gktjrPr&format=image" alt="60s-for-news"></p>
+</div>
 
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "14",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		
       
     </div>
     <div class="article-footer">
