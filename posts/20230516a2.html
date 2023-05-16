@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>JAVASPI设计模式之策略模式文字版主页有视频 | 赵KK的个人博客</title>
+  <meta name="description" content="在业务开发中，登录接口是非常常见的场景，随着业务的发展，需要支持多种登录形式 java设计模式之策略模式搭配SPI(一)java设计模式之策略模式搭配SPI(二)java设计模式之策略模式搭配SPI(完结)那么登陆接口该如何书写？ 如何设计接口？ 面对大量if else如何进行优化？ 我们今天讲解的是在项目中如何应用策略模式。 登陆场景 登录方法 实现 策略（Strategy）模式的定义：该模式定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVASPI设计模式之策略模式文字版主页有视频">
+<meta property="og:url" content="https://zkkget.github.io/posts/20230516a2.html">
+<meta property="og:site_name" content="赵KK个人博客第三站">
+<meta property="og:description" content="在业务开发中，登录接口是非常常见的场景，随着业务的发展，需要支持多种登录形式 java设计模式之策略模式搭配SPI(一)java设计模式之策略模式搭配SPI(二)java设计模式之策略模式搭配SPI(完结)那么登陆接口该如何书写？ 如何设计接口？ 面对大量if else如何进行优化？ 我们今天讲解的是在项目中如何应用策略模式。 登陆场景 登录方法 实现 策略（Strategy）模式的定义：该模式定">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-16T07:49:13.000Z">
+<meta property="article:modified_time" content="2023-05-16T08:07:43.348Z">
+<meta property="article:author" content="赵KK">
+<meta property="article:tag" content="JAVASPI">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://zkkget.github.io/posts/20230516a2.html">
+  
+    <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+    <link href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.css" rel="stylesheet">
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://kkget.github.io/" target="_blank">
+          <img class="img-circle img-rotate" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">赵kk</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">java Developer &amp; pm</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 北京, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://kkget.github.io/" target="_blank" title="主站博客" data-toggle=tooltip data-placement=top><i class="icon icon-主站博客"></i></a></li>
+        
+        <li><a href="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.png" target="_blank" title="公众号" data-toggle=tooltip data-placement=top><i class="icon icon-公众号"></i></a></li>
+        
+        <li><a href="https://cloud.tencent.com/developer/inventory/14725" target="_blank" title="云+社区" data-toggle=tooltip data-placement=top><i class="icon icon-云+社区"></i></a></li>
+        
+        <li><a href="/1462018576" target="_blank" title="QQ" data-toggle=tooltip data-placement=top><i class="icon icon-QQ"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+      .pace .pace-progress {
+          background: #1E92FB; /*进度条颜色*/
+          height: 3px;
+      }
+      .pace .pace-progress-inner {
+           box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+      }
+      .pace .pace-activity {
+          border-top-color: #1E92FB;    /*上边框颜色*/
+          border-left-color: #1E92FB;    /*左边框颜色*/
+      }
+  </style>
+
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>有问题可搜索</br>个人公众号<赵KK日常技术记录></br>或联系作者进行沟通!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%90%88%E9%9B%86/">AI工具大合集</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MQ/">MQ</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringCloud-Nacos/">SpringCloud Nacos</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Springboot/">Springboot</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%AC%E4%BC%97%E5%8F%B7%E3%80%90%E8%B5%B5KK%E6%97%A5%E5%B8%B8%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95%E3%80%91%E6%AC%A2%E8%BF%8E%E5%85%B3%E6%B3%A8/">公众号【赵KK日常技术记录】欢迎关注</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%93%E9%A2%98/">并发编程专题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A560s/">每日早报60s</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%90%88%E9%9B%86/" rel="tag">AI工具大合集</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CompletableFuture/" rel="tag">CompletableFuture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ContainsAll/" rel="tag">ContainsAll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVASPI/" rel="tag">JAVASPI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/" rel="tag">JSON</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JunitTest/" rel="tag">JunitTest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag">Leetcode算法题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List%E9%81%8D%E5%8E%86%E5%88%A0%E9%99%A4/" rel="tag">List遍历删除</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MQ/" rel="tag">MQ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloud-Nacos/" rel="tag">SpringCloud Nacos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringCloudAlibaba/" rel="tag">SpringCloudAlibaba</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/" rel="tag">Springboot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Thymleaf/" rel="tag">Thymleaf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yapi/" rel="tag">Yapi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/" rel="tag">opencv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/valine/" rel="tag">valine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E5%8A%A1/" rel="tag">事务</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E3%80%90%E8%B5%B5KK%E6%97%A5%E5%B8%B8%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95%E3%80%91%E6%AC%A2%E8%BF%8E%E5%85%B3%E6%B3%A8/" rel="tag">公众号【赵KK日常技术记录】欢迎关注</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A0%A1%E5%9E%92%E6%9C%BA/" rel="tag">堡垒机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E6%88%98/" rel="tag">实战</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%93%E9%A2%98/" rel="tag">并发编程专题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A560s/" rel="tag">每日早报60s</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" rel="tag">面试,字节跳动</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/AI%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%90%88%E9%9B%86/" style="font-size: 13.5px;">AI工具大合集</a> <a href="/tags/CompletableFuture/" style="font-size: 13px;">CompletableFuture</a> <a href="/tags/ContainsAll/" style="font-size: 13px;">ContainsAll</a> <a href="/tags/JAVASPI/" style="font-size: 13px;">JAVASPI</a> <a href="/tags/JSON/" style="font-size: 13px;">JSON</a> <a href="/tags/JunitTest/" style="font-size: 13px;">JunitTest</a> <a href="/tags/Leetcode%E7%AE%97%E6%B3%95%E9%A2%98/" style="font-size: 13px;">Leetcode算法题</a> <a href="/tags/List%E9%81%8D%E5%8E%86%E5%88%A0%E9%99%A4/" style="font-size: 13px;">List遍历删除</a> <a href="/tags/MQ/" style="font-size: 13px;">MQ</a> <a href="/tags/MySQL/" style="font-size: 13px;">MySQL</a> <a href="/tags/Mysql/" style="font-size: 13.5px;">Mysql</a> <a href="/tags/Nginx/" style="font-size: 13px;">Nginx</a> <a href="/tags/SpringCloud-Nacos/" style="font-size: 13px;">SpringCloud Nacos</a> <a href="/tags/SpringCloudAlibaba/" style="font-size: 13px;">SpringCloudAlibaba</a> <a href="/tags/Springboot/" style="font-size: 13.5px;">Springboot</a> <a href="/tags/Thymleaf/" style="font-size: 13px;">Thymleaf</a> <a href="/tags/Yapi/" style="font-size: 13px;">Yapi</a> <a href="/tags/leetcode/" style="font-size: 14px;">leetcode</a> <a href="/tags/opencv/" style="font-size: 13px;">opencv</a> <a href="/tags/valine/" style="font-size: 13px;">valine</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 13px;">事务</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E3%80%90%E8%B5%B5KK%E6%97%A5%E5%B8%B8%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95%E3%80%91%E6%AC%A2%E8%BF%8E%E5%85%B3%E6%B3%A8/" style="font-size: 13px;">公众号【赵KK日常技术记录】欢迎关注</a> <a href="/tags/%E5%A0%A1%E5%9E%92%E6%9C%BA/" style="font-size: 13px;">堡垒机</a> <a href="/tags/%E5%AE%9E%E6%88%98/" style="font-size: 13px;">实战</a> <a href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%93%E9%A2%98/" style="font-size: 13px;">并发编程专题</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A560s/" style="font-size: 13px;">每日早报60s</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 13px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.5px;">面试</a> <a href="/tags/%E9%9D%A2%E8%AF%95-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 13px;">面试,字节跳动</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/AI%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%90%88%E9%9B%86/">AI工具大合集</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/20230516a2.html" class="title">JAVASPI设计模式之策略模式文字版主页有视频</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-16T07:49:13.000Z" itemprop="datePublished">2023-05-16</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/AI%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%90%88%E9%9B%86/">AI工具大合集</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/20230516a1.html" class="title">ChatGptPrompt专栏</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-16T07:44:28.000Z" itemprop="datePublished">2023-05-16</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/AI%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%90%88%E9%9B%86/">AI工具大合集</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/20230515a1.html" class="title">免费的ChatGpt专栏</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-15T01:40:04.000Z" itemprop="datePublished">2023-05-15</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/20230510a1.html" class="title">不限次数的AI对标ChatGPT提高生产力无需魔法</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-10T02:37:16.000Z" itemprop="datePublished">2023-05-10</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/20230509a1.html" class="title">Springboot正确的停机方式</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-09T07:26:02.000Z" itemprop="datePublished">2023-05-09</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E6%90%AD%E9%85%8DSPI-%E4%B8%80"><span class="toc-number">1.</span> <span class="toc-text">java设计模式之策略模式搭配SPI(一)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E6%90%AD%E9%85%8DSPI-%E4%BA%8C"><span class="toc-number">2.</span> <span class="toc-text">java设计模式之策略模式搭配SPI(二)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E6%90%AD%E9%85%8DSPI-%E5%AE%8C%E7%BB%93"><span class="toc-number">3.</span> <span class="toc-text">java设计模式之策略模式搭配SPI(完结)</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-JAVASPI设计模式之策略模式文字版主页有视频" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JAVASPI设计模式之策略模式文字版主页有视频
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/20230516a2.html" class="article-date">
+	  <time datetime="2023-05-16T07:49:13.000Z" itemprop="datePublished">2023-05-16</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/AI%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%90%88%E9%9B%86/">AI工具大合集</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/JAVASPI/" rel="tag">JAVASPI</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20230516a2.html#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 4.1k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 21(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>在业务开发中，登录接口是非常常见的场景，随着业务的发展，需要支持多种登录形式</p>
+<h1 id="java设计模式之策略模式搭配SPI-一"><a href="#java设计模式之策略模式搭配SPI-一" class="headerlink" title="java设计模式之策略模式搭配SPI(一)"></a><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/video/76588">java设计模式之策略模式搭配SPI(一)</a></h1><h1 id="java设计模式之策略模式搭配SPI-二"><a href="#java设计模式之策略模式搭配SPI-二" class="headerlink" title="java设计模式之策略模式搭配SPI(二)"></a><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/video/76589">java设计模式之策略模式搭配SPI(二)</a></h1><h1 id="java设计模式之策略模式搭配SPI-完结"><a href="#java设计模式之策略模式搭配SPI-完结" class="headerlink" title="java设计模式之策略模式搭配SPI(完结)"></a><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/video/76631">java设计模式之策略模式搭配SPI(完结)</a></h1><p>那么登陆接口该如何书写？</p>
+<p>如何设计接口？</p>
+<p>面对大量if else如何进行优化？</p>
+<p>我们今天讲解的是在项目中如何应用策略模式。</p>
+<p>登陆场景</p>
+<p>登录方法</p>
+<p>实现</p>
+<p>策略（Strategy）模式的定义：该模式定义了一系列算法，并将每个算法封装起来，使它们可以相互替换，且算法的变化不会影响使用算法的客户。策略模式属于对象行为模式，它通过对算法进行封装，把使用算法的责任和算法的实现分割开来，并委派给不同的对象对这些算法进行管理。</p>
+<p>建立Springboot demo</p>
+<p><a target="_blank" rel="noopener" href="https://start.spring.io/">https://start.spring.io/</a></p>
+<p>1.SQL</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `user` (</span><br><span class="line"> </span><br><span class="line">  `id` bigint(20) unsigned  NOT NULL AUTO_INCREMENT COMMENT &#x27;主键ID&#x27;,</span><br><span class="line"> </span><br><span class="line">  `user_name` varchar(20) NOT NULL DEFAULT &#x27;&#x27; COMMENT &#x27;用户名&#x27;,</span><br><span class="line"> </span><br><span class="line">  `password` decimal(15,4) NOT NULL COMMENT &#x27;密码&#x27;,</span><br><span class="line"> </span><br><span class="line">  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &#x27;创建时间&#x27;,</span><br><span class="line"> </span><br><span class="line">  `create_by` varchar(30) NOT NULL DEFAULT &#x27;sys&#x27; COMMENT &#x27;创建者&#x27;,</span><br><span class="line"> </span><br><span class="line">  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT &#x27;更新时间&#x27;,</span><br><span class="line"> </span><br><span class="line">  `update_by` varchar(30) NOT NULL DEFAULT &#x27;sys&#x27; COMMENT &#x27;更新者&#x27;,</span><br><span class="line"> </span><br><span class="line">  PRIMARY KEY (`id`)</span><br><span class="line"> </span><br><span class="line">) COMMENT=&#x27;用户信息表&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>2.pom</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">   xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</span><br><span class="line">   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span><br><span class="line">   &lt;parent&gt;</span><br><span class="line">      &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;2.7.9&lt;/version&gt;</span><br><span class="line">      &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;</span><br><span class="line">   &lt;/parent&gt;</span><br><span class="line">   &lt;groupId&gt;testdemo&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;demo&lt;/artifactId&gt;</span><br><span class="line">   &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</span><br><span class="line">   &lt;name&gt;demo&lt;/name&gt;</span><br><span class="line">   &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;</span><br><span class="line">   &lt;properties&gt;</span><br><span class="line">      &lt;java.version&gt;11&lt;/java.version&gt;</span><br><span class="line">   &lt;/properties&gt;</span><br><span class="line">   &lt;dependencies&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">         &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">      &lt;!--akka--&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;com.typesafe.akka&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;akka-slf4j_2.11&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;2.5.16&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;RELEASE&lt;/version&gt;</span><br><span class="line">         &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;RELEASE&lt;/version&gt;</span><br><span class="line">         &lt;scope&gt;compile&lt;/scope&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;!-- https://mvnrepository.com/artifact/com.alibaba/fastjson --&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;fastjson&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;1.2.41&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;!--Mysql依赖包--&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">      &lt;!-- druid数据源驱动 --&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;druid&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;1.1.6&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;org.lionsoul&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;ip2region&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;1.7.2&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;3.2.0&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;mybatis-plus-generator&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;3.2.0&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;org.freemarker&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;freemarker&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;2.3.28&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">   &lt;/dependencies&gt;</span><br><span class="line"></span><br><span class="line">   &lt;build&gt;</span><br><span class="line">      &lt;plugins&gt;</span><br><span class="line">         &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">         &lt;/plugin&gt;</span><br><span class="line">      &lt;/plugins&gt;</span><br><span class="line">   &lt;/build&gt;</span><br><span class="line"></span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure>
+
+<p>新增一个controller</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@Slf4j</span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)</span><br><span class="line">public class LoginController &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private LoginService loginService;</span><br><span class="line"></span><br><span class="line">    @PostMapping(value = &quot;login/create&quot;)</span><br><span class="line">    public String loginVerify(@RequestBody LoginRequest request)&#123;</span><br><span class="line">        if(request == null) throw new RuntimeException(&quot;网络丢了,请稍后再试......&quot;);</span><br><span class="line">        return JSONObject.toJSONString(loginService.login(request));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @PostMapping(value = &quot;add/user&quot;)</span><br><span class="line">    public String addUser(@RequestBody User user)&#123;</span><br><span class="line">        if(user == null) throw new RuntimeException(&quot;网络丢了,请稍后再试......&quot;);</span><br><span class="line">        return JSONObject.toJSONString(loginService.addUser(user));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>新增一个service</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public interface LoginService &#123;</span><br><span class="line"></span><br><span class="line">    Boolean login(LoginRequest request);</span><br><span class="line"></span><br><span class="line">    Boolean addUser(User user);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>新增一个impl</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">@Service</span><br><span class="line">@Slf4j</span><br><span class="line">public class LoginServiceImpl implements LoginService &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private UserMapper userMapper;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Boolean login(LoginRequest request) &#123;</span><br><span class="line">        var msg = &quot;当前登录方式是&quot;;</span><br><span class="line">        if(request.getType() == 1)&#123;</span><br><span class="line">            log.info(msg + &quot;账号密码登录,用户名是&#123;&#125;密码是&#123;&#125;&quot;,request.getLoginName(),request.getPassword());</span><br><span class="line">        &#125;</span><br><span class="line">        if(request.getType() == 2)&#123;</span><br><span class="line">            log.info(msg + &quot;验证码登录,用户名是&#123;&#125;密码是&#123;&#125;&quot;,request.getLoginName(),request.getPassword());</span><br><span class="line">        &#125;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    @Transactional(rollbackFor = Exception.class)</span><br><span class="line">    public Boolean addUser(User user) &#123;</span><br><span class="line">        user.setCreateBy(user.getUserName());</span><br><span class="line">        user.setCreateTime(new Date());</span><br><span class="line">        user.setUpdateTime(new Date());</span><br><span class="line">        user.setUpdateBy(user.getUserName());</span><br><span class="line">        userMapper.insert(user);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>@Mapper</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">public interface UserMapper extends BaseMapper&lt;User&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot; &gt;</span><br><span class="line">&lt;mapper namespace=&quot;springboot.strategy.dao.UserMapper&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;resultMap id=&quot;BaseResultMap&quot; type=&quot;springboot.strategy.entity.User&quot;&gt;</span><br><span class="line">        &lt;id column=&quot;id&quot; property=&quot;id&quot; jdbcType=&quot;BIGINT&quot;/&gt;</span><br><span class="line">        &lt;result column=&quot;user_name&quot; property=&quot;userName&quot; jdbcType=&quot;VARCHAR&quot;/&gt;</span><br><span class="line">        &lt;result column=&quot;password&quot; property=&quot;password&quot; jdbcType=&quot;VARCHAR&quot;/&gt;</span><br><span class="line">        &lt;result column=&quot;create_time&quot; property=&quot;createTime&quot; jdbcType=&quot;TIMESTAMP&quot;/&gt;</span><br><span class="line">        &lt;result column=&quot;create_by&quot; property=&quot;createBy&quot; jdbcType=&quot;VARCHAR&quot;/&gt;</span><br><span class="line">        &lt;result column=&quot;update_time&quot; property=&quot;updateTime&quot; jdbcType=&quot;TIMESTAMP&quot;/&gt;</span><br><span class="line">        &lt;result column=&quot;update_by&quot; property=&quot;updateBy&quot; jdbcType=&quot;VARCHAR&quot;/&gt;</span><br><span class="line">    &lt;/resultMap&gt;</span><br><span class="line"></span><br><span class="line">    &lt;select id=&quot;selectUserInfo&quot; resultType=&quot;springboot.strategy.entity.User&quot;&gt;</span><br><span class="line">        SELECT * FROM user WHERE user_name is  not null order by create_time desc</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">package springboot.strategy.entity;</span><br><span class="line"></span><br><span class="line">import com.baomidou.mybatisplus.annotation.IdType;</span><br><span class="line">import com.baomidou.mybatisplus.annotation.TableId;</span><br><span class="line">import com.baomidou.mybatisplus.annotation.TableName;</span><br><span class="line">import lombok.Data;</span><br><span class="line"></span><br><span class="line">import java.util.Date;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author zhaokk</span><br><span class="line"> * @create 2023-03-25 19:09</span><br><span class="line"> */</span><br><span class="line">@Data</span><br><span class="line">@TableName(&quot;user&quot;)</span><br><span class="line">public class User &#123;</span><br><span class="line">    @TableId(type = IdType.AUTO)</span><br><span class="line">    private Long id;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 用户名</span><br><span class="line">     */</span><br><span class="line">    private String userName;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 密码</span><br><span class="line">     */</span><br><span class="line">    private String password;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    private Date createTime;</span><br><span class="line">    /**</span><br><span class="line">     * 创建人</span><br><span class="line">     */</span><br><span class="line">    private String createBy;</span><br><span class="line">    /**</span><br><span class="line">     * 修改时间</span><br><span class="line">     */</span><br><span class="line">    private Date updateTime;</span><br><span class="line">    /**</span><br><span class="line">     * 修改人</span><br><span class="line">     */</span><br><span class="line">    private String updateBy;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.登录场景</p>
+<p>1.策略模式</p>
+<p>定义一个策略类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class LoginStrategy &#123;</span><br><span class="line">    </span><br><span class="line">private DynamicLoginService  strategy;</span><br><span class="line"></span><br><span class="line">    public void setStrategy(Strategy strategy) &#123;</span><br><span class="line">        this.strategy = strategy;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public Boolean login(LoginRequest request) &#123;</span><br><span class="line">        return strategy.login(request);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>实际调用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LoginStrategy strategy  = new LoginStrategy();</span><br><span class="line">if(request.getType == 1)&#123;</span><br><span class="line">    strategy.setStrategy(new AccountNamePasswordLoginServiceImpl());</span><br><span class="line">&#125;</span><br><span class="line">strategy.login(request)</span><br></pre></td></tr></table></figure>
+
+<p>API = Application Programming Interface  程序之间的接口</p>
+<p>SPI（service provider interface）机制是JDK内置的一种服务发现机制，可以动态的发现服务，即服务提供商，它通过在ClassPath路径下的META-INF/services文件夹查找文件，自动加载文件里所定义的类。目前这种大部分都利用SPI的机制进行服务提供.</p>
+<p>在 JDK SPI 中，通过 ServiceLoader 加载实现类时，底层会使用反射机制加载并实例化对应的类。具体地，ServiceLoader 会通过线程上下文类加载器加载指定的服务接口的实现类，并调用其无参构造方法进行实例化。这意味着，实现类必须提供一个公共的无参构造方法，以便在加载时被正确实例化。</p>
+<p>在 Spring SPI 中，通过 ApplicationContext 加载 Bean 时，底层也使用了反射机制来实例化对应的类。具体地，Spring 会扫描项目中所有的 class 文件，查找带有特定注解（例如 @Component、@Service 等）的类，并将其实例化成 Bean。当需要获取某个 Bean 时，Spring 会根据 Bean 的名称或类型，在容器的内部缓存中查找并返回相应的实例。</p>
+<p>mysql-connector-java-5.1.35.jar</p>
+<p>java.util.ServiceLoader</p>
+<p>JDK8  VS  JDK11</p>
+<p><a target="_blank" rel="noopener" href="https://download.java.net/openjdk/jdk8u40/ri/openjdk-8u40-src-b25-10_feb_2015.zip">https://download.java.net/openjdk/jdk8u40/ri/openjdk-8u40-src-b25-10_feb_2015.zip</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.apiref.com/java11-zh/java.base/java/util/ServiceLoader.html">https://www.apiref.com/java11-zh/java.base/java/util/ServiceLoader.html</a></p>
+<p>2.JDK SPI  </p>
+<p>META-INF/services新建一个service的全限定类名的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ServiceLoader&lt;DynamicService&gt; serviceLoader = ServiceLoader.load(DynamicService.class);   </span><br><span class="line">System.out.println(&quot;Java SPI&quot;);       </span><br><span class="line">serviceLoader.forEach(Robot::sayHello);</span><br></pre></td></tr></table></figure>
+
+<p>为什么替换JDK自带的SPI？</p>
+<p>2.SpringFactoriesLoader类的主要作用是通过类路径下的META-INF/spring.factories文件获取工厂类接口的实现类，初始化并保存在缓存中，以供Springboot启动过程中各个阶段的调用。Spring的自动化配置功能从而加载配置中的bean，也与此息息相关。</p>
+<p>反射，属于主动调用，所以会触发类初始化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.core.io.support.SpringFactoriesLoader#loadSpringFactories方法</span><br><span class="line">既然能够获取所有的实现类，那我们能指定码？自带的方法是不支持的，我们需要自己改造</span><br><span class="line">import org.apache.commons.logging.Log;</span><br><span class="line">import org.apache.commons.logging.LogFactory;</span><br><span class="line">import org.springframework.core.annotation.AnnotationAwareOrderComparator;</span><br><span class="line">import org.springframework.core.io.UrlResource;</span><br><span class="line">import org.springframework.core.io.support.PropertiesLoaderUtils;</span><br><span class="line">import org.springframework.core.io.support.SpringFactoriesLoader;</span><br><span class="line">import org.springframework.lang.Nullable;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line">import org.springframework.util.*;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.net.URL;</span><br><span class="line">import java.util.*;</span><br><span class="line">import java.util.stream.Collectors;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author zhaokk</span><br><span class="line"> * @create 2023-03-27 11:45</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public class SpringFactoriesLoaderExtend&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * The location to look for factories.</span><br><span class="line">     * &lt;p&gt;Can be present in multiple JAR files.</span><br><span class="line">     */</span><br><span class="line">    public static final String FACTORIES_RESOURCE_LOCATION = &quot;META-INF/spring.factories&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    private static final Log logger = LogFactory.getLog(SpringFactoriesLoader.class);</span><br><span class="line"></span><br><span class="line">    //private static final Map&lt;ClassLoader, MultiValueMap&lt;String, String&gt;&gt; cache = new ConcurrentReferenceHashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    private SpringFactoriesLoaderExtend() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Load and instantiate the factory implementations of the given type from</span><br><span class="line">     * &#123;@value #FACTORIES_RESOURCE_LOCATION&#125;, using the given class loader.</span><br><span class="line">     * &lt;p&gt;The returned factories are sorted through &#123;@link AnnotationAwareOrderComparator&#125;.</span><br><span class="line">     * &lt;p&gt;If a custom instantiation strategy is required, use &#123;@link #loadFactoryNames&#125;</span><br><span class="line">     * to obtain all registered factory names.</span><br><span class="line">     * @param factoryClass the interface or abstract class representing the factory</span><br><span class="line">     * @param classLoader the ClassLoader to use for loading (can be &#123;@code null&#125; to use the default)</span><br><span class="line">     * @throws IllegalArgumentException if any factory implementation class cannot</span><br><span class="line">     * be loaded or if an error occurs while instantiating any factory</span><br><span class="line">     * @see #loadFactoryNames</span><br><span class="line">     */</span><br><span class="line">    public static &lt;T&gt; List&lt;T&gt; loadFactories(Class&lt;T&gt; factoryClass, @Nullable ClassLoader classLoader) &#123;</span><br><span class="line">        Assert.notNull(factoryClass, &quot;&#x27;factoryClass&#x27; must not be null&quot;);</span><br><span class="line">        ClassLoader classLoaderToUse = classLoader;</span><br><span class="line">        if (classLoaderToUse == null) &#123;</span><br><span class="line">            classLoaderToUse = SpringFactoriesLoader.class.getClassLoader();</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;String&gt; factoryNames = loadFactoryNames(factoryClass, classLoaderToUse);</span><br><span class="line">        if (logger.isTraceEnabled()) &#123;</span><br><span class="line">            logger.trace(&quot;Loaded [&quot; + factoryClass.getName() + &quot;] names: &quot; + factoryNames);</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;T&gt; result = new ArrayList&lt;&gt;(factoryNames.size());</span><br><span class="line">        for (String factoryName : factoryNames) &#123;</span><br><span class="line">            result.add(instantiateFactory(factoryName, factoryClass, classLoaderToUse));</span><br><span class="line">        &#125;</span><br><span class="line">        AnnotationAwareOrderComparator.sort(result);</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Load the fully qualified class names of factory implementations of the</span><br><span class="line">     * given type from &#123;@value #FACTORIES_RESOURCE_LOCATION&#125;, using the given</span><br><span class="line">     * class loader.</span><br><span class="line">     * @param factoryClass the interface or abstract class representing the factory</span><br><span class="line">     * @param classLoader the ClassLoader to use for loading resources; can be</span><br><span class="line">     * &#123;@code null&#125; to use the default</span><br><span class="line">     * @throws IllegalArgumentException if an error occurs while loading factory names</span><br><span class="line">     * @see #loadFactories</span><br><span class="line">     */</span><br><span class="line">    public static List&lt;String&gt; loadFactoryNames(Class&lt;?&gt; factoryClass, @Nullable ClassLoader classLoader) &#123;</span><br><span class="line">        String factoryClassName = factoryClass.getName();</span><br><span class="line">        Collection&lt;List&lt;String&gt;&gt; values = loadSpringFactories(classLoader, factoryClassName).values();</span><br><span class="line">        List&lt;String&gt; names = new ArrayList&lt;&gt;();</span><br><span class="line">        for (List&lt;String&gt; value : values) &#123;</span><br><span class="line">            for (String s : value) &#123;</span><br><span class="line">                names.add(s);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Collection&lt;List&lt;String&gt;&gt; values1 = loadSpringFactories(classLoader, factoryClassName).values();</span><br><span class="line">        List&lt;String&gt; collect = values1.stream().filter(item -&gt; item.size() &gt; 1).flatMap(set -&gt; set.stream()).collect(Collectors.toList());</span><br><span class="line">        return  names;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static Map&lt;String, List&lt;String&gt;&gt; loadSpringFactories(@Nullable ClassLoader classLoader,String className) &#123;</span><br><span class="line">        MultiValueMap&lt;String, String&gt; result = new LinkedMultiValueMap&lt;&gt;();</span><br><span class="line">        try &#123;</span><br><span class="line">            Enumeration&lt;URL&gt; urls =  classLoader.getResources(FACTORIES_RESOURCE_LOCATION);</span><br><span class="line">            result = new LinkedMultiValueMap&lt;&gt;();</span><br><span class="line">            while (urls.hasMoreElements()) &#123;</span><br><span class="line">                if (!result.isEmpty()) &#123;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                URL url = urls.nextElement();</span><br><span class="line">                UrlResource resource = new UrlResource(url);</span><br><span class="line">                Properties properties = PropertiesLoaderUtils.loadProperties(resource);</span><br><span class="line">                for (Map.Entry&lt;?, ?&gt; entry : properties.entrySet()) &#123;</span><br><span class="line"></span><br><span class="line">                    String factoryClassName = ((String) entry.getKey()).trim();</span><br><span class="line">                    for (String factoryName : StringUtils.commaDelimitedListToStringArray((String) entry.getValue())) &#123;</span><br><span class="line">                        if(factoryName.equals(className))&#123;</span><br><span class="line">                            result.add(factoryClassName, factoryName.trim());</span><br><span class="line">                            break;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            //cache.put(classLoader, result);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;catch (IOException ex) &#123;</span><br><span class="line">            throw new IllegalArgumentException(&quot;Unable to load factories from location [&quot; +</span><br><span class="line">                    FACTORIES_RESOURCE_LOCATION + &quot;]&quot;, ex);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @SuppressWarnings(&quot;unchecked&quot;)</span><br><span class="line">    private static &lt;T&gt; T instantiateFactory(String instanceClassName, Class&lt;T&gt; factoryClass, ClassLoader classLoader) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            Class&lt;?&gt; instanceClass = ClassUtils.forName(instanceClassName, classLoader);</span><br><span class="line">            if (!factoryClass.isAssignableFrom(instanceClass)) &#123;</span><br><span class="line">                throw new IllegalArgumentException(</span><br><span class="line">                        &quot;Class [&quot; + instanceClassName + &quot;] is not assignable to [&quot; + factoryClass.getName() + &quot;]&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            return (T) ReflectionUtils.accessibleConstructor(instanceClass).newInstance();</span><br><span class="line">        &#125;</span><br><span class="line">        catch (Throwable ex) &#123;</span><br><span class="line">            throw new IllegalArgumentException(&quot;Unable to instantiate factory class: &quot; + factoryClass.getName(), ex);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.有没有一种方法，等我们实际使用的时候在进行加载，并且还支持ByName获取呢？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext  </span><br><span class="line">实例化所有剩余的（非惰性init）singleton</span><br><span class="line">→org.springframework.boot.SpringApplication#refreshContext</span><br><span class="line">→→org.springframework.context.support.AbstractApplicationContext#refresh</span><br><span class="line">→→→org.springframework.context.support.AbstractApplicationContext#finishBeanFactoryInitialization</span><br><span class="line">initializing all remaining singleton beans</span><br><span class="line">protected void finishBeanFactoryInitialization(ConfigurableListableBeanFactory beanFactory) &#123;</span><br><span class="line">   // Initialize conversion service for this context.</span><br><span class="line">   if (beanFactory.containsBean(CONVERSION_SERVICE_BEAN_NAME) &amp;&amp;</span><br><span class="line">         beanFactory.isTypeMatch(CONVERSION_SERVICE_BEAN_NAME, ConversionService.class)) &#123;</span><br><span class="line">      beanFactory.setConversionService(</span><br><span class="line">            beanFactory.getBean(CONVERSION_SERVICE_BEAN_NAME, ConversionService.class));</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   // Register a default embedded value resolver if no bean post-processor</span><br><span class="line">   // (such as a PropertyPlaceholderConfigurer bean) registered any before:</span><br><span class="line">   // at this point, primarily for resolution in annotation attribute values.</span><br><span class="line">   if (!beanFactory.hasEmbeddedValueResolver()) &#123;</span><br><span class="line">      beanFactory.addEmbeddedValueResolver(strVal -&gt; getEnvironment().resolvePlaceholders(strVal));</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   // Initialize LoadTimeWeaverAware beans early to allow for registering their transformers early.</span><br><span class="line">   String[] weaverAwareNames = beanFactory.getBeanNamesForType(LoadTimeWeaverAware.class, false, false);</span><br><span class="line">   for (String weaverAwareName : weaverAwareNames) &#123;</span><br><span class="line">      getBean(weaverAwareName);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   // Stop using the temporary ClassLoader for type matching.</span><br><span class="line">   beanFactory.setTempClassLoader(null);</span><br><span class="line">    //冻结所有的beanDefinition</span><br><span class="line">   // Allow for caching all bean definition metadata, not expecting further changes.</span><br><span class="line">   beanFactory.freezeConfiguration();</span><br><span class="line"></span><br><span class="line">   // Instantiate all remaining (non-lazy-init) singletons.</span><br><span class="line">   beanFactory.preInstantiateSingletons();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>SPI实际上是“接口+策略模式+配置文件”实现的动态加载机制。在系统设计中，模块之间通常基于接口编程，不直接显示指定实现类。一旦代码里指定了实现类，就无法在不修改代码的情况下替换为另一种实现。为了达到动态可插拔的效果，java提供了SPI以实现服务发现。</p>
+<p>扩展点开发指南 | Apache Dubbo</p>
+<p>SPI 扩展使用手册 | Apache Dubbo</p>
+<p>源码下载：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/apache/dubbo-samples.git">https://github.com/apache/dubbo-samples.git</a></p>
+<p>Dubbo 扩展的特性</p>
+<p>Dubbo 中的扩展能力是从 JDK 标准的 SPI 扩展点发现机制加强而来，它改进了 JDK 标准的 SPI 以下问题：</p>
+<p>JDK 标准的 SPI 会一次性实例化扩展点所有实现，如果有扩展实现初始化很耗时，但如果没用上也加载，会很浪费资源。</p>
+<p>如果扩展点加载失败，连扩展点的名称都拿不到了。比如：JDK 标准的 ScriptEngine，通过 getName() 获取脚本类型的名称，但如果 RubyScriptEngine 因为所依赖的 jruby.jar 不存在，导致 RubyScriptEngine 类加载失败，这个失败原因被吃掉了，和 ruby 对应不起来，当用户执行 ruby 脚本时，会报不支持 ruby，而不是真正失败的原因。</p>
+<p>用户能够基于 Dubbo 提供的扩展能力，很方便基于自身需求扩展其他协议、过滤器、路由等。下面介绍下 Dubbo 扩展能力的特性。</p>
+<p>按需加载。Dubbo 的扩展能力不会一次性实例化所有实现，而是用扩展类实例化，减少资源浪费。</p>
+<p>增加扩展类的 IOC 能力。Dubbo 的扩展能力并不仅仅只是发现扩展服务实现类，而是在此基础上更进一步，如果该扩展类的属性依赖其他对象，则 Dubbo 会自动的完成该依赖对象的注入功能。</p>
+<p>增加扩展类的 AOP 能力。Dubbo 扩展能力会自动的发现扩展类的包装类，完成包装类的构造，增强扩展类的功能。</p>
+<p>具备动态选择扩展实现的能力。Dubbo 扩展会基于参数，在运行时动态选择对应的扩展类，提高了 Dubbo 的扩展能力。</p>
+<p>可以对扩展实现进行排序。能够基于用户需求，指定扩展实现的执行顺序。</p>
+<p>提供扩展点的 Adaptive 能力。该能力可以使的一些扩展类在 consumer 端生效，一些扩展类在 provider 端生效。</p>
+<p>从 Dubbo 扩展的设计目标可以看出，Dubbo 实现的一些例如动态选择扩展实现、IOC、AOP 等特性，能够为用户提供非常灵活的扩展能力。</p>
+<p>4.Applicationcontext</p>
+<p>加载bean</p>
+<p>finishBeanFactoryInitialization(beanFactory);</p>
+<p>注入Applicationcontext</p>
+<p>维护枚举类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">@Getter</span><br><span class="line">@AllArgsConstructor</span><br><span class="line">public enum DynamicStrategyEnum &#123;</span><br><span class="line"></span><br><span class="line">    账号密码(DynamicEnum.账号密码.getCode(), UnRouteTaskServiceImpl.class),</span><br><span class="line"></span><br><span class="line">    验证码(DynamicEnum.验证码.getCode(), CancelRouteTaskServiceImpl.class),</span><br><span class="line"></span><br><span class="line">    人脸(DynamicEnum.人脸.getCode(), ChangeOrderTaskServiceImpl.class),</span><br><span class="line"></span><br><span class="line">    指纹(DynamicEnum.指纹.getCode(), RoutedAndUnDistributeServiceImpl.class),</span><br><span class="line"></span><br><span class="line">    微信登录(DynamicEnum.微信登录.getCode(), DistributeApplyOrderServiceImpl.class),</span><br><span class="line"></span><br><span class="line">    支付宝(DynamicEnum.支付宝.getCode(),UnApprovedSettlementServiceIimpl.class);</span><br><span class="line"></span><br><span class="line">    private Integer code;</span><br><span class="line"></span><br><span class="line">    private Class&lt;? extends WmsDailySettlementService&gt; clazz;</span><br><span class="line"></span><br><span class="line">    public static Class&lt;? extends WmsDailySettlementService&gt; getClazz(Integer param) &#123;</span><br><span class="line">        if (StringUtils.isEmpty(param)) &#123;</span><br><span class="line">            throw new NullPointerException(&quot;param is null&quot;);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            for (DynamicStrategyEnum strategyEnum : DynamicStrategyEnum.values()) &#123;</span><br><span class="line">                if (strategyEnum.getCode().equals(param)) &#123;</span><br><span class="line">                    return strategyEnum.getClazz();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            throw new NullPointerException(String.format(&quot;param is null is %s&quot;, param));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.注解驱动</p>
+<p>注解是如何获取的？</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/A_art_xiang/article/details/121954905">https://blog.csdn.net/A_art_xiang/article/details/121954905</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">findCandidateComponents</span><br><span class="line">scanCandidateComponents -&gt; </span><br><span class="line">getMetadataReader -&gt; </span><br><span class="line">MetadataReader metadataReader = getMetadataReaderFactory().getMetadataReader(resource);</span><br><span class="line"></span><br><span class="line">CachingMetadataReaderFactory::getMetadataReader -&gt; new SimpleMetadataReader</span><br><span class="line">@Override</span><br><span class="line">public String generateBeanName(BeanDefinition definition, BeanDefinitionRegistry registry) &#123;</span><br><span class="line">   if (definition instanceof AnnotatedBeanDefinition) &#123;</span><br><span class="line">      String beanName = determineBeanNameFromAnnotation((AnnotatedBeanDefinition) definition);</span><br><span class="line">      if (StringUtils.hasText(beanName)) &#123;</span><br><span class="line">         // Explicit bean name found.</span><br><span class="line">         return beanName;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   // Fallback: generate a unique default bean name.</span><br><span class="line">   return buildDefaultBeanName(definition, registry);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>新建一个注解驱动</p>
+<p>@Target(ElementType.TYPE)</p>
+<p>@Retention(RetentionPolicy.RUNTIME)</p>
+<p>@Documented</p>
+<p>public @interface DynamicHandlerType {</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DynamicEnum handler();</span><br></pre></td></tr></table></figure>
+
+<p>}</p>
+<p>在实现类添加注解</p>
+<p>@DynamicHandlerType(handler = DynamicEnum.账号密码登录)</p>
+<p>在应用的地方</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">private Map&lt;DynamicEnum, DynamicLoginService&gt; dynamicLoginServiceMap;</span><br><span class="line"></span><br><span class="line">@Autowired</span><br><span class="line">public void setDynamicLoginServiceMap(List&lt;DynamicLoginService&gt; list) &#123;</span><br><span class="line">    dynamicLoginServiceMap = list.stream()</span><br><span class="line">            .collect(Collectors.toMap(</span><br><span class="line">                    handler-&gt; AnnotationUtils.findAnnotation(handler.getClass(), DynamicHandlerType.class).handler(),</span><br><span class="line">                    handler-&gt; handler));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> DynamicLoginService dynamicLoginService = dynamicLoginServiceMap.get(DynamicEnum.tEnum(request.getType().toString()));</span><br><span class="line"> dynamicLoginService.dynamicLogin(request);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6.CompletableFuture</span><br><span class="line">private static ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();</span><br><span class="line">static &#123;</span><br><span class="line">    taskExecutor.setCorePoolSize(2);</span><br><span class="line">    taskExecutor.setMaxPoolSize(2);</span><br><span class="line">    taskExecutor.setKeepAliveSeconds(0);</span><br><span class="line">    taskExecutor.setQueueCapacity(0);</span><br><span class="line">    taskExecutor.setThreadNamePrefix(&quot;threadpool&quot;);</span><br><span class="line">    taskExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());</span><br><span class="line">    taskExecutor.initialize();</span><br><span class="line">&#125;</span><br><span class="line">CompletableFuture&lt;Void&gt; t1 = CompletableFuture.runAsync(() -&gt; &#123;</span><br><span class="line">    Service.login</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;, taskExecutor);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://zkkget.github.io/posts/20230516a2.html" title="JAVASPI设计模式之策略模式文字版主页有视频" target="_blank" rel="external">https://zkkget.github.io/posts/20230516a2.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://kkget.github.io/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://kkget.github.io/" target="_blank"><span class="text-dark">赵kk</span><small class="ml-1x">java Developer &amp; pm</small></a></h3>
+        <div>纠结体本体,同步记录日常笔记，Write the code, Change the world！</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/posts/20230516a1.html" title="ChatGptPrompt专栏"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220826100219.jpg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220112102818.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            {% if post.top %}
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          {% endif %}
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://kkget.github.io/" target="_blank" title="主站博客" data-toggle=tooltip data-placement=top><i class="icon icon-主站博客"></i></a></li>
+        
+        <li><a href="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.png" target="_blank" title="公众号" data-toggle=tooltip data-placement=top><i class="icon icon-公众号"></i></a></li>
+        
+        <li><a href="https://cloud.tencent.com/developer/inventory/14725" target="_blank" title="云+社区" data-toggle=tooltip data-placement=top><i class="icon icon-云+社区"></i></a></li>
+        
+        <li><a href="/1462018576" target="_blank" title="QQ" data-toggle=tooltip data-placement=top><i class="icon icon-QQ"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+
+  <div>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span >本站总访问量: <span id="busuanzi_value_site_pv"></span>次</span>
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1840459406&auto=1&height=66"></iframe>
+  </div>
+
+
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '5qofQKP6PLlRGj9AKdN2wFy8-gzGzoHsz',
+    appKey: 'MUjdIW5XaUutRWAdIFu4IdxP',
+    placeholder: '来都来了，说点啥吧~',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.js"></script>
+  <script>
+  //利用 FancyBox 实现点击图片放大
+  $(document).ready(function() {
+    $('article img').not('[hidden]').not('.panel-body img').each(function() {
+      var $image = $(this);
+      var imageCaption = $image.attr('alt');
+      var $imageWrapLink = $image.parent('a');
+      if ($imageWrapLink.length < 1) {
+        var src = this.getAttribute('src');
+        var idx = src.lastIndexOf('?');
+        if (idx != -1) {
+          src = src.substring(0, idx);
+        }
+        $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+      }
+      $imageWrapLink.attr('data-fancybox', 'images');
+      if (imageCaption) {
+        $imageWrapLink.attr('data-caption', imageCaption);
+      }
+    });
+    $().fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+    });
+  });
+  </script>
+
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/01/assets/haru01.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: true,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+<!--<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script> -->
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</html>
