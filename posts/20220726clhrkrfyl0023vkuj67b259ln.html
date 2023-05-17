@@ -17,23 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>mysql中的锁表语句查看方法汇总 | 赵KK的个人博客</title>
-  <meta name="description" content="1234567891011121314mysql&gt; show status like &amp;#x27;Table%&amp;#x27;;+----------------------------+----------+| Variable_name        | Value |+----------------------------+----------+| Table_locks_immedia">
+  <title>优雅永不过时 | 赵KK的个人博客</title>
+  <meta name="description" content="无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法 优雅的关闭流java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭 try catch finally 12345678910111213141516BufferedReader in &#x3D; null;try &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql中的锁表语句查看方法汇总">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220428clhrkpsmi001b78uj1h0t1a85.html">
+<meta property="og:title" content="优雅永不过时">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220726clhrkrfyl0023vkuj67b259ln.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="1234567891011121314mysql&gt; show status like &amp;#x27;Table%&amp;#x27;;+----------------------------+----------+| Variable_name        | Value |+----------------------------+----------+| Table_locks_immedia">
+<meta property="og:description" content="无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法 优雅的关闭流java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭 try catch finally 12345678910111213141516BufferedReader in &#x3D; null;try &amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/mysql.png">
-<meta property="article:published_time" content="2022-04-28T08:48:51.000Z">
-<meta property="article:modified_time" content="2022-09-15T09:34:18.463Z">
+<meta property="article:published_time" content="2022-07-26T02:26:41.000Z">
+<meta property="article:modified_time" content="2022-07-26T02:30:41.087Z">
 <meta property="article:author" content="赵KK">
-<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/mysql.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220428clhrkpsmi001b78uj1h0t1a85.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220726clhrkrfyl0023vkuj67b259ln.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -364,25 +361,16 @@
 
   
   
-<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
-  <div class="slimContent">
-    <nav id="toc" class="article-toc">
-      <h3 class="toc-title">文章目录</h3>
-      
-    </nav>
-  </div>
-</aside>
-
 <main class="main" role="main">
   <div class="content">
-  <article id="post-mysql中的锁表语句查看方法汇总" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-优雅永不过时" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      mysql中的锁表语句查看方法汇总
+      优雅永不过时
     </h1>
   
 
@@ -390,22 +378,12 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220428clhrkpsmi001b78uj1h0t1a85.html" class="article-date">
-	  <time datetime="2022-04-28T08:48:51.000Z" itemprop="datePublished">2022-04-28</time>
+	<a href="/posts/20220726clhrkrfyl0023vkuj67b259ln.html" class="article-date">
+	  <time datetime="2022-07-26T02:26:41.000Z" itemprop="datePublished">2022-07-26</time>
 	</a>
 </span>
         
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
-  </span>
-
         
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/MySQL/" rel="tag">MySQL</a>
-  </span>
-
 
         
 	<span class="article-read hidden-xs">
@@ -416,53 +394,58 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220428clhrkpsmi001b78uj1h0t1a85.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220726clhrkrfyl0023vkuj67b259ln.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.3k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 633(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show status like <span class="string">&#x27;Table%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Variable_name        | Value |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Table_locks_immediate | <span class="number">105</span>         |</span><br><span class="line"></span><br><span class="line">| Table_locks_waited   | <span class="number">3</span>           |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>Table_locks_immediate    26839653<br>Table_locks_waited            0<br>Table_open_cache_hits    3<br>Table_open_cache_misses    2<br>Table_open_cache_overflows    2</p>
-<p>Table_locks_immediate  指的是能够立即获得表级锁的次数</p>
-<p>Table_locks_waited  指的是不能立即获取表级锁而需要等待的次数</p>
-<p>Table_open_cache_hits  表缓存被命中的次数</p>
-<p>Table_open_cache_misses 表缓存未被命中的次数</p>
-<p>Table_open_cache_overflows  就是上面说的淘汰的instance（table cache）的数量</p>
-<p>查看正在被锁定的的表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">OPEN</span> TABLES <span class="keyword">where</span> In_use <span class="operator">&gt;</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+        <div id="readmore-container"><p>无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法</p>
+<p>优雅的关闭流<br>java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭</p>
+<p>try catch finally</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader in = null;</span><br><span class="line">try &#123;</span><br><span class="line">			....</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;finally &#123;</span><br><span class="line">			try &#123;</span><br><span class="line">				if (in != null) &#123;</span><br><span class="line">					in.close();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; catch (Exception e2) &#123;</span><br><span class="line">				e2.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">try winth resource</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try (final BufferedReader in = new BufferedReader(new InputStreamReader((new URL(url + &quot;?&quot; + param)).openConnection().getInputStream()));PrintWriter out =new PrintWriter(response.getWriter()))&#123;</span><br><span class="line"></span><br><span class="line">	...	</span><br><span class="line">	&#125;catch&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>Netty 优雅的关闭流程<br>1<br>shutdownGracefully()<br>Lambda表达式<br>list求交集</p>
+<p>1<br>List<Long> collect = list1.stream().filter(list2::contains).collect(Collectors.toList());<br>设计模式代替if else,策略模式，模板模式<br>代码整洁度，例如多注入service，按着高矮胖瘦排列，视觉舒适，controller求求你别写业务代码了</Long></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public  List getRandomList(List&lt;?&gt; paramList,int count)&#123;</span><br><span class="line">        if(count==0)&#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        Random random=new Random();</span><br><span class="line">        List&lt;Integer&gt; tempList=new ArrayList&lt;&gt;();//临时存放产生的list索引，去除重复的索引</span><br><span class="line">        List newList=new ArrayList();//生成新的list集合</span><br><span class="line">        int temp=0;</span><br><span class="line">        if(count&lt;=1)&#123;//如果数据小于1，取一条数据</span><br><span class="line">            temp = random.nextInt(paramList.size());</span><br><span class="line">            newList.add(paramList.get(temp));</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            for(int i=0;i&lt;Math.ceil(count);i++)&#123;</span><br><span class="line">                temp=random.nextInt(paramList.size());//初始化一个随机数，将产生的随机数作为被抽list的索引</span><br><span class="line">                if(!tempList.contains(temp))&#123;//判断随机抽取的随机数</span><br><span class="line">                    tempList.add(temp);</span><br><span class="line">                    newList.add(paramList.get(temp));</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    i--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return newList;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>优雅判空<br>个人喜欢Assert判空，至于java8的Optional并没体会到优雅之处，日常StringUtils，Collections，isNoBlank等，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public String testOptional(Test test) &#123;</span><br><span class="line">        return Optional.ofNullable(test).flatMap(Test::getTest3)</span><br><span class="line">                .flatMap(Test3::getTest2)</span><br><span class="line">                .map(Test2::getInfo)</span><br><span class="line">                .orElse(&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">看起来挺优雅，但日常没体会到</span><br><span class="line">还有日常常用的instanceof</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">else if (f instanceof TreeBin) &#123;</span><br><span class="line">        validated = true;</span><br><span class="line">        TreeBin&lt;K,V&gt; t = (TreeBin&lt;K,V&gt;)f;</span><br><span class="line">        TreeNode&lt;K,V&gt; r, p;</span><br><span class="line">        if ((r = t.root) != null &amp;&amp;</span><br><span class="line">            (p = r.findTreeNode(hash, key, null)) != null) &#123;</span><br><span class="line">            V pv = p.val;</span><br><span class="line">            if (cv == null || cv == pv ||</span><br><span class="line">                (pv != null &amp;&amp; cv.equals(pv))) &#123;</span><br><span class="line">                oldVal = pv;</span><br><span class="line">                if (value != null)</span><br><span class="line">                    p.val = value;</span><br><span class="line">                else if (t.removeTreeNode(p))</span><br><span class="line">                    setTabAt(tab, i, untreeify(t.first));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
 
-<p>怎么查找mysql中的锁表语句</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> processlist;</span><br><span class="line">与<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> information_schema.processlist效果相同</span><br></pre></td></tr></table></figure>
-<p>SHOW PROCESSLIST显示哪些线程正在运行。您也可以使用mysqladmin processlist语句得到此信息。如果您有SUPER权限，您可以看到所有线程。否则，您只能看到您自己的线程（也就是，与您正在使用的MySQL账户相关的线程）。如果有线程在update或者insert 某个表，此时进程的status为updating 或者 sending data。<br>show processlist 是显示用户正在运行的线程，需要注意的是，除了 root 用户能看到所有正在运行的线程外，其他用户都只能看到自己正在运行的线程，看不到其它用户正在运行的线程。除非单独个这个用户赋予了PROCESS 权限<br>– 查看那些表锁到了</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">OPEN</span> TABLES <span class="keyword">where</span> In_use <span class="operator">&gt;</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<p>– 查看进程号</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> processlist;</span><br></pre></td></tr></table></figure>
-<p>–删除进程</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill <span class="number">1085850</span>；</span><br></pre></td></tr></table></figure>
-<p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/mysql.png" alt="流程"></p>
-<p>Id: 就是这个线程的唯一标识，当我们发现这个线程有问题的时候，可以通过 kill 命令，加上这个Id值将这个线程杀掉。前面我们说了show processlist 显示的信息时来自information_schema.processlist 表，所以这个Id就是这个表的主键。<br>User: 就是指启动这个线程的用户。<br>Host: 记录了发送请求的客户端的 IP 和 端口号。通过这些信息在排查问题的时候，我们可以定位到是哪个客户端的哪个进程发送的请求。<br>DB: 当前执行的命令是在哪一个数据库上。如果没有指定数据库，则该值为 NULL 。<br>Command: 是指此刻该线程正在执行的命令。这个很复杂，下面单独解释<br>Time: 表示该线程处于当前状态的时间。<br>State: 线程的状态，和 Command 对应，下面单独解释。<br>Info: 一般记录的是线程执行的语句。默认只显示前100个字符，也就是你看到的语句可能是截断了的，要看全部信息，需要使用 show full processlist。<br>下面我们单独看一下 Command 的值：<br>Binlog Dump: 主节点正在将二进制日志 ，同步到从节点<br>Change User: 正在执行一个 change-user 的操作<br>Close Stmt: 正在关闭一个Prepared Statement 对象<br>Connect: 一个从节点连上了主节点<br>Connect Out: 一个从节点正在连主节点<br>Create DB: 正在执行一个create-database 的操作<br>Daemon: 服务器内部线程，而不是来自客户端的链接<br>Debug: 线程正在生成调试信息<br>Delayed Insert: 该线程是一个延迟插入的处理程序<br>Drop DB: 正在执行一个 drop-database 的操作<br>Execute: 正在执行一个 Prepared Statement<br>Fetch: 正在从Prepared Statement 中获取执行结果<br>Field List: 正在获取表的列信息<br>Init DB: 该线程正在选取一个默认的数据库<br>Kill : 正在执行 kill 语句，杀死指定线程<br>Long Data: 正在从Prepared Statement 中检索 long data<br>Ping: 正在处理 server-ping 的请求<br>Prepare: 该线程正在准备一个 Prepared Statement<br>ProcessList: 该线程正在生成服务器线程相关信息<br>Query: 该线程正在执行一个语句<br>Quit: 该线程正在退出<br>Refresh：该线程正在刷表，日志或缓存；或者在重置状态变量，或者在复制服务器信息<br>Register Slave： 正在注册从节点<br>Reset Stmt: 正在重置 prepared statement<br>Set Option: 正在设置或重置客户端的 statement-execution 选项<br>Shutdown: 正在关闭服务器<br>Sleep: 正在等待客户端向它发送执行语句<br>Statistics: 该线程正在生成 server-status 信息<br>Table Dump: 正在发送表的内容到从服务器<br>Time: Unused</p>
-<p>那么MySQL突然飙升,首先查询当下主库内正在运行的线程以及是否有占用资源的SQL。然后执行分析info语句，看此次SQL是否是新发版功能引起，如果是新功能引起，立即回滚。</p>
-<p>– 查询非 Sleep 状态的链接，按消耗时间倒序展示，自己加条件过滤</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> id, db, <span class="keyword">user</span>, host, command, <span class="type">time</span>, state, info</span><br><span class="line"><span class="keyword">from</span> information_schema.processlist</span><br><span class="line"><span class="keyword">where</span> command <span class="operator">!=</span> <span class="string">&#x27;Sleep&#x27;</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="type">time</span> <span class="keyword">desc</span> </span><br></pre></td></tr></table></figure>
-<p>其次查看CAT，但是CAT中除了Heartbeat报表GC异常以外，只有一条一分钟的SQL，并没有其他超时SQL</p>
-<p>然后查看Grafana可以看到飙升时间在7点18分</p>
-<p>在这个时间段查询PMM</p>
-<p>没有异常，但是在其他服务中查询到有长达10分钟SQL未返回。</p>
-<p>运行show full processlist命令查看是否有线程递增的情况</p>
-<p>查询发现每一秒都有一个SQL在查询，经过代码分析，是某个接口前端轮询调用每秒都在进行查询导致的，没想到一个查询频率超高的SQL能导致CPU超高</p>
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-<iframe src="//player.bilibili.com/player.html?aid=90978812&cid=155358422&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;"></iframe></div>
-
-
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "14",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		
       
     </div>
     <div class="article-footer">
@@ -471,7 +454,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220428clhrkpsmi001b78uj1h0t1a85.html" title="mysql中的锁表语句查看方法汇总" target="_blank" rel="external">https://zkkget.github.io/posts/20220428clhrkpsmi001b78uj1h0t1a85.html</a>
+      <a href="https://zkkget.github.io/posts/20220726clhrkrfyl0023vkuj67b259ln.html" title="优雅永不过时" target="_blank" rel="external">https://zkkget.github.io/posts/20220726clhrkrfyl0023vkuj67b259ln.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -518,23 +501,14 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220510clhrkpsna003p78ujf9tbhz68.html" title="项目实战----行政优先级分析"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220728clhrkrfxq0006vkuj5smh0nhy.html" title="CompletableFuture"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220407clhrkpsms002478ujcd9w7rwe.html" title="人工智能vs人工智障之图片识别"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220726clhrkrfxx000hvkuj5rt2b1w4.html" title="Leetcode算法题"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
-    
-    <li class="toggle-toc">
-      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
-        <span>[&nbsp;</span><span>文章目录</span>
-        <i class="text-collapsed icon icon-anchor"></i>
-        <i class="text-in icon icon-close"></i>
-        <span>]</span>
-      </a>
-    </li>
     
   </ul>
   
