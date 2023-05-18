@@ -417,7 +417,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20230516a2.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 4.1k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 4.2k(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 21(分)</span>
@@ -427,7 +427,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>在业务开发中，登录接口是非常常见的场景，随着业务的发展，需要支持多种登录形式</p>
+        <div id="readmore-container"><p>在业务开发中，登录接口是非常常见的场景，随着业务的发展，需要支持多种登录形式</p>
 <h1 id="java设计模式之策略模式搭配SPI-一"><a href="#java设计模式之策略模式搭配SPI-一" class="headerlink" title="java设计模式之策略模式搭配SPI(一)"></a><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/video/76588">java设计模式之策略模式搭配SPI(一)</a></h1><h1 id="java设计模式之策略模式搭配SPI-二"><a href="#java设计模式之策略模式搭配SPI-二" class="headerlink" title="java设计模式之策略模式搭配SPI(二)"></a><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/video/76589">java设计模式之策略模式搭配SPI(二)</a></h1><h1 id="java设计模式之策略模式搭配SPI-完结"><a href="#java设计模式之策略模式搭配SPI-完结" class="headerlink" title="java设计模式之策略模式搭配SPI(完结)"></a><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/video/76631">java设计模式之策略模式搭配SPI(完结)</a></h1><p>那么登陆接口该如何书写？</p>
 <p>如何设计接口？</p>
 <p>面对大量if else如何进行优化？</p>
@@ -525,7 +525,35 @@
 <p>在实现类添加注解</p>
 <p>@DynamicHandlerType(handler = DynamicEnum.账号密码登录)</p>
 <p>在应用的地方</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">private Map&lt;DynamicEnum, DynamicLoginService&gt; dynamicLoginServiceMap;</span><br><span class="line"></span><br><span class="line">@Autowired</span><br><span class="line">public void setDynamicLoginServiceMap(List&lt;DynamicLoginService&gt; list) &#123;</span><br><span class="line">    dynamicLoginServiceMap = list.stream()</span><br><span class="line">            .collect(Collectors.toMap(</span><br><span class="line">                    handler-&gt; AnnotationUtils.findAnnotation(handler.getClass(), DynamicHandlerType.class).handler(),</span><br><span class="line">                    handler-&gt; handler));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> DynamicLoginService dynamicLoginService = dynamicLoginServiceMap.get(DynamicEnum.tEnum(request.getType().toString()));</span><br><span class="line"> dynamicLoginService.dynamicLogin(request);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6.CompletableFuture</span><br><span class="line">private static ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();</span><br><span class="line">static &#123;</span><br><span class="line">    taskExecutor.setCorePoolSize(2);</span><br><span class="line">    taskExecutor.setMaxPoolSize(2);</span><br><span class="line">    taskExecutor.setKeepAliveSeconds(0);</span><br><span class="line">    taskExecutor.setQueueCapacity(0);</span><br><span class="line">    taskExecutor.setThreadNamePrefix(&quot;threadpool&quot;);</span><br><span class="line">    taskExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());</span><br><span class="line">    taskExecutor.initialize();</span><br><span class="line">&#125;</span><br><span class="line">CompletableFuture&lt;Void&gt; t1 = CompletableFuture.runAsync(() -&gt; &#123;</span><br><span class="line">    Service.login</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;, taskExecutor);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">private Map&lt;DynamicEnum, DynamicLoginService&gt; dynamicLoginServiceMap;</span><br><span class="line"></span><br><span class="line">@Autowired</span><br><span class="line">public void setDynamicLoginServiceMap(List&lt;DynamicLoginService&gt; list) &#123;</span><br><span class="line">    dynamicLoginServiceMap = list.stream()</span><br><span class="line">            .collect(Collectors.toMap(</span><br><span class="line">                    handler-&gt; AnnotationUtils.findAnnotation(handler.getClass(), DynamicHandlerType.class).handler(),</span><br><span class="line">                    handler-&gt; handler));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> DynamicLoginService dynamicLoginService = dynamicLoginServiceMap.get(DynamicEnum.tEnum(request.getType().toString()));</span><br><span class="line"> dynamicLoginService.dynamicLogin(request);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6.CompletableFuture</span><br><span class="line">private static ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();</span><br><span class="line">static &#123;</span><br><span class="line">    taskExecutor.setCorePoolSize(2);</span><br><span class="line">    taskExecutor.setMaxPoolSize(2);</span><br><span class="line">    taskExecutor.setKeepAliveSeconds(0);</span><br><span class="line">    taskExecutor.setQueueCapacity(0);</span><br><span class="line">    taskExecutor.setThreadNamePrefix(&quot;threadpool&quot;);</span><br><span class="line">    taskExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());</span><br><span class="line">    taskExecutor.initialize();</span><br><span class="line">&#125;</span><br><span class="line">CompletableFuture&lt;Void&gt; t1 = CompletableFuture.runAsync(() -&gt; &#123;</span><br><span class="line">    Service.login</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;, taskExecutor);</span><br></pre></td></tr></table></figure></div>
+
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "14",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		
       
     </div>
     <div class="article-footer">
