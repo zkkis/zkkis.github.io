@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>更多AI工具导航请点击侧边栏友链10000+工具导航栏</title>
-    <url>/posts/20230518a1.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"></div>
-
-			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
-			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
-			<script>
-			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
-			if (!isMobile) {
-				try {
-					var plugin = new ReadmorePlugin();
-					plugin.init({
-						"type": "hexo",
-						"id": "readmore-container",
-						"name": "赵KK日常技术记录",
-						"blogId": "62435-1742912502174-081",
-						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
-						"keyword": "验证码",
-						"random": "1",
-						"height": "auto",
-						"expires": "14",
-						"lockToc": "yes",
-						"interval": "60",
-						"baseUrl": ""
-					});
-				} catch(e) {
-					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
-				}
-			}
-			</script>
-		]]></content>
-      <categories>
-        <category>AI工具大合集</category>
-      </categories>
-  </entry>
-  <entry>
     <title>免费的ChatGpt专栏</title>
     <url>/posts/20230515a2.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="温馨提示：本站所有资料仅供学习交流-严禁用于商业用途-请于24小时内删除"><a href="#温馨提示：本站所有资料仅供学习交流-严禁用于商业用途-请于24小时内删除" class="headerlink" title="温馨提示：本站所有资料仅供学习交流,严禁用于商业用途,请于24小时内删除"></a>温馨提示：本站所有资料仅供学习交流,严禁用于商业用途,请于24小时内删除</h1><h1 id="文章底部有文章目录按钮"><a href="#文章底部有文章目录按钮" class="headerlink" title="文章底部有文章目录按钮~~~~~"></a>文章底部有文章目录按钮~~~~~</h1><h1 id="需要什么资料可以在最下方留言-不定期更新"><a href="#需要什么资料可以在最下方留言-不定期更新" class="headerlink" title="需要什么资料可以在最下方留言,不定期更新"></a>需要什么资料可以在最下方留言,不定期更新</h1><h1 id="AI-Gamma一键生成PPT工具直达链接"><a href="#AI-Gamma一键生成PPT工具直达链接" class="headerlink" title="AI Gamma一键生成PPT工具直达链接"></a>AI Gamma一键生成PPT工具直达链接</h1><h2 id="https-gamma-app-signup-r-sqgovd3iif5btr4"><a href="#https-gamma-app-signup-r-sqgovd3iif5btr4" class="headerlink" title="https://gamma.app/signup?r=sqgovd3iif5btr4"></a><a href="https://gamma.app/signup?r=sqgovd3iif5btr4">https://gamma.app/signup?r=sqgovd3iif5btr4</a></h2><p><img src="/posts/20230515a2/640.png" alt="Gamma"><br><img src="/posts/20230515a2/1.png" alt="求关注"><br><img src="/posts/20230515a2/2.png" alt="求点赞"><br><img src="/posts/20230515a2/3.png" alt="求转发"></p>
@@ -312,7 +276,7 @@
 <li>Auto Abstractor<br>Auto Abstractor是一款利用人工智能算法自动生成文摘和内容摘要的在线工具。你输入要摘要的网页地址或文章内容,选择摘要长度,点击”摘要生成”,它可以智能抽取关键内容为你生成中文摘要。</li>
 <li>SmallSEOTools<br>SmallSEOTools是一个搜索优化工具集合,里面提供内容摘要生成器。你只需输入网页URL或文章内容,选择摘要比例,点击”生成摘要”,它可以提取主要句子为你生成指定长度的摘要。<h1 id="科研学术网站"><a href="#科研学术网站" class="headerlink" title="科研学术网站"></a>科研学术网站</h1><h1 id="Matlab-点我直达"><a href="#Matlab-点我直达" class="headerlink" title="Matlab 点我直达"></a><a href="https://www.mathworks.com/">Matlab 点我直达</a></h1>算法开发、数据可视<br>化、数据分析以及数<br>值计算的高级技术<br><img src="/posts/20230425a1/22.png" alt="Gamma"><h1 id="Mathemantic-点我直达"><a href="#Mathemantic-点我直达" class="headerlink" title="Mathemantic 点我直达"></a><a href="https://www.wolfram.com/mathematica/">Mathemantic 点我直达</a></h1>科学计算软件,结合<br>了数值和符号计算引<br>擎、图形系统<br><img src="/posts/20230425a1/23.png" alt="Gamma"><h1 id="Maple-点我直达"><a href="#Maple-点我直达" class="headerlink" title="Maple 点我直达"></a><a href="https://www.wolfram.com/mathematica/">Maple 点我直达</a></h1>精确的数值处理功<br>能,无以伦比的符号<br>计算功能<br><img src="/posts/20230425a1/24.png" alt="Gamma"><h1 id="MathCad-点我直达"><a href="#MathCad-点我直达" class="headerlink" title="MathCad 点我直达"></a><a href="https://www.mathcad.com/en/">MathCad 点我直达</a></h1>一种交互式数值计算<br>系统,集编程,计<br>算,显示,文档记录<br><img src="/posts/20230425a1/25.png" alt="Gamma"><h1 id="Scilab-点我直达"><a href="#Scilab-点我直达" class="headerlink" title="Scilab 点我直达"></a><a href="https://www.scilab.org/">Scilab 点我直达</a></h1>能应用于科学计算、<br>数学建模、信号处<br>理、决策优化、<br><img src="/posts/20230425a1/26.png" alt="Gamma"><h1 id="Mathtype点我直达"><a href="#Mathtype点我直达" class="headerlink" title="Mathtype点我直达"></a><a href="http://www.dessci.com/en/products/mathtype/default.htm">Mathtype点我直达</a></h1>数学公式编辑器工具<br>可以轻松输入各种复<br>杂的公式和符号<br><img src="/posts/20230425a1/27.png" alt="Gamma"><h1 id="Latex点我直达"><a href="#Latex点我直达" class="headerlink" title="Latex点我直达"></a><a href="https://www.latex-project.org/">Latex点我直达</a></h1>基于TEX的排版系<br>统,易于生成复杂表<br>格和数学公式<br><img src="/posts/20230425a1/28.png" alt="Gamma"></li>
 </ol>
-<h1 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><h1 id="本站导航仅为网址导航网-离开本站后-本站对其内容不负任何责任-对于该外部链接的指向-不由本站实际控制。本站在收录该网站时-已对其内容进行审核-收录时网页上的内容都属于合规合法-后期网页的内容如出现违规-可以直接联系本站管理员进行删除-x31-x34-54-50-48-x31-x38-x35-x37-54-x40-113-113-x2e-x63-111-本站不承担任何责任。"><a href="#本站导航仅为网址导航网-离开本站后-本站对其内容不负任何责任-对于该外部链接的指向-不由本站实际控制。本站在收录该网站时-已对其内容进行审核-收录时网页上的内容都属于合规合法-后期网页的内容如出现违规-可以直接联系本站管理员进行删除-x31-x34-54-50-48-x31-x38-x35-x37-54-x40-113-113-x2e-x63-111-本站不承担任何责任。" class="headerlink" title="本站导航仅为网址导航网,离开本站后,本站对其内容不负任何责任!对于该外部链接的指向,不由本站实际控制。本站在收录该网站时,已对其内容进行审核,收录时网页上的内容都属于合规合法,后期网页的内容如出现违规,可以直接联系本站管理员进行删除(&#x31;&#x34;&#54;&#50;&#48;&#x31;&#x38;&#x35;&#x37;&#54;&#x40;&#113;&#113;&#x2e;&#x63;&#111;),本站不承担任何责任。"></a>本站导航仅为网址导航网,离开本站后,本站对其内容不负任何责任!对于该外部链接的指向,不由本站实际控制。本站在收录该网站时,已对其内容进行审核,收录时网页上的内容都属于合规合法,后期网页的内容如出现违规,可以直接联系本站管理员进行删除(<a href="mailto:&#x31;&#x34;&#54;&#50;&#48;&#x31;&#x38;&#x35;&#x37;&#54;&#x40;&#113;&#113;&#x2e;&#x63;&#111;">&#x31;&#x34;&#54;&#50;&#48;&#x31;&#x38;&#x35;&#x37;&#54;&#x40;&#113;&#113;&#x2e;&#x63;&#111;</a>),本站不承担任何责任。</h1><h1 id="特此声明"><a href="#特此声明" class="headerlink" title="特此声明!"></a>特此声明!</h1></div>
+<h1 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h1><h1 id="本站导航仅为网址导航网-离开本站后-本站对其内容不负任何责任-对于该外部链接的指向-不由本站实际控制。本站在收录该网站时-已对其内容进行审核-收录时网页上的内容都属于合规合法-后期网页的内容如出现违规-可以直接联系本站管理员进行删除-49-52-54-50-x30-49-x38-x35-x37-x36-x40-x71-x71-46-99-111-本站不承担任何责任。"><a href="#本站导航仅为网址导航网-离开本站后-本站对其内容不负任何责任-对于该外部链接的指向-不由本站实际控制。本站在收录该网站时-已对其内容进行审核-收录时网页上的内容都属于合规合法-后期网页的内容如出现违规-可以直接联系本站管理员进行删除-49-52-54-50-x30-49-x38-x35-x37-x36-x40-x71-x71-46-99-111-本站不承担任何责任。" class="headerlink" title="本站导航仅为网址导航网,离开本站后,本站对其内容不负任何责任!对于该外部链接的指向,不由本站实际控制。本站在收录该网站时,已对其内容进行审核,收录时网页上的内容都属于合规合法,后期网页的内容如出现违规,可以直接联系本站管理员进行删除(&#49;&#52;&#54;&#50;&#x30;&#49;&#x38;&#x35;&#x37;&#x36;&#x40;&#x71;&#x71;&#46;&#99;&#111;),本站不承担任何责任。"></a>本站导航仅为网址导航网,离开本站后,本站对其内容不负任何责任!对于该外部链接的指向,不由本站实际控制。本站在收录该网站时,已对其内容进行审核,收录时网页上的内容都属于合规合法,后期网页的内容如出现违规,可以直接联系本站管理员进行删除(<a href="mailto:&#49;&#52;&#54;&#50;&#x30;&#49;&#x38;&#x35;&#x37;&#x36;&#x40;&#x71;&#x71;&#46;&#99;&#111;">&#49;&#52;&#54;&#50;&#x30;&#49;&#x38;&#x35;&#x37;&#x36;&#x40;&#x71;&#x71;&#46;&#99;&#111;</a>),本站不承担任何责任。</h1><h1 id="特此声明"><a href="#特此声明" class="headerlink" title="特此声明!"></a>特此声明!</h1></div>
 
 			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
 			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
@@ -390,7 +354,7 @@
   </entry>
   <entry>
     <title>Spring事务管理报错Transaction rolled back because it has been marked as rollback-only</title>
-    <url>/posts/20220725clhspcs1k0014ugujgfiwbqpt.html</url>
+    <url>/posts/20220725clhspjnet0014mcuj8c0xa6xf.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>事务是我们平时项目中对数据操作最为直接、常用的方式，现在无论是大小公司都离不开对事务的操作，伴随业务的提升，客户量的积累也大大增加了对事务管理的难度。<br>在本章节中将会讲到如下内容：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1、线上环境对roll back only 的处理</span><br><span class="line"></span><br><span class="line">2、线上环境对嵌套事务的解决方案</span><br><span class="line"></span><br><span class="line">3、11个demo分析事务失效的场景</span><br><span class="line"></span><br><span class="line">4、分布式事务</span><br><span class="line"></span><br><span class="line">5、事务也能异步</span><br></pre></td></tr></table></figure>
 <p>1、线上环境对roll back only 的处理与产生</p>
@@ -454,42 +418,8 @@
       </tags>
   </entry>
   <entry>
-    <title>【声明】阿里云服务器导致图片不显示[可在此贴下方留言]</title>
-    <url>/posts/20220725clhspcs1q001fuguj05if5jjj.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>1.图片服务器原因不定期修复…紧急修复中….<br>2.重要重要【图片不显示，请更换为火狐浏览器打开！！！或者手机在微信中打开也可食用】,放大图片更清晰<br>3.服务器内存过小,2020年10月13日后续部分内容将图片转至腾讯云<br>4.2d妹子会叫,有问题请留言<br>5.阿里云服务器到期,后续将不再续费,个人项目停止维护</p>
-</div>
-
-			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
-			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
-			<script>
-			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
-			if (!isMobile) {
-				try {
-					var plugin = new ReadmorePlugin();
-					plugin.init({
-						"type": "hexo",
-						"id": "readmore-container",
-						"name": "赵KK日常技术记录",
-						"blogId": "62435-1742912502174-081",
-						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
-						"keyword": "验证码",
-						"random": "1",
-						"height": "auto",
-						"expires": "14",
-						"lockToc": "yes",
-						"interval": "60",
-						"baseUrl": ""
-					});
-				} catch(e) {
-					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
-				}
-			}
-			</script>
-		]]></content>
-  </entry>
-  <entry>
     <title>【置顶】Springboot之---强大的Servlet</title>
-    <url>/posts/20220127clhspcs1s001nuguj85311jyc.html</url>
+    <url>/posts/20220127clhspjnew001dmcuj63uaeq2t.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h4 id="If-I-have-seen-further-it-is-by-standing-on-the-shoulders-of-giants"><a href="#If-I-have-seen-further-it-is-by-standing-on-the-shoulders-of-giants" class="headerlink" title="If I have seen further, it is by standing on the shoulders of giants"></a>If I have seen further, it is by standing on the shoulders of giants</h4><h4 id="如果我比别人看得更远-那是因为我站在巨人的肩膀上"><a href="#如果我比别人看得更远-那是因为我站在巨人的肩膀上" class="headerlink" title="如果我比别人看得更远,那是因为我站在巨人的肩膀上"></a>如果我比别人看得更远,那是因为我站在巨人的肩膀上</h4><h3 id="如今回头看下Servlet不仅如此强大-还具有很强烈的参考意义-能在现如今流行的大部分框架中找到它的影子。下面文章不止与探索Servlet-可能在其中穿插其他的关联知识点-旨在能从此次的学习中获取更多的知识点参考资料总结-转化为自己的理解输出-在文中我尽量以截图-复制全限定类名的方式记录-以便感兴趣的再次查找。"><a href="#如今回头看下Servlet不仅如此强大-还具有很强烈的参考意义-能在现如今流行的大部分框架中找到它的影子。下面文章不止与探索Servlet-可能在其中穿插其他的关联知识点-旨在能从此次的学习中获取更多的知识点参考资料总结-转化为自己的理解输出-在文中我尽量以截图-复制全限定类名的方式记录-以便感兴趣的再次查找。" class="headerlink" title="如今回头看下Servlet不仅如此强大,还具有很强烈的参考意义,能在现如今流行的大部分框架中找到它的影子。下面文章不止与探索Servlet,可能在其中穿插其他的关联知识点,旨在能从此次的学习中获取更多的知识点参考资料总结,转化为自己的理解输出,在文中我尽量以截图+复制全限定类名的方式记录,以便感兴趣的再次查找。"></a>如今回头看下Servlet不仅如此强大,还具有很强烈的参考意义,能在现如今流行的大部分框架中找到它的影子。下面文章不止与探索Servlet,可能在其中穿插其他的关联知识点,旨在能从此次的学习中获取更多的知识点参考资料总结,转化为自己的理解输出,在文中我尽量以截图+复制全限定类名的方式记录,以便感兴趣的再次查找。</h3><h2 id="Springboot与Servlet"><a href="#Springboot与Servlet" class="headerlink" title="Springboot与Servlet"></a>Springboot与Servlet</h2><p>在springboot中内嵌了Tomcat容器,而Tomcat又是Servlet的容器,Springboot就与Servlet产生了紧密的联系。<br>在分析各个类时,注意下每个类所在的包是如何在tomcat与boot之间跨越的~</p>
 <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>1、初始化<br>2、处理请求<br>3、销毁<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/servlet.png" alt="流程"></p>
 <h3 id="应用上下文ServletContext"><a href="#应用上下文ServletContext" class="headerlink" title="应用上下文ServletContext"></a>应用上下文ServletContext</h3><p>应用上下文即可看做：一次请求到达,到响应结束的过程中间的catlog,即阅读中结合上下文语境,是一个广义定义。<br>为什么说到上下文呢？来看下ServletContext的实现,第一个经典实现既是ApplicationContext我们不止在一次源码和应用中见到它,另外加载器目前有两种选择：ContextLoaderListener和ContextLoaderServlet。其功能是完全相同。会在下文进行介绍</p>
@@ -802,109 +732,6 @@
       </categories>
       <tags>
         <tag>Springboot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>RocketMq从入门到放弃</title>
-    <url>/posts/20211028clhspcs1e000vuguj699a57d4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="【置顶】-留言请点击友链留言室或者在文章底部留言"><a href="#【置顶】-留言请点击友链留言室或者在文章底部留言" class="headerlink" title="【置顶】 留言请点击友链留言室或者在文章底部留言"></a>【置顶】 留言请点击友链留言室或者在文章底部留言</h1><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktMq.jpg" alt="mq"></p>
-<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a href="http://rocketmq.apache.org/release_notes/release-notes-4.3.2/">http://rocketmq.apache.org/release_notes/release-notes-4.3.2/</a></p>
-<h1 id="中文文档"><a href="#中文文档" class="headerlink" title="中文文档"></a>中文文档</h1><p><a href="https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing">https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing</a></p>
-<h1 id="idea调试工具"><a href="#idea调试工具" class="headerlink" title="idea调试工具"></a>idea调试工具</h1><p><a href="https://www.jetbrains.com/help/idea/2019.1/debug-tool-window.html">https://www.jetbrains.com/help/idea/2019.1/debug-tool-window.html</a><br><a href="https://github.com/DillonDong/notes">https://github.com/DillonDong/notes</a></p>
-<h1 id="Windows环境下安装RocketMQ"><a href="#Windows环境下安装RocketMQ" class="headerlink" title="Windows环境下安装RocketMQ"></a>Windows环境下安装RocketMQ</h1><p>一.预备环境<br>1.系统<br>Windows<br>2. 环境<br>JDK1.8、Maven、Git<br>二. RocketMQ部署<br>1.下载<br>1.1地址：<a href="http://rocketmq.apache.org/release_notes/release-notes-4.3.0/">http://rocketmq.apache.org/release_notes/release-notes-4.3.0/</a><br>1.2选择‘Binary’进行下载<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq1.jpg" alt="rocketMq"><br>1.3解压已下载工程<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq2.jpg" alt="rocketMq"><br>2. 配置<br>2.1 系统环境变量配置<br>变量名：ROCKETMQ_HOME<br>变量值：MQ解压路径\MQ文件夹名<br>eg、ROCKETMQ_HOME=D:\dev\rocketmq-all-4.3.0-bin-release<br>3. 启动<br>3.1 启动NAMESERVER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqnamesrv.cmd’，启动NAMESERVER。成功后会弹出提示框，此框勿关闭。<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq3.jpg" alt="rocketMq"><br>3.2 启动BROKER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true’，启动BROKER。成功后会弹出提示框，此框勿关闭</p>
-<ol start="2">
-<li>编译启动<br>用CMD进入‘\rocketmq-externals\rocketmq-console’文件夹，执行‘mvn clean package -Dmaven.test.skip=true’，编译生成。<br>编译成功之后，Cmd进入‘target’文件夹，执行‘java -jar rocketmq-console-ng-1.0.0.jar’，启动‘rocketmq-console-ng-1.0.0.jar’。</li>
-<li>测试<br>浏览器中输入‘127.0.0.1:配置端口’，成功后即可查看。<br>eg：<a href="http://127.0.0.1:8088/">http://127.0.0.1:8088</a><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq4.jpg" alt="rocketMq"></li>
-</ol>
-<h1 id="基本配置项"><a href="#基本配置项" class="headerlink" title="基本配置项"></a>基本配置项</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server.contextPath=</span><br><span class="line">server.port=8088</span><br><span class="line">#spring.application.index=true</span><br><span class="line">spring.application.name=rocketmq-console</span><br><span class="line">spring.http.encoding.charset=UTF-8</span><br><span class="line">spring.http.encoding.enabled=true</span><br><span class="line">spring.http.encoding.force=true</span><br><span class="line">logging.config=classpath:logback.xml</span><br><span class="line">#if this value is empty,use env value rocketmq.config.namesrvAddr  NAMESRV_ADDR | now, you can set it in ops page.default localhost:9876</span><br><span class="line">rocketmq.config.namesrvAddr=127.0.0.1:9876</span><br><span class="line">#if you use rocketmq version &lt; 3.5.8, rocketmq.config.isVIPChannel should be false.default true</span><br><span class="line">rocketmq.config.isVIPChannel=</span><br><span class="line">#rocketmq-console&#x27;s data path:dashboard/monitor</span><br><span class="line">rocketmq.config.dataPath=/tmp/rocketmq-console/data</span><br><span class="line">#set it false if you don&#x27;t want use dashboard.default true</span><br><span class="line">rocketmq.config.enableDashBoardCollect=true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="java整合MQ"><a href="#java整合MQ" class="headerlink" title="java整合MQ"></a>java整合MQ</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RockermqproducerApplicationTests</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;apache.rocketmq.producer.producerGroup&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String producerGroup;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * NameServer 地址</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;apache.rocketmq.namesrvAddr&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String namesrvAddr;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextLoads</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//生产者的组名</span></span><br><span class="line">        DefaultMQProducer producer=<span class="keyword">new</span> DefaultMQProducer(producerGroup);</span><br><span class="line">        <span class="comment">//指定NameServer地址，多个地址以 ; 隔开</span></span><br><span class="line">        producer.setNamesrvAddr(namesrvAddr);</span><br><span class="line">        <span class="comment">//消息发送失败重试次数</span></span><br><span class="line">        producer.setRetryTimesWhenSendFailed(<span class="number">3</span>);</span><br><span class="line">        <span class="comment">//异步发送失败重试次数</span></span><br><span class="line">        producer.setRetryTimesWhenSendAsyncFailed(<span class="number">3</span>);</span><br><span class="line">        <span class="comment">//消息没有发送成功，是否发送到另外一个Broker中</span></span><br><span class="line">        producer.setRetryAnotherBrokerWhenNotStoreOK(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line"> </span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">             * Producer对象在使用之前必须要调用start初始化，初始化一次即可</span></span><br><span class="line"><span class="comment">             * 注意：切记不可以在每次发送消息时，都调用start方法</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            producer.start();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">10000</span>;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Message msg=<span class="keyword">new</span> Message(<span class="string">&quot;topic_example_java&quot;</span>,<span class="string">&quot;TagA&quot;</span>,(<span class="string">&quot;Hello Java Demo RocketMQ:&quot;</span>+i).getBytes(Charset.defaultCharset()));</span><br><span class="line">                SendResult result=producer.send(msg);</span><br><span class="line">                System.out.println(<span class="string">&quot;消息发送结果：&quot;</span>+result);</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">            producer.shutdown();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>消息消费顺序：全局消息顺序<br>  局部消息顺序</p>
-<p>保证局部消息的顺序<br>只在一个队列保证一个人消费<br>消费时，同一个OrderId获取到的肯定是同一个队列。</p>
-<p>消息存储结构</p>
-<p>刷盘机制：同步刷盘<br>异步刷盘<br>RocketMQ的消息是存储到磁盘上的，这样既能保证断电后恢复， 又可以让存储的消息量超出内存的限制。RocketMQ为了提高性能，会尽可能地保证磁盘的<br>顺序写。消息在通过Producer写入RocketMQ的时 候，有两种写磁盘方式，分布式同步刷盘和异步刷盘<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq5.jpg" alt="rocketMq"></p>
-<p>顺序消息消费及时监控处理<br>对于顺序消息，当消费者消费消息失败后，消息队列 RocketMQ 会自动不断进行消息重试（每次间隔时间为 1 秒），这时，应用会出现消息消费被阻塞的情况。因此，在使用顺序消息时，务必保证应用能够及时监控并处理消费失败的情况，避免阻塞现象的发生<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq6.jpg" alt="rocketMq"></p>
-<p>消费幂等：若某操作执行多次或一次对系统产生的结果是相同的，则称该操作是幂等的<br>例如支付场景，因为网络原因导致二次消费，会不会造成重复扣款</p>
-<blockquote>
-<p>RocketMq的文件存储系统有两点优化以保证性能：</p>
-</blockquote>
-<blockquote>
-<p>消息存储（顺序写）：RocketMQ的消息用顺序写,保证了消息存储的速度。目前的高性能磁盘，顺序写速度可以达到600MB/s，<br>超过了一般网卡的传输速度，但是磁盘随机写的速度只有大概100KB/s<br>消息发送（零拷贝）：将本机磁盘文件的内容发送到客户端需要进行多次复制，比如从磁盘复制数据到内核态内存；从内核态内存复制到用户态内存；从用户态内存复制到网络驱动，&gt;最后从网络驱动复制到网卡中。RocketMq采用Java中零拷贝的技术，让从内核态内存复制到用户态内存这一步省略，直接赋值到网络驱动中<br>零拷贝技术有个限制是不能超过2G，所以RocketMQ默认设置单个CommitLog日志数据文件为1G</p>
-</blockquote>
-<p>RokectMq架构<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq7.jpg" alt="rocketMq"></p>
-<h1 id="存储结构是什么样的？"><a href="#存储结构是什么样的？" class="headerlink" title="存储结构是什么样的？"></a>存储结构是什么样的？</h1><p>RocketMQ消息的存储是由ConsumeQueue和CommitLog配合完成的</p>
-<p>CommitLog：消息真正的物理存储文件是CommitLog，默认一个文件一个G，存储的是Topic，QueueId和Message，一个存储满了会自动创建一个新的。<br>ConsumeQueue：是消息的逻辑队列，类似数据库的索引文件，存储的是指向物理存储的地址，为了加快消息的读取速度。消费者消费某条消息时，先查询索引获取CommitLog的对应的物理地址。每个Topic下的每个Message Queue都有一个对应的ConsumeQueue文件，文件很小，通常会加载到内存中。如果该文件丢失或者损坏，可以通过CommitLog恢复<br>IndexFile：也是个索引文件，为了消息查询提供了一种通过key或时间区间来查询消息的方法，这种通过IndexFile来查找消息的方法不影响发送与消费消息的主流程</p>
-<h1 id="如何保证消息不丢失？"><a href="#如何保证消息不丢失？" class="headerlink" title="如何保证消息不丢失？"></a>如何保证消息不丢失？</h1><p>RocketMq提供消息持久化机制，消息的刷盘策略分为同步刷盘和异步刷盘。同步刷盘即刷盘成功后再返回一个成功信息，能够保证数据一定保存成功，但是会降低系统吞吐量，异步刷盘与同步刷盘相反，我一般会采用同步刷盘的策略来保证消息不会丢失。<br>RocketMq采用的文件系统存储而不是关系型数据库存储，因为在一般情况下文件系统的性能是比数据库性能高的<br>而RocketMq为了提高文件系统的读写的高性能，做了两点优化。第一点是采用顺序写的方式，这样可以大大提高磁盘写的性能。第二点采用了零拷贝，原来的文件读取流程是：从磁盘复制数据到内核态内存；从内核态内存复制到用户态内存；从用户态内存复制到网络驱动，最后从网络驱动复制到网卡中发送，零拷贝则省去了从内核态内存复制到用户态内存的这一过程，提高了读取的性能，但是零拷贝对文件大小有要求，所以RocketMq的持久化文件<font color="#0099ff" size="3" face="黑体">commitlog默认为1G</font>。<br>commitlog是存储了RocketMq的消息等核心信息，除此之外，还提供可一个ConsumeQueue作为持久化文件的索引，提高查询的效率，一般文件比较小，都是加载在内存中。除了ConsumeQueue之外，还会存储一个IndexFile文件，用来提供针对某一个key或者时间区间的查询。</p>
-<h1 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h1><h2 id="Producer负载均衡"><a href="#Producer负载均衡" class="headerlink" title="Producer负载均衡"></a>Producer负载均衡</h2><p>Producer端，每个实例在发消息的时候，默认会轮询所有的message queue发送，以达到让消息平均落在不同的queue上。而由于queue可以散落在不同的broker，所以消息就发送到不同的broker下</p>
-<h2 id="Consumer负载均衡"><a href="#Consumer负载均衡" class="headerlink" title="Consumer负载均衡"></a>Consumer负载均衡</h2><p>如果consumer实例的数量比message queue的总数量还多的话，多出来的consumer实例将无法分到queue，也就无法消费到消息，也就无法起到分摊负载的作用了。所以需要控制让queue的总数量大于等于consumer的数量。</p>
-<p>消费者的集群模式–启动多个消费者就可以保证消费者的负载均衡（均摊队列）</p>
-<p>默认使用的是均摊队列：会按照queue的数量和实例的数量平均分配queue给每个实例，这样每个消费者可以均摊消费的队列</p>
-<h1 id="消息重试机制"><a href="#消息重试机制" class="headerlink" title="消息重试机制"></a>消息重试机制</h1><h2 id="1-顺序消息的重试"><a href="#1-顺序消息的重试" class="headerlink" title="1. 顺序消息的重试"></a>1. 顺序消息的重试</h2><p>对于顺序消息，当消费者消费消息失败后，消息队列 RocketMQ 会自动不断进行消息重试（每次间隔时间为 1 秒），这时，应用会出现消息消费被阻塞的情况。</p>
-<p>因此，在使用顺序消息时，务必保证应用能够及时监控并处理消费失败的情况，避免阻塞现象的发生。</p>
-<h2 id="2-无序消息的重试"><a href="#2-无序消息的重试" class="headerlink" title="2. 无序消息的重试"></a>2. 无序消息的重试</h2><p>对于无序消息（普通、定时、延时、事务消息），当消费者消费消息失败时，您可以通过设置返回状态达到消息重试的结果。</p>
-<p>无序消息的重试只针对集群消费方式生效；广播方式不提供失败重试特性，即消费失败后，失败消息不再重试，继续消费新的消息。</p>
-<p>消息队列 RocketMQ 默认允许每条消息最多重试 16 次，将会在接下来的 4 小时 46 分钟之内进行 16 次重试，如果依然失败就会进入死信队列。</p>
-<p>一条消息无论重试多少次，这些重试消息的 Message ID 不会改变。</p>
-<p>也可以通过配置，让其不再重试，但是不建议这样</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MessageListenerImpl</span> <span class="keyword">implements</span> <span class="title">MessageListener</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Action <span class="title">consume</span><span class="params">(Message message, ConsumeContext context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            doConsumeMessage(message);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">            <span class="comment">//捕获消费逻辑中的所有异常，并返回 Action.CommitMessage;</span></span><br><span class="line">            <span class="keyword">return</span> Action.CommitMessage;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//消息处理正常，直接返回 Action.CommitMessage;</span></span><br><span class="line">        <span class="keyword">return</span> Action.CommitMessage;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="消费幂等"><a href="#消费幂等" class="headerlink" title="消费幂等"></a>消费幂等</h1><p>消息队列 RocketMQ 消费者在接收到消息以后，有必要根据业务上的唯一 Key 对消息做幂等处理的必要性。</p>
-<h2 id="1-什么时候产生重复消息？"><a href="#1-什么时候产生重复消息？" class="headerlink" title="1. 什么时候产生重复消息？"></a>1. 什么时候产生重复消息？</h2><p>在互联网应用中，尤其在网络不稳定的情况下，消息队列 RocketMQ 的消息有可能会出现重复，这个重复简单可以概括为以下情况：</p>
-<p>发送时消息重复</p>
-<p>当一条消息已被成功发送到服务端并完成持久化，此时出现了网络闪断或者客户端宕机，导致服务端对客户端应答失败。 如果此时生产者意识到消息发送失败并尝试再次发送消息，消费者后续会收到两条内容相同并且 Message ID 也相同的消息。</p>
-<p>消费时消息重复</p>
-<p>消息消费的场景下，消息已投递到消费者并完成业务处理，当客户端给服务端反馈应答的时候网络闪断。 为了保证消息至少被消费一次，消息队列 RocketMQ 的服务端将在网络恢复后再次尝试投递之前已被处理过的消息，消费者后续会收到两条内容相同并且 Message ID 也相同的消息。</p>
-<p>负载均衡时消息重复（包括但不限于网络抖动、Broker 重启以及订阅方应用重启）</p>
-<p>当消息队列 RocketMQ 的 Broker 或客户端重启、扩容或缩容时，会触发 Rebalance，此时消费者可能会收到重复消息。</p>
-<h2 id="2-处理方式"><a href="#2-处理方式" class="headerlink" title="2. 处理方式"></a>2. 处理方式</h2><p>因为 Message ID 有可能出现冲突（重复）的情况，所以真正安全的幂等处理，不建议以 Message ID 作为处理依据。 最好的方式是以业务唯一标识作为幂等处理的关键依据，而业务的唯一标识可以通过消息 Key 进行设置：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">Message message = <span class="keyword">new</span> Message();</span><br><span class="line">message.setKey(<span class="string">&quot;ORDERID_100&quot;</span>);</span><br><span class="line">SendResult sendResult = producer.send(message);</span><br></pre></td></tr></table></figure>
-<p>订阅方收到消息时可以根据消息的 Key 进行幂等处理：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">consumer.subscribe(<span class="string">&quot;ons_test&quot;</span>, <span class="string">&quot;*&quot;</span>, <span class="keyword">new</span> MessageListener() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Action <span class="title">consume</span><span class="params">(Message message, ConsumeContext context)</span> </span>&#123;</span><br><span class="line">        String key = message.getKey()</span><br><span class="line">        <span class="comment">// 根据业务唯一标识的 key 做幂等处理</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>接下来，就需要根据业务进行处理：</p>
-<p>拿个数据要写库，先根据主键查一下，如果这数据都有了，你就别插入了，只需要更新一下；或者可以设置一个唯一索引<br>如果是写Redis，每次操作都是set，天然可以保证幂等性<br>如果不是上面两种场景，需要让生产者发送每条数据的时候，里面加一个全局唯一的id，类似订单id之类的东西；<strong>消费者需要先根据这个id去比如redis里查一下，之前消费过吗？</strong>如果没有消费过，你就处理，然后这个id写redis。如果消费过了，那你就别处理了，保证别重复处理相同的消息即可。<br>如何解决消息积压的问题？<br>这个可能出现在消费端出了问题，不消费了，或者消费的极其极其慢，导致大量的消息无法消费，最后消息队列集群的磁盘都快写满了</p>
-<p>首先最重要的就是修复消费者，接着最大的问题就是在消费者重启后，如何快速处理积压的消息？</p>
-<p>新建一个topic，临时建立好原先10倍或者20倍的queue数量<br>接着扩容临时的consumer，此时消费速度是原来的十几倍<br>等快速消费完积压数据之后，得恢复原先部署架构，重新用原先的consumer机器来消费消息</p>
-<h1 id="如何设计一个Mq？"><a href="#如何设计一个Mq？" class="headerlink" title="如何设计一个Mq？"></a>如何设计一个Mq？</h1><p>是上面内容的一个总结，需要分点进行设计</p>
-<p>扩展性</p>
-<p>生产者的扩展性<br>消息队列的扩展性<br>消费者的扩展性<br>高可用性</p>
-<p>如何设计刷盘策略？<br>如何保证消息0丢失？<br>如何保证在其中有机器宕机时，保障服务可用？<br>消息重试机制</p>
-<p>当一个消息没有被消费时，如何进行重试，保证消息一定被消费？<br>当消费端不可用时，如何保证消费端重启后，依然可以消费消息？<br>心跳检测机制</p>
-<p>如何检测生产者、消息队列和消费者是否宕机？<br>负载均衡模式</p>
-<p>如何做到消息生产以及消费的负载均衡？<br>顺序消息</p>
-<p>如何实现顺序消息？</p>
-</div>
-
-			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
-			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
-			<script>
-			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
-			if (!isMobile) {
-				try {
-					var plugin = new ReadmorePlugin();
-					plugin.init({
-						"type": "hexo",
-						"id": "readmore-container",
-						"name": "赵KK日常技术记录",
-						"blogId": "62435-1742912502174-081",
-						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
-						"keyword": "验证码",
-						"random": "1",
-						"height": "auto",
-						"expires": "14",
-						"lockToc": "yes",
-						"interval": "60",
-						"baseUrl": ""
-					});
-				} catch(e) {
-					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
-				}
-			}
-			</script>
-		]]></content>
-      <categories>
-        <category>MQ</category>
-      </categories>
-      <tags>
-        <tag>MQ</tag>
       </tags>
   </entry>
   <entry>
@@ -2213,7 +2040,7 @@
   </entry>
   <entry>
     <title>1000万数据对比ContainsAll实测</title>
-    <url>/posts/20220812clhspcs0n0001uguj56lz58b2.html</url>
+    <url>/posts/20220812clhspjndx0001mcujfj7fel3l.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">timeoutReminder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; list2 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000000</span>; i++) &#123;</span><br><span class="line">            Random random = <span class="keyword">new</span> Random();</span><br><span class="line">            list.add(getRandomString(random.nextInt(<span class="number">100</span>)));</span><br><span class="line">            list2.add(getRandomString(random.nextInt(<span class="number">100</span>)));</span><br><span class="line">        &#125;</span><br><span class="line">        StopWatch stopWatch = <span class="keyword">new</span> StopWatch();</span><br><span class="line">        stopWatch.start();</span><br><span class="line">        list.containsAll(list2);</span><br><span class="line">        stopWatch.stop();</span><br><span class="line">        System.out.println(stopWatch.getTotalTimeSeconds());</span><br><span class="line">        StopWatch stopWatch2 = <span class="keyword">new</span> StopWatch();</span><br><span class="line">        stopWatch2.start();</span><br><span class="line">        CollectionUtils.containsAll(list, list2);</span><br><span class="line">        stopWatch2.stop();</span><br><span class="line">        System.out.println(stopWatch2.getTotalTimeSeconds());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"><span class="number">0.571</span></span><br><span class="line"><span class="number">17.27</span></span><br><span class="line"></span><br><span class="line">源码 java.util.List#<span class="function">containsAll</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"> <span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span> </span>&#123;</span><br><span class="line">        Object[] es = getArray();</span><br><span class="line">        <span class="keyword">int</span> len = es.length;</span><br><span class="line">        <span class="keyword">for</span> (Object e : c) &#123;</span><br><span class="line">            <span class="keyword">if</span> (indexOfRange(e, es, <span class="number">0</span>, len) &lt; <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">      <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">indexOfRange</span><span class="params">(Object o, Object[] es, <span class="keyword">int</span> from, <span class="keyword">int</span> to)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (o == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = from; i &lt; to; i++)</span><br><span class="line">                <span class="keyword">if</span> (es[i] == <span class="keyword">null</span>)</span><br><span class="line">                    <span class="keyword">return</span> i;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = from; i &lt; to; i++)</span><br><span class="line">                <span class="keyword">if</span> (o.equals(es[i]))</span><br><span class="line">                    <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">源码org.apache.commons.collections4.CollectionUtils#containsAll</span><br><span class="line"></span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Returns &lt;code&gt;true&lt;/code&gt; iff all elements of &#123;<span class="doctag">@code</span> coll2&#125; are also contained</span></span><br><span class="line"><span class="comment">     * in &#123;<span class="doctag">@code</span> coll1&#125;. The cardinality of values in &#123;<span class="doctag">@code</span> coll2&#125; is not taken into account,</span></span><br><span class="line"><span class="comment">     * which is the same behavior as &#123;<span class="doctag">@link</span> Collection#containsAll(Collection)&#125;.</span></span><br><span class="line"><span class="comment">     * &lt;p&gt;</span></span><br><span class="line"><span class="comment">     * In other words, this method returns &lt;code&gt;true&lt;/code&gt; iff the</span></span><br><span class="line"><span class="comment">     * &#123;<span class="doctag">@link</span> #intersection&#125; of &lt;i&gt;coll1&lt;/i&gt; and &lt;i&gt;coll2&lt;/i&gt; has the same cardinality as</span></span><br><span class="line"><span class="comment">     * the set of unique values from &#123;<span class="doctag">@code</span> coll2&#125;. In case &#123;<span class="doctag">@code</span> coll2&#125; is empty, &#123;<span class="doctag">@code</span> true&#125;</span></span><br><span class="line"><span class="comment">     * will be returned.</span></span><br><span class="line"><span class="comment">     * &lt;p&gt;</span></span><br><span class="line"><span class="comment">     * This method is intended as a replacement for &#123;<span class="doctag">@link</span> Collection#containsAll(Collection)&#125;</span></span><br><span class="line"><span class="comment">     * with a guaranteed runtime complexity of &#123;<span class="doctag">@code</span> O(n + m)&#125;. Depending on the type of</span></span><br><span class="line"><span class="comment">     * &#123;<span class="doctag">@link</span> Collection&#125; provided, this method will be much faster than calling</span></span><br><span class="line"><span class="comment">     * &#123;<span class="doctag">@link</span> Collection#containsAll(Collection)&#125; instead, though this will come at the</span></span><br><span class="line"><span class="comment">     * cost of an additional space complexity O(n).</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> coll1  the first collection, must not be null</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> coll2  the second collection, must not be null</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> &lt;code&gt;true&lt;/code&gt; iff the intersection of the collections has the same cardinality</span></span><br><span class="line"><span class="comment">     *   as the set of unique elements from the second collection</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@since</span> 4.0</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">containsAll</span><span class="params">(<span class="keyword">final</span> Collection&lt;?&gt; coll1, <span class="keyword">final</span> Collection&lt;?&gt; coll2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (coll2.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">final</span> Iterator&lt;?&gt; it = coll1.iterator();</span><br><span class="line">            <span class="keyword">final</span> Set&lt;Object&gt; elementsAlreadySeen = <span class="keyword">new</span> HashSet&lt;Object&gt;();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">final</span> Object nextElement : coll2) &#123;</span><br><span class="line">                <span class="keyword">if</span> (elementsAlreadySeen.contains(nextElement)) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">boolean</span> foundCurrentElement = <span class="keyword">false</span>;</span><br><span class="line">                <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">                    <span class="keyword">final</span> Object p = it.next();</span><br><span class="line">                    elementsAlreadySeen.add(p);</span><br><span class="line">                    <span class="keyword">if</span> (nextElement == <span class="keyword">null</span> ? p == <span class="keyword">null</span> : nextElement.equals(p)) &#123;</span><br><span class="line">                        foundCurrentElement = <span class="keyword">true</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (foundCurrentElement) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 </div>
 
@@ -2250,7 +2077,7 @@
   </entry>
   <entry>
     <title>面向面试编程</title>
-    <url>/posts/20220802clhspcs2s003vugujas5p1svi.html</url>
+    <url>/posts/20220802clhspjnfq003tmcujdxlj0gyj.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h2 id="2023年2月2日09-58-57更新"><a href="#2023年2月2日09-58-57更新" class="headerlink" title="2023年2月2日09:58:57更新"></a>2023年2月2日09:58:57更新</h2><p>提问：请问什么是java中函数式接口？<br>回答：只定义了一个抽象方法的接口。(如果你也是这个回答，很遗憾肯定是不及格的)</p>
 <p>原答案中对于此回答不是很认可，我不知道是处于语法的严谨还是个人角度理解的不同，在官方文档中如下</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Package java.util.function Description</span><br><span class="line">Functional interfaces provide target types for lambda expressions and method references. Each functional interface has a single abstract method, called the functional method for that functional interface, to which the lambda expression&#x27;s parameter and return types are matched or adapted. Functional interfaces can provide a target type in multiple contexts, such as assignment context, method invocation, or cast context:</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -2651,7 +2478,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>CompletableFuture</title>
-    <url>/posts/20220728clhspcs0z0009uguj89sm4ugu.html</url>
+    <url>/posts/20220728clhspjnea0009mcuj4m6jg5xr.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>想学习CompletableFuture，因此查询资料发现<br>CompletableFuture是JDK8中的新特性，主要用于对JDK5中加入的Future的补充。<br>CompletableFuture实现了CompletionStage和Future接口。<br>需要先了解Future接口<br>什么是Future？<br>简单来说future就是一个Future对象，当执行return await。。。的时候，实际上返回的是一个延迟计算的Future对象，这个Future对象是Dart内置的，有自己的队列策略，它将要操作的事件放入EventQueue中，在队列中的事件按照先进先出的原则去逐一处理事件，当事件处理完成后，将结果返回给Future对象。</p>
 <p>在这个过程中涉及到了异步和等待：</p>
 <p>异步：就是不用阻塞当前线程，来等待该线程任务处理完成再去执行其他任务。<br>等待：await，声明运算为延迟执行<br>async和await<br>首先看一个例子：</p>
@@ -2794,7 +2621,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>优雅永不过时</title>
-    <url>/posts/20220726clhspcs1z0024ugujc684c7u9.html</url>
+    <url>/posts/20220726clhspjnf70026mcujgu7pfz4p.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>无论是日常编码，还是业务涉及，能够优雅的表达思想，提高代码简洁度，阅读性都是一种能力，总结一下优雅的做法</p>
 <p>优雅的关闭流<br>java7 try with resource，针对实现了AutoCloseable接口的类，都可优雅的关闭流，从而舍弃finally关闭</p>
 <p>try catch finally</p>
@@ -2837,7 +2664,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>Leetcode算法题</title>
-    <url>/posts/20220726clhspcs17000jugujbz8dguvu.html</url>
+    <url>/posts/20220726clhspjnei000jmcuj5klngrmo.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>一：力扣第14题 编写一个函数来查找字符串数组中的最长公共前缀<br>官方解法：<br>##方法一：横向扫描</p>
 <p>如果在尚未遍历完所有的字符串时，最长公共前缀已经是空串，则最长公共前缀一定是空串，因此不需要继续遍历剩下的字符串，直接返回空串即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String longestCommonPrefix(String[] strs) &#123;</span><br><span class="line">        if (strs == null || strs.length == 0) &#123;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        String prefix = strs[0];</span><br><span class="line">        int count = strs.length;</span><br><span class="line">        for (int i = 1; i &lt; count; i++) &#123;</span><br><span class="line">            prefix = longestCommonPrefix(prefix, strs[i]);</span><br><span class="line">            if (prefix.length() == 0) &#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return prefix;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String longestCommonPrefix(String str1, String str2) &#123;</span><br><span class="line">        int length = Math.min(str1.length(), str2.length());</span><br><span class="line">        int index = 0;</span><br><span class="line">        while (index &lt; length &amp;&amp; str1.charAt(index) == str2.charAt(index)) &#123;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        return str1.substring(0, index);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">复杂度分析</span><br><span class="line">时间复杂度：O(mn)O(mn)，其中 mm 是字符串数组中的字符串的平均长度，nn 是字符串的数量。最坏情况下，字符串数组中的每个字符串的每个字符都会被比较一次。</span><br><span class="line">空间复杂度：O(1)O(1)。使用的额外空间复杂度为常数。</span><br><span class="line">作者：LeetCode-Solution</span><br><span class="line">链接：https://leetcode-cn.com/problems/longest-common-prefix/solution/zui-chang-gong-gong-qian-zhui-by-leetcode-solution/</span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
@@ -2918,7 +2745,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>蚂蚁一面整理</title>
-    <url>/posts/20220726clhspcs2d002quguj5b5hf2xa.html</url>
+    <url>/posts/20220726clhspjnfg002rmcuj8t3sgix0.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>java的同步容器，并发容器？<br>同步：即每次只有一个线程访问容器状态。<br>并发：即每次可有多个线程访问容器状态。<br>同步容器：Vector，HashTable<br>并发容器：ConCurrentHashMap，CopeyOnwrite<br>–当并发读远多于修改的场景下需要使用List和Set时，可以考虑使用CopyOnWriteArrayList和CopyOnWriteArraySet；<br>–当需要并发使用&lt;Key, Value&gt;键值对存取数据时，可以使用ConcurrentHashMap；<br>–当要保证并发&lt;Key, Value&gt;键值对有序时可以使用ConcurrentSkipListMap。</p>
 <p>ArrayList和LinkedList的插入和访问的复杂度<br>即数组与链表的访问插入复杂度<br>1&gt;.数组在访问时可通过下标直接查询，复杂度O(1),链表复杂度O(n)<br>2&gt;.数组插入时数组下标需要移动O(n)，链表直接操作指针O(1)<br>反射原理—&gt;</p>
 <blockquote>
@@ -3014,7 +2841,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>List遍历删除</title>
-    <url>/posts/20220726clhspcs1b000quguj1l777sos.html</url>
+    <url>/posts/20220726clhspjnej000nmcuj8saw3khx.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>方法一：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">       list.add(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;ab&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">       list.add(<span class="string">&quot;ad&quot;</span>);</span><br><span class="line">       Iterator&lt;String&gt; iterator = list.iterator();</span><br><span class="line">       <span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">           String next = iterator.next();</span><br><span class="line">           <span class="keyword">if</span>(<span class="string">&quot;a&quot;</span>.equals(next)||<span class="string">&quot;c&quot;</span>.equals(next))&#123;</span><br><span class="line">               iterator.remove();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       System.out.println(JSONObject.toJSONString(list));</span><br><span class="line">   &#125;</span><br><span class="line">输出：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span></span><br><span class="line">[<span class="string">&quot;ab&quot;</span>,<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;ad&quot;</span>]</span><br></pre></td></tr></table></figure>
 
@@ -3055,7 +2882,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>Mysql海量数据存储与优化</title>
-    <url>/posts/20220725clhspcs1c000tuguj40leb43i.html</url>
+    <url>/posts/20220725clhspjnen000tmcujh9f3cmey.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>我坚信，机会永远属于有准备的人，我们与其羡慕他人的成功，不如从此刻起，积累足够多的知识和面试经验，为将来进入更好的公司做充足的准备<br>本片文章将会根据资料学习深入Mysql的设计与优化<br>1、Mysql基础知识</p>
 <p>2、Mysql架构原理和存储机制</p>
 <p>3、Mysql高可用方案</p>
@@ -3112,8 +2939,42 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
       </tags>
   </entry>
   <entry>
+    <title>【声明】阿里云服务器导致图片不显示[可在此贴下方留言]</title>
+    <url>/posts/20220725clhspjnex001fmcujgy7x69tg.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>1.图片服务器原因不定期修复…紧急修复中….<br>2.重要重要【图片不显示，请更换为火狐浏览器打开！！！或者手机在微信中打开也可食用】,放大图片更清晰<br>3.服务器内存过小,2020年10月13日后续部分内容将图片转至腾讯云<br>4.2d妹子会叫,有问题请留言<br>5.阿里云服务器到期,后续将不再续费,个人项目停止维护</p>
+</div>
+
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "14",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		]]></content>
+  </entry>
+  <entry>
     <title>主站博客迁移之字节跳动面经个人搜索答案</title>
-    <url>/posts/20220725clhspcs1x0020uguj4e9fefs5.html</url>
+    <url>/posts/20220725clhspjnf50020mcujamlu1nko.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>问题来源<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%AD%97%E8%8A%82%E9%9D%A2%E8%AF%95%E9%A2%98.jpg" alt="流程"></p>
 <h1 id="1-线程池参数的含义？"><a href="#1-线程池参数的含义？" class="headerlink" title="1.线程池参数的含义？"></a>1.线程池参数的含义？</h1><p>int corePoolSize：常驻线程数<br>int maximumPoolSize：线程池同时执行的最大线程数，&gt;=1<br>long keepAliveTime:空闲线程的存活时间<br>TimeUnit unit：keepAliveTime的单位<br>BlockingQueueworkQueue：被提交等待被执行的任务<br>ThreadFactory threadFactory：工作线程的线程工厂<br>RejectedExecutionHandler handler：线程池拒绝策略<br>线程池拒绝策略</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">当线程池的任务缓存队列已满并且线程池中的线程数目达到maximumPoolSize时，</span><br><span class="line">如果还有任务到来就会采取任务拒绝策略，通常有以下四种策略：</span><br><span class="line">ThreadPoolExecutor.AbortPolicy:丢弃任务并抛出RejectedExecutionException异常。</span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor.DiscardPolicy：丢弃任务，但是不抛出异常。 </span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor.DiscardOldestPolicy：丢弃队列最前面的任务，然后重新提交被拒绝的任务 </span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor.CallerRunsPolicy：由调用线程（提交任务的线程）处理该任务</span><br></pre></td></tr></table></figure>
@@ -3221,7 +3082,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>主站博客迁移之Nginx安装与原理</title>
-    <url>/posts/20220725clhspcs1u001rugujeon01o3u.html</url>
+    <url>/posts/20220725clhspjnf1001rmcuj17by9sxs.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>官网<a href="http://nginx.org/">http://nginx.org/</a><br>需要的素材</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">pcre-<span class="number">8.37</span>.tar.gz</span><br><span class="line">openssl-<span class="number">1.0</span>.1t.tar.gz</span><br><span class="line">zlib-<span class="number">1.2</span><span class="number">.8</span>.tar.gz</span><br><span class="line">nginx-<span class="number">1.11</span><span class="number">.1</span>.tar.gz</span><br></pre></td></tr></table></figure>
 <p>1.1.安装pcre<br>解压缩pcre-xx.tar.gz包<br>进入解压缩目录，执行./configure<br>如果提示，需要提前安装gcc++<br>进入安装光盘目录的软件包(/media/CentOSXX/Package)<br>执行</p>
@@ -3273,7 +3134,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>主站博客迁移之Thymleaf项目常用操作</title>
-    <url>/posts/20220725clhspcs1w001wuguj55242a87.html</url>
+    <url>/posts/20220725clhspjnf4001xmcuj8ha87qna.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>Thymleaf搭配Springboot完成页面渲染，整理下日常开发中常见常用操作<br>1.下拉框动态被选中</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;label <span class="keyword">for</span>=<span class="string">&quot;inputLevel&quot;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-6 col-form-label form-label&quot;</span>&gt;用户等级:&lt;/label&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-6&quot;</span>&gt;</span><br><span class="line">&lt;select id=<span class="string">&quot;inputLevel&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-control&quot;</span> name=<span class="string">&quot;level&quot;</span>&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;selected&#x27;:req.level==null?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;</span><br><span class="line">全部</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;1&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;false&#x27;:req.level==&#x27;1&#x27;?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;<span class="number">1</span>级</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;option value=<span class="string">&quot;2&quot;</span></span><br><span class="line">th:selected=<span class="string">&quot;$&#123;null==req?&#x27;false&#x27;:req.level==&#x27;2&#x27;?&#x27;select&#x27;:&#x27;false&#x27;&#125;&quot;</span>&gt;<span class="number">2</span>级</span><br><span class="line">&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <p>2.动态复选框选中(判断List是否包含)</p>
@@ -3320,7 +3181,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>主站博客迁移之SpringCloudAlibaba服务注册新发现</title>
-    <url>/posts/20220725clhspcs1u001tugujf4lfdatv.html</url>
+    <url>/posts/20220725clhspjnf2001umcujbnwr2hjh.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>2018.09.21「小马哥技术周报」- 第一期《Spring Cloud 服务发现新选择 - Alibaba Nacos Discovery</p>
 <p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud1.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud2.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud3.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud4.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud5.jpg" alt="流程"><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/Springcloud6.jpg" alt="流程"><br>基本是刚出来的时候就已经讲了，现在都2020了<br>不太适合大规模的分布式服务发现ZAB算法<br>内存型，有内存限制</p>
 <p>Springcloudcommons as servicediscovery load balancing  circuit break<br>EnableDiscoveryClient是通用API</p>
@@ -3374,7 +3235,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>主站博客迁移之拒绝解析又臭又长的JSON</title>
-    <url>/posts/20220725clhspcs1y0022uguj6uky2gou.html</url>
+    <url>/posts/20220725clhspjnf50022mcujaxfzf8du.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>在日常工作中，不管是因为接收前端返回约定格式的JSON字符串，还是因为需要约定格式请求第三方服务，或者需要将前端画像xml解析成JSON，再或者需要接入第三方短信，供应商，数据提供商的JSON数据，或是需要提供对外暴露接口的API，可见解析JSON是一个常见操作。</p>
 <p>JSON是一个轻量级的数据交换格式。</p>
 <p>一：表单数据由数据库实体对象接收</p>
@@ -3427,7 +3288,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>项目实战----行政优先级分析</title>
-    <url>/posts/20220510clhspcs2r003tugujdc61ah8i.html</url>
+    <url>/posts/20220510clhspjnfp003rmcuje03jay60.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>在现有地点中解析其地点优先级,最小到区县,当前区县可指定作业优先级,当绑定优先级数据后的数据应在选择时优先展示。</p>
 <h2 id="行政优先级维护"><a href="#行政优先级维护" class="headerlink" title="行政优先级维护"></a>行政优先级维护</h2><p>采用百度地图数据很行行政区域编码维护,考虑到现有数据是人工维护,获取其省市区县可能不准确,所以先根据其经纬度定位后可准确获取其省市区县,然后再进行编码维护。</p>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>地点北京市东城区天安门，百度坐标116.403963,39.915119</p>
@@ -3475,7 +3336,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>mysql中的锁表语句查看方法汇总</title>
-    <url>/posts/20220428clhspcs1p001duguj69lxe9pd.html</url>
+    <url>/posts/20220428clhspjney001kmcujdmx60yro.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">mysql&gt; show status like <span class="string">&#x27;Table%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Variable_name        | Value |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br><span class="line">| Table_locks_immediate | <span class="number">105</span>         |</span><br><span class="line"></span><br><span class="line">| Table_locks_waited   | <span class="number">3</span>           |</span><br><span class="line"></span><br><span class="line">+----------------------------+----------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>Table_locks_immediate    26839653<br>Table_locks_waited            0<br>Table_open_cache_hits    3<br>Table_open_cache_misses    2<br>Table_open_cache_overflows    2</p>
 <p>Table_locks_immediate  指的是能够立即获得表级锁的次数</p>
@@ -3547,7 +3408,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>人工智能vs人工智障之图片识别</title>
-    <url>/posts/20220407clhspcs1z0026uguj4yo51g58.html</url>
+    <url>/posts/20220407clhspjnf60024mcuj9kbj0da5.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>从车牌识别到图片的相似度处理。开始的目的是识别车牌，以供研究opencv的,在接触车牌的识别的过程中,接触到java的tess4j以及java整合opencv的过程,但是车牌识别效率很低。人为识别是很清晰的但是仍然解析不出来。</p>
 <h2 id="1-Tess4j"><a href="#1-Tess4j" class="headerlink" title="1.Tess4j"></a>1.Tess4j</h2><p>引入依赖</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;!-- https:<span class="comment">//mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j --&gt;</span></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;net.sourceforge.tess4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;tess4j&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">3.4</span><span class="number">.8</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
@@ -3595,7 +3456,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>Springboot+Netty仿微信实战设计文档</title>
-    <url>/posts/20220331clhspcs1e000xuguj5gg1a9aj.html</url>
+    <url>/posts/20220331clhspjner0010mcujdhqh934t.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>日期：2021-12-28<br>版本号：1.0.0<br>作者：kk</p>
 <p>1   编写目的<br> 1.1    术语与定义<br> 1.2    引用标准和规范<br> 1.3    参考资料<br>2    系统总体框架<br> 2.1    设计目标<br> 2.2    总体技术路线<br> 2.3    架构概览<br> 2.3.1    架构总览图<br> 2.3.2    功能一览图<br>3功能展示</p>
 <p>1.1编写目的</p>
@@ -3651,7 +3512,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>还在手动写单元测试？</title>
-    <url>/posts/20220207clhspcs2e002tuguja3s6cd9o.html</url>
+    <url>/posts/20220207clhspjnfg002umcujcb3n4wdq.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="JUnitGenerator安装"><a href="#JUnitGenerator安装" class="headerlink" title="JUnitGenerator安装"></a>JUnitGenerator安装</h1><p>在Idea市场里安装JUnitGenerator插件如图，重启后生效<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/junit1.png" alt="流程"></p>
 <h1 id="设置生成路径及模板"><a href="#设置生成路径及模板" class="headerlink" title="设置生成路径及模板"></a>设置生成路径及模板</h1><p>Output Path: ${SOURCEPATH}/..//../test/java/${PACKAGE}/${FILENAME}<br>注：根据实际项目结构调整，设置为默认模板，另需要在Project Structure–&gt;Modules中设置Test文件目录，可改造为自启动，随容器启动，<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/junit2.png" alt="流程"></p>
 <h1 id="设置Junit4-生成模板"><a href="#设置Junit4-生成模板" class="headerlink" title="设置Junit4 生成模板"></a>设置Junit4 生成模板</h1><p>支持 CommonResponse 或  Wrapper</p>
@@ -3696,7 +3557,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>如何删除valine评论</title>
-    <url>/posts/20220126clhspcs200029ugujhxey2j2o.html</url>
+    <url>/posts/20220126clhspjnf70029mcujakqe3o05.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><p>1.登陆leancloud</p>
 <p>2.找到结构话数据–comment<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/cloud.png" alt="流程"><br>3.将测试数据一一删掉</p>
 </div>
@@ -3734,7 +3595,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>开源堡垒机jumpserver安装部署</title>
-    <url>/posts/20220114clhspcs21002bugujghvi85ff.html</url>
+    <url>/posts/20220114clhspjnfb002dmcujb2wgdpzm.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="临时高可用架构方案如下"><a href="#临时高可用架构方案如下" class="headerlink" title="临时高可用架构方案如下"></a>临时高可用架构方案如下</h1><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/%E5%A0%A1%E5%9E%92%E6%9C%BA.png" alt="流程"></p>
 <p>一，安装mysql数据库</p>
 <p>1 ，安装（步骤省略）</p>
@@ -3808,7 +3669,7 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
   </entry>
   <entry>
     <title>还在手动维护Yapi?</title>
-    <url>/posts/20220106clhspcs2g002zuguj7wi5eewh.html</url>
+    <url>/posts/20220106clhspjnfh002xmcuj7cl3cm6c.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="【置顶】-留言请点击友链留言室或者在文章底部留言"><a href="#【置顶】-留言请点击友链留言室或者在文章底部留言" class="headerlink" title="【置顶】 留言请点击友链留言室或者在文章底部留言"></a>【置顶】 留言请点击友链留言室或者在文章底部留言</h1><p>因前后端人员通过接口定义字段，返回值等对接时非常苦恼，没有一个很好的平台维护，后端每次迭代都要写开发文档，需求变化，多系统联调等，给前后端联调造成阻塞。</p>
 <h1 id="1、后端开发文档编写规范"><a href="#1、后端开发文档编写规范" class="headerlink" title="1、后端开发文档编写规范"></a>1、后端开发文档编写规范</h1><p>1）文档模板统一使用：xxx系统开发文档-模板.docx<br>2）后端每次迭代需要编写开发文档，并进行技术评审（前端、后端、测试、产品参与）<br>3）文档的命名方式：《产品名称-V版本号-设计开发文档-编写人》<br>4) 文档统一保存<br>5）后端必须在编写业务代码前，优先设计API（Swagger），并提供给测试和前端，最大化并行迭代。<br>6）允许特殊情况延期提供API，如：需求变化、多系统联调等。</p>
 <h1 id="Swagger使用规范"><a href="#Swagger使用规范" class="headerlink" title="Swagger使用规范"></a>Swagger使用规范</h1><p>1）后端开发人员必须使用Swagger<br>2）API接口定义参数时，要明确备注信息和是否必须，样例如下：<br>public class SupplierReq {<br>   @NotEmpty(message = “姓名必填”)<br>   @ApiModelProperty(value = “员工姓名”, required = true)<br>   private String name;</p>
@@ -3850,6 +3711,109 @@ update t_user set age=10 where name=&#39;chackca&#39;;    无索引,表锁。
 		]]></content>
       <tags>
         <tag>Yapi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RocketMq从入门到放弃</title>
+    <url>/posts/20211028clhspjneo000vmcujbdoc31ec.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="readmore-container"><h1 id="【置顶】-留言请点击友链留言室或者在文章底部留言"><a href="#【置顶】-留言请点击友链留言室或者在文章底部留言" class="headerlink" title="【置顶】 留言请点击友链留言室或者在文章底部留言"></a>【置顶】 留言请点击友链留言室或者在文章底部留言</h1><p><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktMq.jpg" alt="mq"></p>
+<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a href="http://rocketmq.apache.org/release_notes/release-notes-4.3.2/">http://rocketmq.apache.org/release_notes/release-notes-4.3.2/</a></p>
+<h1 id="中文文档"><a href="#中文文档" class="headerlink" title="中文文档"></a>中文文档</h1><p><a href="https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing">https://rocketmq-1.gitbook.io/rocketmq-connector/quick-start/qian-qi-zhun-bei/dan-ji-huan-jing</a></p>
+<h1 id="idea调试工具"><a href="#idea调试工具" class="headerlink" title="idea调试工具"></a>idea调试工具</h1><p><a href="https://www.jetbrains.com/help/idea/2019.1/debug-tool-window.html">https://www.jetbrains.com/help/idea/2019.1/debug-tool-window.html</a><br><a href="https://github.com/DillonDong/notes">https://github.com/DillonDong/notes</a></p>
+<h1 id="Windows环境下安装RocketMQ"><a href="#Windows环境下安装RocketMQ" class="headerlink" title="Windows环境下安装RocketMQ"></a>Windows环境下安装RocketMQ</h1><p>一.预备环境<br>1.系统<br>Windows<br>2. 环境<br>JDK1.8、Maven、Git<br>二. RocketMQ部署<br>1.下载<br>1.1地址：<a href="http://rocketmq.apache.org/release_notes/release-notes-4.3.0/">http://rocketmq.apache.org/release_notes/release-notes-4.3.0/</a><br>1.2选择‘Binary’进行下载<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq1.jpg" alt="rocketMq"><br>1.3解压已下载工程<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq2.jpg" alt="rocketMq"><br>2. 配置<br>2.1 系统环境变量配置<br>变量名：ROCKETMQ_HOME<br>变量值：MQ解压路径\MQ文件夹名<br>eg、ROCKETMQ_HOME=D:\dev\rocketmq-all-4.3.0-bin-release<br>3. 启动<br>3.1 启动NAMESERVER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqnamesrv.cmd’，启动NAMESERVER。成功后会弹出提示框，此框勿关闭。<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocktmq3.jpg" alt="rocketMq"><br>3.2 启动BROKER<br>Cmd命令框执行进入至‘MQ文件夹\bin’下，然后执行‘start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true’，启动BROKER。成功后会弹出提示框，此框勿关闭</p>
+<ol start="2">
+<li>编译启动<br>用CMD进入‘\rocketmq-externals\rocketmq-console’文件夹，执行‘mvn clean package -Dmaven.test.skip=true’，编译生成。<br>编译成功之后，Cmd进入‘target’文件夹，执行‘java -jar rocketmq-console-ng-1.0.0.jar’，启动‘rocketmq-console-ng-1.0.0.jar’。</li>
+<li>测试<br>浏览器中输入‘127.0.0.1:配置端口’，成功后即可查看。<br>eg：<a href="http://127.0.0.1:8088/">http://127.0.0.1:8088</a><br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq4.jpg" alt="rocketMq"></li>
+</ol>
+<h1 id="基本配置项"><a href="#基本配置项" class="headerlink" title="基本配置项"></a>基本配置项</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server.contextPath=</span><br><span class="line">server.port=8088</span><br><span class="line">#spring.application.index=true</span><br><span class="line">spring.application.name=rocketmq-console</span><br><span class="line">spring.http.encoding.charset=UTF-8</span><br><span class="line">spring.http.encoding.enabled=true</span><br><span class="line">spring.http.encoding.force=true</span><br><span class="line">logging.config=classpath:logback.xml</span><br><span class="line">#if this value is empty,use env value rocketmq.config.namesrvAddr  NAMESRV_ADDR | now, you can set it in ops page.default localhost:9876</span><br><span class="line">rocketmq.config.namesrvAddr=127.0.0.1:9876</span><br><span class="line">#if you use rocketmq version &lt; 3.5.8, rocketmq.config.isVIPChannel should be false.default true</span><br><span class="line">rocketmq.config.isVIPChannel=</span><br><span class="line">#rocketmq-console&#x27;s data path:dashboard/monitor</span><br><span class="line">rocketmq.config.dataPath=/tmp/rocketmq-console/data</span><br><span class="line">#set it false if you don&#x27;t want use dashboard.default true</span><br><span class="line">rocketmq.config.enableDashBoardCollect=true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="java整合MQ"><a href="#java整合MQ" class="headerlink" title="java整合MQ"></a>java整合MQ</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RockermqproducerApplicationTests</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;apache.rocketmq.producer.producerGroup&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String producerGroup;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * NameServer 地址</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;apache.rocketmq.namesrvAddr&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String namesrvAddr;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextLoads</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//生产者的组名</span></span><br><span class="line">        DefaultMQProducer producer=<span class="keyword">new</span> DefaultMQProducer(producerGroup);</span><br><span class="line">        <span class="comment">//指定NameServer地址，多个地址以 ; 隔开</span></span><br><span class="line">        producer.setNamesrvAddr(namesrvAddr);</span><br><span class="line">        <span class="comment">//消息发送失败重试次数</span></span><br><span class="line">        producer.setRetryTimesWhenSendFailed(<span class="number">3</span>);</span><br><span class="line">        <span class="comment">//异步发送失败重试次数</span></span><br><span class="line">        producer.setRetryTimesWhenSendAsyncFailed(<span class="number">3</span>);</span><br><span class="line">        <span class="comment">//消息没有发送成功，是否发送到另外一个Broker中</span></span><br><span class="line">        producer.setRetryAnotherBrokerWhenNotStoreOK(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line"> </span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">             * Producer对象在使用之前必须要调用start初始化，初始化一次即可</span></span><br><span class="line"><span class="comment">             * 注意：切记不可以在每次发送消息时，都调用start方法</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            producer.start();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">10000</span>;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Message msg=<span class="keyword">new</span> Message(<span class="string">&quot;topic_example_java&quot;</span>,<span class="string">&quot;TagA&quot;</span>,(<span class="string">&quot;Hello Java Demo RocketMQ:&quot;</span>+i).getBytes(Charset.defaultCharset()));</span><br><span class="line">                SendResult result=producer.send(msg);</span><br><span class="line">                System.out.println(<span class="string">&quot;消息发送结果：&quot;</span>+result);</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">            producer.shutdown();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>消息消费顺序：全局消息顺序<br>  局部消息顺序</p>
+<p>保证局部消息的顺序<br>只在一个队列保证一个人消费<br>消费时，同一个OrderId获取到的肯定是同一个队列。</p>
+<p>消息存储结构</p>
+<p>刷盘机制：同步刷盘<br>异步刷盘<br>RocketMQ的消息是存储到磁盘上的，这样既能保证断电后恢复， 又可以让存储的消息量超出内存的限制。RocketMQ为了提高性能，会尽可能地保证磁盘的<br>顺序写。消息在通过Producer写入RocketMQ的时 候，有两种写磁盘方式，分布式同步刷盘和异步刷盘<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq5.jpg" alt="rocketMq"></p>
+<p>顺序消息消费及时监控处理<br>对于顺序消息，当消费者消费消息失败后，消息队列 RocketMQ 会自动不断进行消息重试（每次间隔时间为 1 秒），这时，应用会出现消息消费被阻塞的情况。因此，在使用顺序消息时，务必保证应用能够及时监控并处理消费失败的情况，避免阻塞现象的发生<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq6.jpg" alt="rocketMq"></p>
+<p>消费幂等：若某操作执行多次或一次对系统产生的结果是相同的，则称该操作是幂等的<br>例如支付场景，因为网络原因导致二次消费，会不会造成重复扣款</p>
+<blockquote>
+<p>RocketMq的文件存储系统有两点优化以保证性能：</p>
+</blockquote>
+<blockquote>
+<p>消息存储（顺序写）：RocketMQ的消息用顺序写,保证了消息存储的速度。目前的高性能磁盘，顺序写速度可以达到600MB/s，<br>超过了一般网卡的传输速度，但是磁盘随机写的速度只有大概100KB/s<br>消息发送（零拷贝）：将本机磁盘文件的内容发送到客户端需要进行多次复制，比如从磁盘复制数据到内核态内存；从内核态内存复制到用户态内存；从用户态内存复制到网络驱动，&gt;最后从网络驱动复制到网卡中。RocketMq采用Java中零拷贝的技术，让从内核态内存复制到用户态内存这一步省略，直接赋值到网络驱动中<br>零拷贝技术有个限制是不能超过2G，所以RocketMQ默认设置单个CommitLog日志数据文件为1G</p>
+</blockquote>
+<p>RokectMq架构<br><img src="https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/rocketmq7.jpg" alt="rocketMq"></p>
+<h1 id="存储结构是什么样的？"><a href="#存储结构是什么样的？" class="headerlink" title="存储结构是什么样的？"></a>存储结构是什么样的？</h1><p>RocketMQ消息的存储是由ConsumeQueue和CommitLog配合完成的</p>
+<p>CommitLog：消息真正的物理存储文件是CommitLog，默认一个文件一个G，存储的是Topic，QueueId和Message，一个存储满了会自动创建一个新的。<br>ConsumeQueue：是消息的逻辑队列，类似数据库的索引文件，存储的是指向物理存储的地址，为了加快消息的读取速度。消费者消费某条消息时，先查询索引获取CommitLog的对应的物理地址。每个Topic下的每个Message Queue都有一个对应的ConsumeQueue文件，文件很小，通常会加载到内存中。如果该文件丢失或者损坏，可以通过CommitLog恢复<br>IndexFile：也是个索引文件，为了消息查询提供了一种通过key或时间区间来查询消息的方法，这种通过IndexFile来查找消息的方法不影响发送与消费消息的主流程</p>
+<h1 id="如何保证消息不丢失？"><a href="#如何保证消息不丢失？" class="headerlink" title="如何保证消息不丢失？"></a>如何保证消息不丢失？</h1><p>RocketMq提供消息持久化机制，消息的刷盘策略分为同步刷盘和异步刷盘。同步刷盘即刷盘成功后再返回一个成功信息，能够保证数据一定保存成功，但是会降低系统吞吐量，异步刷盘与同步刷盘相反，我一般会采用同步刷盘的策略来保证消息不会丢失。<br>RocketMq采用的文件系统存储而不是关系型数据库存储，因为在一般情况下文件系统的性能是比数据库性能高的<br>而RocketMq为了提高文件系统的读写的高性能，做了两点优化。第一点是采用顺序写的方式，这样可以大大提高磁盘写的性能。第二点采用了零拷贝，原来的文件读取流程是：从磁盘复制数据到内核态内存；从内核态内存复制到用户态内存；从用户态内存复制到网络驱动，最后从网络驱动复制到网卡中发送，零拷贝则省去了从内核态内存复制到用户态内存的这一过程，提高了读取的性能，但是零拷贝对文件大小有要求，所以RocketMq的持久化文件<font color="#0099ff" size="3" face="黑体">commitlog默认为1G</font>。<br>commitlog是存储了RocketMq的消息等核心信息，除此之外，还提供可一个ConsumeQueue作为持久化文件的索引，提高查询的效率，一般文件比较小，都是加载在内存中。除了ConsumeQueue之外，还会存储一个IndexFile文件，用来提供针对某一个key或者时间区间的查询。</p>
+<h1 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h1><h2 id="Producer负载均衡"><a href="#Producer负载均衡" class="headerlink" title="Producer负载均衡"></a>Producer负载均衡</h2><p>Producer端，每个实例在发消息的时候，默认会轮询所有的message queue发送，以达到让消息平均落在不同的queue上。而由于queue可以散落在不同的broker，所以消息就发送到不同的broker下</p>
+<h2 id="Consumer负载均衡"><a href="#Consumer负载均衡" class="headerlink" title="Consumer负载均衡"></a>Consumer负载均衡</h2><p>如果consumer实例的数量比message queue的总数量还多的话，多出来的consumer实例将无法分到queue，也就无法消费到消息，也就无法起到分摊负载的作用了。所以需要控制让queue的总数量大于等于consumer的数量。</p>
+<p>消费者的集群模式–启动多个消费者就可以保证消费者的负载均衡（均摊队列）</p>
+<p>默认使用的是均摊队列：会按照queue的数量和实例的数量平均分配queue给每个实例，这样每个消费者可以均摊消费的队列</p>
+<h1 id="消息重试机制"><a href="#消息重试机制" class="headerlink" title="消息重试机制"></a>消息重试机制</h1><h2 id="1-顺序消息的重试"><a href="#1-顺序消息的重试" class="headerlink" title="1. 顺序消息的重试"></a>1. 顺序消息的重试</h2><p>对于顺序消息，当消费者消费消息失败后，消息队列 RocketMQ 会自动不断进行消息重试（每次间隔时间为 1 秒），这时，应用会出现消息消费被阻塞的情况。</p>
+<p>因此，在使用顺序消息时，务必保证应用能够及时监控并处理消费失败的情况，避免阻塞现象的发生。</p>
+<h2 id="2-无序消息的重试"><a href="#2-无序消息的重试" class="headerlink" title="2. 无序消息的重试"></a>2. 无序消息的重试</h2><p>对于无序消息（普通、定时、延时、事务消息），当消费者消费消息失败时，您可以通过设置返回状态达到消息重试的结果。</p>
+<p>无序消息的重试只针对集群消费方式生效；广播方式不提供失败重试特性，即消费失败后，失败消息不再重试，继续消费新的消息。</p>
+<p>消息队列 RocketMQ 默认允许每条消息最多重试 16 次，将会在接下来的 4 小时 46 分钟之内进行 16 次重试，如果依然失败就会进入死信队列。</p>
+<p>一条消息无论重试多少次，这些重试消息的 Message ID 不会改变。</p>
+<p>也可以通过配置，让其不再重试，但是不建议这样</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MessageListenerImpl</span> <span class="keyword">implements</span> <span class="title">MessageListener</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Action <span class="title">consume</span><span class="params">(Message message, ConsumeContext context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            doConsumeMessage(message);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">            <span class="comment">//捕获消费逻辑中的所有异常，并返回 Action.CommitMessage;</span></span><br><span class="line">            <span class="keyword">return</span> Action.CommitMessage;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//消息处理正常，直接返回 Action.CommitMessage;</span></span><br><span class="line">        <span class="keyword">return</span> Action.CommitMessage;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="消费幂等"><a href="#消费幂等" class="headerlink" title="消费幂等"></a>消费幂等</h1><p>消息队列 RocketMQ 消费者在接收到消息以后，有必要根据业务上的唯一 Key 对消息做幂等处理的必要性。</p>
+<h2 id="1-什么时候产生重复消息？"><a href="#1-什么时候产生重复消息？" class="headerlink" title="1. 什么时候产生重复消息？"></a>1. 什么时候产生重复消息？</h2><p>在互联网应用中，尤其在网络不稳定的情况下，消息队列 RocketMQ 的消息有可能会出现重复，这个重复简单可以概括为以下情况：</p>
+<p>发送时消息重复</p>
+<p>当一条消息已被成功发送到服务端并完成持久化，此时出现了网络闪断或者客户端宕机，导致服务端对客户端应答失败。 如果此时生产者意识到消息发送失败并尝试再次发送消息，消费者后续会收到两条内容相同并且 Message ID 也相同的消息。</p>
+<p>消费时消息重复</p>
+<p>消息消费的场景下，消息已投递到消费者并完成业务处理，当客户端给服务端反馈应答的时候网络闪断。 为了保证消息至少被消费一次，消息队列 RocketMQ 的服务端将在网络恢复后再次尝试投递之前已被处理过的消息，消费者后续会收到两条内容相同并且 Message ID 也相同的消息。</p>
+<p>负载均衡时消息重复（包括但不限于网络抖动、Broker 重启以及订阅方应用重启）</p>
+<p>当消息队列 RocketMQ 的 Broker 或客户端重启、扩容或缩容时，会触发 Rebalance，此时消费者可能会收到重复消息。</p>
+<h2 id="2-处理方式"><a href="#2-处理方式" class="headerlink" title="2. 处理方式"></a>2. 处理方式</h2><p>因为 Message ID 有可能出现冲突（重复）的情况，所以真正安全的幂等处理，不建议以 Message ID 作为处理依据。 最好的方式是以业务唯一标识作为幂等处理的关键依据，而业务的唯一标识可以通过消息 Key 进行设置：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">Message message = <span class="keyword">new</span> Message();</span><br><span class="line">message.setKey(<span class="string">&quot;ORDERID_100&quot;</span>);</span><br><span class="line">SendResult sendResult = producer.send(message);</span><br></pre></td></tr></table></figure>
+<p>订阅方收到消息时可以根据消息的 Key 进行幂等处理：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">consumer.subscribe(<span class="string">&quot;ons_test&quot;</span>, <span class="string">&quot;*&quot;</span>, <span class="keyword">new</span> MessageListener() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Action <span class="title">consume</span><span class="params">(Message message, ConsumeContext context)</span> </span>&#123;</span><br><span class="line">        String key = message.getKey()</span><br><span class="line">        <span class="comment">// 根据业务唯一标识的 key 做幂等处理</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>接下来，就需要根据业务进行处理：</p>
+<p>拿个数据要写库，先根据主键查一下，如果这数据都有了，你就别插入了，只需要更新一下；或者可以设置一个唯一索引<br>如果是写Redis，每次操作都是set，天然可以保证幂等性<br>如果不是上面两种场景，需要让生产者发送每条数据的时候，里面加一个全局唯一的id，类似订单id之类的东西；<strong>消费者需要先根据这个id去比如redis里查一下，之前消费过吗？</strong>如果没有消费过，你就处理，然后这个id写redis。如果消费过了，那你就别处理了，保证别重复处理相同的消息即可。<br>如何解决消息积压的问题？<br>这个可能出现在消费端出了问题，不消费了，或者消费的极其极其慢，导致大量的消息无法消费，最后消息队列集群的磁盘都快写满了</p>
+<p>首先最重要的就是修复消费者，接着最大的问题就是在消费者重启后，如何快速处理积压的消息？</p>
+<p>新建一个topic，临时建立好原先10倍或者20倍的queue数量<br>接着扩容临时的consumer，此时消费速度是原来的十几倍<br>等快速消费完积压数据之后，得恢复原先部署架构，重新用原先的consumer机器来消费消息</p>
+<h1 id="如何设计一个Mq？"><a href="#如何设计一个Mq？" class="headerlink" title="如何设计一个Mq？"></a>如何设计一个Mq？</h1><p>是上面内容的一个总结，需要分点进行设计</p>
+<p>扩展性</p>
+<p>生产者的扩展性<br>消息队列的扩展性<br>消费者的扩展性<br>高可用性</p>
+<p>如何设计刷盘策略？<br>如何保证消息0丢失？<br>如何保证在其中有机器宕机时，保障服务可用？<br>消息重试机制</p>
+<p>当一个消息没有被消费时，如何进行重试，保证消息一定被消费？<br>当消费端不可用时，如何保证消费端重启后，依然可以消费消息？<br>心跳检测机制</p>
+<p>如何检测生产者、消息队列和消费者是否宕机？<br>负载均衡模式</p>
+<p>如何做到消息生产以及消费的负载均衡？<br>顺序消息</p>
+<p>如何实现顺序消息？</p>
+</div>
+
+			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
+			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
+			<script>
+			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+			if (!isMobile) {
+				try {
+					var plugin = new ReadmorePlugin();
+					plugin.init({
+						"type": "hexo",
+						"id": "readmore-container",
+						"name": "赵KK日常技术记录",
+						"blogId": "62435-1742912502174-081",
+						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
+						"keyword": "验证码",
+						"random": "1",
+						"height": "auto",
+						"expires": "14",
+						"lockToc": "yes",
+						"interval": "60",
+						"baseUrl": ""
+					});
+				} catch(e) {
+					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
+				}
+			}
+			</script>
+		]]></content>
+      <categories>
+        <category>MQ</category>
+      </categories>
+      <tags>
+        <tag>MQ</tag>
       </tags>
   </entry>
 </search>
