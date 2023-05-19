@@ -21,7 +21,7 @@
   <meta name="description" content="事务是我们平时项目中对数据操作最为直接、常用的方式，现在无论是大小公司都离不开对事务的操作，伴随业务的提升，客户量的积累也大大增加了对事务管理的难度。在本章节中将会讲到如下内容： 1234567891、线上环境对roll back only 的处理2、线上环境对嵌套事务的解决方案3、11个demo分析事务失效的场景4、分布式事务5、事务也能异步 1、线上环境对roll back only 的处理与">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring事务管理报错Transaction rolled back because it has been marked as rollback-only">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220725clhsyo09k001578ujdrutchxv.html">
+<meta property="og:url" content="https://zkkget.github.io/posts/20220725clhtwi73n001324ujal7lc53s.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
 <meta property="og:description" content="事务是我们平时项目中对数据操作最为直接、常用的方式，现在无论是大小公司都离不开对事务的操作，伴随业务的提升，客户量的积累也大大增加了对事务管理的难度。在本章节中将会讲到如下内容： 1234567891、线上环境对roll back only 的处理2、线上环境对嵌套事务的解决方案3、11个demo分析事务失效的场景4、分布式事务5、事务也能异步 1、线上环境对roll back only 的处理与">
 <meta property="og:locale" content="zh_CN">
@@ -31,7 +31,7 @@
 <meta property="article:tag" content="事务">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220725clhsyo09k001578ujdrutchxv.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20220725clhtwi73n001324ujal7lc53s.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -388,7 +388,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220725clhsyo09k001578ujdrutchxv.html" class="article-date">
+	<a href="/posts/20220725clhtwi73n001324ujal7lc53s.html" class="article-date">
 	  <time datetime="2022-07-25T08:15:07.000Z" itemprop="datePublished">2022-07-25</time>
 	</a>
 </span>
@@ -414,20 +414,20 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220725clhsyo09k001578ujdrutchxv.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220725clhtwi73n001324ujal7lc53s.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 5.5k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 5.4k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 22(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 21(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <div id="readmore-container"><p>事务是我们平时项目中对数据操作最为直接、常用的方式，现在无论是大小公司都离不开对事务的操作，伴随业务的提升，客户量的积累也大大增加了对事务管理的难度。<br>在本章节中将会讲到如下内容：</p>
+        <p>事务是我们平时项目中对数据操作最为直接、常用的方式，现在无论是大小公司都离不开对事务的操作，伴随业务的提升，客户量的积累也大大增加了对事务管理的难度。<br>在本章节中将会讲到如下内容：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、线上环境对roll back only 的处理</span><br><span class="line"></span><br><span class="line">2、线上环境对嵌套事务的解决方案</span><br><span class="line"></span><br><span class="line">3、11个demo分析事务失效的场景</span><br><span class="line"></span><br><span class="line">4、分布式事务</span><br><span class="line"></span><br><span class="line">5、事务也能异步</span><br></pre></td></tr></table></figure>
 <p>1、线上环境对roll back only 的处理与产生</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.dao.CannotAcquireLockException: </span><br><span class="line">### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; <span class="keyword">try</span> restarting transaction</span><br><span class="line">### The error may involve xxxMapper.insert-Inline</span><br><span class="line">### The error occurred <span class="keyword">while</span> setting parameters</span><br><span class="line">### SQL: INSERT INTO xxx</span><br><span class="line">### Cause: com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; <span class="keyword">try</span> restarting transaction</span><br><span class="line">; Lock wait timeout exceeded; <span class="keyword">try</span> restarting transaction; nested exception is com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; <span class="keyword">try</span> restarting transaction</span><br></pre></td></tr></table></figure>
@@ -453,35 +453,7 @@
 <p>一致性理论<br>分布式事务的目的是保障分库数据一致性，而跨库事务会遇到各种不可控制的问题，如个别节点永久性宕机，像单机事务一样的ACID是无法奢望的。另外，业界著名的CAP理论也告诉我们，对分布式系统，需要将数据一致性和系统可用性、分区容忍性放在天平上一起考虑。<br>两阶段提交协议（简称2PC）是实现分布式事务较为经典的方案，但2PC 的可扩展性很差，在分布式架构下应用代价较大，eBay 架构师Dan Pritchett 提出了BASE 理论，用于解决大规模分布式系统下的数据一致性问题。BASE 理论告诉我们：可以通过放弃系统在每个时刻的强一致性来换取系统的可扩展性。<br>CAP理论在分布式系统中，一致性（Consistency）、可用性（Availability）和分区容忍性（Partition Tolerance）3 个要素最多只能同时满足两个，不可兼得。<br>其中，分区容忍性又是不可或缺的。<br>avatar<br>一致性：分布式环境下多个节点的数据是否强一致。可用性：分布式服务能一直保证可用状态。当用户发出一个请求后，服务能在有限时间内返回结果。分区容忍性：特指对网络分区的容忍性。举例：Cassandra、Dynamo<br>等，默认优先选择AP，弱化C；HBase、MongoDB 等，默认优先选择CP，弱化A。<br>BASE理论核心思想：<br>基本可用（BasicallyAvailable）：指分布式系统在出现故障时，允许损失部分的可用性来保证核心可用。<br>软状态（SoftState）：指允许分布式系统存在中间状态，该中间状态不会影响到系统的整体可用性。<br>最终一致性（EventualConsistency）：指分布式系统中的所有副本数据经过一定时间后，最终能够达到一致的状态。<br>2. 一致性模型<br>数据的一致性模型可以分成以下 3 类：<br>强一致性：数据更新成功后，任意时刻所有副本中的数据都是一致的，一般采用同步的方式实现。 弱一致性：数据更新成功后，系统不承诺立即可以读到最新写入的值，也不承诺具体多久之后可以读到。 最终一致性：弱一致性的一种形式，数据更新成功后，系统不承诺立即可以返回最新写入的值，但是保证最终会返回上一次更新操作的值。 分布式系统数据的强一致性、弱一致性和最终一致性可以通过Quorum NRW算法分析。<br>3. 分布式事务解决方案<br>2PC方案——强一致性<br>2PC的核心原理是通过提交分阶段和记日志的方式，记录下事务提交所处的阶段状态，在组件宕机重启后，可通过日志恢复事务提交的阶段状态，并在这个状态节点重试，如Coordinator重启后，通过日志可以确定提交处于Prepare还是PrepareAll状态，若是前者，说明有节点可能没有Prepare成功，或所有节点Prepare成功但还没有下发Commit，状态恢复后给所有节点下发RollBack；若是PrepareAll状态，需要给所有节点下发Commit，数据库节点需要保证Commit幂等。<br>avatar<br>2PC方案的问题：同步阻塞。数据不一致。单点问题。升级的3PC方案旨在解决这些问题，主要有两个改进：增加超时机制。两阶段之间插入准备阶段。但三阶段提交也存在一些缺陷，要彻底从协议层面避免数据不一致，可以采用Paxos或者Raft算法。<br>eBay 事件队列方案——最终一致性<br>eBay 的架构师Dan Pritchett，曾在一篇解释BASE 原理的论文《Base：An Acid<br>Alternative》中提到一个eBay<br>分布式系统一致性问题的解决方案。它的核心思想是将需要分布式处理的任务通过消息或者日志的方式来异步执行，消息或日志可以存到本地文件、数据库或消息队列，再通过业务规则进行失败重试，它要求各服务的接口是幂等的。描述的场景为，有用户表user<br>和交易表transaction，用户表存储用户信息、总销售额和总购买额，交易表存储每一笔交易的流水号、买家信息、卖家信息和交易金额。如果产生了一笔交易，需要在交易表增加记录，同时还要修改用户表的金额。<br>avatar<br>论文中提出的解决方法是将更新交易表记录和用户表更新消息放在一个本地事务来完成，为了避免重复消费用户表更新消息带来的问题，增加一个操作记录表updates_applied来记录已经完成的交易相关的信息。</p>
 <p>这个方案的核心在于第二阶段的重试和幂等执行。失败后重试，这是一种补偿机制，它是能保证系统最终一致的关键流程。<br>TCC （Try-Confirm-Cancel）补偿模式——最终一致性<br>某业务模型如图，由服务 A、服务B、服务C、服务D 共同组成的一个微服务架构系统。服务A 需要依次调用服务B、服务C 和服务D<br>共同完成一个操作。当服务A 调用服务D 失败时，若要保证整个系统数据的一致性，就要对服务B 和服务C 的invoke<br>操作进行回滚，执行反向的revert 操作。回滚成功后，整个微服务系统是数据一致的。<br>avatar<br>实现关键要素：服务调用链必须被记录下来。每个服务提供者都需要提供一组业务逻辑相反的操作，互为补偿，同时回滚操作要保证幂等。必须按失败原因执行不同的回滚策略。<br>缓存数据最终一致性<br>在我们的业务系统中，缓存（Redis 或者Memcached）通常被用在数据库前面，作为数据读取的缓冲，使得I/O<br>操作不至于直接落在数据库上。以商品详情页为例，假如卖家修改了商品信息，并写回到数据库，但是这时候用户从商品详情页看到的信息还是从缓存中拿到的过时数据，这就出现了缓存系统和数据库系统中的数据不一致的现象。<br>要解决该场景下缓存和数据库数据不一致的问题我们有以下两种解决方案：为缓存数据设置过期时间。当缓存中数据过期后，业务系统会从数据库中获取数据，并将新值放入缓存。这个过期时间就是系统可以达到最终一致的容忍时间。更新数据库数据后同时清除缓存数据。数据库数据更新后，同步删除缓存中数据，使得下次对商品详情的获取直接从数据库中获取，并同步到缓存。<br>常用组件： Seata，Sega，Atomikos<br>avatar<br>TC (Transaction Coordinator) - 事务协调者<br>维护全局和分支事务的状态，驱动全局事务提交或回滚。<br>TM (Transaction Manager) - 事务管理器<br>定义全局事务的范围：开始全局事务、提交或回滚全局事务。<br>RM (Resource Manager) - 资源管理器<br>管理分支事务处理的资源，与TC交谈以注册分支事务和报告分支事务的状态，并驱动分支事务提交或回滚。<br>avatar<br>安装<br>关键注解全局@GlobalTranstional<br>1.更改事务组名称service<br>2.store更改mode 修改db<br>3.执行sql<br>4.修改注册进nacos<br>5.启动seata-server.bat<br>如何保证分布唯一全局id的生成</p>
 <p>5、分布式事务异步方案<br>看下分布式事务的异步问题，根据事务的xid搭配future在切面里对注解进行处理，实现异步+分布式事务的并存<br>注意事项<br>这个依赖只是用来解决部分问题，不是解决全部问题<br>这个仅用于TM端，不要用来RM端(其实要实现RM端的话，可以仿照SeataAsyncAspect，写一个aspect，很简单的)<br>不要进行事务嵌套，不支持事务嵌套！！！<br>确保异步的多个操作之间是没有先后顺序的<br>这个是一个私人包装处理，仅供参考，还未应用到生产环境<br>—-待续</p>
-</div>
 
-			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
-			<script src="https://qiniu.techgrow.cn/readmore/dist/readmore.js" type="text/javascript"></script>
-			<script>
-			var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
-			if (!isMobile) {
-				try {
-					var plugin = new ReadmorePlugin();
-					plugin.init({
-						"type": "hexo",
-						"id": "readmore-container",
-						"name": "赵KK日常技术记录",
-						"blogId": "62435-1742912502174-081",
-						"qrcode": "https://zkk-1300025204.cos.ap-nanjing.myqcloud.com/999.png",
-						"keyword": "验证码",
-						"random": "1",
-						"height": "auto",
-						"expires": "14",
-						"lockToc": "yes",
-						"interval": "60",
-						"baseUrl": ""
-					});
-				} catch(e) {
-					console.warn("readmore plugin occurred error: " + e.name + " | " + e.message);
-				}
-			}
-			</script>
-		
       
     </div>
     <div class="article-footer">
@@ -490,7 +462,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220725clhsyo09k001578ujdrutchxv.html" title="Spring事务管理报错Transaction rolled back because it has been marked as rollback-only" target="_blank" rel="external">https://zkkget.github.io/posts/20220725clhsyo09k001578ujdrutchxv.html</a>
+      <a href="https://zkkget.github.io/posts/20220725clhtwi73n001324ujal7lc53s.html" title="Spring事务管理报错Transaction rolled back because it has been marked as rollback-only" target="_blank" rel="external">https://zkkget.github.io/posts/20220725clhtwi73n001324ujal7lc53s.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -537,12 +509,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/20220725clhsyo09e000v78ujcfexbxt0.html" title="Mysql海量数据存储与优化"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/20220725clhtwi73n001424uj5bejax3p.html" title="Mysql海量数据存储与优化"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/posts/20220725clhsyo09o001h78ujddqo3kax.html" title="【声明】阿里云服务器导致图片不显示[可在此贴下方留言]"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20220725clhtwi73s001k24uj7pwv0h8v.html" title="【声明】阿里云服务器导致图片不显示[可在此贴下方留言]"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
