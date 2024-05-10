@@ -17,21 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>项目实战----行政优先级分析 | 赵KK的个人博客</title>
-  <meta name="description" content="需求分析在现有地点中解析其地点优先级,最小到区县,当前区县可指定作业优先级,当绑定优先级数据后的数据应在选择时优先展示。 行政优先级维护采用百度地图数据很行行政区域编码维护,考虑到现有数据是人工维护,获取其省市区县可能不准确,所以先根据其经纬度定位后可准确获取其省市区县,然后再进行编码维护。 示例地点北京市东城区天安门，百度坐标116.403963,39.915119 API:https:&#x2F;&#x2F;lb">
+  <title>java中的happens-before是什么? | 赵KK的个人博客</title>
+  <meta name="description" content="《Java 内存模型: 深入探索 JavaHappens-Before 的奥秘》 作为一名资深的 Java 架构师,我经常被问到关于 Java 内存模型 (JMM) 的各种问题。其中最核心的概念就是 happens-before 关系。这个看似简单的概念,却是理解并掌握 Java 并发编程的关键所在。在本文中,我将深入探讨 happens-before 规则,并通过生动的实例为大家展示它的实际应用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="项目实战----行政优先级分析">
-<meta property="og:url" content="https://zkkget.github.io/posts/20220510clutkxr9a0031swuj6g3336d5.html">
+<meta property="og:title" content="java中的happens-before是什么?">
+<meta property="og:url" content="https://zkkget.github.io/posts/20240510a1.html">
 <meta property="og:site_name" content="赵KK个人博客第三站">
-<meta property="og:description" content="需求分析在现有地点中解析其地点优先级,最小到区县,当前区县可指定作业优先级,当绑定优先级数据后的数据应在选择时优先展示。 行政优先级维护采用百度地图数据很行行政区域编码维护,考虑到现有数据是人工维护,获取其省市区县可能不准确,所以先根据其经纬度定位后可准确获取其省市区县,然后再进行编码维护。 示例地点北京市东城区天安门，百度坐标116.403963,39.915119 API:https:&#x2F;&#x2F;lb">
+<meta property="og:description" content="《Java 内存模型: 深入探索 JavaHappens-Before 的奥秘》 作为一名资深的 Java 架构师,我经常被问到关于 Java 内存模型 (JMM) 的各种问题。其中最核心的概念就是 happens-before 关系。这个看似简单的概念,却是理解并掌握 Java 并发编程的关键所在。在本文中,我将深入探讨 happens-before 规则,并通过生动的实例为大家展示它的实际应用">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-10T03:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-13T06:24:14.000Z">
+<meta property="article:published_time" content="2024-05-10T06:57:56.000Z">
+<meta property="article:modified_time" content="2024-05-10T06:59:11.642Z">
 <meta property="article:author" content="赵KK">
-<meta property="article:tag" content="实战">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zkkget.github.io/posts/20220510clutkxr9a0031swuj6g3336d5.html">
+  <link rel="canonical" href="https://zkkget.github.io/posts/20240510a1.html">
   
     <link rel="alternate" href="/atom.xml" title="赵KK个人博客第三站" type="application/atom+xml">
   
@@ -264,7 +263,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -276,6 +275,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/20240510a1.html" class="title">java中的happens-before是什么?</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2024-05-10T06:57:56.000Z" itemprop="datePublished">2024-05-10</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -298,7 +312,7 @@
                 
               </p>
               <p class="item-title">
-                <a href="/posts/20240204clutkxr8o001hswuj0w1gh6ep.html" class="title">一站式解决AI绘画AI视频</a>
+                <a href="/posts/20240204clw0bu8fz001itcujfh9jdi46.html" class="title">一站式解决AI绘画AI视频</a>
               </p>
               <p class="item-date">
                 <time datetime="2024-02-04T02:49:04.000Z" itemprop="datePublished">2024-02-04</time>
@@ -336,21 +350,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/posts/20230811a1.html" class="title">高情商HR教你面试</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2023-08-11T02:23:32.000Z" itemprop="datePublished">2023-08-11</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -364,14 +363,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-项目实战-行政优先级分析" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-java中的happens-before是什么" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      项目实战----行政优先级分析
+      java中的happens-before是什么?
     </h1>
   
 
@@ -379,17 +378,12 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/20220510clutkxr9a0031swuj6g3336d5.html" class="article-date">
-	  <time datetime="2022-05-10T03:00:00.000Z" itemprop="datePublished">2022-05-10</time>
+	<a href="/posts/20240510a1.html" class="article-date">
+	  <time datetime="2024-05-10T06:57:56.000Z" itemprop="datePublished">2024-05-10</time>
 	</a>
 </span>
         
         
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/%E5%AE%9E%E6%88%98/" rel="tag">实战</a>
-  </span>
-
 
         
 	<span class="article-read hidden-xs">
@@ -400,31 +394,92 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20220510clutkxr9a0031swuj6g3336d5.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/20240510a1.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 942(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2.2k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 9(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <div id="readmore-container"><h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>在现有地点中解析其地点优先级,最小到区县,当前区县可指定作业优先级,当绑定优先级数据后的数据应在选择时优先展示。</p>
-<h2 id="行政优先级维护"><a href="#行政优先级维护" class="headerlink" title="行政优先级维护"></a>行政优先级维护</h2><p>采用百度地图数据很行行政区域编码维护,考虑到现有数据是人工维护,获取其省市区县可能不准确,所以先根据其经纬度定位后可准确获取其省市区县,然后再进行编码维护。</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>地点北京市东城区天安门，百度坐标116.403963,39.915119</p>
-<h2 id="API"><a href="#API" class="headerlink" title="API:"></a>API:</h2><p><a target="_blank" rel="noopener" href="https://lbsyun.baidu.com/index.php?title=webapi/district-search">https://lbsyun.baidu.com/index.php?title=webapi/district-search</a><br><a target="_blank" rel="noopener" href="https://lbsyun.baidu.com/index.php?title=webapi/guide/webservice-geocoding-abroad">https://lbsyun.baidu.com/index.php?title=webapi/guide/webservice-geocoding-abroad</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"> Map&lt;String, String&gt; map = IbsBMapUtils.reverseGeocoding(&quot;116.403963&quot;, &quot;39.915119&quot;);</span><br><span class="line">                String province = map.get(&quot;province&quot;);</span><br><span class="line"></span><br><span class="line">List&lt;IbsBMapUtils.Districts&gt; districts = IbsBMapUtils.regionSearch(province.substring(0, 2));</span><br><span class="line">                for (IbsBMapUtils.Districts district : districts) &#123;</span><br><span class="line">                    DivisionDo divisionDo = new DivisionDo();</span><br><span class="line">                    divisionDo.setProvinceCode(district.getCode());</span><br><span class="line">                    divisionDo.setProvinceName(district.getName());</span><br><span class="line">                    divisionDo.setWarehouseCode(locationConfigDO.getWarehouseCode());</span><br><span class="line">                    List&lt;IbsBMapUtils.Districts&gt; districtsList = district.getDistricts();</span><br><span class="line">                    if (org.apache.commons.collections.CollectionUtils.isNotEmpty(districtsList)) &#123;</span><br><span class="line">                        for (IbsBMapUtils.Districts districts2 : districtsList) &#123;</span><br><span class="line">                            divisionDo.setCityCode(districts2.getCode());</span><br><span class="line">                            divisionDo.setCityName(districts2.getName());</span><br><span class="line">                            List&lt;IbsBMapUtils.Districts&gt; districts3 = districts2.getDistricts();</span><br><span class="line">                            if (org.apache.commons.collections.CollectionUtils.isNotEmpty(districts3)) &#123;</span><br><span class="line">                                for (IbsBMapUtils.Districts district3 : districts3) &#123;</span><br><span class="line">                                    divisionDo.setRegionName(district3.getName());</span><br><span class="line">                                    divisionDo.setRegionCode(district3.getCode());</span><br><span class="line">                                    divisionRepository.insert(divisionDo);</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125; else &#123;</span><br><span class="line">                                divisionRepository.insert(divisionDo);</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        divisionRepository.insert(divisionDo);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="当前区域指定优先级作业后数据优先展示"><a href="#当前区域指定优先级作业后数据优先展示" class="headerlink" title="当前区域指定优先级作业后数据优先展示"></a>当前区域指定优先级作业后数据优先展示</h2><p>例如北京市有N个区,指定了N个规划路线,当东城区指定了由最近的骑手配送时，则点击东城区商家的配送线路优先展示</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">List&lt;MunicipalLevel&gt;  list = MunicipalLevelMapper.selectMunicipalLevelList(&quot;北京市-东城区&quot;);</span><br><span class="line"></span><br><span class="line">       if(CollectionUtils.isEmpty(list))&#123;</span><br><span class="line">           return Collections.emptyList();</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">	List&lt;String&gt; riderList = divisionMapper.getRiderByProvince(&quot;11001&quot;, &quot;北京市&quot;,&quot;东城区&quot;);</span><br><span class="line">               //错误实例</span><br><span class="line">			if (CollectionUtils.isNotEmpty(riderList)) &#123;</span><br><span class="line">                   for (String riderName : riderList) &#123;</span><br><span class="line">                       List&lt;RirderListResponse&gt; listResponses = list.stream().filter(vo -&gt; StringUtils.isNotEmpty(vo.getRirderName()) &amp;&amp; vo.getRiderName().equals(riderName)).collect(Collectors.toList());</span><br><span class="line">                       if (CollectionUtils.isNotEmpty(listResponses)) &#123;</span><br><span class="line">                           for (int i = 0; i &lt; listResponses.size(); i++) &#123;</span><br><span class="line">                               RirderListResponse response = listResponses.get(i);</span><br><span class="line">                               final List l = list;</span><br><span class="line">                               l.set(i, l.set(j, l.get(i)));</span><br><span class="line">                           &#125;</span><br><span class="line">                       &#125;</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">       log.warn(&quot;响应&#123;&#125;&quot;, JSONObject.toJSONString(list));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="bug修复"><a href="#bug修复" class="headerlink" title="bug修复"></a>bug修复</h2><p>当前查询出东城区绑定优先级为1.2.3.4时，查询出来的顺序更新索引位置会变为4.3.2.1，且考虑到list会多个且可重复重新更改代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">List&lt;MunicipalLevel&gt;  list = MunicipalLevelMapper.selectMunicipalLevelList(&quot;北京市-东城区&quot;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       if(CollectionUtils.isEmpty(list))&#123;</span><br><span class="line">           return Collections.emptyList();</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">              List&lt;String&gt; riderList = divisionMapper.getRiderByProvince(&quot;11001&quot;, &quot;北京市&quot;,&quot;东城区&quot;);</span><br><span class="line">               riderList = riderList.stream().filter(item -&gt; responseList.stream().map(RouteListResponse::getName).collect(Collectors.toList()).contains(item)).collect(Collectors.toList());</span><br><span class="line">               Collections.reverse(riderList);</span><br><span class="line">                   Collections.reverse(riderList);</span><br><span class="line">                   for (int i = 0; i &lt; riderList.size(); i++) &#123;</span><br><span class="line">                       for (MunicipalLevel res : list) &#123;</span><br><span class="line">                           if(res.getName().equals(riderList.get(i)))&#123;</span><br><span class="line">                               Collections.swap(list, list.indexOf(res), i);</span><br><span class="line">                           &#125;</span><br><span class="line">                       &#125;</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">       &#125;         </span><br><span class="line">           </span><br></pre></td></tr></table></figure>
-<h2 id="bug再次修复终极版"><a href="#bug再次修复终极版" class="headerlink" title="bug再次修复终极版"></a>bug再次修复终极版</h2><p>当存在多个优先级相同的区域路线时，会因为本身在list的位置不同，导致最后只有第一个正确，其他元素位置不正确</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if(CollectionUtils.isEmpty(list))&#123;</span><br><span class="line">            return Collections.emptyList();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">              // List&lt;String&gt; riderList = divisionMapper.getRiderByProvince(&quot;11001&quot;, &quot;北京市&quot;,&quot;东城区&quot;);</span><br><span class="line">                //riderList = riderList.stream().filter(item -&gt; responseList.stream().map(RouteListResponse::getName).collect(Collectors.toList()).contains(item)).collect(Collectors.toList());</span><br><span class="line">                    //Collections.reverse(riderList);</span><br><span class="line">                    //借助外部元素记录交换元素位置</span><br><span class="line">                    if (CollectionUtils.isNotEmpty(supplierList)) &#123;</span><br><span class="line">                    int a = 0 ;</span><br><span class="line">                    for (int i = 0; i &lt; riderList.size(); i++) &#123;</span><br><span class="line">                        for (MunicipalLevel res : list) &#123;</span><br><span class="line">                            if(res.getName().equals(riderList.get(i)))&#123;</span><br><span class="line">                                Collections.swap(list, list.indexOf(res), i);</span><br><span class="line">                                a++;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br></pre></td></tr></table></figure>
+        <div id="readmore-container"><p>《Java 内存模型: 深入探索 JavaHappens-Before 的奥秘》</p>
+<p>作为一名资深的 Java 架构师,我经常被问到关于 Java 内存模型 (JMM) 的各种问题。其中最核心的概念就是 happens-before 关系。这个看似简单的概念,却是理解并掌握 Java 并发编程的关键所在。在本文中,我将深入探讨 happens-before 规则,并通过生动的实例为大家展示它的实际应用场景。</p>
+<h2 id="什么是-JavaHappens-Before"><a href="#什么是-JavaHappens-Before" class="headerlink" title="什么是 JavaHappens-Before?"></a>什么是 JavaHappens-Before?</h2><p>happens-before 是 Java 内存模型中最重要的概念之一。它定义了一种偏序关系,用来描述一个操作 A 是否可以”看到”另一个操作 B 的执行结果。 </p>
+<p>准确地说,如果一个操作 A happens-before 于另一个操作 B,那么 A 执行的结果对 B 来说就是可见的。换句话说,B 就可以看到 A 的执行结果。反之,如果 A 不 happens-before B,那么 B 能否看到 A 的结果就是不确定的。</p>
+<p>这个概念可能看起来很抽象,不过一旦理解了它的本质,你就会发现它无处不在,贯穿于 Java 并发编程的方方面面。接下来,让我们通过几个生动的例子来感受一下 happens-before 在实际应用中的威力。</p>
+<h2 id="示例-1-单线程中的-happens-before"><a href="#示例-1-单线程中的-happens-before" class="headerlink" title="示例 1: 单线程中的 happens-before"></a>示例 1: 单线程中的 happens-before</h2><p>在单线程环境中,happens-before 规则非常简单:</p>
+<ol>
+<li>程序顺序规则: 在一个线程中,按照代码的顺序执行,前面的操作happens-before后面的操作。</li>
+</ol>
+<p>下面的代码片段就是一个典型的例子:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
 
+<p>根据程序顺序规则,<code>a = 1</code> happens-before <code>b = 2</code>。也就是说,在这个线程中,<code>b = 2</code> 一定能看到 <code>a = 1</code> 的结果。</p>
+<ol start="2">
+<li>volatile 变量规则: 对一个 volatile 变量的写操作,happens-before于后面对这个变量的读操作。</li>
+</ol>
+<p>假设我们有一个 volatile 变量 <code>flag</code>:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">volatile</span> <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">flag = <span class="keyword">true</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">if</span> (flag) &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这里,<code>flag = true</code> happens-before <code>if (flag)</code>。也就是说,当执行 <code>if (flag)</code> 时,一定能看到 <code>flag = true</code> 的结果。</p>
+<ol start="3">
+<li>监视器规则: 一个线程中,unlock 一个监视器happens-before于后面对这个监视器的 lock 操作。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">synchronized</span> (obj) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个代码块中,退出 <code>synchronized</code> 块 (unlock) happens-before于后续再次进入 <code>synchronized</code> 块 (lock)。</p>
+<p>总的来说,在单线程环境下,happens-before 规则是非常直观和容易理解的。但是,当涉及到多线程环境时,情况就变得复杂多了。</p>
+<h2 id="示例-2-多线程中的-happens-before"><a href="#示例-2-多线程中的-happens-before" class="headerlink" title="示例 2: 多线程中的 happens-before"></a>示例 2: 多线程中的 happens-before</h2><p>在多线程环境下,happens-before 规则就变得更加复杂和重要了。我们来看一个例子:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HappensBeforeExample</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> x = <span class="number">0</span>, y = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keyword">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Thread t1 = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            a = <span class="number">1</span>;</span><br><span class="line">            x = b;</span><br><span class="line">        &#125;);</span><br><span class="line">        Thread t2 = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            b = <span class="number">1</span>;</span><br><span class="line">            y = a;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">        t1.join();</span><br><span class="line">        t2.join();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;x = &quot;</span> + x + <span class="string">&quot;, y = &quot;</span> + y);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中,我们有两个线程 <code>t1</code> 和 <code>t2</code>。每个线程都会修改一个 volatile 变量,然后读取另一个线程修改的变量。</p>
+<p>我们来仔细分析一下这个程序的执行流程:</p>
+<ol>
+<li>线程 <code>t1</code> 首先执行 <code>a = 1</code>。根据 volatile 变量规则,这个写操作 happens-before 于后面的 <code>x = b</code>。</li>
+<li>线程 <code>t2</code> 执行 <code>b = 1</code>。同样根据 volatile 变量规则,这个写操作 happens-before 于后面的 <code>y = a</code>。</li>
+<li>现在问题来了,<code>x = b</code> 和 <code>y = a</code> 谁先执行呢?这就不确定了。</li>
+</ol>
+<p>根据 happens-before 规则,如果 <code>t1</code> 的 <code>a = 1</code> happens-before <code>t2</code> 的 <code>y = a</code>，那么 <code>y</code> 一定能看到 <code>a = 1</code>的结果,即 <code>y = 1</code>。</p>
+<p>同理,如果 <code>t2</code> 的 <code>b = 1</code> happens-before <code>t1</code> 的 <code>x = b</code>,那么 <code>x</code> 一定能看到 <code>b = 1</code> 的结果,即 <code>x = 1</code>。</p>
+<p>但是,如果 <code>t1</code> 的 <code>a = 1</code> 不 happens-before <code>t2</code> 的 <code>y = a</code>,那么 <code>y</code> 可能看到 <code>a = 0</code>(初始值),即 <code>y = 0</code>。同样,如果 <code>t2</code> 的 <code>b = 1</code> 不 happens-before <code>t1</code> 的 <code>x = b</code>,那么 <code>x</code> 可能看到 <code>b = 0</code>(初始值),即 <code>x = 0</code>。</p>
+<p>所以,最终的打印结果可能是:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = 0, y = 0</span><br><span class="line">x = 0, y = 1</span><br><span class="line">x = 1, y = 0</span><br><span class="line">x = 1, y = 1</span><br></pre></td></tr></table></figure>
+
+<p>这就是 happens-before 在多线程环境下的复杂性。它决定了一个线程能否看到另一个线程的执行结果,从而影响程序的正确性。掌握 happens-before 规则对于编写正确的并发程序至关重要。</p>
+<h2 id="happens-before-的应用场景"><a href="#happens-before-的应用场景" class="headerlink" title="happens-before 的应用场景"></a>happens-before 的应用场景</h2><p>既然 happens-before 如此重要,那么它在实际应用中扮演着什么样的角色呢?让我们来看几个典型的应用场景。</p>
+<h3 id="1-线程安全的发布"><a href="#1-线程安全的发布" class="headerlink" title="1. 线程安全的发布"></a>1. 线程安全的发布</h3><p>在多线程环境下,如何安全地发布一个共享对象是一个常见的问题。happens-before 规则可以帮助我们解决这个问题。</p>
+<p>假设我们有一个 <code>MyClass</code> 对象,我们希望在一个线程中初始化它,然后在其他线程中使用它。我们可以利用 happens-before 规则来实现这个功能:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> MyClass instance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">MyClass</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 初始化 MyClass</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MyClass <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (MyClass.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    instance = <span class="keyword">new</span> MyClass();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中,我们使用了双重检查锁定 (Double-Checked Locking) 来实现线程安全的单例模式。关键在于, <code>instance = new MyClass()</code> 操作不仅仅是一个简单的赋值,它实际上包含了多个步骤:</p>
+<ol>
+<li>分配内存空间</li>
+<li>初始化 <code>MyClass</code> 对象</li>
+<li>将 <code>instance</code> 指向分配的内存空间</li>
+</ol>
+<p>如果这三个步骤的执行顺序被重排,那么其他线程可能会观察到一个未初始化的 <code>MyClass</code> 对象。</p>
+<p>幸运的是,happens-before 规则可以帮助我们解决这个问题。在 <code>synchronized</code> 块中,unlock 操作 happens-before 于后续的 lock 操作。这意味着,当一个线程成功获取到锁并执行 <code>instance = new MyClass()</code> 时,其他线程在 <code>getInstance()</code> 中的 <code>instance == null</code> 判断一定能看到已经正确初始化的 <code>MyClass</code> 对象。</p>
+<h3 id="2-并发容器的实现"><a href="#2-并发容器的实现" class="headerlink" title="2. 并发容器的实现"></a>2. 并发容器的实现</h3><p>在 Java 并发编程中,并发容器是一个非常重要的概念。而 happens-before 规则在并发容器的实现中起着关键作用。</p>
+<p>让我们以 <code>ConcurrentHashMap</code> 为例,看看 happens-before 是如何影响它的实现的:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcurrentHashMap</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Segment&lt;K, V&gt;[] segments;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> V <span class="title">put</span><span class="params">(K key, V value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> hash = hash(key);</span><br><span class="line">        <span class="keyword">int</span> j = (hash &gt;&gt;&gt; segmentShift) &amp; segmentMask;</span><br><span class="line">        <span class="keyword">return</span> segmentFor(j).put(key, hash, value, <span class="keyword">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> Segment&lt;K, V&gt; <span class="title">segmentFor</span><span class="params">(<span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> segments[j];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Segment</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt; <span class="keyword">extends</span> <span class="title">ReentrantLock</span> </span>&#123;</span><br><span class="line">        <span class="keyword">volatile</span> HashEntry&lt;K, V&gt;[] table;</span><br><span class="line"></span><br><span class="line">        <span class="function">V <span class="title">put</span><span class="params">(K key, <span class="keyword">int</span> hash, V value, <span class="keyword">boolean</span> onlyIfAbsent)</span> </span>&#123;</span><br><span class="line">            lock();</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">int</span> c = count;</span><br><span class="line">                <span class="keyword">if</span> (c++ &gt; threshold) <span class="comment">// 扩容</span></span><br><span class="line">                    rehash();</span><br><span class="line">                HashEntry&lt;K, V&gt;[] tab = table;</span><br><span class="line">                <span class="keyword">int</span> index = (tab.length - <span class="number">1</span>) &amp; hash;</span><br><span class="line">                HashEntry&lt;K, V&gt; first = tab[index];</span><br><span class="line">                <span class="comment">// ...</span></span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                unlock();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>ConcurrentHashMap</code> 的实现中,每个 <code>Segment</code> 都是一个独立的锁段,用来保证并发安全。关键点在于:</p>
+<ol>
+<li>当一个线程获取到 <code>Segment</code> 的锁后,它对 <code>Segment</code> 内部数据结构的修改对其他线程是可见的。这是因为 <code>lock()</code> 和 <code>unlock()</code> 操作满足 happens-before 规则。</li>
+<li>当一个线程扩容 <code>Segment</code> 的时候,新的 <code>HashEntry</code> 数组的发布对其他线程是可见的。这是因为扩容操作的 happens-before 关系。</li>
+</ol>
+<p>通过 happens-before 规则的保证,<code>ConcurrentHashMap</code> 能够在多线程环境下安全地工作,避免出现数据不一致的问题。</p>
+<h3 id="3-异步任务的协调"><a href="#3-异步任务的协调" class="headerlink" title="3. 异步任务的协调"></a>3. 异步任务的协调</h3><p>在实际项目中,我们经常需要编写一些异步任务,比如异步计算、异步通知等。这些任务之间通常存在着复杂的依赖关系,需要通过 happens-before 规则来协调它们的执行顺序。</p>
+<p>举个例子,假设我们有一个异步计算任务,需要等待另一个异步任务的结果作为输入。我们可以利用 <code>CompletableFuture</code> 来实现这个需求:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CompletableFuture&lt;Integer&gt; taskA = CompletableFuture.supplyAsync(() -&gt; &#123;</span><br><span class="line">    <span class="comment">// 执行任务 A</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">42</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">CompletableFuture&lt;String&gt; taskB = taskA.thenApplyAsync(result -&gt; &#123;</span><br><span class="line">    <span class="comment">// 使用任务 A 的结果执行任务 B</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;The answer is &quot;</span> + result;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">String finalResult = taskB.join();</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中,<code>taskB</code> 的执行 happens-before 于 <code>finalResult</code> 的获取。这是因为 <code>thenApplyAsync</code> 方法保证了其回调函数的执行会在 <code>taskA</code> 完成之后。</p>
+<p>通过 happens-before 规则,我们可以轻松地协调各个异步任务之间的依赖关系,确保程序的正确性。</p>
 </div>
 
 			<link rel="stylesheet" type="text/css" href="https://qiniu.techgrow.cn/readmore/dist/hexo.css">
@@ -462,7 +517,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://zkkget.github.io/posts/20220510clutkxr9a0031swuj6g3336d5.html" title="项目实战----行政优先级分析" target="_blank" rel="external">https://zkkget.github.io/posts/20220510clutkxr9a0031swuj6g3336d5.html</a>
+      <a href="https://zkkget.github.io/posts/20240510a1.html" title="java中的happens-before是什么?" target="_blank" rel="external">https://zkkget.github.io/posts/20240510a1.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -508,13 +563,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/20220725clutkxr91002eswuj98sl714e.html" title="主站博客迁移之拒绝解析又臭又长的JSON"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/20220428clutkxr8p001jswuj2kgu88y8.html" title="mysql中的锁表语句查看方法汇总"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/20240410a1.html" title="Java多线程线程池实战"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
